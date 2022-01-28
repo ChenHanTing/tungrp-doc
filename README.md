@@ -4,87 +4,84 @@ All URIs are relative to *//uatecapi.tungrp.com/*
 
 Method | HTTP request | 說明 
 ------------- | ------------- | -------------
-[**刪除最愛**](V1Api.md#刪除最愛) | **DELETE** /v1/carts/favorite |刪除最愛
-[**刪除地址**](V1Api.md#刪除地址) | **DELETE** /v1/customer/addresses/{id} |刪除地址簿內指定的地址
-[**刪除信用卡**](V1Api.md#刪除信用卡) | **DELETE** /v1/customers/credit_cards/{card_id} |刪除會員帳號內綁定的信用卡
-[**取得當前App版號**](V1Api.md#取得當前App版號) | **GET** /v1/app_version |查看當前的手機App版號
-[**取得購物車**](V1Api.md#取得購物車) | **GET** /v1/carts |取得購物車資訊
-[**查看最愛**](V1Api.md#查看最愛) | **GET** /v1/carts/favorites |查看會員收藏商品
-[**get_v1_categories**](V1Api.md#get_v1_categories) | **GET** /v1/categories |
-[**get_v1_categories_id**](V1Api.md#get_v1_categories_id) | **GET** /v1/categories/{id} |
-[**get_v1_collections**](V1Api.md#get_v1_collections) | **GET** /v1/collections |
-[**get_v1_collections_id**](V1Api.md#get_v1_collections_id) | **GET** /v1/collections/{id} |
-[**get_v1_customer_addresses**](V1Api.md#get_v1_customer_addresses) | **GET** /v1/customer/addresses |
-[**get_v1_customer_addresses_id**](V1Api.md#get_v1_customer_addresses_id) | **GET** /v1/customer/addresses/{id} |
-[**get_v1_customers_credit_cards**](V1Api.md#get_v1_customers_credit_cards) | **GET** /v1/customers/credit_cards |
-[**get_v1_customers_credit_cards_get_primary**](V1Api.md#get_v1_customers_credit_cards_get_primary) | **GET** /v1/customers/credit_cards/get_primary |
-[**get_v1_customers_exist**](V1Api.md#get_v1_customers_exist) | **GET** /v1/customers/exist |
-[**get_v1_customers_me**](V1Api.md#get_v1_customers_me) | **GET** /v1/customers/me |
-[**get_v1_customers_point_history**](V1Api.md#get_v1_customers_point_history) | **GET** /v1/customers/point_history |
-[**get_v1_customers_pos_order_histories**](V1Api.md#get_v1_customers_pos_order_histories) | **GET** /v1/customers/pos_order_histories |
-[**get_v1_customers_store**](V1Api.md#get_v1_customers_store) | **GET** /v1/customers/store |
-[**get_v1_customers_vip_barcode**](V1Api.md#get_v1_customers_vip_barcode) | **GET** /v1/customers/vip_barcode |
-[**get_v1_event_pages**](V1Api.md#get_v1_event_pages) | **GET** /v1/event_pages |
-[**get_v1_event_pages_event_page_id**](V1Api.md#get_v1_event_pages_event_page_id) | **GET** /v1/event_pages/{event_page_id} |
-[**get_v1_home_page**](V1Api.md#get_v1_home_page) | **GET** /v1/home_page |
-[**get_v1_information**](V1Api.md#get_v1_information) | **GET** /v1/information |
-[**get_v1_information_information_id**](V1Api.md#get_v1_information_information_id) | **GET** /v1/information/{information_id} |
-[**維修保養單列表**](V1Api.md#維修保養單列表) | **GET** /v1/maintain_orders |
-[**get_v1_maintain_orders_number**](V1Api.md#get_v1_maintain_orders_number) | **GET** /v1/maintain_orders/{number} |
-[**get_v1_notifications**](V1Api.md#get_v1_notifications) | **GET** /v1/notifications |
-[**get_v1_notifications_id**](V1Api.md#get_v1_notifications_id) | **GET** /v1/notifications/{id} |
-[**get_v1_notifications_third_party_ping**](V1Api.md#get_v1_notifications_third_party_ping) | **GET** /v1/notifications/third_party/ping |
-[**get_v1_orders**](V1Api.md#get_v1_orders) | **GET** /v1/orders |
-[**get_v1_orders_number**](V1Api.md#get_v1_orders_number) | **GET** /v1/orders/{number} |
-[**查看商品**](V1Api.md#查看商品) | **GET** /v1/products/{id} |
-[**get_v1_products_query_stock**](V1Api.md#get_v1_products_query_stock) | **GET** /v1/products/query_stock |
-[**get_v1_return_orders_id**](V1Api.md#get_v1_return_orders_id) | **GET** /v1/return_orders/{id} |
-[**get_v1_scrolling_texts**](V1Api.md#get_v1_scrolling_texts) | **GET** /v1/scrolling_texts |
-[**get_v1_search**](V1Api.md#get_v1_search) | **GET** /v1/search |
-[**get_v1_series**](V1Api.md#get_v1_series) | **GET** /v1/series |
-[**get_v1_series_series_id**](V1Api.md#get_v1_series_series_id) | **GET** /v1/series/{series_id} |
-[**get_v1_stores**](V1Api.md#get_v1_stores) | **GET** /v1/stores |
-[**get_v1_sub_collections**](V1Api.md#get_v1_sub_collections) | **GET** /v1/sub_collections |
-[**get_v1_sub_collections_id**](V1Api.md#get_v1_sub_collections_id) | **GET** /v1/sub_collections/{id} |
-[**get_v1_sub_orders_id**](V1Api.md#get_v1_sub_orders_id) | **GET** /v1/sub_orders/{id} |
-[**get_v1_target_price_discounts**](V1Api.md#get_v1_target_price_discounts) | **GET** /v1/target_price_discounts |
-[**get_v1_top_banner**](V1Api.md#get_v1_top_banner) | **GET** /v1/top_banner |
-[**post_v1_carts**](V1Api.md#post_v1_carts) | **POST** /v1/carts |
-[**post_v1_carts_add_favorites**](V1Api.md#post_v1_carts_add_favorites) | **POST** /v1/carts/add_favorites |
-[**post_v1_customer_addresses**](V1Api.md#post_v1_customer_addresses) | **POST** /v1/customer/addresses |
-[**post_v1_customers**](V1Api.md#post_v1_customers) | **POST** /v1/customers |
-[**post_v1_customers_credit_cards**](V1Api.md#post_v1_customers_credit_cards) | **POST** /v1/customers/credit_cards |
-[**post_v1_customers_credit_cards_set_primary**](V1Api.md#post_v1_customers_credit_cards_set_primary) | **POST** /v1/customers/credit_cards/set_primary |
-[**post_v1_customers_login_with_otp**](V1Api.md#post_v1_customers_login_with_otp) | **POST** /v1/customers/login_with_otp |
-[**post_v1_customers_otp**](V1Api.md#post_v1_customers_otp) | **POST** /v1/customers/otp |
-[**post_v1_customers_receive_notifications**](V1Api.md#post_v1_customers_receive_notifications) | **POST** /v1/customers/receive_notifications |
-[**post_v1_customers_reset_password**](V1Api.md#post_v1_customers_reset_password) | **POST** /v1/customers/reset_password |
-[**post_v1_customers_set_default_store**](V1Api.md#post_v1_customers_set_default_store) | **POST** /v1/customers/set_default_store |
-[**post_v1_customers_sso**](V1Api.md#post_v1_customers_sso) | **POST** /v1/customers/sso |
-[**post_v1_customers_sso_bind**](V1Api.md#post_v1_customers_sso_bind) | **POST** /v1/customers/sso_bind |
-[**post_v1_customers_sso_unbind**](V1Api.md#post_v1_customers_sso_unbind) | **POST** /v1/customers/sso_unbind |
-[**post_v1_customers_sync_pos**](V1Api.md#post_v1_customers_sync_pos) | **POST** /v1/customers/sync_pos |
-[**post_v1_customers_update**](V1Api.md#post_v1_customers_update) | **POST** /v1/customers/update |
-[**post_v1_customers_update_password**](V1Api.md#post_v1_customers_update_password) | **POST** /v1/customers/update_password |
-[**post_v1_customers_validate_otp**](V1Api.md#post_v1_customers_validate_otp) | **POST** /v1/customers/validate_otp |
-[**post_v1_customers_validate_password**](V1Api.md#post_v1_customers_validate_password) | **POST** /v1/customers/validate_password |
-[**post_v1_maintain_orders**](V1Api.md#post_v1_maintain_orders) | **POST** /v1/maintain_orders |
-[**post_v1_maintain_orders_number_cancel**](V1Api.md#post_v1_maintain_orders_number_cancel) | **POST** /v1/maintain_orders/{number}/cancel |
-[**post_v1_maintain_orders_number_quotation**](V1Api.md#post_v1_maintain_orders_number_quotation) | **POST** /v1/maintain_orders/{number}/quotation |
-[**post_v1_notification_bind**](V1Api.md#post_v1_notification_bind) | **POST** /v1/notification/bind |
-[**post_v1_notification_unbind**](V1Api.md#post_v1_notification_unbind) | **POST** /v1/notification/unbind |
-[**post_v1_notifications_read**](V1Api.md#post_v1_notifications_read) | **POST** /v1/notifications/read |
-[**post_v1_notifications_read_all**](V1Api.md#post_v1_notifications_read_all) | **POST** /v1/notifications/read_all |
-[**post_v1_notifications_third_party**](V1Api.md#post_v1_notifications_third_party) | **POST** /v1/notifications/third_party |
-[**post_v1_notifications_third_party_customer_locale**](V1Api.md#post_v1_notifications_third_party_customer_locale) | **POST** /v1/notifications/third_party/customer_locale |
-[**post_v1_notifications_third_party_demo**](V1Api.md#post_v1_notifications_third_party_demo) | **POST** /v1/notifications/third_party/demo |
-[**post_v1_orders**](V1Api.md#post_v1_orders) | **POST** /v1/orders |
-[**post_v1_orders_number_cancel**](V1Api.md#post_v1_orders_number_cancel) | **POST** /v1/orders/{number}/cancel |
-[**post_v1_orders_number_checkout**](V1Api.md#post_v1_orders_number_checkout) | **POST** /v1/orders/{number}/checkout |
-[**post_v1_products**](V1Api.md#post_v1_products) | **POST** /v1/products |
-[**post_v1_return_orders_id**](V1Api.md#post_v1_return_orders_id) | **POST** /v1/return_orders/{id} |
-[**post_v1_return_orders_pre_calculate_id**](V1Api.md#post_v1_return_orders_pre_calculate_id) | **POST** /v1/return_orders/pre_calculate/{id} |
-[**put_v1_customer_addresses_id**](V1Api.md#put_v1_customer_addresses_id) | **PUT** /v1/customer/addresses/{id} |
+[**刪除最愛**](#刪除最愛) | **DELETE** /v1/carts/favorite |刪除最愛
+[**刪除地址**](#刪除地址) | **DELETE** /v1/customer/addresses/{id} |刪除地址簿內指定的地址
+[**刪除信用卡**](#刪除信用卡) | **DELETE** /v1/customers/credit_cards/{card_id} |刪除會員帳號內綁定的信用卡
+[**當前App版號**](#當前App版號) | **GET** /v1/app_version |查看當前的手機App版號
+[**購物車**](#購物車) | **GET** /v1/carts |購物車資訊
+[**查看最愛**](#查看最愛) | **GET** /v1/carts/favorites |查看會員收藏商品
+[**大類列表**](#大類列表) | **GET** /v1/categories |
+[**特定大類**](#特定大類) | **GET** /v1/categories/{id} |
+[**中類列表**](#中類列表) | **GET** /v1/collections |
+[**特定中類**](#特定中類) | **GET** /v1/collections/{id} |
+[**地址簿**](#地址簿) | **GET** /v1/customer/addresses |
+[**從地址簿中取得特定地址**](#從地址簿中取得特定地址) | **GET** /v1/customer/addresses/{id} |
+[**會員信用卡列表**](#會員信用卡列表) | **GET** /v1/customers/credit_cards |
+[**會員主信用卡**](#會員主信用卡) | **GET** /v1/customers/credit_cards/get_primary |
+[**會員是否存在**](#會員是否存在) | **GET** /v1/customers/exist |
+[**會員基本資訊**](#會員基本資訊) | **GET** /v1/customers/me |
+[**會員點數紀錄**](#會員點數紀錄) | **GET** /v1/customers/point_history |
+[**會員訂單記錄**](#會員訂單記錄) | **GET** /v1/customers/pos_order_histories |
+[**會員業務店**](#會員業務店) | **GET** /v1/customers/store |
+[**會員Barcode**](#會員Barcode) | **GET** /v1/customers/vip_barcode |
+[**促銷頁列表**](#促銷頁列表) | **GET** /v1/event_pages |
+[**特定促銷頁**](#特定促銷頁) | **GET** /v1/event_pages/{event_page_id} |
+[**首頁**](#首頁) | **GET** /v1/home_page |
+[**消息列表**](#消息列表) | **GET** /v1/information |
+[**特定消息**](#特定消息) | **GET** /v1/information/{information_id} |
+[**維修保養單列表**](#維修保養單列表) | **GET** /v1/maintain_orders |
+[**維修保養單明細**](#維修保養單明細) | **GET** /v1/maintain_orders/{number} |
+[**推播列表**](#推播列表) | **GET** /v1/notifications |
+[**推播明細**](#推播明細) | **GET** /v1/notifications/{id} |
+[**第三方推播**](#第三方推播) | **GET** /v1/notifications/third_party/ping |
+[**訂單列表**](#訂單列表) | **GET** /v1/orders |
+[**訂單明細**](#訂單明細) | **GET** /v1/orders/{number} |
+[**查看商品**](#查看商品) | **GET** /v1/products/{id} |
+[**指定品項庫存**](#指定品項庫存) | **GET** /v1/products/query_stock |
+[**退貨單明細**](#退貨單明細) | **GET** /v1/return_orders/{id} |
+[**跑馬燈**](#跑馬燈) | **GET** /v1/scrolling_texts |
+[**取得搜尋內容**](#取得搜尋內容) | **GET** /v1/search |
+[**系列頁列表**](#系列頁列表) | **GET** /v1/series |
+[**指定系列頁**](#指定系列頁) | **GET** /v1/series/{series_id} |
+[**店舖列表**](#店舖列表) | **GET** /v1/stores |
+[**小類列表**](#小類列表) | **GET** /v1/sub_collections |
+[**小類明細**](#小類明細) | **GET** /v1/sub_collections/{id} |
+[**特定子訂單**](#特定子訂單) | **GET** /v1/sub_orders/{id} |
+[**當前滿額贈**](#當前滿額贈) | **GET** /v1/target_price_discounts |
+[**置頂Banner**](#置頂Banner) | **GET** /v1/top_banner |
+[**加入購物車**](#加入購物車) | **POST** /v1/carts |
+[**加入最愛**](#加入最愛) | **POST** /v1/carts/add_favorites |
+[**新增地址簿**](#新增地址簿) | **POST** /v1/customer/addresses |
+[**創建顧客**](#創建顧客) | **POST** /v1/customers |
+[**新增信用卡**](#新增信用卡) | **POST** /v1/customers/credit_cards |
+[**設定主信用卡**](#設定主信用卡) | **POST** /v1/customers/credit_cards/set_primary |
+[**發送OTP到手機**](#發送OTP到手機) | **POST** /v1/customers/login_with_otp |
+[**發送OTP**](#發送OTP) | **POST** /v1/customers/otp |
+[**會員接收推播設定**](#會員接收推播設定) | **POST** /v1/customers/receive_notifications |
+[**會員重設密碼**](#會員重設密碼) | **POST** /v1/customers/reset_password |
+[**會員設定預設店**](#會員設定預設店) | **POST** /v1/customers/set_default_store |
+[**取得sso憑證**](#取得sso憑證) | **POST** /v1/customers/sso |
+[**社群媒體登入**](#社群媒體登入) | **POST** /v1/customers/sso_bind |
+[**社群媒體登出**](#社群媒體登出) | **POST** /v1/customers/sso_unbind |
+[**會員同步pos**](#會員同步pos) | **POST** /v1/customers/sync_pos |
+[**會員資訊更新**](#會員資訊更新) | **POST** /v1/customers/update |
+[**會員重設密碼**](#會員重設密碼) | **POST** /v1/customers/update_password |
+[**驗證OTP**](#驗證OTP) | **POST** /v1/customers/validate_otp |
+[**驗證密碼**](#驗證密碼) | **POST** /v1/customers/validate_password |
+[**創建維修單**](#創建維修單) | **POST** /v1/maintain_orders |
+[**取消維修單**](#取消維修單) | **POST** /v1/maintain_orders/{number}/cancel |
+[**同意報價**](#同意報價) | **POST** /v1/maintain_orders/{number}/quotation |
+[**綁定推播**](#綁定推播) | **POST** /v1/notification/bind |
+[**解綁推播**](#解綁推播) | **POST** /v1/notification/unbind |
+[**已讀推播**](#已讀推播) | **POST** /v1/notifications/read |
+[**推播已讀全部**](#推播已讀全部) | **POST** /v1/notifications/read_all |
+[**創建訂單**](#創建訂單) | **POST** /v1/orders |
+[**取消訂單**](#取消訂單) | **POST** /v1/orders/{number}/cancel |
+[**重新結帳**](#重新結帳) | **POST** /v1/orders/{number}/checkout |
+[**商品篩選**](#商品篩選) | **POST** /v1/products |
+[**創建退貨單**](#創建退貨單) | **POST** /v1/return_orders/{id} |
+[**計算預退金額與點數**](#計算預退金額與點數) | **POST** /v1/return_orders/pre_calculate/{id} |
+[**修改地址**](#修改地址) | **PUT** /v1/customer/addresses/{id} |
 
 # **刪除最愛**
 從所有會員收藏的商品內刪除特定一筆商品
@@ -205,8 +202,8 @@ No authorization required
 
 
 
-# **取得當前App版號**
-> 取得當前App版號
+# **當前App版號**
+> 當前App版號
 
 
 
@@ -220,9 +217,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.取得當前App版號
+  api_instance.當前App版號
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->取得當前App版號: #{e}"
+  puts "Exception when calling V1Api->當前App版號: #{e}"
 end
 ```
 
@@ -244,8 +241,8 @@ No authorization required
 
 
 
-# **取得購物車**
-> 取得購物車(opts)
+# **購物車**
+> 購物車(opts)
 
 
 
@@ -332,8 +329,8 @@ No authorization required
 
 
 
-# **get_v1_categories**
-> get_v1_categories(brand_id)
+# **大類列表**
+> 大類列表(brand_id)
 
 
 
@@ -679,8 +676,8 @@ No authorization required
 
 
 
-# **get_v1_categories_id**
-> get_v1_categories_id(id)
+# **特定大類**
+> 特定大類(id)
 
 
 
@@ -696,9 +693,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_categories_id(id)
+  api_instance.大類(id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_categories_id: #{e}"
+  puts "Exception when calling V1Api->大類: #{e}"
 end
 ```
 
@@ -723,8 +720,8 @@ No authorization required
 
 
 
-# **get_v1_collections**
-> get_v1_collections(brand_id)
+# **中類列表**
+> 中類列表(brand_id)
 
 
 
@@ -740,9 +737,9 @@ brand_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_collections(brand_id)
+  api_instance.中類列表(brand_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_collections: #{e}"
+  puts "Exception when calling V1Api->中類列表: #{e}"
 end
 ```
 
@@ -767,8 +764,8 @@ No authorization required
 
 
 
-# **get_v1_collections_id**
-> get_v1_collections_id(id)
+# **特定中類**
+> 特定中類(id)
 
 
 
@@ -784,9 +781,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_collections_id(id)
+  api_instance.特定中類(id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_collections_id: #{e}"
+  puts "Exception when calling V1Api->特定中類: #{e}"
 end
 ```
 
@@ -811,8 +808,8 @@ No authorization required
 
 
 
-# **get_v1_customer_addresses**
-> get_v1_customer_addresses
+# **地址簿**
+> 地址簿
 
 
 
@@ -826,9 +823,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.get_v1_customer_addresses
+  api_instance.地址簿
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customer_addresses: #{e}"
+  puts "Exception when calling V1Api->地址簿: #{e}"
 end
 ```
 
@@ -850,8 +847,8 @@ No authorization required
 
 
 
-# **get_v1_customer_addresses_id**
-> get_v1_customer_addresses_id(id)
+# **從地址簿中取得特定地址**
+> 從地址簿中取得特定地址(id)
 
 
 
@@ -867,9 +864,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_customer_addresses_id(id)
+  api_instance.從地址簿中取得特定地址(id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customer_addresses_id: #{e}"
+  puts "Exception when calling V1Api->從地址簿中取得特定地址: #{e}"
 end
 ```
 
@@ -894,8 +891,8 @@ No authorization required
 
 
 
-# **get_v1_customers_credit_cards**
-> get_v1_customers_credit_cards
+# **會員信用卡列表**
+> 會員信用卡列表
 
 
 
@@ -909,9 +906,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.get_v1_customers_credit_cards
+  api_instance.會員信用卡列表
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customers_credit_cards: #{e}"
+  puts "Exception when calling V1Api->會員信用卡列表: #{e}"
 end
 ```
 
@@ -933,8 +930,8 @@ No authorization required
 
 
 
-# **get_v1_customers_credit_cards_get_primary**
-> get_v1_customers_credit_cards_get_primary
+# **會員主信用卡**
+> 會員主信用卡
 
 
 
@@ -948,9 +945,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.get_v1_customers_credit_cards_get_primary
+  api_instance.會員主信用卡
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customers_credit_cards_get_primary: #{e}"
+  puts "Exception when calling V1Api->會員主信用卡: #{e}"
 end
 ```
 
@@ -972,8 +969,8 @@ No authorization required
 
 
 
-# **get_v1_customers_exist**
-> get_v1_customers_exist(phone)
+# **會員是否存在**
+> 會員是否存在(phone)
 
 
 
@@ -989,9 +986,9 @@ phone = 'phone_example' # String |
 
 
 begin
-  api_instance.get_v1_customers_exist(phone)
+  api_instance.會員是否存在(phone)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customers_exist: #{e}"
+  puts "Exception when calling V1Api->會員是否存在: #{e}"
 end
 ```
 
@@ -1016,8 +1013,8 @@ No authorization required
 
 
 
-# **get_v1_customers_me**
-> get_v1_customers_me
+# **會員基本資訊**
+> 會員基本資訊
 
 
 
@@ -1031,9 +1028,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.get_v1_customers_me
+  api_instance.會員基本資訊
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customers_me: #{e}"
+  puts "Exception when calling V1Api->會員基本資訊: #{e}"
 end
 ```
 
@@ -1055,8 +1052,8 @@ No authorization required
 
 
 
-# **get_v1_customers_point_history**
-> get_v1_customers_point_history
+# **會員點數紀錄**
+> 會員點數紀錄
 
 
 
@@ -1070,9 +1067,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.get_v1_customers_point_history
+  api_instance.會員點數紀錄
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customers_point_history: #{e}"
+  puts "Exception when calling V1Api->會員點數紀錄: #{e}"
 end
 ```
 
@@ -1094,8 +1091,8 @@ No authorization required
 
 
 
-# **get_v1_customers_pos_order_histories**
-> get_v1_customers_pos_order_histories
+# **會員訂單記錄**
+> 會員訂單記錄
 
 
 
@@ -1109,9 +1106,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.get_v1_customers_pos_order_histories
+  api_instance.會員訂單記錄
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customers_pos_order_histories: #{e}"
+  puts "Exception when calling V1Api->會員訂單記錄: #{e}"
 end
 ```
 
@@ -1133,8 +1130,8 @@ No authorization required
 
 
 
-# **get_v1_customers_store**
-> get_v1_customers_store(brand_id)
+# **會員業務店**
+> 會員業務店(brand_id)
 
 
 
@@ -1150,9 +1147,9 @@ brand_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_customers_store(brand_id)
+  api_instance.會員業務店(brand_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customers_store: #{e}"
+  puts "Exception when calling V1Api->會員業務店: #{e}"
 end
 ```
 
@@ -1177,8 +1174,8 @@ No authorization required
 
 
 
-# **get_v1_customers_vip_barcode**
-> get_v1_customers_vip_barcode
+# **會員Barcode**
+> 會員Barcode
 
 
 
@@ -1192,9 +1189,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.get_v1_customers_vip_barcode
+  api_instance.會員Barcode
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_customers_vip_barcode: #{e}"
+  puts "Exception when calling V1Api->會員Barcode: #{e}"
 end
 ```
 
@@ -1216,8 +1213,8 @@ No authorization required
 
 
 
-# **get_v1_event_pages**
-> get_v1_event_pages(brand_id)
+# **促銷頁列表**
+> 促銷頁列表(brand_id)
 
 
 
@@ -1233,9 +1230,9 @@ brand_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_event_pages(brand_id)
+  api_instance.促銷頁列表(brand_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_event_pages: #{e}"
+  puts "Exception when calling V1Api->促銷頁列表: #{e}"
 end
 ```
 
@@ -1260,8 +1257,8 @@ No authorization required
 
 
 
-# **get_v1_event_pages_event_page_id**
-> get_v1_event_pages_event_page_id(event_page_id)
+# **特定促銷頁**
+> 特定促銷頁(event_page_id)
 
 
 
@@ -1277,9 +1274,9 @@ event_page_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_event_pages_event_page_id(event_page_id)
+  api_instance.特定促銷頁(event_page_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_event_pages_event_page_id: #{e}"
+  puts "Exception when calling V1Api->特定促銷頁: #{e}"
 end
 ```
 
@@ -1304,8 +1301,8 @@ No authorization required
 
 
 
-# **get_v1_home_page**
-> get_v1_home_page(brand_id)
+# **首頁**
+> 首頁(brand_id)
 
 
 
@@ -1321,9 +1318,9 @@ brand_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_home_page(brand_id)
+  api_instance.首頁(brand_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_home_page: #{e}"
+  puts "Exception when calling V1Api->首頁: #{e}"
 end
 ```
 
@@ -1348,8 +1345,8 @@ No authorization required
 
 
 
-# **get_v1_information**
-> get_v1_information(brand_id, opts)
+# **消息列表**
+> 消息列表(brand_id, opts)
 
 
 
@@ -1368,9 +1365,9 @@ opts = {
 }
 
 begin
-  api_instance.get_v1_information(brand_id, opts)
+  api_instance.消息列表(brand_id, opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_information: #{e}"
+  puts "Exception when calling V1Api->消息列表: #{e}"
 end
 ```
 
@@ -1397,8 +1394,8 @@ No authorization required
 
 
 
-# **get_v1_information_information_id**
-> get_v1_information_information_id(information_id)
+# **特定消息**
+> 特定消息(information_id)
 
 
 
@@ -1414,9 +1411,9 @@ information_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_information_information_id(information_id)
+  api_instance.特定消息(information_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_information_information_id: #{e}"
+  puts "Exception when calling V1Api->特定消息: #{e}"
 end
 ```
 
@@ -1488,8 +1485,8 @@ No authorization required
 
 
 
-# **get_v1_maintain_orders_number**
-> get_v1_maintain_orders_number(number)
+# **維修保養單明細**
+> 維修保養單明細(number)
 
 
 
@@ -1505,9 +1502,9 @@ number = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_maintain_orders_number(number)
+  api_instance.維修保養單明細(number)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_maintain_orders_number: #{e}"
+  puts "Exception when calling V1Api->維修保養單明細: #{e}"
 end
 ```
 
@@ -1532,8 +1529,8 @@ No authorization required
 
 
 
-# **get_v1_notifications**
-> get_v1_notifications(type, opts)
+# **推播列表**
+> 推播列表(type, opts)
 
 
 
@@ -1552,9 +1549,9 @@ opts = {
 }
 
 begin
-  api_instance.get_v1_notifications(type, opts)
+  api_instance.推播列表(type, opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_notifications: #{e}"
+  puts "Exception when calling V1Api->推播列表: #{e}"
 end
 ```
 
@@ -1581,8 +1578,8 @@ No authorization required
 
 
 
-# **get_v1_notifications_id**
-> get_v1_notifications_id(id)
+# **推播明細**
+> 推播明細(id)
 
 
 
@@ -1598,9 +1595,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_notifications_id(id)
+  api_instance.推播明細(id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_notifications_id: #{e}"
+  puts "Exception when calling V1Api->推播明細: #{e}"
 end
 ```
 
@@ -1625,8 +1622,8 @@ No authorization required
 
 
 
-# **get_v1_notifications_third_party_ping**
-> get_v1_notifications_third_party_ping
+# **第三方推播**
+> 第三方推播
 
 
 
@@ -1640,9 +1637,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.get_v1_notifications_third_party_ping
+  api_instance.第三方推播
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_notifications_third_party_ping: #{e}"
+  puts "Exception when calling V1Api->第三方推播: #{e}"
 end
 ```
 
@@ -1664,8 +1661,8 @@ No authorization required
 
 
 
-# **get_v1_orders**
-> get_v1_orders(opts)
+# **訂單列表**
+> 訂單列表(opts)
 
 
 
@@ -1684,9 +1681,9 @@ opts = {
 }
 
 begin
-  api_instance.get_v1_orders(opts)
+  api_instance.訂單列表(opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_orders: #{e}"
+  puts "Exception when calling V1Api->訂單列表: #{e}"
 end
 ```
 
@@ -1713,12 +1710,12 @@ No authorization required
 
 
 
-# **get_v1_orders_number**
-> get_v1_orders_number(number)
+# **訂單明細**
+> 訂單明細(number)
 
 
 
-取得特定訂單
+特定訂單
 
 ### Example
 ```ruby
@@ -1730,9 +1727,9 @@ number = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_orders_number(number)
+  api_instance.訂單明細(number)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_orders_number: #{e}"
+  puts "Exception when calling V1Api->訂單明細: #{e}"
 end
 ```
 
@@ -2518,8 +2515,8 @@ No authorization required
 
 
 
-# **get_v1_products_query_stock**
-> get_v1_products_query_stock(variant_id)
+# **指定品項庫存**
+> 指定品項庫存(variant_id)
 
 
 
@@ -2535,9 +2532,9 @@ variant_id = 'variant_id_example' # String |
 
 
 begin
-  api_instance.get_v1_products_query_stock(variant_id)
+  api_instance.指定品項庫存(variant_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_products_query_stock: #{e}"
+  puts "Exception when calling V1Api->指定品項庫存: #{e}"
 end
 ```
 
@@ -2562,12 +2559,12 @@ No authorization required
 
 
 
-# **get_v1_return_orders_id**
-> get_v1_return_orders_id(id)
+# **退貨單明細**
+> 退貨單明細(id)
 
 
 
-取得退貨單
+退貨單
 
 ### Example
 ```ruby
@@ -2579,9 +2576,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_return_orders_id(id)
+  api_instance.退貨單明細(id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_return_orders_id: #{e}"
+  puts "Exception when calling V1Api->退貨單明細: #{e}"
 end
 ```
 
@@ -2606,8 +2603,8 @@ No authorization required
 
 
 
-# **get_v1_scrolling_texts**
-> get_v1_scrolling_texts(brand_id)
+# **跑馬燈**
+> 跑馬燈(brand_id)
 
 
 
@@ -2623,9 +2620,9 @@ brand_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_scrolling_texts(brand_id)
+  api_instance.跑馬燈(brand_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_scrolling_texts: #{e}"
+  puts "Exception when calling V1Api->跑馬燈: #{e}"
 end
 ```
 
@@ -2650,8 +2647,8 @@ No authorization required
 
 
 
-# **get_v1_search**
-> get_v1_search(keyword)
+# **取得搜尋內容**
+> 取得搜尋內容(keyword)
 
 
 
@@ -2667,9 +2664,9 @@ keyword = 'keyword_example' # String |
 
 
 begin
-  api_instance.get_v1_search(keyword)
+  api_instance.取得搜尋內容(keyword)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_search: #{e}"
+  puts "Exception when calling V1Api->取得搜尋內容: #{e}"
 end
 ```
 
@@ -2694,8 +2691,8 @@ No authorization required
 
 
 
-# **get_v1_series**
-> get_v1_series(brand_id)
+# **系列頁列表**
+> 系列頁列表(brand_id)
 
 
 
@@ -2711,9 +2708,9 @@ brand_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_series(brand_id)
+  api_instance.系列頁列表(brand_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_series: #{e}"
+  puts "Exception when calling V1Api->系列頁列表: #{e}"
 end
 ```
 
@@ -2738,8 +2735,8 @@ No authorization required
 
 
 
-# **get_v1_series_series_id**
-> get_v1_series_series_id(series_id)
+# **指定系列頁**
+> 指定系列頁(series_id)
 
 
 
@@ -2755,9 +2752,9 @@ series_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_series_series_id(series_id)
+  api_instance.指定系列頁(series_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_series_series_id: #{e}"
+  puts "Exception when calling V1Api->指定系列頁: #{e}"
 end
 ```
 
@@ -2782,8 +2779,8 @@ No authorization required
 
 
 
-# **get_v1_stores**
-> get_v1_stores(brand_id)
+# **店舖列表**
+> 店舖列表(brand_id)
 
 
 
@@ -2799,9 +2796,9 @@ brand_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_stores(brand_id)
+  api_instance.店舖列表(brand_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_stores: #{e}"
+  puts "Exception when calling V1Api->店舖列表: #{e}"
 end
 ```
 
@@ -2826,8 +2823,8 @@ No authorization required
 
 
 
-# **get_v1_sub_collections**
-> get_v1_sub_collections(brand_id)
+# **小類列表**
+> 小類列表(brand_id)
 
 
 
@@ -2843,9 +2840,9 @@ brand_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_sub_collections(brand_id)
+  api_instance.小類列表(brand_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_sub_collections: #{e}"
+  puts "Exception when calling V1Api->小類列表: #{e}"
 end
 ```
 
@@ -2870,8 +2867,8 @@ No authorization required
 
 
 
-# **get_v1_sub_collections_id**
-> get_v1_sub_collections_id(id)
+# **小類明細**
+> 小類明細(id)
 
 
 
@@ -2887,9 +2884,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_sub_collections_id(id)
+  api_instance.小類明細(id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_sub_collections_id: #{e}"
+  puts "Exception when calling V1Api->小類明細: #{e}"
 end
 ```
 
@@ -2914,12 +2911,12 @@ No authorization required
 
 
 
-# **get_v1_sub_orders_id**
-> get_v1_sub_orders_id(id)
+# **特定子訂單**
+> 特定子訂單(id)
 
 
 
-取得退貨子訂單
+退貨子訂單
 
 ### Example
 ```ruby
@@ -2931,9 +2928,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_sub_orders_id(id)
+  api_instance.特定子訂單(id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_sub_orders_id: #{e}"
+  puts "Exception when calling V1Api->特定子訂單: #{e}"
 end
 ```
 
@@ -2958,8 +2955,8 @@ No authorization required
 
 
 
-# **get_v1_target_price_discounts**
-> get_v1_target_price_discounts
+# **當前滿額贈**
+> 當前滿額贈
 
 
 
@@ -2973,9 +2970,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.get_v1_target_price_discounts
+  api_instance.當前滿額贈
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_target_price_discounts: #{e}"
+  puts "Exception when calling V1Api->當前滿額贈: #{e}"
 end
 ```
 
@@ -2997,8 +2994,8 @@ No authorization required
 
 
 
-# **get_v1_top_banner**
-> get_v1_top_banner(brand_id)
+# **置頂Banner**
+> 置頂Banner(brand_id)
 
 
 
@@ -3014,9 +3011,9 @@ brand_id = 56 # Integer |
 
 
 begin
-  api_instance.get_v1_top_banner(brand_id)
+  api_instance.置頂Banner(brand_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->get_v1_top_banner: #{e}"
+  puts "Exception when calling V1Api->置頂Banner: #{e}"
 end
 ```
 
@@ -3041,8 +3038,8 @@ No authorization required
 
 
 
-# **post_v1_carts**
-> post_v1_carts(body)
+# **加入購物車**
+> 加入購物車(body)
 
 
 
@@ -3058,9 +3055,9 @@ body = SwaggerClient::V1CartsBody.new # V1CartsBody |
 
 
 begin
-  api_instance.post_v1_carts(body)
+  api_instance.加入購物車(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_carts: #{e}"
+  puts "Exception when calling V1Api->加入購物車: #{e}"
 end
 ```
 
@@ -3085,8 +3082,8 @@ No authorization required
 
 
 
-# **post_v1_carts_add_favorites**
-> post_v1_carts_add_favorites(body)
+# **加入最愛**
+> 加入最愛(body)
 
 
 
@@ -3102,9 +3099,9 @@ body = SwaggerClient::CartsAddFavoritesBody.new # CartsAddFavoritesBody |
 
 
 begin
-  api_instance.post_v1_carts_add_favorites(body)
+  api_instance.加入最愛(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_carts_add_favorites: #{e}"
+  puts "Exception when calling V1Api->加入最愛: #{e}"
 end
 ```
 
@@ -3129,8 +3126,8 @@ No authorization required
 
 
 
-# **post_v1_customer_addresses**
-> post_v1_customer_addresses(body)
+# **新增地址簿**
+> 新增地址簿(body)
 
 
 
@@ -3146,9 +3143,9 @@ body = SwaggerClient::CustomerAddressesBody.new # CustomerAddressesBody |
 
 
 begin
-  api_instance.post_v1_customer_addresses(body)
+  api_instance.新增地址簿(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customer_addresses: #{e}"
+  puts "Exception when calling V1Api->新增地址簿: #{e}"
 end
 ```
 
@@ -3173,8 +3170,8 @@ No authorization required
 
 
 
-# **post_v1_customers**
-> post_v1_customers(body)
+# **創建顧客**
+> 創建顧客(body)
 
 
 
@@ -3190,9 +3187,9 @@ body = SwaggerClient::V1CustomersBody.new # V1CustomersBody |
 
 
 begin
-  api_instance.post_v1_customers(body)
+  api_instance.創建顧客(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers: #{e}"
+  puts "Exception when calling V1Api->創建顧客: #{e}"
 end
 ```
 
@@ -3217,8 +3214,8 @@ No authorization required
 
 
 
-# **post_v1_customers_credit_cards**
-> post_v1_customers_credit_cards(body)
+# **新增信用卡**
+> 新增信用卡(body)
 
 
 
@@ -3234,9 +3231,9 @@ body = SwaggerClient::CustomersCreditCardsBody.new # CustomersCreditCardsBody |
 
 
 begin
-  api_instance.post_v1_customers_credit_cards(body)
+  api_instance.新增信用卡(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_credit_cards: #{e}"
+  puts "Exception when calling V1Api->新增信用卡: #{e}"
 end
 ```
 
@@ -3261,8 +3258,8 @@ No authorization required
 
 
 
-# **post_v1_customers_credit_cards_set_primary**
-> post_v1_customers_credit_cards_set_primary(body)
+# **設定主信用卡**
+> 設定主信用卡(body)
 
 
 
@@ -3278,9 +3275,9 @@ body = SwaggerClient::CreditCardsSetPrimaryBody.new # CreditCardsSetPrimaryBody 
 
 
 begin
-  api_instance.post_v1_customers_credit_cards_set_primary(body)
+  api_instance.設定主信用卡(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_credit_cards_set_primary: #{e}"
+  puts "Exception when calling V1Api->設定主信用卡: #{e}"
 end
 ```
 
@@ -3305,8 +3302,8 @@ No authorization required
 
 
 
-# **post_v1_customers_login_with_otp**
-> post_v1_customers_login_with_otp(body)
+# **發送OTP到手機**
+> 發送OTP到手機(body)
 
 
 
@@ -3322,9 +3319,9 @@ body = SwaggerClient::CustomersLoginWithOtpBody.new # CustomersLoginWithOtpBody 
 
 
 begin
-  api_instance.post_v1_customers_login_with_otp(body)
+  api_instance.發送OTP到手機(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_login_with_otp: #{e}"
+  puts "Exception when calling V1Api->發送OTP到手機: #{e}"
 end
 ```
 
@@ -3349,8 +3346,8 @@ No authorization required
 
 
 
-# **post_v1_customers_otp**
-> post_v1_customers_otp(body)
+# **發送OTP**
+> 發送OTP(body)
 
 
 
@@ -3366,9 +3363,9 @@ body = SwaggerClient::CustomersOtpBody.new # CustomersOtpBody |
 
 
 begin
-  api_instance.post_v1_customers_otp(body)
+  api_instance.發送OTP(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_otp: #{e}"
+  puts "Exception when calling V1Api->發送OTP: #{e}"
 end
 ```
 
@@ -3393,8 +3390,8 @@ No authorization required
 
 
 
-# **post_v1_customers_receive_notifications**
-> post_v1_customers_receive_notifications(body)
+# **會員接收推播設定**
+> 會員接收推播設定(body)
 
 
 
@@ -3410,9 +3407,9 @@ body = SwaggerClient::CustomersReceiveNotificationsBody.new # CustomersReceiveNo
 
 
 begin
-  api_instance.post_v1_customers_receive_notifications(body)
+  api_instance.會員接收推播設定(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_receive_notifications: #{e}"
+  puts "Exception when calling V1Api->會員接收推播設定: #{e}"
 end
 ```
 
@@ -3437,8 +3434,8 @@ No authorization required
 
 
 
-# **post_v1_customers_reset_password**
-> post_v1_customers_reset_password(body)
+# **會員重設密碼**
+> 會員重設密碼(body)
 
 
 
@@ -3454,9 +3451,9 @@ body = SwaggerClient::CustomersResetPasswordBody.new # CustomersResetPasswordBod
 
 
 begin
-  api_instance.post_v1_customers_reset_password(body)
+  api_instance.會員重設密碼(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_reset_password: #{e}"
+  puts "Exception when calling V1Api->會員重設密碼: #{e}"
 end
 ```
 
@@ -3481,8 +3478,8 @@ No authorization required
 
 
 
-# **post_v1_customers_set_default_store**
-> post_v1_customers_set_default_store(body)
+# **會員設定預設店**
+> 會員設定預設店(body)
 
 
 
@@ -3498,9 +3495,9 @@ body = SwaggerClient::CustomersSetDefaultStoreBody.new # CustomersSetDefaultStor
 
 
 begin
-  api_instance.post_v1_customers_set_default_store(body)
+  api_instance.會員設定預設店(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_set_default_store: #{e}"
+  puts "Exception when calling V1Api->會員設定預設店: #{e}"
 end
 ```
 
@@ -3525,8 +3522,8 @@ No authorization required
 
 
 
-# **post_v1_customers_sso**
-> post_v1_customers_sso(body)
+# **取得sso憑證**
+> 取得sso憑證(body)
 
 
 
@@ -3542,9 +3539,9 @@ body = SwaggerClient::CustomersSsoBody.new # CustomersSsoBody |
 
 
 begin
-  api_instance.post_v1_customers_sso(body)
+  api_instance.取得sso憑證(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_sso: #{e}"
+  puts "Exception when calling V1Api->取得sso憑證: #{e}"
 end
 ```
 
@@ -3569,8 +3566,8 @@ No authorization required
 
 
 
-# **post_v1_customers_sso_bind**
-> post_v1_customers_sso_bind(body)
+# **社群媒體登入**
+> 社群媒體登入(body)
 
 
 
@@ -3586,9 +3583,9 @@ body = SwaggerClient::CustomersSsoBindBody.new # CustomersSsoBindBody |
 
 
 begin
-  api_instance.post_v1_customers_sso_bind(body)
+  api_instance.社群媒體登入(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_sso_bind: #{e}"
+  puts "Exception when calling V1Api->社群媒體登入: #{e}"
 end
 ```
 
@@ -3613,8 +3610,8 @@ No authorization required
 
 
 
-# **post_v1_customers_sso_unbind**
-> post_v1_customers_sso_unbind(body)
+# **社群媒體登出**
+> 社群媒體登出(body)
 
 
 
@@ -3630,9 +3627,9 @@ body = SwaggerClient::CustomersSsoUnbindBody.new # CustomersSsoUnbindBody |
 
 
 begin
-  api_instance.post_v1_customers_sso_unbind(body)
+  api_instance.社群媒體登出(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_sso_unbind: #{e}"
+  puts "Exception when calling V1Api->社群媒體登出: #{e}"
 end
 ```
 
@@ -3657,8 +3654,8 @@ No authorization required
 
 
 
-# **post_v1_customers_sync_pos**
-> post_v1_customers_sync_pos
+# **會員同步pos**
+> 會員同步pos
 
 
 
@@ -3672,9 +3669,9 @@ require 'swagger_client'
 api_instance = SwaggerClient::V1Api.new
 
 begin
-  api_instance.post_v1_customers_sync_pos
+  api_instance.會員同步pos
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_sync_pos: #{e}"
+  puts "Exception when calling V1Api->會員同步pos: #{e}"
 end
 ```
 
@@ -3696,8 +3693,8 @@ No authorization required
 
 
 
-# **post_v1_customers_update**
-> post_v1_customers_update(opts)
+# **會員資訊更新**
+> 會員資訊更新(opts)
 
 
 
@@ -3714,9 +3711,9 @@ opts = {
 }
 
 begin
-  api_instance.post_v1_customers_update(opts)
+  api_instance.會員資訊更新(opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_update: #{e}"
+  puts "Exception when calling V1Api->會員資訊更新: #{e}"
 end
 ```
 
@@ -3741,8 +3738,8 @@ No authorization required
 
 
 
-# **post_v1_customers_update_password**
-> post_v1_customers_update_password(body)
+# **會員重設密碼**
+> 會員重設密碼(body)
 
 
 
@@ -3758,9 +3755,9 @@ body = SwaggerClient::CustomersUpdatePasswordBody.new # CustomersUpdatePasswordB
 
 
 begin
-  api_instance.post_v1_customers_update_password(body)
+  api_instance.會員重設密碼(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_update_password: #{e}"
+  puts "Exception when calling V1Api->會員重設密碼: #{e}"
 end
 ```
 
@@ -3785,8 +3782,8 @@ No authorization required
 
 
 
-# **post_v1_customers_validate_otp**
-> post_v1_customers_validate_otp(body)
+# **驗證OTP**
+> 驗證OTP(body)
 
 
 
@@ -3802,9 +3799,9 @@ body = SwaggerClient::CustomersValidateOtpBody.new # CustomersValidateOtpBody |
 
 
 begin
-  api_instance.post_v1_customers_validate_otp(body)
+  api_instance.驗證OTP(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_validate_otp: #{e}"
+  puts "Exception when calling V1Api->驗證OTP: #{e}"
 end
 ```
 
@@ -3829,8 +3826,8 @@ No authorization required
 
 
 
-# **post_v1_customers_validate_password**
-> post_v1_customers_validate_password(body)
+# **驗證密碼**
+> 驗證密碼(body)
 
 
 
@@ -3846,9 +3843,9 @@ body = SwaggerClient::CustomersValidatePasswordBody.new # CustomersValidatePassw
 
 
 begin
-  api_instance.post_v1_customers_validate_password(body)
+  api_instance.驗證密碼(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_customers_validate_password: #{e}"
+  puts "Exception when calling V1Api->驗證密碼: #{e}"
 end
 ```
 
@@ -3873,8 +3870,8 @@ No authorization required
 
 
 
-# **post_v1_maintain_orders**
-> post_v1_maintain_orders(body)
+# **創建維修單**
+> 創建維修單(body)
 
 
 
@@ -3890,9 +3887,9 @@ body = SwaggerClient::V1MaintainOrdersBody.new # V1MaintainOrdersBody |
 
 
 begin
-  api_instance.post_v1_maintain_orders(body)
+  api_instance.創建維修單(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_maintain_orders: #{e}"
+  puts "Exception when calling V1Api->創建維修單: #{e}"
 end
 ```
 
@@ -3917,8 +3914,8 @@ No authorization required
 
 
 
-# **post_v1_maintain_orders_number_cancel**
-> post_v1_maintain_orders_number_cancel(number)
+# **取消維修單**
+> 取消維修單(number)
 
 
 
@@ -3934,9 +3931,9 @@ number = 56 # Integer |
 
 
 begin
-  api_instance.post_v1_maintain_orders_number_cancel(number)
+  api_instance.取消維修單(number)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_maintain_orders_number_cancel: #{e}"
+  puts "Exception when calling V1Api->取消維修單: #{e}"
 end
 ```
 
@@ -3961,8 +3958,8 @@ No authorization required
 
 
 
-# **post_v1_maintain_orders_number_quotation**
-> post_v1_maintain_orders_number_quotation(bodynumber)
+# **同意報價**
+> 同意報價(bodynumber)
 
 
 
@@ -3979,9 +3976,9 @@ number = 56 # Integer |
 
 
 begin
-  api_instance.post_v1_maintain_orders_number_quotation(bodynumber)
+  api_instance.同意報價(bodynumber)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_maintain_orders_number_quotation: #{e}"
+  puts "Exception when calling V1Api->同意報價: #{e}"
 end
 ```
 
@@ -4007,8 +4004,8 @@ No authorization required
 
 
 
-# **post_v1_notification_bind**
-> post_v1_notification_bind(body)
+# **綁定推播**
+> 綁定推播(body)
 
 
 
@@ -4024,9 +4021,9 @@ body = SwaggerClient::NotificationBindBody.new # NotificationBindBody |
 
 
 begin
-  api_instance.post_v1_notification_bind(body)
+  api_instance.綁定推播(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_notification_bind: #{e}"
+  puts "Exception when calling V1Api->綁定推播: #{e}"
 end
 ```
 
@@ -4051,8 +4048,8 @@ No authorization required
 
 
 
-# **post_v1_notification_unbind**
-> post_v1_notification_unbind(opts)
+# **解綁推播**
+> 解綁推播(opts)
 
 
 
@@ -4069,9 +4066,9 @@ opts = {
 }
 
 begin
-  api_instance.post_v1_notification_unbind(opts)
+  api_instance.解綁推播(opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_notification_unbind: #{e}"
+  puts "Exception when calling V1Api->解綁推播: #{e}"
 end
 ```
 
@@ -4096,8 +4093,8 @@ No authorization required
 
 
 
-# **post_v1_notifications_read**
-> post_v1_notifications_read(body)
+# **已讀推播**
+> 已讀推播(body)
 
 
 
@@ -4113,9 +4110,9 @@ body = SwaggerClient::NotificationsReadBody.new # NotificationsReadBody |
 
 
 begin
-  api_instance.post_v1_notifications_read(body)
+  api_instance.已讀推播(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_notifications_read: #{e}"
+  puts "Exception when calling V1Api->已讀推播: #{e}"
 end
 ```
 
@@ -4140,8 +4137,8 @@ No authorization required
 
 
 
-# **post_v1_notifications_read_all**
-> post_v1_notifications_read_all(body)
+# **推播已讀全部**
+> 推播已讀全部(body)
 
 
 
@@ -4157,9 +4154,9 @@ body = SwaggerClient::NotificationsReadAllBody.new # NotificationsReadAllBody |
 
 
 begin
-  api_instance.post_v1_notifications_read_all(body)
+  api_instance.推播已讀全部(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_notifications_read_all: #{e}"
+  puts "Exception when calling V1Api->推播已讀全部: #{e}"
 end
 ```
 
@@ -4183,141 +4180,8 @@ No authorization required
  - **Accept**: Not defined
 
 
-
-# **post_v1_notifications_third_party**
-> post_v1_notifications_third_party(body)
-
-
-
-第三方推播
-
-### Example
-```ruby
-# load the gem
-require 'swagger_client'
-
-api_instance = SwaggerClient::V1Api.new
-body = SwaggerClient::NotificationsThirdPartyBody.new # NotificationsThirdPartyBody | 
-
-
-begin
-  api_instance.post_v1_notifications_third_party(body)
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_notifications_third_party: #{e}"
-end
-```
-
-### 請求參數說明
-
-參數 | 型別 | 說明  | 範例 
-------------- | ------------- | ------------- | -------------
- **body** | [**NotificationsThirdPartyBody**](NotificationsThirdPartyBody.md)|  |
-
-### 回傳參數說明
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-
-# **post_v1_notifications_third_party_customer_locale**
-> post_v1_notifications_third_party_customer_locale(body)
-
-
-
-[Deprecated] 取得語系
-
-### Example
-```ruby
-# load the gem
-require 'swagger_client'
-
-api_instance = SwaggerClient::V1Api.new
-body = SwaggerClient::ThirdPartyCustomerLocaleBody.new # ThirdPartyCustomerLocaleBody | 
-
-
-begin
-  api_instance.post_v1_notifications_third_party_customer_locale(body)
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_notifications_third_party_customer_locale: #{e}"
-end
-```
-
-### 請求參數說明
-
-參數 | 型別 | 說明  | 範例 
-------------- | ------------- | ------------- | -------------
- **body** | [**ThirdPartyCustomerLocaleBody**](ThirdPartyCustomerLocaleBody.md)|  |
-
-### 回傳參數說明
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-
-# **post_v1_notifications_third_party_demo**
-> post_v1_notifications_third_party_demo(body)
-
-
-
-推播 Demo
-
-### Example
-```ruby
-# load the gem
-require 'swagger_client'
-
-api_instance = SwaggerClient::V1Api.new
-body = SwaggerClient::ThirdPartyDemoBody.new # ThirdPartyDemoBody | 
-
-
-begin
-  api_instance.post_v1_notifications_third_party_demo(body)
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_notifications_third_party_demo: #{e}"
-end
-```
-
-### 請求參數說明
-
-參數 | 型別 | 說明  | 範例 
-------------- | ------------- | ------------- | -------------
- **body** | [**ThirdPartyDemoBody**](ThirdPartyDemoBody.md)|  |
-
-### 回傳參數說明
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-
-# **post_v1_orders**
-> post_v1_orders(body)
+# **創建訂單**
+> 創建訂單(body)
 
 
 
@@ -4333,9 +4197,9 @@ body = SwaggerClient::V1OrdersBody.new # V1OrdersBody |
 
 
 begin
-  api_instance.post_v1_orders(body)
+  api_instance.創建訂單(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_orders: #{e}"
+  puts "Exception when calling V1Api->創建訂單: #{e}"
 end
 ```
 
@@ -4360,8 +4224,8 @@ No authorization required
 
 
 
-# **post_v1_orders_number_cancel**
-> post_v1_orders_number_cancel(number)
+# **取消訂單**
+> 取消訂單(number)
 
 
 
@@ -4377,9 +4241,9 @@ number = 56 # Integer |
 
 
 begin
-  api_instance.post_v1_orders_number_cancel(number)
+  api_instance.取消訂單(number)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_orders_number_cancel: #{e}"
+  puts "Exception when calling V1Api->取消訂單: #{e}"
 end
 ```
 
@@ -4404,12 +4268,12 @@ No authorization required
 
 
 
-# **post_v1_orders_number_checkout**
-> post_v1_orders_number_checkout(bodynumber)
+# **重新結帳**
+> 重新結帳(bodynumber)
 
 
 
-結帳失敗後，做重新結帳的動作
+重新結帳失敗後，做重新重新結帳的動作
 
 ### Example
 ```ruby
@@ -4422,9 +4286,9 @@ number = 56 # Integer |
 
 
 begin
-  api_instance.post_v1_orders_number_checkout(bodynumber)
+  api_instance.重新結帳(bodynumber)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_orders_number_checkout: #{e}"
+  puts "Exception when calling V1Api->重新結帳: #{e}"
 end
 ```
 
@@ -4450,8 +4314,8 @@ No authorization required
 
 
 
-# **post_v1_products**
-> post_v1_products(body)
+# **商品篩選**
+> 商品篩選(body)
 
 
 
@@ -4467,9 +4331,9 @@ body = SwaggerClient::V1ProductsBody.new # V1ProductsBody |
 
 
 begin
-  api_instance.post_v1_products(body)
+  api_instance.商品篩選(body)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_products: #{e}"
+  puts "Exception when calling V1Api->商品篩選: #{e}"
 end
 ```
 
@@ -4494,8 +4358,8 @@ No authorization required
 
 
 
-# **post_v1_return_orders_id**
-> post_v1_return_orders_id(bodyid)
+# **創建退貨單**
+> 創建退貨單(bodyid)
 
 
 
@@ -4512,9 +4376,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.post_v1_return_orders_id(bodyid)
+  api_instance.創建退貨單(bodyid)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_return_orders_id: #{e}"
+  puts "Exception when calling V1Api->創建退貨單: #{e}"
 end
 ```
 
@@ -4540,12 +4404,12 @@ No authorization required
 
 
 
-# **post_v1_return_orders_pre_calculate_id**
-> post_v1_return_orders_pre_calculate_id(bodyid)
+# **計算預退金額與點數**
+> 計算預退金額與點數(bodyid)
 
 
 
-取得返還金額、購物金
+返還金額、購物金
 
 ### Example
 ```ruby
@@ -4558,9 +4422,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.post_v1_return_orders_pre_calculate_id(bodyid)
+  api_instance.計算預退金額與點數(bodyid)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->post_v1_return_orders_pre_calculate_id: #{e}"
+  puts "Exception when calling V1Api->計算預退金額與點數: #{e}"
 end
 ```
 
@@ -4586,8 +4450,8 @@ No authorization required
 
 
 
-# **put_v1_customer_addresses_id**
-> put_v1_customer_addresses_id(bodyid)
+# **修改地址**
+> 修改地址(bodyid)
 
 
 
@@ -4604,9 +4468,9 @@ id = 56 # Integer |
 
 
 begin
-  api_instance.put_v1_customer_addresses_id(bodyid)
+  api_instance.修改地址(bodyid)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling V1Api->put_v1_customer_addresses_id: #{e}"
+  puts "Exception when calling V1Api->修改地址: #{e}"
 end
 ```
 
