@@ -62,7 +62,7 @@
 | [**社群媒體登出**](#社群媒體登出)                     | **POST** /v1/customers/sso_unbind               |                                        | Y        |
 | [**會員同步 pos**](#會員同步pos)                      | **POST** /v1/customers/sync_pos                 |                                        | Y        |
 | [**會員資訊更新**](#會員資訊更新)                     | **POST** /v1/customers/update                   |                                        | Y        |
-| [**會員重設密碼**](#會員重設密碼)                     | **POST** /v1/customers/update_password          |                                        | Y        |
+| [**會員更新密碼**](#會員更新密碼)                     | **POST** /v1/customers/update_password          |                                        | Y        |
 | [**驗證 OTP**](#驗證OTP)                              | **POST** /v1/customers/validate_otp             | 驗證為數 6 碼的驗證碼                  | Y        |
 | [**驗證密碼**](#驗證密碼)                             | **POST** /v1/customers/validate_password        | 驗證密碼是否正確                       | Y        |
 | [**創建維修單**](#創建維修單)                         | **POST** /v1/maintain_orders                    |                                        | Y        |
@@ -1599,9 +1599,13 @@ Header
 
 Parameters
 
-| 參數     | 型別                              | 說明 | 範例 |
-| -------- | --------------------------------- | ---- | ---- |
-| **body** | [**V1CartsBody**](V1CartsBody.md) |      |      |
+| 參數                  | 型別                     | 說明 | 範例       |
+| --------------------- | ------------------------ | ---- | ---------- |
+| **token**             | **String**               |      | [optional] |
+| **use_birth_gift**    | **Integer**              |      | [optional] |
+| **use_rebate_points** | **Integer**              |      | [optional] |
+| **items_variant_id**  | **Array&lt;String&gt;**  |      |
+| **items_quantity**    | **Array&lt;Integer&gt;** |      |
 
 - 請求參數範例
 
@@ -1634,9 +1638,9 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                  | 說明 | 範例 |
-| -------- | ----------------------------------------------------- | ---- | ---- |
-| **body** | [**CartsAddFavoritesBody**](CartsAddFavoritesBody.md) |      |      |
+| 參數           | 型別        | 說明 | 範例 |
+| -------------- | ----------- | ---- | ---- |
+| **variant_id** | **Integer** |      |
 
 - 請求參數範例
 
@@ -1669,9 +1673,18 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                  | 說明 | 範例 |
-| -------- | ----------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomerAddressesBody**](CustomerAddressesBody.md) |      |      |
+| 參數               | 型別        | 說明 | 範例       |
+| ------------------ | ----------- | ---- | ---------- |
+| **receiver_name**  | **String**  |      |
+| **receiver_phone** | **String**  |      |
+| **city**           | **String**  |      | [optional] |
+| **district**       | **String**  |      | [optional] |
+| **detail**         | **String**  |      | [optional] |
+| **address_type**   | **String**  |      | [optional] |
+| **store_id**       | **String**  |      | [optional] |
+| **store_name**     | **String**  |      | [optional] |
+| **store_type**     | **String**  |      | [optional] |
+| **default**        | **BOOLEAN** |      | [optional] |
 
 - 請求參數範例
 
@@ -1704,9 +1717,16 @@ Header
 
 Parameters
 
-| 參數     | 型別                                      | 說明 | 範例 |
-| -------- | ----------------------------------------- | ---- | ---- |
-| **body** | [**V1CustomersBody**](V1CustomersBody.md) |      |      |
+| 參數          | 型別       | 說明 | 範例       |
+| ------------- | ---------- | ---- | ---------- |
+| **name**      | **String** |      |
+| **phone**     | **String** |      |
+| **password**  | **String** |      |
+| **email**     | **String** |      |
+| **birthdate** | **String** |      |
+| **sex**       | **String** |      | [optional] |
+| **locale**    | **String** |      | [optional] |
+| **source**    | **String** |      | [optional] |
 
 - 請求參數範例
 
@@ -1739,9 +1759,9 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                        | 說明 | 範例 |
-| -------- | ----------------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersCreditCardsBody**](CustomersCreditCardsBody.md) |      |      |
+| 參數                | 型別       | 說明 | 範例 |
+| ------------------- | ---------- | ---- | ---- |
+| **client_back_url** | **String** |      |
 
 - 請求參數範例
 
@@ -1774,9 +1794,9 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                          | 說明 | 範例 |
-| -------- | ------------------------------------------------------------- | ---- | ---- |
-| **body** | [**CreditCardsSetPrimaryBody**](CreditCardsSetPrimaryBody.md) |      |      |
+| 參數        | 型別       | 說明 | 範例 |
+| ----------- | ---------- | ---- | ---- |
+| **card_id** | **String** |      |
 
 - 請求參數範例
 
@@ -1809,9 +1829,10 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                          | 說明 | 範例 |
-| -------- | ------------------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersLoginWithOtpBody**](CustomersLoginWithOtpBody.md) |      |      |
+| 參數      | 型別       | 說明 | 範例 |
+| --------- | ---------- | ---- | ---- |
+| **phone** | **String** |      |
+| **otp**   | **String** |      |
 
 - 請求參數範例
 
@@ -1844,9 +1865,9 @@ Header
 
 Parameters
 
-| 參數     | 型別                                        | 說明 | 範例 |
-| -------- | ------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersOtpBody**](CustomersOtpBody.md) |      |      |
+| 參數      | 型別       | 說明 | 範例 |
+| --------- | ---------- | ---- | ---- |
+| **phone** | **String** |      |
 
 - 請求參數範例
 
@@ -1879,9 +1900,11 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                                          | 說明 | 範例 |
-| -------- | ----------------------------------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersReceiveNotificationsBody**](CustomersReceiveNotificationsBody.md) |      |      |
+| 參數                  | 型別        | 說明 | 範例       |
+| --------------------- | ----------- | ---- | ---------- |
+| **received**          | **BOOLEAN** |      |
+| **receive_type**      | **String**  |      |
+| **notification_type** | **String**  |      | [optional] |
 
 - 請求參數範例
 
@@ -1914,9 +1937,11 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                            | 說明 | 範例 |
-| -------- | --------------------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersResetPasswordBody**](CustomersResetPasswordBody.md) |      |      |
+| 參數             | 型別       | 說明 | 範例 |
+| ---------------- | ---------- | ---- | ---- |
+| **phone**        | **String** |      |
+| **new_password** | **String** |      |
+| **otp**          | **String** |      |
 
 - 請求參數範例
 
@@ -1949,9 +1974,10 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                                | 說明 | 範例 |
-| -------- | ------------------------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersSetDefaultStoreBody**](CustomersSetDefaultStoreBody.md) |      |      |
+| 參數         | 型別        | 說明 | 範例 |
+| ------------ | ----------- | ---- | ---- |
+| **brand_id** | **Integer** |      |
+| **store_id** | **Integer** |      |
 
 - 請求參數範例
 
@@ -1984,9 +2010,10 @@ Header
 
 Parameters
 
-| 參數     | 型別                                        | 說明 | 範例 |
-| -------- | ------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersSsoBody**](CustomersSsoBody.md) |      |      |
+| 參數         | 型別       | 說明 | 範例       |
+| ------------ | ---------- | ---- | ---------- |
+| **provider** | **String** |      | [optional] |
+| **token**    | **String** |      |
 
 - 請求參數範例
 
@@ -2019,9 +2046,10 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                | 說明 | 範例 |
-| -------- | --------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersSsoBindBody**](CustomersSsoBindBody.md) |      |      |
+| 參數         | 型別       | 說明 | 範例 |
+| ------------ | ---------- | ---- | ---- |
+| **provider** | **String** |      |
+| **token**    | **String** |      |
 
 - 請求參數範例
 
@@ -2054,9 +2082,9 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                    | 說明 | 範例 |
-| -------- | ------------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersSsoUnbindBody**](CustomersSsoUnbindBody.md) |      |      |
+| 參數         | 型別       | 說明 | 範例 |
+| ------------ | ---------- | ---- | ---- |
+| **provider** | **String** |      |
 
 - 請求參數範例
 
@@ -2098,6 +2126,47 @@ https://uatecapi.tungrp.com/v1/products/697
 - 回應參數說明
 - 回傳參數範例
 
+# **會員資訊更新**
+
+- 應用場景
+  - 從所有會員收藏的商品內刪除特定一筆商品
+- 介接方式
+
+  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
+  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+
+- 請求參數說明
+  - Content Type ：application/x-www-form-urlencoded
+  - Accept：application/json
+  - HTTP Method ：GET
+
+Header
+
+| Key           | Value        | 範例                                        | 說明     |
+| ------------- | ------------ | ------------------------------------------- | -------- |
+| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+
+Parameters
+
+| 參數          | 型別       | 說明 | 範例       |
+| ------------- | ---------- | ---- | ---------- |
+| **name**      | **String** |      | [optional] |
+| **phone**     | **String** |      | [optional] |
+| **password**  | **String** |      | [optional] |
+| **email**     | **String** |      | [optional] |
+| **birthdate** | **String** |      | [optional] |
+| **sex**       | **String** |      | [optional] |
+| **locale**    | **String** |      | [optional] |
+
+請求參數範例
+
+```
+https://uatecapi.tungrp.com/v1/products/697
+```
+
+- 回應參數說明
+- 回傳參數範例
+
 # **會員重設密碼**
 
 - 應用場景
@@ -2120,9 +2189,11 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                              | 說明 | 範例 |
-| -------- | ----------------------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersUpdatePasswordBody**](CustomersUpdatePasswordBody.md) |      |      |
+| 參數                          | 型別       | 說明 | 範例 |
+| ----------------------------- | ---------- | ---- | ---- |
+| **old_password**              | **String** |      |
+| **new_password**              | **String** |      |
+| **new_password_confirmation** | **String** |      |
 
 請求參數範例
 
@@ -2155,9 +2226,10 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                        | 說明 | 範例 |
-| -------- | ----------------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersValidateOtpBody**](CustomersValidateOtpBody.md) |      |      |
+| 參數      | 型別       | 說明 | 範例 |
+| --------- | ---------- | ---- | ---- |
+| **phone** | **String** |      |
+| **otp**   | **String** |      |
 
 - 請求參數範例
 
@@ -2190,9 +2262,9 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                                  | 說明 | 範例 |
-| -------- | --------------------------------------------------------------------- | ---- | ---- |
-| **body** | [**CustomersValidatePasswordBody**](CustomersValidatePasswordBody.md) |      |      |
+| 參數         | 型別       | 說明 | 範例 |
+| ------------ | ---------- | ---- | ---- |
+| **password** | **String** |      |
 
 - 請求參數範例
 
@@ -2225,9 +2297,15 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                | 說明 | 範例 |
-| -------- | --------------------------------------------------- | ---- | ---- |
-| **body** | [**V1MaintainOrdersBody**](V1MaintainOrdersBody.md) |      |      |
+| 參數               | 型別                    | 說明     | 範例 |
+| ------------------ | ----------------------- | -------- | ---- |
+| **receiver_name**  | **String**              | 姓名     |
+| **receiver_phone** | **String**              | 電話     |
+| **brand_id**       | **Integer**             | 品牌     |
+| **item**           | **String**              | 品項     |
+| **product_no**     | **String**              | 商品品號 |
+| **services**       | **Array&lt;String&gt;** | 服務項目 |
+| **store_id**       | **Integer**             | 指定門市 |
 
 - 請求參數範例
 
@@ -2295,10 +2373,10 @@ Header
 
 Parameters
 
-| 參數       | 型別                                              | 說明 | 範例 |
-| ---------- | ------------------------------------------------- | ---- | ---- |
-| **body**   | [**NumberQuotationBody**](NumberQuotationBody.md) |      |      |
-| **number** | **Integer**                                       |      |      |
+| 參數       | 型別        | 說明 | 範例 |
+| ---------- | ----------- | ---- | ---- |
+| **action** | **String**  | 動作 |
+| **number** | **Integer** |      |      |
 
 - 請求參數範例
 
@@ -2331,9 +2409,10 @@ Header
 
 Parameter
 
-| 參數     | 型別                                                | 說明 | 範例 |
-| -------- | --------------------------------------------------- | ---- | ---- |
-| **body** | [**NotificationBindBody**](NotificationBindBody.md) |      |      |
+| 參數             | 型別       | 說明 | 範例 |
+| ---------------- | ---------- | ---- | ---- |
+| **device_token** | **String** |      |
+| **device_type**  | **String** |      |
 
 - 請求參數範例
 
@@ -2366,9 +2445,9 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                    | 說明 | 範例       |
-| -------- | ------------------------------------------------------- | ---- | ---------- |
-| **body** | [**NotificationUnbindBody**](NotificationUnbindBody.md) |      | [optional] |
+| 參數             | 型別       | 說明 | 範例       |
+| ---------------- | ---------- | ---- | ---------- |
+| **device_token** | **String** |      | [optional] |
 
 - 請求參數範例
 
@@ -2403,9 +2482,9 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                  | 說明 | 範例 |
-| -------- | ----------------------------------------------------- | ---- | ---- |
-| **body** | [**NotificationsReadBody**](NotificationsReadBody.md) |      |      |
+| 參數   | 型別       | 說明 | 範例 |
+| ------ | ---------- | ---- | ---- |
+| **id** | **String** |      |
 
 - 請求參數範例
 
@@ -2441,9 +2520,9 @@ Header
 
 Parameters
 
-| 參數     | 型別                                                        | 說明 | 範例 |
-| -------- | ----------------------------------------------------------- | ---- | ---- |
-| **body** | [**NotificationsReadAllBody**](NotificationsReadAllBody.md) |      |      |
+| 參數     | 型別       | 說明 | 範例 |
+| -------- | ---------- | ---- | ---- |
+| **type** | **String** |      |
 
 - 請求參數範例
 
@@ -2478,9 +2557,28 @@ Header
 
 Parameters
 
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
+| 參數                  | 型別                     | 說明     | 範例       |
+| --------------------- | ------------------------ | -------- | ---------- |
+| **items_variant_id**  | **Array&lt;Integer&gt;** |          |
+| **items_quantity**    | **Array&lt;Integer&gt;** |          |
+| **credit_card_id**    | **Integer**              |          |
+| **use_birth_gift**    | **Integer**              |          | [optional] |
+| **use_rebate_points** | **Integer**              |          | [optional] |
+| **shipping_type**     | **String**               |          |
+| **receiver_name**     | **String**               |          |
+| **receiver_phone**    | **String**               |          |
+| **zip**               | **String**               |          | [optional] |
+| **city**              | **String**               |          | [optional] |
+| **district**          | **String**               |          | [optional] |
+| **address**           | **String**               |          | [optional] |
+| **cvs_number**        | **String**               |          | [optional] |
+| **cvs_store_name**    | **String**               |          | [optional] |
+| **cvs_store_type**    | **String**               |          | [optional] |
+| **e_gui_type**        | **String**               | 載具類型 |
+| **e_gui_carrier**     | **String**               | 載具號碼 | [optional] |
+| **e_gui_tax_number**  | **String**               | 統一編號 | [optional] |
+| **installment**       | **Integer**              |          | [optional] |
+| **invoice_address**   | **String**               | 發票地址 | [optional] |
 
 - 請求參數範例
 
@@ -2552,10 +2650,11 @@ Header
 
 Parameters
 
-| 參數       | 型別                                            | 說明 | 範例 |
-| ---------- | ----------------------------------------------- | ---- | ---- |
-| **body**   | [**NumberCheckoutBody**](NumberCheckoutBody.md) |      |      |
-| **number** | **Integer**                                     |      |      |
+| 參數               | 型別        | 說明 | 範例       |
+| ------------------ | ----------- | ---- | ---------- |
+| **credit_card_id** | **Integer** |      |
+| **installment**    | **Integer** |      | [optional] |
+| **number**         | **Integer** |      |            |
 
 - 請求參數範例
 
@@ -2588,9 +2687,27 @@ Header
 
 Parameters
 
-| 參數     | 型別                                    | 說明 | 範例 |
-| -------- | --------------------------------------- | ---- | ---- |
-| **body** | [**V1ProductsBody**](V1ProductsBody.md) |      |      |
+| 參數                      | 型別                    | 說明 | 範例       |
+| ------------------------- | ----------------------- | ---- | ---------- |
+| **brand_id**              | **Integer**             |      | [optional] |
+| **offset**                | **Integer**             |      |
+| **limit**                 | **Integer**             |      | [optional] |
+| **sort_by**               | **String**              |      | [optional] |
+| **search**                | [\*\*\*\*](.md)         |      | [optional] |
+| **search_filter_br**      | **Array&lt;String&gt;** |      | [optional] |
+| **search_filter_metal**   | **Array&lt;String&gt;** |      | [optional] |
+| **search_filter_gem**     | **Array&lt;String&gt;** |      | [optional] |
+| **search_filter_size**    | **Array&lt;String&gt;** |      | [optional] |
+| **search_filter_cat**     | **Array&lt;String&gt;** |      | [optional] |
+| **search_filter_pattern** | **Array&lt;String&gt;** |      | [optional] |
+| **search_filter_color**   | **Array&lt;String&gt;** |      | [optional] |
+| **search_filter_theme**   | **Array&lt;String&gt;** |      | [optional] |
+| **search_filter_series**  | **Array&lt;String&gt;** |      | [optional] |
+| **collection_ids**        | **Array&lt;String&gt;** |      | [optional] |
+| **keyword**               | **String**              |      | [optional] |
+| **sub_collection_ids**    | **Array&lt;String&gt;** |      | [optional] |
+| **series_id**             | **Integer**             |      | [optional] |
+| **category_ids**          | **Array&lt;String&gt;** |      | [optional] |
 
 - 請求參數範例
 
@@ -2624,10 +2741,19 @@ Header
 
 Parameters
 
-| 參數     | 型別                                            | 說明 | 範例 |
-| -------- | ----------------------------------------------- | ---- | ---- |
-| **body** | [**ReturnOrdersIdBody**](ReturnOrdersIdBody.md) |      |      |
-| **id**   | **Integer**                                     |      |      |
+| 參數                    | 型別                     | 說明     | 範例       |
+| ----------------------- | ------------------------ | -------- | ---------- |
+| **receiver_name**       | **String**               |          |
+| **receiver_phone**      | **String**               |          |
+| **zip**                 | **String**               |          | [optional] |
+| **city**                | **String**               |          | [optional] |
+| **district**            | **String**               |          | [optional] |
+| **address**             | **String**               |          |
+| **items_variant_id**    | **Array&lt;Integer&gt;** | 商品 ID  |
+| **items_quantity**      | **Array&lt;Integer&gt;** | 退貨數量 |
+| **items_cancel_reason** | **Array&lt;String&gt;**  | 取消原因 |
+| **pics**                | **Array&lt;File&gt;**    |          | [optional] |
+| **id**                  | **Integer**              |          |            |
 
 - 請求參數範例
 
@@ -2662,10 +2788,11 @@ Header
 
 Parameters
 
-| 參數     | 型別                                            | 說明 | 範例 |
-| -------- | ----------------------------------------------- | ---- | ---- |
-| **body** | [**PreCalculateIdBody**](PreCalculateIdBody.md) |      |      |
-| **id**   | **Integer**                                     |      |      |
+| 參數                 | 型別                     | 說明 | 範例 |
+| -------------------- | ------------------------ | ---- | ---- |
+| **items_variant_id** | **Array&lt;Integer&gt;** |      |
+| **items_quantity**   | **Array&lt;Integer&gt;** |      |
+| **id**               | **Integer**              |      |      |
 
 - 請求參數範例
 
@@ -2700,10 +2827,19 @@ Header
 
 Parameters
 
-| 參數     | 型別                                      | 說明 | 範例 |
-| -------- | ----------------------------------------- | ---- | ---- |
-| **body** | [**AddressesIdBody**](AddressesIdBody.md) |      |      |
-| **id**   | **Integer**                               |      |      |
+| 參數               | 型別        | 說明 | 範例       |
+| ------------------ | ----------- | ---- | ---------- |
+| ------------------ | ----------- | ---- | ---------- |
+| **receiver_name**  | **String**  |      |
+| **receiver_phone** | **String**  |      |
+| **city**           | **String**  |      | [optional] |
+| **district**       | **String**  |      | [optional] |
+| **detail**         | **String**  |      | [optional] |
+| **store_id**       | **String**  |      | [optional] |
+| **store_name**     | **String**  |      | [optional] |
+| **store_type**     | **String**  |      | [optional] |
+| **default**        | **BOOLEAN** |      |
+| **id**             | **Integer** |      |            |
 
 - 請求參數範例
 
@@ -2735,349 +2871,3 @@ https://uatecapi.tungrp.com/v1/products/697
 | 200         | 成功               |
 | 201         | 成功創建           |
 | 400         | 請求錯誤、內部錯誤 |
-
-# 附錄 3
-
-該附錄組織性的彙整出`api`的資料結構
-
-## AddressesIdBody
-
-| 參數               | 型別        | 說明 | 註記       |
-| ------------------ | ----------- | ---- | ---------- |
-| **receiver\_參數** | **String**  |      |
-| **receiver_phone** | **String**  |      |
-| **city**           | **String**  |      | [optional] |
-| **district**       | **String**  |      | [optional] |
-| **detail**         | **String**  |      | [optional] |
-| **store_id**       | **String**  |      | [optional] |
-| **store_name**     | **String**  |      | [optional] |
-| **store_type**     | **String**  |      | [optional] |
-| **default**        | **BOOLEAN** |      |
-
-## CartsAddFavoritesBody
-
-| 參數           | 型別        | 說明 | 註記 |
-| -------------- | ----------- | ---- | ---- |
-| **variant_id** | **Integer** |      |
-
-## CreditCardsSetPrimaryBody
-
-| 參數        | 型別       | 說明 | 註記 |
-| ----------- | ---------- | ---- | ---- |
-| **card_id** | **String** |      |
-
-## CustomerAddressesBody
-
-| 參數               | 型別        | 說明 | 註記       |
-| ------------------ | ----------- | ---- | ---------- |
-| **receiver_name**  | **String**  |      |
-| **receiver_phone** | **String**  |      |
-| **city**           | **String**  |      | [optional] |
-| **district**       | **String**  |      | [optional] |
-| **detail**         | **String**  |      | [optional] |
-| **address_type**   | **String**  |      | [optional] |
-| **store_id**       | **String**  |      | [optional] |
-| **store_name**     | **String**  |      | [optional] |
-| **store_type**     | **String**  |      | [optional] |
-| **default**        | **BOOLEAN** |      | [optional] |
-
-## CustomersCreditCardsBody
-
-| 參數                | 型別       | 說明 | 註記 |
-| ------------------- | ---------- | ---- | ---- |
-| **client_back_url** | **String** |      |
-
-## CustomersLoginWithOtpBody
-
-| 參數      | 型別       | 說明 | 註記 |
-| --------- | ---------- | ---- | ---- |
-| **phone** | **String** |      |
-| **otp**   | **String** |      |
-
-## CustomersOtpBody
-
-| 參數      | 型別       | 說明 | 註記 |
-| --------- | ---------- | ---- | ---- |
-| **phone** | **String** |      |
-
-## CustomersReceiveNotificationsBody
-
-| 參數                  | 型別        | 說明 | 註記       |
-| --------------------- | ----------- | ---- | ---------- |
-| **received**          | **BOOLEAN** |      |
-| **receive_type**      | **String**  |      |
-| **notification_type** | **String**  |      | [optional] |
-
-## CustomersResetPasswordBody
-
-| 參數             | 型別       | 說明 | 註記 |
-| ---------------- | ---------- | ---- | ---- |
-| **phone**        | **String** |      |
-| **new_password** | **String** |      |
-| **otp**          | **String** |      |
-
-## CustomersSetDefaultStoreBody
-
-| 參數         | 型別        | 說明 | 註記 |
-| ------------ | ----------- | ---- | ---- |
-| **brand_id** | **Integer** |      |
-| **store_id** | **Integer** |      |
-
-## CustomersSsoBindBody
-
-| 參數         | 型別       | 說明 | 註記 |
-| ------------ | ---------- | ---- | ---- |
-| **provider** | **String** |      |
-| **token**    | **String** |      |
-
-## CustomersSsoBody
-
-| 參數         | 型別       | 說明 | 註記       |
-| ------------ | ---------- | ---- | ---------- |
-| **provider** | **String** |      | [optional] |
-| **token**    | **String** |      |
-
-## CustomersSsoUnbindBody
-
-| 參數         | 型別       | 說明 | 註記 |
-| ------------ | ---------- | ---- | ---- |
-| **provider** | **String** |      |
-
-## CustomersUpdateBody
-
-| 參數          | 型別       | 說明 | 註記       |
-| ------------- | ---------- | ---- | ---------- |
-| **name**      | **String** |      | [optional] |
-| **phone**     | **String** |      | [optional] |
-| **password**  | **String** |      | [optional] |
-| **email**     | **String** |      | [optional] |
-| **birthdate** | **String** |      | [optional] |
-| **sex**       | **String** |      | [optional] |
-| **locale**    | **String** |      | [optional] |
-
-## CustomersUpdatePasswordBody
-
-| 參數                          | 型別       | 說明 | 註記 |
-| ----------------------------- | ---------- | ---- | ---- |
-| **old_password**              | **String** |      |
-| **new_password**              | **String** |      |
-| **new_password_confirmation** | **String** |      |
-
-## CustomersSetDefaultStoreBody
-
-| 參數         | 型別        | 說明 | 註記 |
-| ------------ | ----------- | ---- | ---- |
-| **brand_id** | **Integer** |      |
-| **store_id** | **Integer** |      |
-
-## CustomersValidateOtpBody
-
-| 參數      | 型別       | 說明 | 註記 |
-| --------- | ---------- | ---- | ---- |
-| **phone** | **String** |      |
-| **otp**   | **String** |      |
-
-## CustomersValidatePasswordBody
-
-| 參數         | 型別       | 說明 | 註記 |
-| ------------ | ---------- | ---- | ---- |
-| **password** | **String** |      |
-
-## NotificationBindBody
-
-| 參數             | 型別       | 說明 | 註記 |
-| ---------------- | ---------- | ---- | ---- |
-| **device_token** | **String** |      |
-| **device_type**  | **String** |      |
-
-## NotificationsReadAllBody
-
-| 參數     | 型別       | 說明 | 註記 |
-| -------- | ---------- | ---- | ---- |
-| **type** | **String** |      |
-
-## NotificationsReadBody
-
-| 參數   | 型別       | 說明 | 註記 |
-| ------ | ---------- | ---- | ---- |
-| **id** | **String** |      |
-
-## NotificationsThirdPartyBody
-
-| 參數           | 型別       | 說明           | 註記 |
-| -------------- | ---------- | -------------- | ---- |
-| **phone**      | **String** | 會員電話       |
-| **title_zh**   | **String** | 推播標題(中文) |
-| **content_zh** | **String** | 推播內文(中文) |
-| **title_en**   | **String** | 推播標題(英文) |
-| **content_en** | **String** | 推播內文(英文) |
-| **path**       | **String** | 推播連結設定   |
-
-## NotificationUnbindBody
-
-| 參數             | 型別       | 說明 | 註記       |
-| ---------------- | ---------- | ---- | ---------- |
-| **device_token** | **String** |      | [optional] |
-
-## NumberCheckoutBody
-
-| 參數               | 型別        | 說明 | 註記       |
-| ------------------ | ----------- | ---- | ---------- |
-| **credit_card_id** | **Integer** |      |
-| **installment**    | **Integer** |      | [optional] |
-
-## NumberQuotationBody
-
-| 參數       | 型別       | 說明 | 註記 |
-| ---------- | ---------- | ---- | ---- |
-| **action** | **String** | 動作 |
-
-## PreCalculateIdBody
-
-| 參數                 | 型別                     | 說明 | 註記 |
-| -------------------- | ------------------------ | ---- | ---- |
-| **items_variant_id** | **Array&lt;Integer&gt;** |      |
-| **items_quantity**   | **Array&lt;Integer&gt;** |      |
-
-## ReturnOrdersIdBody
-
-| 參數                    | 型別                     | 說明     | 註記       |
-| ----------------------- | ------------------------ | -------- | ---------- |
-| **receiver_name**       | **String**               |          |
-| **receiver_phone**      | **String**               |          |
-| **zip**                 | **String**               |          | [optional] |
-| **city**                | **String**               |          | [optional] |
-| **district**            | **String**               |          | [optional] |
-| **address**             | **String**               |          |
-| **items_variant_id**    | **Array&lt;Integer&gt;** | 商品 ID  |
-| **items_quantity**      | **Array&lt;Integer&gt;** | 退貨數量 |
-| **items_cancel_reason** | **Array&lt;String&gt;**  | 取消原因 |
-| **pics**                | **Array&lt;File&gt;**    |          | [optional] |
-
-## ReturnOrdersIdBody
-
-| 參數                    | 型別                     | 說明     | 註記       |
-| ----------------------- | ------------------------ | -------- | ---------- |
-| **receiver_name**       | **String**               |          |
-| **receiver_phone**      | **String**               |          |
-| **zip**                 | **String**               |          | [optional] |
-| **city**                | **String**               |          | [optional] |
-| **district**            | **String**               |          | [optional] |
-| **address**             | **String**               |          |
-| **items_variant_id**    | **Array&lt;Integer&gt;** | 商品 ID  |
-| **items_quantity**      | **Array&lt;Integer&gt;** | 退貨數量 |
-| **items_cancel_reason** | **Array&lt;String&gt;**  | 取消原因 |
-| **pics**                | **Array&lt;File&gt;**    |          | [optional] |
-
-## ThirdPartyCustomerLocaleBody
-
-| 參數      | 型別       | 說明     | 註記 |
-| --------- | ---------- | -------- | ---- |
-| **phone** | **String** | 會員電話 |
-
-## ThirdPartyDemoBody
-
-| 參數        | 型別       | 說明         | 註記 |
-| ----------- | ---------- | ------------ | ---- |
-| **title**   | **String** | 推播標題     |
-| **content** | **String** | 推播內文     |
-| **path**    | **String** | 推播連結設定 |
-
-## ReturnOrdersIdBody
-
-| 參數                    | 型別                     | 說明     | 註記       |
-| ----------------------- | ------------------------ | -------- | ---------- |
-| **receiver_name**       | **String**               |          |
-| **receiver_phone**      | **String**               |          |
-| **zip**                 | **String**               |          | [optional] |
-| **city**                | **String**               |          | [optional] |
-| **district**            | **String**               |          | [optional] |
-| **address**             | **String**               |          |
-| **items_variant_id**    | **Array&lt;Integer&gt;** | 商品 ID  |
-| **items_quantity**      | **Array&lt;Integer&gt;** | 退貨數量 |
-| **items_cancel_reason** | **Array&lt;String&gt;**  | 取消原因 |
-| **pics**                | **Array&lt;File&gt;**    |          | [optional] |
-
-## V1CartsBody
-
-| 參數                  | 型別                     | 說明 | 註記       |
-| --------------------- | ------------------------ | ---- | ---------- |
-| **token**             | **String**               |      | [optional] |
-| **use_birth_gift**    | **Integer**              |      | [optional] |
-| **use_rebate_points** | **Integer**              |      | [optional] |
-| **items_variant_id**  | **Array&lt;String&gt;**  |      |
-| **items_quantity**    | **Array&lt;Integer&gt;** |      |
-
-## V1CustomersBody
-
-| 參數          | 型別       | 說明 | 註記       |
-| ------------- | ---------- | ---- | ---------- |
-| **name**      | **String** |      |
-| **phone**     | **String** |      |
-| **password**  | **String** |      |
-| **email**     | **String** |      |
-| **birthdate** | **String** |      |
-| **sex**       | **String** |      | [optional] |
-| **locale**    | **String** |      | [optional] |
-| **source**    | **String** |      | [optional] |
-
-## V1MaintainOrdersBody
-
-| 參數               | 型別                    | 說明     | 註記 |
-| ------------------ | ----------------------- | -------- | ---- |
-| **receiver_name**  | **String**              | 姓名     |
-| **receiver_phone** | **String**              | 電話     |
-| **brand_id**       | **Integer**             | 品牌     |
-| **item**           | **String**              | 品項     |
-| **product_no**     | **String**              | 商品品號 |
-| **services**       | **Array&lt;String&gt;** | 服務項目 |
-| **store_id**       | **Integer**             | 指定門市 |
-
-## V1OrdersBody
-
-| 參數                  | 型別                     | 說明     | 註記       |
-| --------------------- | ------------------------ | -------- | ---------- |
-| **items_variant_id**  | **Array&lt;Integer&gt;** |          |
-| **items_quantity**    | **Array&lt;Integer&gt;** |          |
-| **credit_card_id**    | **Integer**              |          |
-| **use_birth_gift**    | **Integer**              |          | [optional] |
-| **use_rebate_points** | **Integer**              |          | [optional] |
-| **shipping_type**     | **String**               |          |
-| **receiver_name**     | **String**               |          |
-| **receiver_phone**    | **String**               |          |
-| **zip**               | **String**               |          | [optional] |
-| **city**              | **String**               |          | [optional] |
-| **district**          | **String**               |          | [optional] |
-| **address**           | **String**               |          | [optional] |
-| **cvs_number**        | **String**               |          | [optional] |
-| **cvs_store_name**    | **String**               |          | [optional] |
-| **cvs_store_type**    | **String**               |          | [optional] |
-| **e_gui_type**        | **String**               | 載具類型 |
-| **e_gui_carrier**     | **String**               | 載具號碼 | [optional] |
-| **e_gui_tax_number**  | **String**               | 統一編號 | [optional] |
-| **installment**       | **Integer**              |          | [optional] |
-| **invoice_address**   | **String**               | 發票地址 | [optional] |
-
-## V1ProductsBody
-
-| 參數                      | 型別                    | 說明 | 註記       |
-| ------------------------- | ----------------------- | ---- | ---------- |
-| **brand_id**              | **Integer**             |      | [optional] |
-| **offset**                | **Integer**             |      |
-| **limit**                 | **Integer**             |      | [optional] |
-| **sort_by**               | **String**              |      | [optional] |
-| **search**                | [\*\*\*\*](.md)         |      | [optional] |
-| **search_filter_br**      | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_metal**   | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_gem**     | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_size**    | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_cat**     | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_pattern** | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_color**   | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_theme**   | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_series**  | **Array&lt;String&gt;** |      | [optional] |
-| **collection_ids**        | **Array&lt;String&gt;** |      | [optional] |
-| **keyword**               | **String**              |      | [optional] |
-| **sub_collection_ids**    | **Array&lt;String&gt;** |      | [optional] |
-| **series_id**             | **Integer**             |      | [optional] |
-| **category_ids**          | **Array&lt;String&gt;** |      | [optional] |
