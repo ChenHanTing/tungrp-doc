@@ -946,10 +946,10 @@ Header
 
 Parameters
 
-| 參數       | 型別        | 說明 | 範例       |
-| ---------- | ----------- | ---- | ---------- |
-| **limit**  | **Integer** |      | [optional] |
-| **offset** | **Integer** |      | [optional] |
+| 參數       | 型別        | 說明 | 範例 |
+| ---------- | ----------- | ---- | ---- |
+| **limit**  | **Integer** |      | 選填 |
+| **offset** | **Integer** |      | 選填 |
 
 - 請求參數範例
 
@@ -1013,11 +1013,11 @@ Header
 
 Parameters
 
-| 參數       | 型別        | 說明 | 範例       |
-| ---------- | ----------- | ---- | ---------- |
-| **type**   | **String**  |      |            |
-| **offset** | **Integer** |      | [optional] |
-| **limit**  | **Integer** |      | [optional] |
+| 參數       | 型別        | 說明 | 範例 |
+| ---------- | ----------- | ---- | ---- |
+| **type**   | **String**  |      |      |
+| **offset** | **Integer** |      | 選填 |
+| **limit**  | **Integer** |      | 選填 |
 
 - 請求參數範例
 
@@ -1087,11 +1087,11 @@ Header
 
 Parameters
 
-| 參數       | 型別        | 說明 | 範例       |
-| ---------- | ----------- | ---- | ---------- |
-| **limit**  | **Integer** |      | [optional] |
-| **offset** | **Integer** |      | [optional] |
-| **status** | **String**  |      | [optional] |
+| 參數       | 型別        | 說明 | 範例 |
+| ---------- | ----------- | ---- | ---- |
+| **limit**  | **Integer** |      | 選填 |
+| **offset** | **Integer** |      | 選填 |
+| **status** | **String**  |      | 選填 |
 
 - 請求參數範例
 
@@ -1599,11 +1599,11 @@ Header
 
 Parameters
 
-| 參數                  | 型別                     | 說明 | 範例       |
-| --------------------- | ------------------------ | ---- | ---------- |
-| **token**             | **String**               |      | [optional] |
-| **use_birth_gift**    | **Integer**              |      | [optional] |
-| **use_rebate_points** | **Integer**              |      | [optional] |
+| 參數                  | 型別                     | 說明 | 範例 |
+| --------------------- | ------------------------ | ---- | ---- |
+| **token**             | **String**               |      | 選填 |
+| **use_birth_gift**    | **Integer**              |      | 選填 |
+| **use_rebate_points** | **Integer**              |      | 選填 |
 | **items_variant_id**  | **Array&lt;String&gt;**  |      |
 | **items_quantity**    | **Array&lt;Integer&gt;** |      |
 
@@ -1673,18 +1673,18 @@ Header
 
 Parameters
 
-| 參數               | 型別        | 說明 | 範例       |
-| ------------------ | ----------- | ---- | ---------- |
+| 參數               | 型別        | 說明 | 範例 |
+| ------------------ | ----------- | ---- | ---- |
 | **receiver_name**  | **String**  |      |
 | **receiver_phone** | **String**  |      |
-| **city**           | **String**  |      | [optional] |
-| **district**       | **String**  |      | [optional] |
-| **detail**         | **String**  |      | [optional] |
-| **address_type**   | **String**  |      | [optional] |
-| **store_id**       | **String**  |      | [optional] |
-| **store_name**     | **String**  |      | [optional] |
-| **store_type**     | **String**  |      | [optional] |
-| **default**        | **BOOLEAN** |      | [optional] |
+| **city**           | **String**  |      | 選填 |
+| **district**       | **String**  |      | 選填 |
+| **detail**         | **String**  |      | 選填 |
+| **address_type**   | **String**  |      | 選填 |
+| **store_id**       | **String**  |      | 選填 |
+| **store_name**     | **String**  |      | 選填 |
+| **store_type**     | **String**  |      | 選填 |
+| **default**        | **BOOLEAN** |      | 選填 |
 
 - 請求參數範例
 
@@ -1717,16 +1717,16 @@ Header
 
 Parameters
 
-| 參數          | 型別       | 說明 | 範例       |
-| ------------- | ---------- | ---- | ---------- |
+| 參數          | 型別       | 說明 | 範例 |
+| ------------- | ---------- | ---- | ---- |
 | **name**      | **String** |      |
 | **phone**     | **String** |      |
 | **password**  | **String** |      |
 | **email**     | **String** |      |
 | **birthdate** | **String** |      |
-| **sex**       | **String** |      | [optional] |
-| **locale**    | **String** |      | [optional] |
-| **source**    | **String** |      | [optional] |
+| **sex**       | **String** |      | 選填 |
+| **locale**    | **String** |      | 選填 |
+| **source**    | **String** |      | 選填 |
 
 - 請求參數範例
 
@@ -1900,11 +1900,11 @@ Header
 
 Parameters
 
-| 參數                  | 型別        | 說明 | 範例       |
-| --------------------- | ----------- | ---- | ---------- |
+| 參數                  | 型別        | 說明 | 範例 |
+| --------------------- | ----------- | ---- | ---- |
 | **received**          | **BOOLEAN** |      |
 | **receive_type**      | **String**  |      |
-| **notification_type** | **String**  |      | [optional] |
+| **notification_type** | **String**  |      | 選填 |
 
 - 請求參數範例
 
@@ -2010,9 +2010,9 @@ Header
 
 Parameters
 
-| 參數         | 型別       | 說明 | 範例       |
-| ------------ | ---------- | ---- | ---------- |
-| **provider** | **String** |      | [optional] |
+| 參數         | 型別       | 說明 | 範例 |
+| ------------ | ---------- | ---- | ---- |
+| **provider** | **String** |      | 選填 |
 | **token**    | **String** |      |
 
 - 請求參數範例
@@ -2148,15 +2148,15 @@ Header
 
 Parameters
 
-| 參數          | 型別       | 說明 | 範例       |
-| ------------- | ---------- | ---- | ---------- |
-| **name**      | **String** |      | [optional] |
-| **phone**     | **String** |      | [optional] |
-| **password**  | **String** |      | [optional] |
-| **email**     | **String** |      | [optional] |
-| **birthdate** | **String** |      | [optional] |
-| **sex**       | **String** |      | [optional] |
-| **locale**    | **String** |      | [optional] |
+| 參數          | 型別       | 說明 | 範例 |
+| ------------- | ---------- | ---- | ---- |
+| **name**      | **String** |      | 選填 |
+| **phone**     | **String** |      | 選填 |
+| **password**  | **String** |      | 選填 |
+| **email**     | **String** |      | 選填 |
+| **birthdate** | **String** |      | 選填 |
+| **sex**       | **String** |      | 選填 |
+| **locale**    | **String** |      | 選填 |
 
 請求參數範例
 
@@ -2445,9 +2445,9 @@ Header
 
 Parameters
 
-| 參數             | 型別       | 說明 | 範例       |
-| ---------------- | ---------- | ---- | ---------- |
-| **device_token** | **String** |      | [optional] |
+| 參數             | 型別       | 說明 | 範例 |
+| ---------------- | ---------- | ---- | ---- |
+| **device_token** | **String** |      | 選填 |
 
 - 請求參數範例
 
@@ -2557,28 +2557,28 @@ Header
 
 Parameters
 
-| 參數                  | 型別                     | 說明     | 範例       |
-| --------------------- | ------------------------ | -------- | ---------- |
+| 參數                  | 型別                     | 說明     | 範例 |
+| --------------------- | ------------------------ | -------- | ---- |
 | **items_variant_id**  | **Array&lt;Integer&gt;** |          |
 | **items_quantity**    | **Array&lt;Integer&gt;** |          |
 | **credit_card_id**    | **Integer**              |          |
-| **use_birth_gift**    | **Integer**              |          | [optional] |
-| **use_rebate_points** | **Integer**              |          | [optional] |
+| **use_birth_gift**    | **Integer**              |          | 選填 |
+| **use_rebate_points** | **Integer**              |          | 選填 |
 | **shipping_type**     | **String**               |          |
 | **receiver_name**     | **String**               |          |
 | **receiver_phone**    | **String**               |          |
-| **zip**               | **String**               |          | [optional] |
-| **city**              | **String**               |          | [optional] |
-| **district**          | **String**               |          | [optional] |
-| **address**           | **String**               |          | [optional] |
-| **cvs_number**        | **String**               |          | [optional] |
-| **cvs_store_name**    | **String**               |          | [optional] |
-| **cvs_store_type**    | **String**               |          | [optional] |
+| **zip**               | **String**               |          | 選填 |
+| **city**              | **String**               |          | 選填 |
+| **district**          | **String**               |          | 選填 |
+| **address**           | **String**               |          | 選填 |
+| **cvs_number**        | **String**               |          | 選填 |
+| **cvs_store_name**    | **String**               |          | 選填 |
+| **cvs_store_type**    | **String**               |          | 選填 |
 | **e_gui_type**        | **String**               | 載具類型 |
-| **e_gui_carrier**     | **String**               | 載具號碼 | [optional] |
-| **e_gui_tax_number**  | **String**               | 統一編號 | [optional] |
-| **installment**       | **Integer**              |          | [optional] |
-| **invoice_address**   | **String**               | 發票地址 | [optional] |
+| **e_gui_carrier**     | **String**               | 載具號碼 | 選填 |
+| **e_gui_tax_number**  | **String**               | 統一編號 | 選填 |
+| **installment**       | **Integer**              |          | 選填 |
+| **invoice_address**   | **String**               | 發票地址 | 選填 |
 
 - 請求參數範例
 
@@ -2650,11 +2650,11 @@ Header
 
 Parameters
 
-| 參數               | 型別        | 說明 | 範例       |
-| ------------------ | ----------- | ---- | ---------- |
+| 參數               | 型別        | 說明 | 範例 |
+| ------------------ | ----------- | ---- | ---- |
 | **credit_card_id** | **Integer** |      |
-| **installment**    | **Integer** |      | [optional] |
-| **number**         | **Integer** |      |            |
+| **installment**    | **Integer** |      | 選填 |
+| **number**         | **Integer** |      |      |
 
 - 請求參數範例
 
@@ -2687,27 +2687,27 @@ Header
 
 Parameters
 
-| 參數                      | 型別                    | 說明 | 範例       |
-| ------------------------- | ----------------------- | ---- | ---------- |
-| **brand_id**              | **Integer**             |      | [optional] |
+| 參數                      | 型別                    | 說明 | 範例 |
+| ------------------------- | ----------------------- | ---- | ---- |
+| **brand_id**              | **Integer**             |      | 選填 |
 | **offset**                | **Integer**             |      |
-| **limit**                 | **Integer**             |      | [optional] |
-| **sort_by**               | **String**              |      | [optional] |
-| **search**                | [\*\*\*\*](.md)         |      | [optional] |
-| **search_filter_br**      | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_metal**   | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_gem**     | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_size**    | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_cat**     | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_pattern** | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_color**   | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_theme**   | **Array&lt;String&gt;** |      | [optional] |
-| **search_filter_series**  | **Array&lt;String&gt;** |      | [optional] |
-| **collection_ids**        | **Array&lt;String&gt;** |      | [optional] |
-| **keyword**               | **String**              |      | [optional] |
-| **sub_collection_ids**    | **Array&lt;String&gt;** |      | [optional] |
-| **series_id**             | **Integer**             |      | [optional] |
-| **category_ids**          | **Array&lt;String&gt;** |      | [optional] |
+| **limit**                 | **Integer**             |      | 選填 |
+| **sort_by**               | **String**              |      | 選填 |
+| **search**                | [\*\*\*\*](.md)         |      | 選填 |
+| **search_filter_br**      | **Array&lt;String&gt;** |      | 選填 |
+| **search_filter_metal**   | **Array&lt;String&gt;** |      | 選填 |
+| **search_filter_gem**     | **Array&lt;String&gt;** |      | 選填 |
+| **search_filter_size**    | **Array&lt;String&gt;** |      | 選填 |
+| **search_filter_cat**     | **Array&lt;String&gt;** |      | 選填 |
+| **search_filter_pattern** | **Array&lt;String&gt;** |      | 選填 |
+| **search_filter_color**   | **Array&lt;String&gt;** |      | 選填 |
+| **search_filter_theme**   | **Array&lt;String&gt;** |      | 選填 |
+| **search_filter_series**  | **Array&lt;String&gt;** |      | 選填 |
+| **collection_ids**        | **Array&lt;String&gt;** |      | 選填 |
+| **keyword**               | **String**              |      | 選填 |
+| **sub_collection_ids**    | **Array&lt;String&gt;** |      | 選填 |
+| **series_id**             | **Integer**             |      | 選填 |
+| **category_ids**          | **Array&lt;String&gt;** |      | 選填 |
 
 - 請求參數範例
 
@@ -2741,19 +2741,19 @@ Header
 
 Parameters
 
-| 參數                    | 型別                     | 說明     | 範例       |
-| ----------------------- | ------------------------ | -------- | ---------- |
+| 參數                    | 型別                     | 說明     | 範例 |
+| ----------------------- | ------------------------ | -------- | ---- |
 | **receiver_name**       | **String**               |          |
 | **receiver_phone**      | **String**               |          |
-| **zip**                 | **String**               |          | [optional] |
-| **city**                | **String**               |          | [optional] |
-| **district**            | **String**               |          | [optional] |
+| **zip**                 | **String**               |          | 選填 |
+| **city**                | **String**               |          | 選填 |
+| **district**            | **String**               |          | 選填 |
 | **address**             | **String**               |          |
 | **items_variant_id**    | **Array&lt;Integer&gt;** | 商品 ID  |
 | **items_quantity**      | **Array&lt;Integer&gt;** | 退貨數量 |
 | **items_cancel_reason** | **Array&lt;String&gt;**  | 取消原因 |
-| **pics**                | **Array&lt;File&gt;**    |          | [optional] |
-| **id**                  | **Integer**              |          |            |
+| **pics**                | **Array&lt;File&gt;**    |          | 選填 |
+| **id**                  | **Integer**              |          |      |
 
 - 請求參數範例
 
@@ -2832,12 +2832,12 @@ Parameters
 | ------------------ | ----------- | ---- | ---------- |
 | **receiver_name**  | **String**  |      |
 | **receiver_phone** | **String**  |      |
-| **city**           | **String**  |      | [optional] |
-| **district**       | **String**  |      | [optional] |
-| **detail**         | **String**  |      | [optional] |
-| **store_id**       | **String**  |      | [optional] |
-| **store_name**     | **String**  |      | [optional] |
-| **store_type**     | **String**  |      | [optional] |
+| **city**           | **String**  |      | 選填       |
+| **district**       | **String**  |      | 選填       |
+| **detail**         | **String**  |      | 選填       |
+| **store_id**       | **String**  |      | 選填       |
+| **store_name**     | **String**  |      | 選填       |
+| **store_type**     | **String**  |      | 選填       |
 | **default**        | **BOOLEAN** |      |
 | **id**             | **Integer** |      |            |
 
