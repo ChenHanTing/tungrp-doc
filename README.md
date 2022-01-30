@@ -110,18 +110,21 @@ Header
 
 Parameters
 
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
+| 參數           | 型別        | 說明       | 範例 |
+| -------------- | ----------- | ---------- | ---- |
+| **variant_id** | **Integer** | 品項流水號 | 3    |
 
 - 請求參數範例
 
-```
-https://uatecapi.tungrp.com/v1/products/697
+```shell
+curl --location --request DELETE 'https://api-test.tun-grp.com/v1/carts/favorite'
+--header 'Authorization: Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60'
+--data-raw '{
+    "variant_id": 3
+}'
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄2](#附錄2)
 
 
 
@@ -148,22 +151,18 @@ Header
 
 Parameters
 
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
+| 參數   | 型別        | 說明         | 範例 |
+| ------ | ----------- | ------------ | ---- |
+| **id** | **Integer** | 地址簿流水號 | 3    |
 
 - 請求參數範例
 
-```
-https://uatecapi.tungrp.com/v1/products/697
+```shell
+curl --location --request DELETE 'https://api-test.tun-grp.com/v1/customers/addresses/3'
+--header 'Authorization: Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60'
 ```
 
-- 回應參數說明
-- 回傳參數範例
-
-參數 | 型別 | 說明  | 範例 
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**|  |
+- 標準回應，詳情請查看 [附錄2](#附錄2)
 
 
 
@@ -173,8 +172,8 @@ https://uatecapi.tungrp.com/v1/products/697
   從會員所有信用卡中，刪除一筆信用卡。該動作會刪除信用卡的動作，並在綠界方同步取消綁定信用卡
   
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/credit_cards/:card_id
-  - 正式環境：https://ecapi.tungrp.com/v1/credit_cards/:card_id
+  - 測試環境：https://uatecapi.tungrp.com/v1/customer/credit_cards/:card_id
+  - 正式環境：https://ecapi.tungrp.com/v1/customer/credit_cards/:card_id
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -189,18 +188,20 @@ Header
 
 Parameters
 
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
+| 參數   | 型別        | 說明         | 範例 |
+| ------ | ----------- | ------------ | ---- |
+| **id** | **Integer** | 信用卡流水號 | 3    |
 
 - 請求參數範例
 
-```
-https://uatecapi.tungrp.com/v1/products/697
+此為刪除`id=3`的信用卡
+
+```shell
+curl --location --request DELETE 'https://api-test.tun-grp.com/v1/customers/credit_cards/3'
+--header 'Authorization: Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60'
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄2](#附錄2)
 
 
 
@@ -218,29 +219,6 @@ https://uatecapi.tungrp.com/v1/products/697
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
-
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
-
-- 請求參數範例
-
-```
-https://uatecapi.tungrp.com/v1/products/697
-```
-
-- 回應參數說明
-- 回傳參數範例
-
-
 
 # **取得購物車**
 
@@ -266,11 +244,11 @@ Header
 Parameters
 
 
-| 參數                  | 型別        | 說明 | 範例       |
-| --------------------- | ----------- | ---- | ---------- |
-| **token**             | **String**  |      | [optional] |
-| **use_birth_gift**    | **Integer** |      | [optional] |
-| **use_rebate_points** | **Integer** |      | [optional] |
+| 參數                  | 型別        | 說明 | 範例 |
+| --------------------- | ----------- | ---- | ---- |
+| **token**             | **String**  | 選填 |      |
+| **use_birth_gift**    | **Integer** | 選填 |      |
+| **use_rebate_points** | **Integer** | 選填 |      |
 
 - 請求參數範例
 
@@ -279,6 +257,8 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+
 
 - 回傳參數範例
 
@@ -2844,3 +2824,14 @@ https://uatecapi.tungrp.com/v1/products/697
 | 3      | Isabel Marant |
 | 4      | Les Néréides  |
 | 5      | Self Portrait |
+
+# 附錄2
+
+惇聚標準回應
+
+| Http Status | 意義               |
+| ----------- | ------------------ |
+| 200         | 成功               |
+| 201         | 成功創建           |
+| 400         | 請求錯誤、內部錯誤 |
+
