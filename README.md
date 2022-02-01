@@ -307,9 +307,14 @@ curl --location --request DELETE 'https://api-test.tun-grp.com/v1/customers/cred
   - 正式環境：https://ecapi.tungrp.com/v1/app_version
 
 - 請求參數說明
+
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
+
+- 回應參數說明
+
+  [**V1AppVersionEntity**](#V1AppVersionEntity)
 
 # **取得購物車**
 
@@ -363,6 +368,10 @@ curl 'https://uatecapi.tungrp.com/v1/carts/' \
   --data-raw '{"items":[{"variant_id":1335,"quantity":1}],"token":null,"use_birth_gift":0,"use_rebate_points":0}' \
   --compressed
 ```
+
+- 回應參數說明
+
+  [**V1CartEntity**](#V1CartEntity)
 
 - 回傳參數範例
 
@@ -476,6 +485,10 @@ curl --location --request GET 'https://uatecapi.tungrp.com/v1/v1/customers/carts
 --header 'Authorization: Bearer QHSQUCdZyYVJIftyRCZpIIZNbH3pbmURbS3x2N3T0Ys'
 ```
 
+- 回應參數說明
+
+  [**Array&lt;V1VariantEntity&gt;**](#V1VariantEntity)
+
 - 回傳參數範例
 
 ```json
@@ -511,6 +524,9 @@ https://uatecapi.tungrp.com/v1/categories?brand_id=1
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1CategoryEntity&gt;**](#V1CategoryEntity)
+
 - 回傳參數範例
 
 # **特定大類**
@@ -542,6 +558,9 @@ https://uatecapi.tungrp.com/v1/categories/3
 ```
 
 - 回應參數說明
+
+  [**V1CategoryEntity**](#V1CategoryEntity)
+
 - 回傳參數範例
 
 # **中類列表**
@@ -566,13 +585,9 @@ Header
 | ------------- | ------------ | ------------------------------------------- | -------- |
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
-
 - 回應參數說明
+
+  [**Array&lt;V1CollectionEntity&gt;**](#V1CollectionEntity)
 
 - 回傳參數範例
 
@@ -611,6 +626,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1CollectionEntity&gt;**](#V1CollectionEntity)
+
 - 回傳參數範例
 
 # **地址簿列表**
@@ -634,14 +652,11 @@ Header
 | Key           | Value        | 範例                                        | 說明     |
 | ------------- | ------------ | ------------------------------------------- | -------- |
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
+|               |
 
 - 回應參數說明
+
+  [**Array&lt;V1AddressEntity&gt;**](#V1AddressEntity)
 
 - 回傳參數範例
 
@@ -680,6 +695,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1AddressEntity**](#V1AddressEntity)
+
 - 回傳參數範例
 
 # **會員信用卡列表**
@@ -1005,12 +1023,6 @@ Header
 | ------------- | ------------ | ------------------------------------------- | -------- |
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
-
 - 請求參數範例
 
 ```
@@ -1018,6 +1030,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1EventPageEntity&gt;**](#V1EventPageEntity)
+
 - 回傳參數範例
 
 # **特定促銷頁**
@@ -1051,6 +1066,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1EventPageEntity**](#V1EventPageEntity)
+
 - 回傳參數範例
 
 # **首頁**
@@ -1084,6 +1102,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1HomePageEntity&gt;**](#V1HomePageEntity)
+
 - 回傳參數範例
 
 # **消息列表**
@@ -1117,6 +1138,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1InformationEntity&gt;**](#V1InformationEntity)
+
 - 回傳參數範例
 
 # **特定消息**
@@ -1217,6 +1241,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1MaintainOrderEntity**](#V1MaintainOrderEntity)
+
 - 回傳參數範例
 
 # **推播列表**
@@ -1252,6 +1279,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1NotificationEntity&gt;**](#V1NotificationEntity)
+
 - 回傳參數範例
 
 # **推播明細**
@@ -1285,6 +1315,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1NotificationEntity**](#V1NotificationEntity)
+
 - 回傳參數範例
 
 # **訂單列表**
@@ -1326,6 +1359,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1OrderEntity&gt;**](#V1OrderEntity)
+
 - 回傳參數範例
 
 # **訂單明細**
@@ -1359,6 +1395,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1OrderEntity**](#V1OrderEntity)
+
 - 回傳參數範例
 
 # **查看商品**
@@ -1394,6 +1433,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1ProductEntity&gt;**](#V1ProductEntity)
+
 - 回傳參數範例
 
 # **指定品項庫存**
@@ -1431,6 +1473,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1VariantEntity**](#V1VariantEntity)
+
 - 回傳參數範例
 
 # **退貨單明細**
@@ -1465,6 +1510,8 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 回應參數說明
 
+  [**V1ReturnOrderEntity**](#V1ReturnOrderEntity)
+
 - 回傳參數範例
 
 # **跑馬燈**
@@ -1498,6 +1545,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1ScrollingTextEntity&gt;**](#V1ScrollingTextEntity)
+
 - 回傳參數範例
 
 # **取得搜尋內容**
@@ -1531,6 +1581,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1SearchEntity&gt;**](#V1SearchEntity)
+
 - 回傳參數範例
 
 # **系列頁列表**
@@ -1564,6 +1617,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1SeriesEntity&gt;**](#V1SeriesEntity)
+
 - 回傳參數範例
 
 # **指定系列頁**
@@ -1597,6 +1653,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1SeriesEntity**](#V1SeriesEntity)
+
 - 回傳參數範例
 
 # **店舖列表**
@@ -1630,6 +1689,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1StoreEntity&gt;**](#V1StoreEntity)
+
 - 回傳參數範例
 
 # **小類列表**
@@ -1663,6 +1725,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1SubCollectionEntity&gt;**](#V1SubCollectionEntity)
+
 - 回傳參數範例
 
 # **小類明細**
@@ -1696,6 +1761,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1SubCollectionEntity**](#V1SubCollectionEntity)
+
 - 回傳參數範例
 
 # **特定子訂單**
@@ -1731,6 +1799,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1ReturnOrderEntity**](#V1ReturnOrderEntity)
+
 - 回傳參數範例
 
 # **當前滿額贈**
@@ -1766,6 +1837,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1TargetPriceDiscountEntity&gt;**](#V1TargetPriceDiscountEntity)
+
 - 回傳參數範例
 
 # **置頂 Banner**
@@ -1801,6 +1875,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**Array&lt;V1TopBannerEntity&gt;**](#V1TopBannerEntity)
+
 - 回傳參數範例
 
 # **加入購物車**
@@ -1840,6 +1917,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1CartEntity**](#V1CartEntity)
+
 - 回傳參數範例
 
 # **加入最愛**
@@ -1919,6 +1999,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1AddressFormEntity**](#V1AddressFormEntity)
+
 - 回傳參數範例
 
 # **創建顧客**
@@ -2831,6 +2914,10 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1OrderEntity**](#V1OrderEntity)
+
+
 - 回傳參數範例
 
 # **取消訂單**
@@ -2937,7 +3024,6 @@ Parameters
 | **offset**                | **Integer**             |      |
 | **limit**                 | **Integer**             |      | 選填 |
 | **sort_by**               | **String**              |      | 選填 |
-| **search**                | [\*\*\*\*](.md)         |      | 選填 |
 | **search_filter_br**      | **Array&lt;String&gt;** |      | 選填 |
 | **search_filter_metal**   | **Array&lt;String&gt;** |      | 選填 |
 | **search_filter_gem**     | **Array&lt;String&gt;** |      | 選填 |
@@ -3092,6 +3178,9 @@ https://uatecapi.tungrp.com/v1/products/697
 ```
 
 - 回應參數說明
+
+  [**V1AddressFormEntity**](#V1AddressFormEntity)
+
 - 回傳參數範例
 
 # 附錄 1
@@ -3118,13 +3207,393 @@ https://uatecapi.tungrp.com/v1/products/697
 
 # 附錄 3
 
-## VarintEntity
+## V1AddressEntity
 
+| 欄位               | 型別        | 說明       | 註記 |
+| ------------------ | ----------- | ---------- | ---- |
+| **id**             | **Integer** | 主鍵       |
+| **receiver_name**  | **String**  | 買受人名字 |
+| **receiver_phone** | **String**  | 買受人號碼 |
+| **zip**            | **String**  | 區碼       |
+| **city**           | **String**  | 城市       |
+| **district**       | **String**  | 區域       |
+| **detail**         | **String**  | 詳細資訊   |
+| **store_id**       | **Integer** | 店舖外來鍵 |
+| **store_name**     | **String**  | 店舖名稱   |
+| **store_type**     | **String**  | 店舖類型   |
+| **address_type**   | **String**  | 地址類型   |
+| **default**        | **String**  | 預設地址   |
 
-# SwaggerClient::V1TopBannerEntity
+## V1AddressFormEntity
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**link_to** | **String** | 連結 |
+| 欄位        | 型別                                      | 說明     | 註記       |
+| ----------- | ----------------------------------------- | -------- | ---------- |
+| **success** | **BOOLEAN**                               | 成功與否 | [optional] |
+| **record**  | [**V1AddressEntity**](#V1AddressEntity) |          | [optional] |
+| **message** | **BOOLEAN**                               | 訊息     | [optional] |
 
+## V1AppVersionEntity
+
+| 欄位             | 型別        | 說明     | 註記       |
+| ---------------- | ----------- | -------- | ---------- |
+| **version**      | **String**  | App 版本 | [optional] |
+| **force_update** | **BOOLEAN** | 強迫更新 | [optional] |
+
+## V1BannerEntity
+
+| 欄位          | 型別        | 說明     | 註記 |
+| ------------- | ----------- | -------- | ---- |
+| **buttons**   | **Array**   | 按鈕資訊 |
+| **id**        | **Integer** | 主鍵     |
+| **title**     | **String**  | 標題     |
+| **video_url** | **String**  | 影片連結 |
+
+## V1BrandEntity
+
+| 欄位                     | 型別                                            | 說明         | 註記       |
+| ------------------------ | ----------------------------------------------- | ------------ | ---------- |
+| **id**                   | **Integer**                                     | 主鍵         |
+| **title**                | **String**                                      | 標題         |
+| **collections**          | [**V1CollectionEntity**](#V1CollectionEntity) |              | [optional] |
+| **brand_products_count** | **Integer**                                     | 品牌商品數量 |
+
+## V1CarouselEntity
+
+| 欄位          | 型別        | 說明     | 註記 |
+| ------------- | ----------- | -------- | ---- |
+| **buttons**   | **Array**   | 按鈕資訊 |
+| **id**        | **Integer** | 主鍵     |
+| **title**     | **String**  | 標題     |
+| **video_url** | **String**  | 影片連結 |
+
+## V1CartEntity
+
+| 欄位         | 型別        | 說明         | 註記 |
+| ------------ | ----------- | ------------ | ---- |
+| **subtotal** | **Integer** | 小計         |
+| **token**    | **String**  | 購物車識別碼 |
+
+## V1CategoryEntity
+
+| 欄位            | 型別                                            | 說明 | 註記       |
+| --------------- | ----------------------------------------------- | ---- | ---------- |
+| **id**          | **Integer**                                     | 主鍵 |
+| **title**       | **String**                                      | 標題 |
+| **collections** | [**V1CollectionEntity**](#V1CollectionEntity) |      | [optional] |
+| **series**      | [**V1SeriesEntity**](#V1SeriesEntity)         |      | [optional] |
+
+## V1CollectionEntity
+
+| 欄位                | 型別                                                  | 說明 | 註記       |
+| ------------------- | ----------------------------------------------------- | ---- | ---------- |
+| **id**              | **Integer**                                           | 主鍵 |
+| **title**           | **String**                                            | 標題 |
+| **sub_collections** | [**V1SubCollectionEntity**](#V1SubCollectionEntity) |      | [optional] |
+
+## V1CollectionEntity
+
+| 欄位                | 型別                                                  | 說明 | 註記       |
+| ------------------- | ----------------------------------------------------- | ---- | ---------- |
+| **id**              | **Integer**                                           | 主鍵 |
+| **title**           | **String**                                            | 標題 |
+| **sub_collections** | [**V1SubCollectionEntity**](#V1SubCollectionEntity) |      | [optional] |
+
+## V1CustomersBody
+
+| 欄位          | 型別       | 說明 | 註記       |
+| ------------- | ---------- | ---- | ---------- |
+| **name**      | **String** |      |
+| **phone**     | **String** |      |
+| **password**  | **String** |      |
+| **email**     | **String** |      |
+| **birthdate** | **String** |      |
+| **sex**       | **String** |      | [optional] |
+| **locale**    | **String** |      | [optional] |
+| **source**    | **String** |      | [optional] |
+
+## V1EventPageEntity
+
+| 欄位                      | 型別                                          | 說明   | 註記       |
+| ------------------------- | --------------------------------------------- | ------ | ---------- |
+| **id**                    | **Integer**                                   | 主鍵   |
+| **title**                 | **String**                                    | 標題   |
+| **description**           | **String**                                    | 描述   |
+| **target_price_discount** | **String**                                    | 滿額贈 |
+| **event_type**            | **String**                                    | 類型   |
+| **promotion**             | [**V1PromotionEntity**](#V1PromotionEntity) |        | [optional] |
+
+## V1FocusProductEntity
+
+| 欄位        | 型別                                      | 說明     | 註記       |
+| ----------- | ----------------------------------------- | -------- | ---------- |
+| **images**  | **Array**                                 | 照片連結 |
+| **product** | [**V1ProductEntity**](#V1ProductEntity) |          | [optional] |
+
+## V1HomePageEntity
+
+| 欄位              | 型別                                              | 說明 | 註記       |
+| ----------------- | ------------------------------------------------- | ---- | ---------- |
+| **carousels**     | [**V1CarouselEntity**](#V1CarouselEntity)       |      | [optional] |
+| **shop_the_look** | [**V1ShopTheLookEntity**](#V1ShopTheLookEntity) |      | [optional] |
+| **banners**       | [**V1BannerEntity**](#V1BannerEntity)           |      | [optional] |
+| **top_banner**    | [**V1TopBannerEntity**](#V1TopBannerEntity)     |      | [optional] |
+
+## V1InformationEntity
+
+| 欄位        | 型別                                              | 說明     | 註記       |
+| ----------- | ------------------------------------------------- | -------- | ---------- |
+| **id**      | **Integer**                                       | 主鍵     |
+| **title**   | **String**                                        | 標題     |
+| **content** | **String**                                        | 內文     |
+| **buttons** | **Array**                                         | 按鈕資訊 |
+| **prev**    | [**V1InformationEntity**](#V1InformationEntity) |          | [optional] |
+| **next**    | [**V1InformationEntity**](#V1InformationEntity) |          | [optional] |
+
+## V1MaintainOrderEntity
+
+| 欄位                         | 型別        | 說明           | 註記 |
+| ---------------------------- | ----------- | -------------- | ---- |
+| **id**                       | **Integer** | 流水號         |
+| **status**                   | **String**  | 狀態           |
+| **quotation**                | **Integer** | 報價           |
+| **customer_agree**           | **BOOLEAN** | 顧客同意報價   |
+| **brand_id**                 | **Integer** | 品牌流水號     |
+| **customer_id**              | **Integer** | 顧客流水號     |
+| **store_id**                 | **Integer** | 商店流水號     |
+| **receiver_name**            | **String**  | 買受人名字     |
+| **receiver_phone**           | **String**  | 買受人電話     |
+| **customer_disagree_reason** | **String**  | 顧客不同意原因 |
+| **number**                   | **String**  | 維修單號碼     |
+
+## V1NotificationEntity
+
+| 欄位             | 型別        | 說明     | 註記 |
+| ---------------- | ----------- | -------- | ---- |
+| **id**           | **Integer** | 主鍵     |
+| **title**        | **String**  | 標題     |
+| **content**      | **String**  | 描述     |
+| **created_date** | **String**  | 創建時間 |
+| **type**         | **String**  | 類別     |
+| **sub_type**     | **String**  | 子類別   |
+| **image**        | **String**  | 照片資訊 |
+| **is_read**      | **BOOLEAN** | 已讀     |
+
+## V1OrderEntity
+
+| 欄位                            | 型別                                        | 說明         | 註記       |
+| ------------------------------- | ------------------------------------------- | ------------ | ---------- |
+| **credit_card_id**              | **Integer**                                 | 信用卡流水號 |
+| **number**                      | **Integer**                                 | 數量         |
+| **price**                       | **Integer**                                 | 價錢         |
+| **receiver_name**               | **String**                                  | 買受人名字   |
+| **receiver_phone**              | **String**                                  | 買受人號碼   |
+| **zip**                         | **String**                                  | 區碼         |
+| **city**                        | **String**                                  | 城市         |
+| **district**                    | **String**                                  | 區域         |
+| **address**                     | **String**                                  | 地址         |
+| **e_gui_type**                  | **String**                                  | 發票類型     |
+| **e_gui_carrier**               | **String**                                  | 發票載具     |
+| **e_gui_tax_number**            | **String**                                  | 統一編號     |
+| **used_birth_gift**             | **Integer**                                 | 使用生日點數 |
+| **used_rebate**                 | **Integer**                                 | 使用點數     |
+| **gained_rebate**               | **Integer**                                 | 新增點數     |
+| **credit_card_last_four**       | **String**                                  | 信用卡前四碼 |
+| **credit_card_first_six**       | **String**                                  | 信用卡後六碼 |
+| **cvs_number**                  | **String**                                  | 超商代碼     |
+| **shipping_type**               | **String**                                  | 貨運狀態     |
+| **status**                      | **String**                                  | 發票狀態     |
+| **payment_status**              | **String**                                  | 付款狀態     |
+| **installment**                 | **Integer**                                 | 分期         |
+| **vip_level**                   | **String**                                  | vip 等級     |
+| **original_price**              | **String**                                  | 原價         |
+| **sub_orders**                  | [**V1SubOrderEntity**](#V1SubOrderEntity) |              | [optional] |
+| **note**                        | **String**                                  | 備註         |
+| **target_price_discount_value** | **Integer**                                 | 滿額贈金額   |
+| **target_price_discount_title** | **String**                                  | 滿額贈名稱   |
+| **cvs_store_name**              | **String**                                  | 便利店名稱   |
+| **cvs_store_type**              | **String**                                  | 便利店類人   |
+| **cancel_reason**               | **String**                                  | 取消原因     |
+| **payment_failed_reason**       | **String**                                  | 付款失敗原因 |
+| **membership_reward_percent**   | **Integer**                                 | 會員獎勵     |
+| **is_offline_order**            | **BOOLEAN**                                 | 線下訂單     |
+
+## V1OrderItemEntity
+
+| 欄位                | 型別                                      | 說明     | 註記       |
+| ------------------- | ----------------------------------------- | -------- | ---------- |
+| **variant**         | [**V1VariantEntity**](#V1VariantEntity) |          | [optional] |
+| **quantity**        | **Integer**                               | 數量     |
+| **price**           | **Integer**                               | 價錢     |
+| **return_quantity** | **Integer**                               | 退貨數量 |
+
+## V1ProductEntity
+
+| 欄位                     | 型別                                                  | 說明       | 註記       |
+| ------------------------ | ----------------------------------------------------- | ---------- | ---------- |
+| **brand_id**             | **Integer**                                           | 品牌流水號 |
+| **title**                | **String**                                            | 商品名稱   |
+| **id**                   | **Integer**                                           | 主鍵       |
+| **category**             | [**V1CategoryEntity**](#V1CategoryEntity)           |            | [optional] |
+| **collection**           | [**V1CollectionEntity**](#V1CollectionEntity)       |            | [optional] |
+| **sub_collection**       | [**V1SubCollectionEntity**](#V1SubCollectionEntity) |            | [optional] |
+| **info_detail**          | **String**                                            | 商品描述   |
+| **series**               | [**V1SeriesEntity**](#V1SeriesEntity)               |            | [optional] |
+| **promotion**            | [**V1PromotionEntity**](#V1PromotionEntity)         |            | [optional] |
+| **member_price**         | **Integer**                                           | 會員價     |
+| **promote_price**        | **Integer**                                           | 促銷價     |
+| **price**                | **Integer**                                           | 價錢       |
+| **styled_with_products** | [**V1ProductEntity**](#V1ProductEntity)             |            | [optional] |
+| **recommend_products**   | [**V1ProductEntity**](#V1ProductEntity)             |            | [optional] |
+| **specified_variant_id** | **Integer**                                           | 品樣流水號 |
+| **variants**             | [**V1VariantEntity**](#V1VariantEntity)             |            | [optional] |
+| **published**            | **BOOLEAN**                                           | 發布狀態   |
+
+## V1PromotionEntity
+
+| 欄位                | 型別                                                  | 說明     | 註記       |
+| ------------------- | ----------------------------------------------------- | -------- | ---------- |
+| **id**              | **String**                                            | 流水號   |
+| **title**           | **String**                                            | 促銷標題 |
+| **ratio**           | **Float**                                             | 打折     |
+| **collections**     | [**V1CollectionEntity**](#V1CollectionEntity)       |          | [optional] |
+| **sub_collections** | [**V1SubCollectionEntity**](#V1SubCollectionEntity) |          | [optional] |
+| **products**        | [**V1ProductEntity**](#V1ProductEntity)             |          | [optional] |
+| **categories**      | [**V1CategoryEntity**](#V1CategoryEntity)           |          | [optional] |
+
+## V1ReturnOrderEntity
+
+| 欄位                             | 型別        | 說明         | 註記 |
+| -------------------------------- | ----------- | ------------ | ---- |
+| **status**                       | **String**  | 退貨狀態     |
+| **status_history**               | **Array**   | 退貨歷史     |
+| **number**                       | **Integer** | 退貨數量     |
+| **payment_status**               | **String**  | 付款狀態     |
+| **receiver_name**                | **Integer** | 申請總額     |
+| **receiver_phone**               | **Integer** | 申請總額     |
+| **zip**                          | **String**  | 區碼         |
+| **city**                         | **String**  | 城市         |
+| **district**                     | **String**  | 區域         |
+| **address**                      | **Integer** | 申請總額     |
+| **invoice_status**               | **String**  | 發票狀態     |
+| **invoice_status_history**       | **Array**   | 發票狀態     |
+| **failed_reason**                | **String**  | 退貨原因     |
+| **partial_failed**               | **BOOLEAN** | 部分退貨     |
+| **return_actual_cash_amount**    | **Integer** | 實際退貨金額 |
+| **return_actual_rebate_amount**  | **Integer** | 申請退貨金額 |
+| **return_applied_cash_amount**   | **Integer** | 實際退點     |
+| **return_applied_rebate_amount** | **Integer** | 申請退點     |
+| **return_actual_amount**         | **Integer** | 實際總額     |
+| **return_applied_amount**        | **Integer** | 申請總額     |
+| **brand_name**                   | **Integer** | 申請總額     |
+| **store_name**                   | **Integer** | 申請總額     |
+| **order_items**                  | **Integer** | 申請總額     |
+| **upload_images**                | **Integer** | 申請總額     |
+
+## V1ScrollingTextEntity
+
+| 欄位      | 型別       | 說明 | 註記       |
+| --------- | ---------- | ---- | ---------- |
+| **title** | **String** | 標題 | [optional] |
+
+## V1SearchEntity
+
+| 欄位                          | 型別                                  | 說明         | 註記       |
+| ----------------------------- | ------------------------------------- | ------------ | ---------- |
+| **brands**                    | [**V1BrandEntity**](#V1BrandEntity) |              | [optional] |
+| **all_brands_products_count** | **Integer**                           | 品牌商品數量 |
+
+## V1SeriesEntity
+
+| 欄位                | 型別        | 說明       | 註記 |
+| ------------------- | ----------- | ---------- | ---- |
+| **id**              | **Integer** | 流水號     |
+| **brand_id**        | **Integer** | 品牌流水號 |
+| **category_id**     | **Integer** | 大類流水號 |
+| **title**           | **String**  | 標題       |
+| **subtitle**        | **String**  | 副標       |
+| **series_sections** | **Array**   | 區塊       |
+
+## V1ShopTheLookEntity
+
+| 欄位         | 型別                                                | 說明 | 註記       |
+| ------------ | --------------------------------------------------- | ---- | ---------- |
+| **products** | [**V1FocusProductEntity**](#V1FocusProductEntity) |      | [optional] |
+
+## V1StoreEntity
+
+| 欄位                        | 型別        | 說明     | 註記 |
+| --------------------------- | ----------- | -------- | ---- |
+| **lat**                     | **Float**   | 緯度     |
+| **lng**                     | **Float**   | 經度     |
+| **title**                   | **String**  | 店舖名稱 |
+| **address**                 | **String**  | 電話     |
+| **phone**                   | **String**  | 手機     |
+| **instant_messaging_token** | **String**  | token    |
+| **opening_hours**           | **Array**   | 營業時間 |
+| **id**                      | **Integer** | 流水號   |
+| **area**                    | **String**  | 區域     |
+| **default**                 | **String**  | 預設店舖 |
+
+## V1SubCollectionEntity
+
+| 欄位      | 型別        | 說明        | 註記 |
+| --------- | ----------- | ----------- | ---- |
+| **id**    | **Integer** | 小類·流水號 |
+| **title** | **String**  | 小類標題    |
+
+## V1SubOrderEntity
+
+| 欄位                | 型別                                          | 說明         | 註記       |
+| ------------------- | --------------------------------------------- | ------------ | ---------- |
+| **id**              | **Integer**                                   | 子訂單流水號 |
+| **brand_id**        | **Integer**                                   | 品牌流水號   |
+| **store**           | [**V1StoreEntity**](#V1StoreEntity)         |              | [optional] |
+| **order_items**     | [**V1OrderItemEntity**](#V1OrderItemEntity) |              | [optional] |
+| **status**          | **String**                                    | 運送狀態     |
+| **shipping_status** | **String**                                    | 運送狀態     |
+| **tracking_number** | **String**                                    | 運單         | [optional] |
+| **return_order_id** | **Integer**                                   | 退貨單       |
+| **returnable**      | **BOOLEAN**                                   | 是否可退     |
+
+## V1TargetPriceDiscountEntity
+
+| 欄位          | 型別                                  | 說明       | 註記       |
+| ------------- | ------------------------------------- | ---------- | ---------- |
+| **threshold** | **Integer**                           | 滿額贈門檻 |
+| **discount**  | **Integer**                           | 滿額贈折扣 |
+| **title**     | [**V1TitleEntity**](#V1TitleEntity) |            | [optional] |
+
+## V1TitleEntity
+
+| 欄位   | 型別       | 說明 | 註記 |
+| ------ | ---------- | ---- | ---- |
+| **zh** | **String** | 中文 |
+| **en** | **String** | 英文 |
+
+## V1VariantEntity
+
+| 欄位               | 型別        | 說明     | 註記       |
+| ------------------ | ----------- | -------- | ---------- |
+| **uid**            | **String**  | 品號     |
+| **id**             | **Integer** | 品樣     |
+| **price**          | **Integer** | 價錢     |
+| **member_price**   | **Integer** | 會員價   |
+| **promote_price**  | **Integer** | 促銷價   |
+| **color**          | **String**  | 價錢     |
+| **color_display**  | **String**  | 顏色     |
+| **material**       | **String**  | 材質     |
+| **color_img**      | **String**  | 顏色連結 |
+| **size**           | **String**  | 尺寸     |
+| **images**         | **String**  | 照片     |
+| **video**          | **String**  | 影片連結 |
+| **product**        | **String**  | 商品     | [optional] |
+| **stock**          | **String**  | 庫存     | [optional] |
+| **filter_br**      | **String**  |          | [optional] |
+| **filter_metal**   | **String**  |          | [optional] |
+| **filter_gem**     | **String**  |          | [optional] |
+| **filter_size**    | **String**  |          | [optional] |
+| **filter_cat**     | **String**  |          | [optional] |
+| **filter_pattern** | **String**  |          | [optional] |
+| **filter_color**   | **String**  |          | [optional] |
+| **filter_theme**   | **String**  |          | [optional] |
+| **filter_series**  | **String**  |          | [optional] |
