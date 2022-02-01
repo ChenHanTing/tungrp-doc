@@ -2,83 +2,180 @@
 
 | Method                                                | HTTP request                                    | 說明                                   | 登入狀態 | 是否完成 |
 | ----------------------------------------------------- | ----------------------------------------------- | -------------------------------------- | -------- | -------- |
+| [**會員登入**](#會員登入)                             | **POST** /oauth/token                           |                                        | Y        | ✅       |
+| [**會員登出**](#會員登出)                             | **POST** /oauth/revoke                          |                                        | Y        | ✅       |
 | [**刪除最愛**](#刪除最愛)                             | **DELETE** /v1/carts/favorite                   | 刪除最愛                               | Y        | ✅       |
 | [**刪除地址**](#刪除地址)                             | **DELETE** /v1/customer/addresses/:id           | 刪除地址簿內指定的地址                 | Y        | ✅       |
 | [**刪除信用卡**](#刪除信用卡)                         | **DELETE** /v1/customers/credit_cards/:card_id  | 刪除會員帳號內綁定的信用卡             | Y        | ✅       |
-| [**當前 App 版號**](#當前App版號)                     | **GET** /v1/app_version                         | 查看當前的手機 App 版號                |          |
-| [**取得購物車**](#取得購物車)                         | **GET** /v1/carts                               | 購物車資訊                             | Y        |
-| [**查看最愛**](#查看最愛)                             | **GET** /v1/carts/favorites                     | 查看會員收藏商品                       | Y        |
-| [**大類列表**](#大類列表)                             | **GET** /v1/categories                          | 查看所有大類                           |          |
-| [**特定大類**](#特定大類)                             | **GET** /v1/categories/:id                      | 取得大類資訊                           |          |
-| [**中類列表**](#中類列表)                             | **GET** /v1/collections                         | 查看所有中類                           |          |
-| [**特定中類**](#特定中類)                             | **GET** /v1/collections/:id                     | 取得中類資訊                           |          |
-| [**地址簿列表**](#地址簿)                             | **GET** /v1/customer/addresses                  | 取得會員地址簿                         | Y        |
-| [**從地址簿中取得特定地址**](#從地址簿中取得特定地址) | **GET** /v1/customer/addresses/:id              | 從會員地址簿內取得特定地址資訊         | Y        |
-| [**會員信用卡列表**](#會員信用卡列表)                 | **GET** /v1/customers/credit_cards              | 取得會員所有綁定的信用卡               | Y        |
-| [**會員主信用卡**](#會員主信用卡)                     | **GET** /v1/customers/credit_cards/get_primary  | 取得會員的主信用卡                     | Y        |
-| [**會員存在狀態**](#會員存在狀態)                     | **GET** /v1/customers/exist                     | 查看會員是否存在                       | Y        |
-| [**會員基本資訊**](#會員基本資訊)                     | **GET** /v1/customers/me                        |                                        | Y        |
-| [**會員點數紀錄**](#會員點數紀錄)                     | **GET** /v1/customers/point_history             |                                        | Y        |
-| [**會員訂單記錄**](#會員訂單記錄)                     | **GET** /v1/customers/pos_order_histories       |                                        | Y        |
-| [**會員業務店**](#會員業務店)                         | **GET** /v1/customers/store                     |                                        | Y        |
-| [**會員 Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                        | Y        |
-| [**促銷頁列表**](#促銷頁列表)                         | **GET** /v1/event_pages                         |                                        |          |
-| [**特定促銷頁**](#特定促銷頁)                         | **GET** /v1/event_pages/:event_page_id          |                                        |          |
-| [**首頁**](#首頁)                                     | **GET** /v1/home_page                           | 首頁資訊                               |          |
-| [**消息列表**](#消息列表)                             | **GET** /v1/information                         |                                        |          |
-| [**特定消息**](#特定消息)                             | **GET** /v1/information/:information_id         |                                        |          |
-| [**維修保養單列表**](#維修保養單列表)                 | **GET** /v1/maintain_orders                     |                                        | Y        |
-| [**維修保養單明細**](#維修保養單明細)                 | **GET** /v1/maintain_orders/:number             |                                        | Y        |
-| [**推播列表**](#推播列表)                             | **GET** /v1/notifications                       |                                        | Y        |
-| [**推播明細**](#推播明細)                             | **GET** /v1/notifications/:id                   |                                        | Y        |
-| [**訂單列表**](#訂單列表)                             | **GET** /v1/orders                              |                                        | Y        |
-| [**訂單明細**](#訂單明細)                             | **GET** /v1/orders/:number                      |                                        | Y        |
-| [**查看商品**](#查看商品)                             | **GET** /v1/products/:id                        |                                        |          |
-| [**指定品項庫存**](#指定品項庫存)                     | **GET** /v1/products/query_stock                |                                        |          |
-| [**退貨單明細**](#退貨單明細)                         | **GET** /v1/return_orders/:id                   |                                        | Y        |
-| [**跑馬燈**](#跑馬燈)                                 | **GET** /v1/scrolling_texts                     |                                        |          |
-| [**取得搜尋內容**](#取得搜尋內容)                     | **GET** /v1/search                              |                                        |          |
-| [**系列頁列表**](#系列頁列表)                         | **GET** /v1/series                              |                                        |          |
-| [**指定系列頁**](#指定系列頁)                         | **GET** /v1/series/{series_id}                  |                                        |          |
-| [**店舖列表**](#店舖列表)                             | **GET** /v1/stores                              |                                        |          |
-| [**小類列表**](#小類列表)                             | **GET** /v1/sub_collections                     |                                        |          |
-| [**小類明細**](#小類明細)                             | **GET** /v1/sub_collections/:id                 |                                        |          |
-| [**特定子訂單**](#特定子訂單)                         | **GET** /v1/sub_orders/:id                      |                                        | Y        |
-| [**當前滿額贈**](#當前滿額贈)                         | **GET** /v1/target_price_discounts              |                                        | Y        |
-| [**置頂 Banner**](#置頂Banner)                        | **GET** /v1/top_banner                          |                                        |          |
-| [**加入購物車**](#加入購物車)                         | **POST** /v1/carts                              |                                        | Y        |
-| [**加入最愛**](#加入最愛)                             | **POST** /v1/carts/add_favorites                |                                        | Y        |
-| [**新增地址簿**](#新增地址簿)                         | **POST** /v1/customer/addresses                 |                                        | Y        |
-| [**創建顧客**](#創建顧客)                             | **POST** /v1/customers                          |                                        | Y        |
-| [**新增信用卡**](#新增信用卡)                         | **POST** /v1/customers/credit_cards             |                                        | Y        |
-| [**設定主信用卡**](#設定主信用卡)                     | **POST** /v1/customers/credit_cards/set_primary |                                        | Y        |
-| [**發送 OTP 到手機**](#發送OTP到手機)                 | **POST** /v1/customers/login_with_otp           |                                        | Y        |
-| [**發送 OTP**](#發送OTP)                              | **POST** /v1/customers/otp                      |                                        | Y        |
-| [**會員接收推播設定**](#會員接收推播設定)             | **POST** /v1/customers/receive_notifications    |                                        | Y        |
-| [**會員重設密碼**](#會員重設密碼)                     | **POST** /v1/customers/reset_password           |                                        | Y        |
-| [**會員設定預設店**](#會員設定預設店)                 | **POST** /v1/customers/set_default_store        |                                        | Y        |
-| [**取得 sso 憑證**](#取得sso憑證)                     | **POST** /v1/customers/sso                      |                                        | Y        |
-| [**社群媒體登入**](#社群媒體登入)                     | **POST** /v1/customers/sso_bind                 |                                        |          |
-| [**社群媒體登出**](#社群媒體登出)                     | **POST** /v1/customers/sso_unbind               |                                        | Y        |
-| [**會員同步 pos**](#會員同步pos)                      | **POST** /v1/customers/sync_pos                 |                                        | Y        |
-| [**會員資訊更新**](#會員資訊更新)                     | **POST** /v1/customers/update                   |                                        | Y        |
-| [**會員更新密碼**](#會員更新密碼)                     | **POST** /v1/customers/update_password          |                                        | Y        |
-| [**驗證 OTP**](#驗證OTP)                              | **POST** /v1/customers/validate_otp             | 驗證為數 6 碼的驗證碼                  | Y        |
-| [**驗證密碼**](#驗證密碼)                             | **POST** /v1/customers/validate_password        | 驗證密碼是否正確                       | Y        |
-| [**創建維修單**](#創建維修單)                         | **POST** /v1/maintain_orders                    |                                        | Y        |
-| [**取消維修單**](#取消維修單)                         | **POST** /v1/maintain_orders/:number/cancel     |                                        | Y        |
-| [**同意報價**](#同意報價)                             | **POST** /v1/maintain_orders/:number/quotation  |                                        | Y        |
-| [**綁定推播**](#綁定推播)                             | **POST** /v1/notification/bind                  |                                        | Y        |
-| [**解綁推播**](#解綁推播)                             | **POST** /v1/notification/unbind                |                                        | Y        |
-| [**已讀推播**](#已讀推播)                             | **POST** /v1/notifications/read                 | 已讀單筆推播                           | Y        |
-| [**推播已讀全部**](#推播已讀全部)                     | **POST** /v1/notifications/read_all             | 已讀會員內的全部推播                   | Y        |
-| [**創建訂單**](#創建訂單)                             | **POST** /v1/orders                             | 新增一筆訂單                           | Y        |
-| [**取消訂單**](#取消訂單)                             | **POST** /v1/orders/:number/cancel              | 取消已被創建的訂單                     | Y        |
-| [**重新結帳**](#重新結帳)                             | **POST** /v1/orders/:number/checkout            | 創建訂單付款失敗之後重新結帳動作       | Y        |
-| [**商品篩選**](#商品篩選)                             | **POST** /v1/products                           | 依據篩選條件篩選出特定商品             |          |
-| [**創建退貨單**](#創建退貨單)                         | **POST** /v1/return_orders/:id                  | 新增一筆待審核的退貨單                 | Y        |
-| [**計算預退金額與點數**](#計算預退金額與點數)         | **POST** /v1/return_orders/pre_calculate/:id    | 進入退貨頁面時，計算預計退貨金額集點數 | Y        |
-| [**修改地址**](#修改地址)                             | **PUT** /v1/customer/addresses/:id              | 修改地址簿內的特定地址                 | Y        |
+| [**當前 App 版號**](#當前App版號)                     | **GET** /v1/app_version                         | 查看當前的手機 App 版號                |          | ✅       |
+| [**取得購物車**](#取得購物車)                         | **GET** /v1/carts                               | 購物車資訊                             | Y        | ✅       |
+| [**查看最愛**](#查看最愛)                             | **GET** /v1/carts/favorites                     | 查看會員收藏商品                       | Y        |          |
+| [**大類列表**](#大類列表)                             | **GET** /v1/categories                          | 查看所有大類                           |          |          |
+| [**特定大類**](#特定大類)                             | **GET** /v1/categories/:id                      | 取得大類資訊                           |          |          |
+| [**中類列表**](#中類列表)                             | **GET** /v1/collections                         | 查看所有中類                           |          |          |
+| [**特定中類**](#特定中類)                             | **GET** /v1/collections/:id                     | 取得中類資訊                           |          |          |
+| [**地址簿列表**](#地址簿)                             | **GET** /v1/customer/addresses                  | 取得會員地址簿                         | Y        |          |
+| [**從地址簿中取得特定地址**](#從地址簿中取得特定地址) | **GET** /v1/customer/addresses/:id              | 從會員地址簿內取得特定地址資訊         | Y        |          |
+| [**會員信用卡列表**](#會員信用卡列表)                 | **GET** /v1/customers/credit_cards              | 取得會員所有綁定的信用卡               | Y        |          |
+| [**會員主信用卡**](#會員主信用卡)                     | **GET** /v1/customers/credit_cards/get_primary  | 取得會員的主信用卡                     | Y        |          |
+| [**會員存在狀態**](#會員存在狀態)                     | **GET** /v1/customers/exist                     | 查看會員是否存在                       | Y        |          |
+| [**會員基本資訊**](#會員基本資訊)                     | **GET** /v1/customers/me                        |                                        | Y        |          |
+| [**會員點數紀錄**](#會員點數紀錄)                     | **GET** /v1/customers/point_history             |                                        | Y        |          |
+| [**會員訂單記錄**](#會員訂單記錄)                     | **GET** /v1/customers/pos_order_histories       |                                        | Y        |          |
+| [**會員業務店**](#會員業務店)                         | **GET** /v1/customers/store                     |                                        | Y        |          |
+| [**會員 Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                        | Y        |          |
+| [**促銷頁列表**](#促銷頁列表)                         | **GET** /v1/event_pages                         |                                        |          |          |
+| [**特定促銷頁**](#特定促銷頁)                         | **GET** /v1/event_pages/:event_page_id          |                                        |          |          |
+| [**首頁**](#首頁)                                     | **GET** /v1/home_page                           | 首頁資訊                               |          |          |
+| [**消息列表**](#消息列表)                             | **GET** /v1/information                         |                                        |          |          |
+| [**特定消息**](#特定消息)                             | **GET** /v1/information/:information_id         |                                        |          |          |
+| [**維修保養單列表**](#維修保養單列表)                 | **GET** /v1/maintain_orders                     |                                        | Y        |          |
+| [**維修保養單明細**](#維修保養單明細)                 | **GET** /v1/maintain_orders/:number             |                                        | Y        |          |
+| [**推播列表**](#推播列表)                             | **GET** /v1/notifications                       |                                        | Y        |          |
+| [**推播明細**](#推播明細)                             | **GET** /v1/notifications/:id                   |                                        | Y        |          |
+| [**訂單列表**](#訂單列表)                             | **GET** /v1/orders                              |                                        | Y        |          |
+| [**訂單明細**](#訂單明細)                             | **GET** /v1/orders/:number                      |                                        | Y        |          |
+| [**查看商品**](#查看商品)                             | **GET** /v1/products/:id                        |                                        |          |          |
+| [**指定品項庫存**](#指定品項庫存)                     | **GET** /v1/products/query_stock                |                                        |          |          |
+| [**退貨單明細**](#退貨單明細)                         | **GET** /v1/return_orders/:id                   |                                        | Y        |          |
+| [**跑馬燈**](#跑馬燈)                                 | **GET** /v1/scrolling_texts                     |                                        |          |          |
+| [**取得搜尋內容**](#取得搜尋內容)                     | **GET** /v1/search                              |                                        |          |          |
+| [**系列頁列表**](#系列頁列表)                         | **GET** /v1/series                              |                                        |          |          |
+| [**指定系列頁**](#指定系列頁)                         | **GET** /v1/series/{series_id}                  |                                        |          |          |
+| [**店舖列表**](#店舖列表)                             | **GET** /v1/stores                              |                                        |          |          |
+| [**小類列表**](#小類列表)                             | **GET** /v1/sub_collections                     |                                        |          |          |
+| [**小類明細**](#小類明細)                             | **GET** /v1/sub_collections/:id                 |                                        |          |          |
+| [**特定子訂單**](#特定子訂單)                         | **GET** /v1/sub_orders/:id                      |                                        | Y        |          |
+| [**當前滿額贈**](#當前滿額贈)                         | **GET** /v1/target_price_discounts              |                                        | Y        |          |
+| [**置頂 Banner**](#置頂Banner)                        | **GET** /v1/top_banner                          |                                        |          |          |
+| [**加入購物車**](#加入購物車)                         | **POST** /v1/carts                              |                                        | Y        |          |
+| [**加入最愛**](#加入最愛)                             | **POST** /v1/carts/add_favorites                |                                        | Y        |          |
+| [**新增地址簿**](#新增地址簿)                         | **POST** /v1/customer/addresses                 |                                        | Y        |          |
+| [**創建顧客**](#創建顧客)                             | **POST** /v1/customers                          |                                        | Y        |          |
+| [**新增信用卡**](#新增信用卡)                         | **POST** /v1/customers/credit_cards             |                                        | Y        |          |
+| [**設定主信用卡**](#設定主信用卡)                     | **POST** /v1/customers/credit_cards/set_primary |                                        | Y        |          |
+| [**發送 OTP 到手機**](#發送OTP到手機)                 | **POST** /v1/customers/login_with_otp           |                                        | Y        |          |
+| [**發送 OTP**](#發送OTP)                              | **POST** /v1/customers/otp                      |                                        | Y        |          |
+| [**會員接收推播設定**](#會員接收推播設定)             | **POST** /v1/customers/receive_notifications    |                                        | Y        |          |
+| [**會員重設密碼**](#會員重設密碼)                     | **POST** /v1/customers/reset_password           |                                        | Y        |          |
+| [**會員設定預設店**](#會員設定預設店)                 | **POST** /v1/customers/set_default_store        |                                        | Y        |          |
+| [**取得 sso 憑證**](#取得sso憑證)                     | **POST** /v1/customers/sso                      |                                        | Y        |          |
+| [**社群媒體登入**](#社群媒體登入)                     | **POST** /v1/customers/sso_bind                 |                                        |          |          |
+| [**社群媒體登出**](#社群媒體登出)                     | **POST** /v1/customers/sso_unbind               |                                        | Y        |          |
+| [**會員同步 pos**](#會員同步pos)                      | **POST** /v1/customers/sync_pos                 |                                        | Y        |          |
+| [**會員資訊更新**](#會員資訊更新)                     | **POST** /v1/customers/update                   |                                        | Y        |          |
+| [**會員更新密碼**](#會員更新密碼)                     | **POST** /v1/customers/update_password          |                                        | Y        |          |
+| [**驗證 OTP**](#驗證OTP)                              | **POST** /v1/customers/validate_otp             | 驗證為數 6 碼的驗證碼                  | Y        |          |
+| [**驗證密碼**](#驗證密碼)                             | **POST** /v1/customers/validate_password        | 驗證密碼是否正確                       | Y        |          |
+| [**創建維修單**](#創建維修單)                         | **POST** /v1/maintain_orders                    |                                        | Y        |          |
+| [**取消維修單**](#取消維修單)                         | **POST** /v1/maintain_orders/:number/cancel     |                                        | Y        |          |
+| [**同意報價**](#同意報價)                             | **POST** /v1/maintain_orders/:number/quotation  |                                        | Y        |          |
+| [**綁定推播**](#綁定推播)                             | **POST** /v1/notification/bind                  |                                        | Y        |          |
+| [**解綁推播**](#解綁推播)                             | **POST** /v1/notification/unbind                |                                        | Y        |          |
+| [**已讀推播**](#已讀推播)                             | **POST** /v1/notifications/read                 | 已讀單筆推播                           | Y        |          |
+| [**推播已讀全部**](#推播已讀全部)                     | **POST** /v1/notifications/read_all             | 已讀會員內的全部推播                   | Y        |          |
+| [**創建訂單**](#創建訂單)                             | **POST** /v1/orders                             | 新增一筆訂單                           | Y        |          |
+| [**取消訂單**](#取消訂單)                             | **POST** /v1/orders/:number/cancel              | 取消已被創建的訂單                     | Y        |          |
+| [**重新結帳**](#重新結帳)                             | **POST** /v1/orders/:number/checkout            | 創建訂單付款失敗之後重新結帳動作       | Y        |          |
+| [**商品篩選**](#商品篩選)                             | **POST** /v1/products                           | 依據篩選條件篩選出特定商品             |          |          |
+| [**創建退貨單**](#創建退貨單)                         | **POST** /v1/return_orders/:id                  | 新增一筆待審核的退貨單                 | Y        |          |
+| [**計算預退金額與點數**](#計算預退金額與點數)         | **POST** /v1/return_orders/pre_calculate/:id    | 進入退貨頁面時，計算預計退貨金額集點數 | Y        |          |
+| [**修改地址**](#修改地址)                             | **PUT** /v1/customer/addresses/:id              | 修改地址簿內的特定地址                 | Y        |          |
+
+# **會員登入**
+
+- 應用場景
+
+  會員登入
+
+- 介接方式
+
+| 環境   | 網址                                       |
+| ------ | ------------------------------------------ |
+| 測試站 | https://uatecapi.tungrp.com/v1/oauth/token |
+| 正式站 | https://ecapi.tungrp.com/v1/oauth/token    |
+
+- 請求參數說明
+  - Content Type ：application/x-www-form-urlencoded
+  - Accept：application/json
+  - HTTP Method ：GET
+
+Parameters
+
+| 參數              | 型別       | 說明          | 範例       |
+| ----------------- | ---------- | ------------- | ---------- |
+| **grant_type**    | **String** | 寫死          | password   |
+| **username**      | **String** | 帳號          | elysia1234 |
+| **password**      | **String** | 密碼          | 1234567890 |
+| **client_id**     | **String** | <IT 人員提供> |            |
+| **client_secret** | **String** | <IT 人員提供> |            |
+
+- 請求參數範例
+
+```shell
+curl --location --request POST 'https://uatecapi.tungrp.com/oauth/token' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "grant_type": "password",
+    "username": "0936654691",
+    "password": "1234qwer",
+    "client_id": "Tdkam5CrBRCRoZiiCjaPPLcnjLdWPPNOw1YRJPcfZoc",
+    "client_secret" : "rN3EGztfr6TjI2AldB3O_uf16MA-k01_8aUJvMBpfQ4"
+}'
+```
+
+- 回應範例
+
+200
+
+```json
+{
+  "access_token": "T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek",
+  "token_type": "Bearer",
+  "scope": "read",
+  "created_at": 1643597734
+}
+```
+
+400
+
+```json
+
+```
+
+# **會員登出**
+
+- 應用場景
+
+  會員登出
+
+- 介接方式
+
+| 環境   | 網址                                     |
+| ------ | ---------------------------------------- |
+| 測試站 | https://uatecapi.tungrp.com/oauth/revoke |
+| 正式站 | https://ecapi.tungrp.com/v1/oauth/revoke |
+
+- 請求參數說明
+  - Content Type ：application/x-www-form-urlencoded
+  - Accept：application/json
+  - HTTP Method ：GET
+
+Header
+
+| Key           | Value        | 範例                                        | 說明     |
+| ------------- | ------------ | ------------------------------------------- | -------- |
+| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+
+Parameters
+
+| 參數              | 型別       | 說明          | 範例                                        |
+| ----------------- | ---------- | ------------- | ------------------------------------------- |
+| **token**         | **String** | 登入權杖      | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 |
+| **client_id**     | **String** | <IT 人員提供> |                                             |
+| **client_secret** | **String** | <IT 人員提供> |                                             |
+
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **刪除最愛**
 
@@ -238,21 +335,117 @@ Header
 
 Parameters
 
-| 參數                  | 型別        | 說明 | 範例 |
-| --------------------- | ----------- | ---- | ---- |
-| **token**             | **String**  | 選填 |      |
-| **use_birth_gift**    | **Integer** | 選填 |      |
-| **use_rebate_points** | **Integer** | 選填 |      |
+| 參數                  | 型別           | 說明 | 範例                                  |
+| --------------------- | -------------- | ---- | ------------------------------------- |
+| **token**             | **String**     | 選填 |                                       |
+| **use_birth_gift**    | **Integer**    | 選填 |                                       |
+| **use_rebate_points** | **Integer**    | 選填 |                                       |
+| **items**             | **ItemObject** | 選填 | [{"variant_id": 1335, "quantity": 1}] |
 
 - 請求參數範例
 
 ```
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/carts/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer C-kZPjOPmgILZqfV5t4-u3VB1qkrbs3EqDG5wp8v0Xo' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --data-raw '{"items":[{"variant_id":1335,"quantity":1}],"token":null,"use_birth_gift":0,"use_rebate_points":0}' \
+  --compressed
 ```
 
-- 回應參數說明
-
 - 回傳參數範例
+
+```json
+{
+  "subtotal": 58800,
+  "items": [
+    {
+      "variant": {
+        "uid": "KEN212-FB52MA0419SB.11.36",
+        "id": 1335,
+        "price": 58800,
+        "member_price": 58800,
+        "promote_price": 58800,
+        "color": "#F5F5DC",
+        "colorDisplay": { "zh": "米黄色", "en": "BEIGE" },
+        "material": { "zh": "棉 100%", "en": "COTTON 100%" },
+        "color_img": "",
+        "size": { "zh": "36", "en": "36" },
+        "images": [
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/7108/FB52MA0419SB.11-1.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/7111/FB52MA0419SB.11-2.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/7114/FB52MA0419SB.11-3.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/7117/FB52MA0419SB.11-4.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/7120/FB52MA0419SB.11-5.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/7123/FB52MA0419SB.11-6.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/7126/FB52MA0419SB.11-7.jpg"
+        ],
+        "video": "",
+        "filter_br": { "zh": "", "en": "" },
+        "filter_metal": { "zh": "", "en": "" },
+        "filter_gem": { "zh": "", "en": "" },
+        "filter_size": { "zh": "S", "en": "S" },
+        "filter_cat": { "zh": "", "en": "" },
+        "filter_pattern": { "zh": "", "en": "" },
+        "filter_color": { "zh": "米色", "en": "BEIGE" },
+        "filter_theme": { "zh": "", "en": "" },
+        "filter_series": { "zh": "SS21", "en": "SS21" },
+        "product": {
+          "brand_id": 1,
+          "title": { "zh": "駝色造型抽繩戰壕大衣", "en": "Belted trench coat" },
+          "id": 703,
+          "category": { "id": 7, "title": { "zh": "女裝", "en": "WOMEN" } },
+          "collection": {
+            "id": 37,
+            "title": { "zh": "外套 \u0026 夾克", "en": "COATS \u0026 JACKETS" }
+          },
+          "sub_collection": {
+            "id": 64,
+            "title": { "zh": "外套", "en": "COATS" }
+          },
+          "info_detail": {
+            "zh": "綁帶長版風衣，為純棉布料舒適透氣，領口抽繩可變化為花苞領，增添整體份量感與造型，而可拆式腰帶能調整腰身，修飾身形，背後防風片則有別一般大衣，以連袖及抽繩設計展現完美廓型，加上防水面料的特性，使風衣外套時髦兼具機能性。",
+            "en": "In an ode to nature, movement and fluidity, the KENZO Spring-Summer 2021 collection continues to celebrate the fundamental values of the House, which are nature and the joy of exploring the world through versatile fashion perfect for a nomadic lifestyle.\n\nMid-length belted trench coat.\nLong buttoned sleeves.\nDrawstring cord at collar and on the back.\nWelt pockets on the front.\nTiger and K embroidered on the interior.\nWater-resistant material.\nFully lined.\nDouble-breasted button fastening on the front."
+          },
+          "size_img": {
+            "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/28/f_size.jpg",
+            "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/29/f_size_zh.jpg"
+          },
+          "series": [],
+          "promotion": null,
+          "member_price": 58800,
+          "promote_price": 58800,
+          "price": 58800,
+          "specified_variant_id": null,
+          "published": true
+        },
+        "stock": 98
+      },
+      "quantity": 1
+    }
+  ],
+  "token": "n8QLW1fkftnbwDUb8i9FMqLc",
+  "price_detail": {
+    "target_price_discount_title": { "zh": "全館滿額", "en": "goons test" },
+    "target_price_discount_value": 5800,
+    "rebate": 0,
+    "birth_gift": 0,
+    "price": 53000,
+    "subtotal": 58800
+  }
+}
+```
 
 # **查看最愛**
 
@@ -276,20 +469,18 @@ Header
 | ------------- | ------------ | ------------------------------------------- | -------- |
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
-
 - 請求參數範例
 
 ```
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request GET 'https://uatecapi.tungrp.com/v1/v1/customers/carts/favorite' \
+--header 'Authorization: Bearer QHSQUCdZyYVJIftyRCZpIIZNbH3pbmURbS3x2N3T0Ys'
 ```
 
-- 回應參數說明
 - 回傳參數範例
+
+```json
+
+```
 
 # **大類列表**
 
@@ -595,8 +786,8 @@ https://uatecapi.tungrp.com/v1/products/697
 - 應用場景
   - 從所有會員收藏的商品內刪除特定一筆商品
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/me
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/me
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -608,20 +799,55 @@ Header
 | ------------- | ------------ | ------------------------------------------- | -------- |
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
-| **id** | **Integer** | 商品流水號 | 697  |
-
 - 請求參數範例
 
 ```
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/me/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'if-none-match: W/"19b71e7779ade1d37530eddf2447a7e3"' \
+  --compressed
 ```
 
 - 回應參數說明
 - 回傳參數範例
+
+```json
+{
+  "id": 17,
+  "phone": "0983168969",
+  "email": "k445566778899k@gmail.com",
+  "name": "ChenHanTing",
+  "birthdate": "2022-01-20",
+  "sex": "N",
+  "vip_no": "70041378",
+  "birth_gift_points": [],
+  "rebate_points": [],
+  "vip_start_date": "2022-01-20",
+  "vip_end_date": "2121-01-31",
+  "vip_level": "M",
+  "vip_card_barcode": "HAAEBDHIDBBAFF",
+  "locale": "zh_tw",
+  "google_display_name": null,
+  "google_uid": null,
+  "facebook_display_name": null,
+  "facebook_uid": null,
+  "apple_display_name": null,
+  "apple_uid": null
+}
+```
 
 # **會員點數紀錄**
 
@@ -2101,8 +2327,8 @@ https://uatecapi.tungrp.com/v1/products/697
   - 從所有會員收藏的商品內刪除特定一筆商品
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/sync_pos
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/sync_pos
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2120,10 +2346,28 @@ Parameters
 - 請求參數範例
 
 ```
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/sync_pos/' \
+  -X 'POST' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'content-length: 0' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --compressed
 ```
 
 - 回應參數說明
+
 - 回傳參數範例
 
 # **會員資訊更新**
@@ -2871,3 +3115,16 @@ https://uatecapi.tungrp.com/v1/products/697
 | 200         | 成功               |
 | 201         | 成功創建           |
 | 400         | 請求錯誤、內部錯誤 |
+
+# 附錄 3
+
+## VarintEntity
+
+
+# SwaggerClient::V1TopBannerEntity
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**link_to** | **String** | 連結 |
+
