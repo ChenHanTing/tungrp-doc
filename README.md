@@ -1,86 +1,86 @@
 # Api & Api 列表
 
-| Method                                                | HTTP request                                    | 說明                                   | 登入狀態 | 是否完成 |
-| ----------------------------------------------------- | ----------------------------------------------- | -------------------------------------- | -------- | -------- |
-| [**會員登入**](#會員登入)                             | **POST** /oauth/token                           |                                        | Y        | ✅       |
-| [**會員登出**](#會員登出)                             | **POST** /oauth/revoke                          |                                        | Y        | ✅       |
-| [**刪除最愛**](#刪除最愛)                             | **DELETE** /v1/carts/favorite                   | 刪除最愛                               | Y        | ✅       |
-| [**刪除地址**](#刪除地址)                             | **DELETE** /v1/customer/addresses/:id           | 刪除地址簿內指定的地址                 | Y        | ✅       |
-| [**刪除信用卡**](#刪除信用卡)                         | **DELETE** /v1/customers/credit_cards/:card_id  | 刪除會員帳號內綁定的信用卡             | Y        | ✅       |
-| [**當前 App 版號**](#當前App版號)                     | **GET** /v1/app_version                         | 查看當前的手機 App 版號                |          | ✅       |
-| [**取得購物車**](#取得購物車)                         | **GET** /v1/carts                               | 購物車資訊                             | Y        | ✅       |
-| [**查看最愛**](#查看最愛)                             | **GET** /v1/carts/favorites                     | 查看會員收藏商品                       | Y        |          |
-| [**大類列表**](#大類列表)                             | **GET** /v1/categories                          | 查看所有大類                           |          |          |
-| [**特定大類**](#特定大類)                             | **GET** /v1/categories/:id                      | 取得大類資訊                           |          |          |
-| [**中類列表**](#中類列表)                             | **GET** /v1/collections                         | 查看所有中類                           |          |          |
-| [**特定中類**](#特定中類)                             | **GET** /v1/collections/:id                     | 取得中類資訊                           |          |          |
-| [**地址簿列表**](#地址簿)                             | **GET** /v1/customer/addresses                  | 取得會員地址簿                         | Y        |          |
-| [**從地址簿中取得特定地址**](#從地址簿中取得特定地址) | **GET** /v1/customer/addresses/:id              | 從會員地址簿內取得特定地址資訊         | Y        |          |
-| [**會員信用卡列表**](#會員信用卡列表)                 | **GET** /v1/customers/credit_cards              | 取得會員所有綁定的信用卡               | Y        |          |
-| [**會員主信用卡**](#會員主信用卡)                     | **GET** /v1/customers/credit_cards/get_primary  | 取得會員的主信用卡                     | Y        |          |
-| [**會員存在狀態**](#會員存在狀態)                     | **GET** /v1/customers/exist                     | 查看會員是否存在                       | Y        |          |
-| [**會員基本資訊**](#會員基本資訊)                     | **GET** /v1/customers/me                        |                                        | Y        |          |
-| [**會員點數紀錄**](#會員點數紀錄)                     | **GET** /v1/customers/point_history             |                                        | Y        |          |
-| [**會員訂單記錄**](#會員訂單記錄)                     | **GET** /v1/customers/pos_order_histories       |                                        | Y        |          |
-| [**會員業務店**](#會員業務店)                         | **GET** /v1/customers/store                     |                                        | Y        |          |
-| [**會員 Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                        | Y        |          |
-| [**促銷頁列表**](#促銷頁列表)                         | **GET** /v1/event_pages                         |                                        |          |          |
-| [**特定促銷頁**](#特定促銷頁)                         | **GET** /v1/event_pages/:event_page_id          |                                        |          |          |
-| [**首頁**](#首頁)                                     | **GET** /v1/home_page                           | 首頁資訊                               |          |          |
-| [**消息列表**](#消息列表)                             | **GET** /v1/information                         |                                        |          |          |
-| [**特定消息**](#特定消息)                             | **GET** /v1/information/:information_id         |                                        |          |          |
-| [**維修保養單列表**](#維修保養單列表)                 | **GET** /v1/maintain_orders                     |                                        | Y        |          |
-| [**維修保養單明細**](#維修保養單明細)                 | **GET** /v1/maintain_orders/:number             |                                        | Y        |          |
-| [**推播列表**](#推播列表)                             | **GET** /v1/notifications                       |                                        | Y        |          |
-| [**推播明細**](#推播明細)                             | **GET** /v1/notifications/:id                   |                                        | Y        |          |
-| [**訂單列表**](#訂單列表)                             | **GET** /v1/orders                              |                                        | Y        |          |
-| [**訂單明細**](#訂單明細)                             | **GET** /v1/orders/:number                      |                                        | Y        |          |
-| [**查看商品**](#查看商品)                             | **GET** /v1/products/:id                        |                                        |          |          |
-| [**指定品項庫存**](#指定品項庫存)                     | **GET** /v1/products/query_stock                |                                        |          |          |
-| [**退貨單明細**](#退貨單明細)                         | **GET** /v1/return_orders/:id                   |                                        | Y        |          |
-| [**跑馬燈**](#跑馬燈)                                 | **GET** /v1/scrolling_texts                     |                                        |          |          |
-| [**取得搜尋內容**](#取得搜尋內容)                     | **GET** /v1/search                              |                                        |          |          |
-| [**系列頁列表**](#系列頁列表)                         | **GET** /v1/series                              |                                        |          |          |
-| [**指定系列頁**](#指定系列頁)                         | **GET** /v1/series/{series_id}                  |                                        |          |          |
-| [**店舖列表**](#店舖列表)                             | **GET** /v1/stores                              |                                        |          |          |
-| [**小類列表**](#小類列表)                             | **GET** /v1/sub_collections                     |                                        |          |          |
-| [**小類明細**](#小類明細)                             | **GET** /v1/sub_collections/:id                 |                                        |          |          |
-| [**特定子訂單**](#特定子訂單)                         | **GET** /v1/sub_orders/:id                      |                                        | Y        |          |
-| [**當前滿額贈**](#當前滿額贈)                         | **GET** /v1/target_price_discounts              |                                        | Y        |          |
-| [**置頂 Banner**](#置頂Banner)                        | **GET** /v1/top_banner                          |                                        |          |          |
-| [**加入購物車**](#加入購物車)                         | **POST** /v1/carts                              |                                        | Y        |          |
-| [**加入最愛**](#加入最愛)                             | **POST** /v1/carts/add_favorites                |                                        | Y        |          |
-| [**新增地址簿**](#新增地址簿)                         | **POST** /v1/customer/addresses                 |                                        | Y        |          |
-| [**創建顧客**](#創建顧客)                             | **POST** /v1/customers                          |                                        | Y        |          |
-| [**新增信用卡**](#新增信用卡)                         | **POST** /v1/customers/credit_cards             |                                        | Y        |          |
-| [**設定主信用卡**](#設定主信用卡)                     | **POST** /v1/customers/credit_cards/set_primary |                                        | Y        |          |
-| [**發送 OTP 到手機**](#發送OTP到手機)                 | **POST** /v1/customers/login_with_otp           |                                        | Y        |          |
-| [**發送 OTP**](#發送OTP)                              | **POST** /v1/customers/otp                      |                                        | Y        |          |
-| [**會員接收推播設定**](#會員接收推播設定)             | **POST** /v1/customers/receive_notifications    |                                        | Y        |          |
-| [**會員重設密碼**](#會員重設密碼)                     | **POST** /v1/customers/reset_password           |                                        | Y        |          |
-| [**會員設定預設店**](#會員設定預設店)                 | **POST** /v1/customers/set_default_store        |                                        | Y        |          |
-| [**取得 sso 憑證**](#取得sso憑證)                     | **POST** /v1/customers/sso                      |                                        | Y        |          |
-| [**社群媒體登入**](#社群媒體登入)                     | **POST** /v1/customers/sso_bind                 |                                        |          |          |
-| [**社群媒體登出**](#社群媒體登出)                     | **POST** /v1/customers/sso_unbind               |                                        | Y        |          |
-| [**會員同步 pos**](#會員同步pos)                      | **POST** /v1/customers/sync_pos                 |                                        | Y        |          |
-| [**會員資訊更新**](#會員資訊更新)                     | **POST** /v1/customers/update                   |                                        | Y        |          |
-| [**會員更新密碼**](#會員更新密碼)                     | **POST** /v1/customers/update_password          |                                        | Y        |          |
-| [**驗證 OTP**](#驗證OTP)                              | **POST** /v1/customers/validate_otp             | 驗證為數 6 碼的驗證碼                  | Y        |          |
-| [**驗證密碼**](#驗證密碼)                             | **POST** /v1/customers/validate_password        | 驗證密碼是否正確                       | Y        |          |
-| [**創建維修單**](#創建維修單)                         | **POST** /v1/maintain_orders                    |                                        | Y        |          |
-| [**取消維修單**](#取消維修單)                         | **POST** /v1/maintain_orders/:number/cancel     |                                        | Y        |          |
-| [**同意報價**](#同意報價)                             | **POST** /v1/maintain_orders/:number/quotation  |                                        | Y        |          |
-| [**綁定推播**](#綁定推播)                             | **POST** /v1/notification/bind                  |                                        | Y        |          |
-| [**解綁推播**](#解綁推播)                             | **POST** /v1/notification/unbind                |                                        | Y        |          |
-| [**已讀推播**](#已讀推播)                             | **POST** /v1/notifications/read                 | 已讀單筆推播                           | Y        |          |
-| [**推播已讀全部**](#推播已讀全部)                     | **POST** /v1/notifications/read_all             | 已讀會員內的全部推播                   | Y        |          |
-| [**創建訂單**](#創建訂單)                             | **POST** /v1/orders                             | 新增一筆訂單                           | Y        |          |
-| [**取消訂單**](#取消訂單)                             | **POST** /v1/orders/:number/cancel              | 取消已被創建的訂單                     | Y        |          |
-| [**重新結帳**](#重新結帳)                             | **POST** /v1/orders/:number/checkout            | 創建訂單付款失敗之後重新結帳動作       | Y        |          |
-| [**商品篩選**](#商品篩選)                             | **POST** /v1/products                           | 依據篩選條件篩選出特定商品             |          |          |
-| [**創建退貨單**](#創建退貨單)                         | **POST** /v1/return_orders/:id                  | 新增一筆待審核的退貨單                 | Y        |          |
+| Method                                                | HTTP request                                    | 說明                                  | 登入狀態 | 是否完成 |
+|-------------------------------------------------------|-------------------------------------------------|---------------------------------------|----------|----------|
+| [**會員登入**](#會員登入)                             | **POST** /oauth/token                           |                                       | Y        | ✅        |
+| [**會員登出**](#會員登出)                             | **POST** /oauth/revoke                          |                                       | Y        | ✅        |
+| [**刪除最愛**](#刪除最愛)                             | **DELETE** /v1/carts/favorite                   | 刪除最愛                              | Y        | ✅        |
+| [**刪除地址**](#刪除地址)                             | **DELETE** /v1/customer/addresses/:id           | 刪除地址簿內指定的地址                | Y        | ✅        |
+| [**刪除信用卡**](#刪除信用卡)                         | **DELETE** /v1/customers/credit_cards/:card_id  | 刪除會員帳號內綁定的信用卡            | Y        | ✅        |
+| [**當前 App 版號**](#當前App版號)                     | **GET** /v1/app_version                         | 查看當前的手機 App 版號               |          | ✅        |
+| [**取得購物車**](#取得購物車)                         | **GET** /v1/carts                               | 購物車資訊                            | Y        | ✅        |
+| [**查看最愛**](#查看最愛)                             | **GET** /v1/carts/favorites                     | 查看會員收藏商品                      | Y        |          |
+| [**大類列表**](#大類列表)                             | **GET** /v1/categories                          | 查看所有大類                          |          |          |
+| [**特定大類**](#特定大類)                             | **GET** /v1/categories/:id                      | 取得大類資訊                          |          |          |
+| [**中類列表**](#中類列表)                             | **GET** /v1/collections                         | 查看所有中類                          |          |          |
+| [**特定中類**](#特定中類)                             | **GET** /v1/collections/:id                     | 取得中類資訊                          |          |          |
+| [**地址簿列表**](#地址簿)                             | **GET** /v1/customer/addresses                  | 取得會員地址簿                        | Y        |          |
+| [**從地址簿中取得特定地址**](#從地址簿中取得特定地址) | **GET** /v1/customer/addresses/:id              | 從會員地址簿內取得特定地址資訊        | Y        |          |
+| [**會員信用卡列表**](#會員信用卡列表)                 | **GET** /v1/customers/credit_cards              | 取得會員所有綁定的信用卡              | Y        |          |
+| [**會員主信用卡**](#會員主信用卡)                     | **GET** /v1/customers/credit_cards/get_primary  | 取得會員的主信用卡                    | Y        |          |
+| [**會員存在狀態**](#會員存在狀態)                     | **GET** /v1/customers/exist                     | 查看會員是否存在                      | Y        |          |
+| [**會員基本資訊**](#會員基本資訊)                     | **GET** /v1/customers/me                        |                                       | Y        |          |
+| [**會員點數紀錄**](#會員點數紀錄)                     | **GET** /v1/customers/point_history             |                                       | Y        |          |
+| [**會員訂單記錄**](#會員訂單記錄)                     | **GET** /v1/customers/pos_order_histories       |                                       | Y        |          |
+| [**會員業務店**](#會員業務店)                         | **GET** /v1/customers/store                     |                                       | Y        |          |
+| [**會員 Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                       | Y        |          |
+| [**促銷頁列表**](#促銷頁列表)                         | **GET** /v1/event_pages                         |                                       |          |          |
+| [**特定促銷頁**](#特定促銷頁)                         | **GET** /v1/event_pages/:event_page_id          |                                       |          |          |
+| [**首頁**](#首頁)                                     | **GET** /v1/home_page                           | 首頁資訊                              |          |          |
+| [**消息列表**](#消息列表)                             | **GET** /v1/information                         |                                       |          |          |
+| [**特定消息**](#特定消息)                             | **GET** /v1/information/:information_id         |                                       |          |          |
+| [**維修保養單列表**](#維修保養單列表)                 | **GET** /v1/maintain_orders                     |                                       | Y        |          |
+| [**維修保養單明細**](#維修保養單明細)                 | **GET** /v1/maintain_orders/:number             |                                       | Y        |          |
+| [**推播列表**](#推播列表)                             | **GET** /v1/notifications                       |                                       | Y        |          |
+| [**推播明細**](#推播明細)                             | **GET** /v1/notifications/:id                   |                                       | Y        |          |
+| [**訂單列表**](#訂單列表)                             | **GET** /v1/orders                              |                                       | Y        |          |
+| [**訂單明細**](#訂單明細)                             | **GET** /v1/orders/:number                      |                                       | Y        |          |
+| [**查看商品**](#查看商品)                             | **GET** /v1/products/:id                        |                                       |          |          |
+| [**指定品項庫存**](#指定品項庫存)                     | **GET** /v1/products/query_stock                |                                       |          |          |
+| [**退貨單明細**](#退貨單明細)                         | **GET** /v1/return_orders/:id                   |                                       | Y        |          |
+| [**跑馬燈**](#跑馬燈)                                 | **GET** /v1/scrolling_texts                     |                                       |          |          |
+| [**取得搜尋內容**](#取得搜尋內容)                     | **GET** /v1/search                              |                                       |          |          |
+| [**系列頁列表**](#系列頁列表)                         | **GET** /v1/series                              |                                       |          |          |
+| [**指定系列頁**](#指定系列頁)                         | **GET** /v1/series/{series_id}                  |                                       |          |          |
+| [**店舖列表**](#店舖列表)                             | **GET** /v1/stores                              |                                       |          |          |
+| [**小類列表**](#小類列表)                             | **GET** /v1/sub_collections                     |                                       |          |          |
+| [**小類明細**](#小類明細)                             | **GET** /v1/sub_collections/:id                 |                                       |          |          |
+| [**特定子訂單**](#特定子訂單)                         | **GET** /v1/sub_orders/:id                      |                                       | Y        |          |
+| [**當前滿額贈**](#當前滿額贈)                         | **GET** /v1/target_price_discounts              |                                       | Y        |          |
+| [**置頂 Banner**](#置頂Banner)                        | **GET** /v1/top_banner                          |                                       |          |          |
+| [**加入購物車**](#加入購物車)                         | **POST** /v1/carts                              |                                       | Y        |          |
+| [**加入最愛**](#加入最愛)                             | **POST** /v1/carts/add_favorites                |                                       | Y        |          |
+| [**新增地址簿**](#新增地址簿)                         | **POST** /v1/customer/addresses                 |                                       | Y        |          |
+| [**創建顧客**](#創建顧客)                             | **POST** /v1/customers                          |                                       | Y        |          |
+| [**新增信用卡**](#新增信用卡)                         | **POST** /v1/customers/credit_cards             |                                       | Y        |          |
+| [**設定主信用卡**](#設定主信用卡)                     | **POST** /v1/customers/credit_cards/set_primary |                                       | Y        |          |
+| [**發送 OTP 到手機**](#發送OTP到手機)                 | **POST** /v1/customers/login_with_otp           |                                       | Y        |          |
+| [**發送 OTP**](#發送OTP)                              | **POST** /v1/customers/otp                      |                                       | Y        |          |
+| [**會員接收推播設定**](#會員接收推播設定)             | **POST** /v1/customers/receive_notifications    |                                       | Y        |          |
+| [**會員重設密碼**](#會員重設密碼)                     | **POST** /v1/customers/reset_password           |                                       | Y        |          |
+| [**會員設定預設店**](#會員設定預設店)                 | **POST** /v1/customers/set_default_store        |                                       | Y        |          |
+| [**取得 sso 憑證**](#取得sso憑證)                     | **POST** /v1/customers/sso                      |                                       | Y        |          |
+| [**社群媒體登入**](#社群媒體登入)                     | **POST** /v1/customers/sso_bind                 |                                       |          |          |
+| [**社群媒體登出**](#社群媒體登出)                     | **POST** /v1/customers/sso_unbind               |                                       | Y        |          |
+| [**會員同步 pos**](#會員同步pos)                      | **POST** /v1/customers/sync_pos                 |                                       | Y        |          |
+| [**會員資訊更新**](#會員資訊更新)                     | **POST** /v1/customers/update                   |                                       | Y        |          |
+| [**會員更新密碼**](#會員更新密碼)                     | **POST** /v1/customers/update_password          |                                       | Y        |          |
+| [**驗證 OTP**](#驗證OTP)                              | **POST** /v1/customers/validate_otp             | 驗證為數 6 碼的驗證碼                 | Y        |          |
+| [**驗證密碼**](#驗證密碼)                             | **POST** /v1/customers/validate_password        | 驗證密碼是否正確                      | Y        |          |
+| [**創建維修單**](#創建維修單)                         | **POST** /v1/maintain_orders                    |                                       | Y        |          |
+| [**取消維修單**](#取消維修單)                         | **POST** /v1/maintain_orders/:number/cancel     |                                       | Y        |          |
+| [**同意報價**](#同意報價)                             | **POST** /v1/maintain_orders/:number/quotation  |                                       | Y        |          |
+| [**綁定推播**](#綁定推播)                             | **POST** /v1/notification/bind                  |                                       | Y        |          |
+| [**解綁推播**](#解綁推播)                             | **POST** /v1/notification/unbind                |                                       | Y        |          |
+| [**已讀推播**](#已讀推播)                             | **POST** /v1/notifications/read                 | 已讀單筆推播                          | Y        |          |
+| [**推播已讀全部**](#推播已讀全部)                     | **POST** /v1/notifications/read_all             | 已讀會員內的全部推播                  | Y        |          |
+| [**創建訂單**](#創建訂單)                             | **POST** /v1/orders                             | 新增一筆訂單                          | Y        |          |
+| [**取消訂單**](#取消訂單)                             | **POST** /v1/orders/:number/cancel              | 取消已被創建的訂單                    | Y        |          |
+| [**重新結帳**](#重新結帳)                             | **POST** /v1/orders/:number/checkout            | 創建訂單付款失敗之後重新結帳動作      | Y        |          |
+| [**商品篩選**](#商品篩選)                             | **POST** /v1/products                           | 依據篩選條件篩選出特定商品            |          |          |
+| [**創建退貨單**](#創建退貨單)                         | **POST** /v1/return_orders/:id                  | 新增一筆待審核的退貨單                | Y        |          |
 | [**計算預退金額與點數**](#計算預退金額與點數)         | **POST** /v1/return_orders/pre_calculate/:id    | 進入退貨頁面時，計算預計退貨金額集點數 | Y        |          |
-| [**修改地址**](#修改地址)                             | **PUT** /v1/customer/addresses/:id              | 修改地址簿內的特定地址                 | Y        |          |
+| [**修改地址**](#修改地址)                             | **PUT** /v1/customer/addresses/:id              | 修改地址簿內的特定地址                | Y        |          |
 
 # **會員登入**
 
@@ -91,7 +91,7 @@
 - 介接方式
 
 | 環境   | 網址                                       |
-| ------ | ------------------------------------------ |
+|------|--------------------------------------------|
 | 測試站 | https://uatecapi.tungrp.com/v1/oauth/token |
 | 正式站 | https://ecapi.tungrp.com/v1/oauth/token    |
 
@@ -103,7 +103,7 @@
 Parameters
 
 | 參數              | 型別       | 說明          | 範例       |
-| ----------------- | ---------- | ------------- | ---------- |
+|-------------------|------------|-------------|------------|
 | **grant_type**    | **String** | 寫死          | password   |
 | **username**      | **String** | 帳號          | elysia1234 |
 | **password**      | **String** | 密碼          | 1234567890 |
@@ -146,7 +146,7 @@ curl --location --request POST 'https://uatecapi.tungrp.com/oauth/token' \
 - 介接方式
 
 | 環境   | 網址                                     |
-| ------ | ---------------------------------------- |
+|------|------------------------------------------|
 | 測試站 | https://uatecapi.tungrp.com/oauth/revoke |
 | 正式站 | https://ecapi.tungrp.com/v1/oauth/revoke |
 
@@ -158,13 +158,13 @@ curl --location --request POST 'https://uatecapi.tungrp.com/oauth/token' \
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數              | 型別       | 說明          | 範例                                        |
-| ----------------- | ---------- | ------------- | ------------------------------------------- |
+|-------------------|------------|-------------|---------------------------------------------|
 | **token**         | **String** | 登入權杖      | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 |
 | **client_id**     | **String** | <IT 人員提供> |                                             |
 | **client_secret** | **String** | <IT 人員提供> |                                             |
@@ -180,7 +180,7 @@ Parameters
 - 介接方式
 
 | 環境   | 網址                                          |
-| ------ | --------------------------------------------- |
+|------|-----------------------------------------------|
 | 測試站 | https://uatecapi.tungrp.com/v1/carts/favorite |
 | 正式站 | https://ecapi.tungrp.com/v1/carts/favorite    |
 
@@ -192,13 +192,13 @@ Parameters
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數           | 型別        | 說明       | 範例 |
-| -------------- | ----------- | ---------- | ---- |
+|----------------|-------------|----------|------|
 | **variant_id** | **Integer** | 品項流水號 | 3    |
 
 - 請求參數範例
@@ -232,13 +232,13 @@ curl --location --request DELETE 'https://api-test.tun-grp.com/v1/carts/favorite
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明         | 範例 |
-| ------ | ----------- | ------------ | ---- |
+|--------|-------------|------------|------|
 | **id** | **Integer** | 地址簿流水號 | 3    |
 
 - 請求參數範例
@@ -269,13 +269,13 @@ curl --location --request DELETE 'https://api-test.tun-grp.com/v1/customers/addr
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明         | 範例 |
-| ------ | ----------- | ------------ | ---- |
+|--------|-------------|------------|------|
 | **id** | **Integer** | 信用卡流水號 | 3    |
 
 - 請求參數範例
@@ -329,13 +329,13 @@ curl --location --request DELETE 'https://api-test.tun-grp.com/v1/customers/cred
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數                  | 型別           | 說明 | 範例                                  |
-| --------------------- | -------------- | ---- | ------------------------------------- |
+|-----------------------|----------------|----|---------------------------------------|
 | **token**             | **String**     | 選填 |                                       |
 | **use_birth_gift**    | **Integer**    | 選填 |                                       |
 | **use_rebate_points** | **Integer**    | 選填 |                                       |
@@ -469,7 +469,7 @@ curl 'https://uatecapi.tungrp.com/v1/carts/' \
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 - 請求參數範例
@@ -508,7 +508,7 @@ curl --location --request GET 'https://uatecapi.tungrp.com/v1/v1/customers/carts
 Parameters
 
 | 參數         | 型別        | 說明                 | 範例 |
-| ------------ | ----------- | -------------------- | ---- |
+|--------------|-------------|--------------------|------|
 | **brand_id** | **Integer** | [**附錄 1**](#附錄1) | 1    |
 
 - 請求參數範例
@@ -542,7 +542,7 @@ https://uatecapi.tungrp.com/v1/categories?brand_id=1
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 大類流水號 | 3    |
 
 - 請求參數範例
@@ -576,7 +576,7 @@ https://uatecapi.tungrp.com/v1/categories/3
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 - 回應參數說明
@@ -604,13 +604,13 @@ Header
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -644,9 +644,9 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|----------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-|               |
+|               |              |                                             |          |
 
 - 回應參數說明
 
@@ -673,13 +673,13 @@ Header
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明         | 範例 |
-| ------ | ----------- | ------------ | ---- |
+|--------|-------------|------------|------|
 | **id** | **Integer** | 地址簿流水號 | 697  |
 
 - 請求參數範例
@@ -709,13 +709,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -742,13 +742,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -775,13 +775,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -808,7 +808,7 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 - 請求參數範例
@@ -876,13 +876,13 @@ curl 'https://uatecapi.tungrp.com/v1/customers/me/' \
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -909,13 +909,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -944,13 +944,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -981,13 +981,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -1014,7 +1014,7 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 - 請求參數範例
@@ -1044,13 +1044,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -1080,13 +1080,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -1116,7 +1116,7 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 - 請求參數範例
@@ -1146,13 +1146,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -1179,13 +1179,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數       | 型別        | 說明 | 範例 |
-| ---------- | ----------- | ---- | ---- |
+|------------|-------------|------|----|
 | **limit**  | **Integer** |      | 選填 |
 | **offset** | **Integer** |      | 選填 |
 
@@ -1213,13 +1213,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數       | 型別        | 說明 | 範例 |
-| ---------- | ----------- | ---- | ---- |
+|------------|-------------|------|------|
 | **number** | **Integer** |      |      |
 
 - 請求參數範例
@@ -1249,13 +1249,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數       | 型別        | 說明 | 範例 |
-| ---------- | ----------- | ---- | ---- |
+|------------|-------------|------|------|
 | **type**   | **String**  |      |      |
 | **offset** | **Integer** |      | 選填 |
 | **limit**  | **Integer** |      | 選填 |
@@ -1287,13 +1287,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明 | 範例 |
-| ------ | ----------- | ---- | ---- |
+|--------|-------------|------|------|
 | **id** | **Integer** |      |      |
 
 - 請求參數範例
@@ -1329,13 +1329,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數       | 型別        | 說明 | 範例 |
-| ---------- | ----------- | ---- | ---- |
+|------------|-------------|------|----|
 | **limit**  | **Integer** |      | 選填 |
 | **offset** | **Integer** |      | 選填 |
 | **status** | **String**  |      | 選填 |
@@ -1367,13 +1367,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數       | 型別        | 說明 | 範例 |
-| ---------- | ----------- | ---- | ---- |
+|------------|-------------|------|------|
 | **number** | **Integer** |      |      |
 
 - 請求參數範例
@@ -1405,13 +1405,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -1445,13 +1445,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數           | 型別       | 說明 | 範例 |
-| -------------- | ---------- | ---- | ---- |
+|----------------|------------|------|------|
 | **variant_id** | **String** |      |      |
 
 - 請求參數範例
@@ -1481,13 +1481,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -1517,13 +1517,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別        | 說明                 | 範例 |
-| ------------ | ----------- | -------------------- | ---- |
+|--------------|-------------|--------------------|------|
 | **brand_id** | **Integer** | [**附錄 1**](#附錄1) | 1    |
 
 - 請求參數範例
@@ -1553,13 +1553,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數        | 型別       | 說明 | 範例 |
-| ----------- | ---------- | ---- | ---- |
+|-------------|------------|------|------|
 | **keyword** | **String** |      |      |
 
 - 請求參數範例
@@ -1589,13 +1589,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別        | 說明                 | 範例 |
-| ------------ | ----------- | -------------------- | ---- |
+|--------------|-------------|--------------------|------|
 | **brand_id** | **Integer** | [**附錄 1**](#附錄1) | 1    |
 
 - 請求參數範例
@@ -1625,13 +1625,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數          | 型別        | 說明 | 範例 |
-| ------------- | ----------- | ---- | ---- |
+|---------------|-------------|------|------|
 | **series_id** | **Integer** |      |      |
 
 - 請求參數範例
@@ -1661,13 +1661,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別        | 說明                 | 範例 |
-| ------------ | ----------- | -------------------- | ---- |
+|--------------|-------------|--------------------|------|
 | **brand_id** | **Integer** | [**附錄 1**](#附錄1) | 1    |
 
 - 請求參數範例
@@ -1697,13 +1697,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別        | 說明                 | 範例 |
-| ------------ | ----------- | -------------------- | ---- |
+|--------------|-------------|--------------------|------|
 | **brand_id** | **Integer** | [**附錄 1**](#附錄1) | 1    |
 
 - 請求參數範例
@@ -1733,13 +1733,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明 | 範例 |
-| ------ | ----------- | ---- | ---- |
+|--------|-------------|------|------|
 | **id** | **Integer** |      |      |
 
 - 請求參數範例
@@ -1771,13 +1771,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -1809,13 +1809,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
-| ------ | ----------- | ---------- | ---- |
+|--------|-------------|----------|------|
 | **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
@@ -1847,13 +1847,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別        | 說明                 | 範例 |
-| ------------ | ----------- | -------------------- | ---- |
+|--------------|-------------|--------------------|------|
 | **brand_id** | **Integer** | [**附錄 1**](#附錄1) | 1    |
 
 - 請求參數範例
@@ -1885,18 +1885,18 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數                  | 型別                     | 說明 | 範例 |
-| --------------------- | ------------------------ | ---- | ---- |
+|-----------------------|--------------------------|------|------|
 | **token**             | **String**               |      | 選填 |
 | **use_birth_gift**    | **Integer**              |      | 選填 |
 | **use_rebate_points** | **Integer**              |      | 選填 |
-| **items_variant_id**  | **Array&lt;String&gt;**  |      |
-| **items_quantity**    | **Array&lt;Integer&gt;** |      |
+| **items_variant_id**  | **Array&lt;String&gt;**  |      |      |
+| **items_quantity**    | **Array&lt;Integer&gt;** |      |      |
 
 - 請求參數範例
 
@@ -1927,14 +1927,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數           | 型別        | 說明 | 範例 |
-| -------------- | ----------- | ---- | ---- |
-| **variant_id** | **Integer** |      |
+|----------------|-------------|------|------|
+| **variant_id** | **Integer** |      |      |
 
 - 請求參數範例
 
@@ -1962,15 +1962,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數               | 型別        | 說明 | 範例 |
-| ------------------ | ----------- | ---- | ---- |
-| **receiver_name**  | **String**  |      |
-| **receiver_phone** | **String**  |      |
+|--------------------|-------------|------|------|
+| **receiver_name**  | **String**  |      |      |
+| **receiver_phone** | **String**  |      |      |
 | **city**           | **String**  |      | 選填 |
 | **district**       | **String**  |      | 選填 |
 | **detail**         | **String**  |      | 選填 |
@@ -2009,18 +2009,18 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數          | 型別       | 說明 | 範例 |
-| ------------- | ---------- | ---- | ---- |
-| **name**      | **String** |      |
-| **phone**     | **String** |      |
-| **password**  | **String** |      |
-| **email**     | **String** |      |
-| **birthdate** | **String** |      |
+|---------------|------------|------|------|
+| **name**      | **String** |      |      |
+| **phone**     | **String** |      |      |
+| **password**  | **String** |      |      |
+| **email**     | **String** |      |      |
+| **birthdate** | **String** |      |      |
 | **sex**       | **String** |      | 選填 |
 | **locale**    | **String** |      | 選填 |
 | **source**    | **String** |      | 選填 |
@@ -2051,14 +2051,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數                | 型別       | 說明 | 範例 |
-| ------------------- | ---------- | ---- | ---- |
-| **client_back_url** | **String** |      |
+|---------------------|------------|------|------|
+| **client_back_url** | **String** |      |      |
 
 - 請求參數範例
 
@@ -2086,14 +2086,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數        | 型別       | 說明 | 範例 |
-| ----------- | ---------- | ---- | ---- |
-| **card_id** | **String** |      |
+|-------------|------------|------|------|
+| **card_id** | **String** |      |      |
 
 - 請求參數範例
 
@@ -2121,15 +2121,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數      | 型別       | 說明 | 範例 |
-| --------- | ---------- | ---- | ---- |
-| **phone** | **String** |      |
-| **otp**   | **String** |      |
+|-----------|------------|------|------|
+| **phone** | **String** |      |      |
+| **otp**   | **String** |      |      |
 
 - 請求參數範例
 
@@ -2157,14 +2157,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數      | 型別       | 說明 | 範例 |
-| --------- | ---------- | ---- | ---- |
-| **phone** | **String** |      |
+|-----------|------------|------|------|
+| **phone** | **String** |      |      |
 
 - 請求參數範例
 
@@ -2192,15 +2192,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數                  | 型別        | 說明 | 範例 |
-| --------------------- | ----------- | ---- | ---- |
-| **received**          | **BOOLEAN** |      |
-| **receive_type**      | **String**  |      |
+|-----------------------|-------------|------|------|
+| **received**          | **BOOLEAN** |      |      |
+| **receive_type**      | **String**  |      |      |
 | **notification_type** | **String**  |      | 選填 |
 
 - 請求參數範例
@@ -2229,16 +2229,16 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數             | 型別       | 說明 | 範例 |
-| ---------------- | ---------- | ---- | ---- |
-| **phone**        | **String** |      |
-| **new_password** | **String** |      |
-| **otp**          | **String** |      |
+|------------------|------------|------|------|
+| **phone**        | **String** |      |      |
+| **new_password** | **String** |      |      |
+| **otp**          | **String** |      |      |
 
 - 請求參數範例
 
@@ -2266,15 +2266,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別        | 說明 | 範例 |
-| ------------ | ----------- | ---- | ---- |
-| **brand_id** | **Integer** |      |
-| **store_id** | **Integer** |      |
+|--------------|-------------|------|------|
+| **brand_id** | **Integer** |      |      |
+| **store_id** | **Integer** |      |      |
 
 - 請求參數範例
 
@@ -2302,15 +2302,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別       | 說明 | 範例 |
-| ------------ | ---------- | ---- | ---- |
+|--------------|------------|------|------|
 | **provider** | **String** |      | 選填 |
-| **token**    | **String** |      |
+| **token**    | **String** |      |      |
 
 - 請求參數範例
 
@@ -2338,15 +2338,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別       | 說明 | 範例 |
-| ------------ | ---------- | ---- | ---- |
-| **provider** | **String** |      |
-| **token**    | **String** |      |
+|--------------|------------|------|------|
+| **provider** | **String** |      |      |
+| **token**    | **String** |      |      |
 
 - 請求參數範例
 
@@ -2374,14 +2374,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別       | 說明 | 範例 |
-| ------------ | ---------- | ---- | ---- |
-| **provider** | **String** |      |
+|--------------|------------|------|------|
+| **provider** | **String** |      |      |
 
 - 請求參數範例
 
@@ -2409,7 +2409,7 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
@@ -2458,13 +2458,13 @@ curl 'https://uatecapi.tungrp.com/v1/customers/sync_pos/' \
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數          | 型別       | 說明 | 範例 |
-| ------------- | ---------- | ---- | ---- |
+|---------------|------------|------|----|
 | **name**      | **String** |      | 選填 |
 | **phone**     | **String** |      | 選填 |
 | **password**  | **String** |      | 選填 |
@@ -2499,16 +2499,16 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數                          | 型別       | 說明 | 範例 |
-| ----------------------------- | ---------- | ---- | ---- |
-| **old_password**              | **String** |      |
-| **new_password**              | **String** |      |
-| **new_password_confirmation** | **String** |      |
+|-------------------------------|------------|------|------|
+| **old_password**              | **String** |      |      |
+| **new_password**              | **String** |      |      |
+| **new_password_confirmation** | **String** |      |      |
 
 請求參數範例
 
@@ -2536,15 +2536,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數      | 型別       | 說明 | 範例 |
-| --------- | ---------- | ---- | ---- |
-| **phone** | **String** |      |
-| **otp**   | **String** |      |
+|-----------|------------|------|------|
+| **phone** | **String** |      |      |
+| **otp**   | **String** |      |      |
 
 - 請求參數範例
 
@@ -2572,14 +2572,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數         | 型別       | 說明 | 範例 |
-| ------------ | ---------- | ---- | ---- |
-| **password** | **String** |      |
+|--------------|------------|------|------|
+| **password** | **String** |      |      |
 
 - 請求參數範例
 
@@ -2607,20 +2607,20 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數               | 型別                    | 說明     | 範例 |
-| ------------------ | ----------------------- | -------- | ---- |
-| **receiver_name**  | **String**              | 姓名     |
-| **receiver_phone** | **String**              | 電話     |
-| **brand_id**       | **Integer**             | 品牌     |
-| **item**           | **String**              | 品項     |
-| **product_no**     | **String**              | 商品品號 |
-| **services**       | **Array&lt;String&gt;** | 服務項目 |
-| **store_id**       | **Integer**             | 指定門市 |
+|--------------------|-------------------------|--------|------|
+| **receiver_name**  | **String**              | 姓名     |      |
+| **receiver_phone** | **String**              | 電話     |      |
+| **brand_id**       | **Integer**             | 品牌     |      |
+| **item**           | **String**              | 品項     |      |
+| **product_no**     | **String**              | 商品品號 |      |
+| **services**       | **Array&lt;String&gt;** | 服務項目 |      |
+| **store_id**       | **Integer**             | 指定門市 |      |
 
 - 請求參數範例
 
@@ -2648,13 +2648,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數       | 型別        | 說明 | 範例 |
-| ---------- | ----------- | ---- | ---- |
+|------------|-------------|------|------|
 | **number** | **Integer** |      |      |
 
 - 請求參數範例
@@ -2683,14 +2683,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數       | 型別        | 說明 | 範例 |
-| ---------- | ----------- | ---- | ---- |
-| **action** | **String**  | 動作 |
+|------------|-------------|------|------|
+| **action** | **String**  | 動作 |      |
 | **number** | **Integer** |      |      |
 
 - 請求參數範例
@@ -2719,15 +2719,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameter
 
 | 參數             | 型別       | 說明 | 範例 |
-| ---------------- | ---------- | ---- | ---- |
-| **device_token** | **String** |      |
-| **device_type**  | **String** |      |
+|------------------|------------|------|------|
+| **device_token** | **String** |      |      |
+| **device_type**  | **String** |      |      |
 
 - 請求參數範例
 
@@ -2755,13 +2755,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數             | 型別       | 說明 | 範例 |
-| ---------------- | ---------- | ---- | ---- |
+|------------------|------------|------|----|
 | **device_token** | **String** |      | 選填 |
 
 - 請求參數範例
@@ -2792,14 +2792,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數   | 型別       | 說明 | 範例 |
-| ------ | ---------- | ---- | ---- |
-| **id** | **String** |      |
+|--------|------------|------|------|
+| **id** | **String** |      |      |
 
 - 請求參數範例
 
@@ -2830,14 +2830,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數     | 型別       | 說明 | 範例 |
-| -------- | ---------- | ---- | ---- |
-| **type** | **String** |      |
+|----------|------------|------|------|
+| **type** | **String** |      |      |
 
 - 請求參數範例
 
@@ -2867,21 +2867,21 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數                  | 型別                     | 說明     | 範例 |
-| --------------------- | ------------------------ | -------- | ---- |
-| **items_variant_id**  | **Array&lt;Integer&gt;** |          |
-| **items_quantity**    | **Array&lt;Integer&gt;** |          |
-| **credit_card_id**    | **Integer**              |          |
+|-----------------------|--------------------------|----------|------|
+| **items_variant_id**  | **Array&lt;Integer&gt;** |          |      |
+| **items_quantity**    | **Array&lt;Integer&gt;** |          |      |
+| **credit_card_id**    | **Integer**              |          |      |
 | **use_birth_gift**    | **Integer**              |          | 選填 |
 | **use_rebate_points** | **Integer**              |          | 選填 |
-| **shipping_type**     | **String**               |          |
-| **receiver_name**     | **String**               |          |
-| **receiver_phone**    | **String**               |          |
+| **shipping_type**     | **String**               |          |      |
+| **receiver_name**     | **String**               |          |      |
+| **receiver_phone**    | **String**               |          |      |
 | **zip**               | **String**               |          | 選填 |
 | **city**              | **String**               |          | 選填 |
 | **district**          | **String**               |          | 選填 |
@@ -2889,7 +2889,7 @@ Parameters
 | **cvs_number**        | **String**               |          | 選填 |
 | **cvs_store_name**    | **String**               |          | 選填 |
 | **cvs_store_type**    | **String**               |          | 選填 |
-| **e_gui_type**        | **String**               | 載具類型 |
+| **e_gui_type**        | **String**               | 載具類型 |      |
 | **e_gui_carrier**     | **String**               | 載具號碼 | 選填 |
 | **e_gui_tax_number**  | **String**               | 統一編號 | 選填 |
 | **installment**       | **Integer**              |          | 選填 |
@@ -2926,13 +2926,13 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數       | 型別        | 說明 | 範例 |
-| ---------- | ----------- | ---- | ---- |
+|------------|-------------|------|------|
 | **number** | **Integer** |      |      |
 
 - 請求參數範例
@@ -2963,14 +2963,14 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數               | 型別        | 說明 | 範例 |
-| ------------------ | ----------- | ---- | ---- |
-| **credit_card_id** | **Integer** |      |
+|--------------------|-------------|------|------|
+| **credit_card_id** | **Integer** |      |      |
 | **installment**    | **Integer** |      | 選填 |
 | **number**         | **Integer** |      |      |
 
@@ -3000,15 +3000,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數                      | 型別                    | 說明 | 範例 |
-| ------------------------- | ----------------------- | ---- | ---- |
+|---------------------------|-------------------------|------|------|
 | **brand_id**              | **Integer**             |      | 選填 |
-| **offset**                | **Integer**             |      |
+| **offset**                | **Integer**             |      |      |
 | **limit**                 | **Integer**             |      | 選填 |
 | **sort_by**               | **String**              |      | 選填 |
 | **search_filter_br**      | **Array&lt;String&gt;** |      | 選填 |
@@ -3053,22 +3053,22 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數                    | 型別                     | 說明     | 範例 |
-| ----------------------- | ------------------------ | -------- | ---- |
-| **receiver_name**       | **String**               |          |
-| **receiver_phone**      | **String**               |          |
+|-------------------------|--------------------------|----------|------|
+| **receiver_name**       | **String**               |          |      |
+| **receiver_phone**      | **String**               |          |      |
 | **zip**                 | **String**               |          | 選填 |
 | **city**                | **String**               |          | 選填 |
 | **district**            | **String**               |          | 選填 |
-| **address**             | **String**               |          |
-| **items_variant_id**    | **Array&lt;Integer&gt;** | 商品 ID  |
-| **items_quantity**      | **Array&lt;Integer&gt;** | 退貨數量 |
-| **items_cancel_reason** | **Array&lt;String&gt;**  | 取消原因 |
+| **address**             | **String**               |          |      |
+| **items_variant_id**    | **Array&lt;Integer&gt;** | 商品 ID  |      |
+| **items_quantity**      | **Array&lt;Integer&gt;** | 退貨數量 |      |
+| **items_cancel_reason** | **Array&lt;String&gt;**  | 取消原因 |      |
 | **pics**                | **Array&lt;File&gt;**    |          | 選填 |
 | **id**                  | **Integer**              |          |      |
 
@@ -3100,15 +3100,15 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數                 | 型別                     | 說明 | 範例 |
-| -------------------- | ------------------------ | ---- | ---- |
-| **items_variant_id** | **Array&lt;Integer&gt;** |      |
-| **items_quantity**   | **Array&lt;Integer&gt;** |      |
+|----------------------|--------------------------|------|------|
+| **items_variant_id** | **Array&lt;Integer&gt;** |      |      |
+| **items_quantity**   | **Array&lt;Integer&gt;** |      |      |
 | **id**               | **Integer**              |      |      |
 
 - 請求參數範例
@@ -3139,22 +3139,22 @@ https://uatecapi.tungrp.com/v1/products/697
 Header
 
 | Key           | Value        | 範例                                        | 說明     |
-| ------------- | ------------ | ------------------------------------------- | -------- |
+|---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 | 參數               | 型別        | 說明 | 範例 |
-| ------------------ | ----------- | ---- | ---- |
-| **receiver_name**  | **String**  |      |
-| **receiver_phone** | **String**  |      |
+|--------------------|-------------|------|------|
+| **receiver_name**  | **String**  |      |      |
+| **receiver_phone** | **String**  |      |      |
 | **city**           | **String**  |      | 選填 |
 | **district**       | **String**  |      | 選填 |
 | **detail**         | **String**  |      | 選填 |
 | **store_id**       | **String**  |      | 選填 |
 | **store_name**     | **String**  |      | 選填 |
 | **store_type**     | **String**  |      | 選填 |
-| **default**        | **BOOLEAN** |      |
+| **default**        | **BOOLEAN** |      |      |
 | **id**             | **Integer** |      |      |
 
 - 請求參數範例
@@ -3174,7 +3174,7 @@ https://uatecapi.tungrp.com/v1/products/697
 `brand_id` 為品牌流水號。目前的測試站、正式站的流水號與代表的品牌如下
 
 | 流水號 | 品牌          |
-| ------ | ------------- |
+|--------|---------------|
 | 1      | KENZO         |
 | 2      | agete         |
 | 3      | Isabel Marant |
@@ -3185,10 +3185,10 @@ https://uatecapi.tungrp.com/v1/products/697
 
 惇聚標準回應
 
-| Http Status | 意義               |
-| ----------- | ------------------ |
-| 200         | 成功               |
-| 201         | 成功創建           |
+| Http Status | 意義              |
+|-------------|-----------------|
+| 200         | 成功              |
+| 201         | 成功創建          |
 | 400         | 請求錯誤、內部錯誤 |
 
 # 附錄 3
@@ -3196,24 +3196,24 @@ https://uatecapi.tungrp.com/v1/products/697
 ## V1AddressEntity
 
 | 欄位               | 型別        | 說明       | 註記 |
-| ------------------ | ----------- | ---------- | ---- |
-| **id**             | **Integer** | 主鍵       |
-| **receiver_name**  | **String**  | 買受人名字 |
-| **receiver_phone** | **String**  | 買受人號碼 |
-| **zip**            | **String**  | 區碼       |
-| **city**           | **String**  | 城市       |
-| **district**       | **String**  | 區域       |
-| **detail**         | **String**  | 詳細資訊   |
-| **store_id**       | **Integer** | 店舖外來鍵 |
-| **store_name**     | **String**  | 店舖名稱   |
-| **store_type**     | **String**  | 店舖類型   |
-| **address_type**   | **String**  | 地址類型   |
-| **default**        | **String**  | 預設地址   |
+|--------------------|-------------|----------|------|
+| **id**             | **Integer** | 主鍵       |      |
+| **receiver_name**  | **String**  | 買受人名字 |      |
+| **receiver_phone** | **String**  | 買受人號碼 |      |
+| **zip**            | **String**  | 區碼       |      |
+| **city**           | **String**  | 城市       |      |
+| **district**       | **String**  | 區域       |      |
+| **detail**         | **String**  | 詳細資訊   |      |
+| **store_id**       | **Integer** | 店舖外來鍵 |      |
+| **store_name**     | **String**  | 店舖名稱   |      |
+| **store_type**     | **String**  | 店舖類型   |      |
+| **address_type**   | **String**  | 地址類型   |      |
+| **default**        | **String**  | 預設地址   |      |
 
 ## V1AddressFormEntity
 
 | 欄位        | 型別                                    | 說明     | 註記 |
-| ----------- | --------------------------------------- | -------- | ---- |
+|-------------|-----------------------------------------|----------|----|
 | **success** | **BOOLEAN**                             | 成功與否 | 選填 |
 | **record**  | [**V1AddressEntity**](#V1AddressEntity) |          | 選填 |
 | **message** | **BOOLEAN**                             | 訊息     | 選填 |
@@ -3221,78 +3221,78 @@ https://uatecapi.tungrp.com/v1/products/697
 ## V1AppVersionEntity
 
 | 欄位             | 型別        | 說明     | 註記 |
-| ---------------- | ----------- | -------- | ---- |
+|------------------|-------------|--------|----|
 | **version**      | **String**  | App 版本 | 選填 |
 | **force_update** | **BOOLEAN** | 強迫更新 | 選填 |
 
 ## V1BannerEntity
 
 | 欄位          | 型別        | 說明     | 註記 |
-| ------------- | ----------- | -------- | ---- |
-| **buttons**   | **Array**   | 按鈕資訊 |
-| **id**        | **Integer** | 主鍵     |
-| **title**     | **String**  | 標題     |
-| **video_url** | **String**  | 影片連結 |
+|---------------|-------------|--------|------|
+| **buttons**   | **Array**   | 按鈕資訊 |      |
+| **id**        | **Integer** | 主鍵     |      |
+| **title**     | **String**  | 標題     |      |
+| **video_url** | **String**  | 影片連結 |      |
 
 ## V1BrandEntity
 
 | 欄位                     | 型別                                          | 說明         | 註記 |
-| ------------------------ | --------------------------------------------- | ------------ | ---- |
-| **id**                   | **Integer**                                   | 主鍵         |
-| **title**                | **String**                                    | 標題         |
+|--------------------------|-----------------------------------------------|--------------|------|
+| **id**                   | **Integer**                                   | 主鍵         |      |
+| **title**                | **String**                                    | 標題         |      |
 | **collections**          | [**V1CollectionEntity**](#V1CollectionEntity) |              | 選填 |
-| **brand_products_count** | **Integer**                                   | 品牌商品數量 |
+| **brand_products_count** | **Integer**                                   | 品牌商品數量 |      |
 
 ## V1CarouselEntity
 
 | 欄位          | 型別        | 說明     | 註記 |
-| ------------- | ----------- | -------- | ---- |
-| **buttons**   | **Array**   | 按鈕資訊 |
-| **id**        | **Integer** | 主鍵     |
-| **title**     | **String**  | 標題     |
-| **video_url** | **String**  | 影片連結 |
+|---------------|-------------|--------|------|
+| **buttons**   | **Array**   | 按鈕資訊 |      |
+| **id**        | **Integer** | 主鍵     |      |
+| **title**     | **String**  | 標題     |      |
+| **video_url** | **String**  | 影片連結 |      |
 
 ## V1CartEntity
 
 | 欄位         | 型別        | 說明         | 註記 |
-| ------------ | ----------- | ------------ | ---- |
-| **subtotal** | **Integer** | 小計         |
-| **token**    | **String**  | 購物車識別碼 |
+|--------------|-------------|------------|------|
+| **subtotal** | **Integer** | 小計         |      |
+| **token**    | **String**  | 購物車識別碼 |      |
 
 ## V1CategoryEntity
 
 | 欄位            | 型別                                          | 說明 | 註記 |
-| --------------- | --------------------------------------------- | ---- | ---- |
-| **id**          | **Integer**                                   | 主鍵 |
-| **title**       | **String**                                    | 標題 |
+|-----------------|-----------------------------------------------|------|------|
+| **id**          | **Integer**                                   | 主鍵 |      |
+| **title**       | **String**                                    | 標題 |      |
 | **collections** | [**V1CollectionEntity**](#V1CollectionEntity) |      | 選填 |
 | **series**      | [**V1SeriesEntity**](#V1SeriesEntity)         |      | 選填 |
 
 ## V1CollectionEntity
 
 | 欄位                | 型別                                                | 說明 | 註記 |
-| ------------------- | --------------------------------------------------- | ---- | ---- |
-| **id**              | **Integer**                                         | 主鍵 |
-| **title**           | **String**                                          | 標題 |
+|---------------------|-----------------------------------------------------|------|------|
+| **id**              | **Integer**                                         | 主鍵 |      |
+| **title**           | **String**                                          | 標題 |      |
 | **sub_collections** | [**V1SubCollectionEntity**](#V1SubCollectionEntity) |      | 選填 |
 
 ## V1CollectionEntity
 
 | 欄位                | 型別                                                | 說明 | 註記 |
-| ------------------- | --------------------------------------------------- | ---- | ---- |
-| **id**              | **Integer**                                         | 主鍵 |
-| **title**           | **String**                                          | 標題 |
+|---------------------|-----------------------------------------------------|------|------|
+| **id**              | **Integer**                                         | 主鍵 |      |
+| **title**           | **String**                                          | 標題 |      |
 | **sub_collections** | [**V1SubCollectionEntity**](#V1SubCollectionEntity) |      | 選填 |
 
 ## V1CustomersBody
 
 | 欄位          | 型別       | 說明 | 註記 |
-| ------------- | ---------- | ---- | ---- |
-| **name**      | **String** |      |
-| **phone**     | **String** |      |
-| **password**  | **String** |      |
-| **email**     | **String** |      |
-| **birthdate** | **String** |      |
+|---------------|------------|------|------|
+| **name**      | **String** |      |      |
+| **phone**     | **String** |      |      |
+| **password**  | **String** |      |      |
+| **email**     | **String** |      |      |
+| **birthdate** | **String** |      |      |
 | **sex**       | **String** |      | 選填 |
 | **locale**    | **String** |      | 選填 |
 | **source**    | **String** |      | 選填 |
@@ -3300,25 +3300,25 @@ https://uatecapi.tungrp.com/v1/products/697
 ## V1EventPageEntity
 
 | 欄位                      | 型別                                        | 說明   | 註記 |
-| ------------------------- | ------------------------------------------- | ------ | ---- |
-| **id**                    | **Integer**                                 | 主鍵   |
-| **title**                 | **String**                                  | 標題   |
-| **description**           | **String**                                  | 描述   |
-| **target_price_discount** | **String**                                  | 滿額贈 |
-| **event_type**            | **String**                                  | 類型   |
+|---------------------------|---------------------------------------------|--------|------|
+| **id**                    | **Integer**                                 | 主鍵   |      |
+| **title**                 | **String**                                  | 標題   |      |
+| **description**           | **String**                                  | 描述   |      |
+| **target_price_discount** | **String**                                  | 滿額贈 |      |
+| **event_type**            | **String**                                  | 類型   |      |
 | **promotion**             | [**V1PromotionEntity**](#V1PromotionEntity) |        | 選填 |
 
 ## V1FocusProductEntity
 
 | 欄位        | 型別                                    | 說明     | 註記 |
-| ----------- | --------------------------------------- | -------- | ---- |
-| **images**  | **Array**                               | 照片連結 |
+|-------------|-----------------------------------------|----------|------|
+| **images**  | **Array**                               | 照片連結 |      |
 | **product** | [**V1ProductEntity**](#V1ProductEntity) |          | 選填 |
 
 ## V1HomePageEntity
 
 | 欄位              | 型別                                            | 說明 | 註記 |
-| ----------------- | ----------------------------------------------- | ---- | ---- |
+|-------------------|-------------------------------------------------|------|----|
 | **carousels**     | [**V1CarouselEntity**](#V1CarouselEntity)       |      | 選填 |
 | **shop_the_look** | [**V1ShopTheLookEntity**](#V1ShopTheLookEntity) |      | 選填 |
 | **banners**       | [**V1BannerEntity**](#V1BannerEntity)           |      | 選填 |
@@ -3327,120 +3327,120 @@ https://uatecapi.tungrp.com/v1/products/697
 ## V1InformationEntity
 
 | 欄位        | 型別                                            | 說明     | 註記 |
-| ----------- | ----------------------------------------------- | -------- | ---- |
-| **id**      | **Integer**                                     | 主鍵     |
-| **title**   | **String**                                      | 標題     |
-| **content** | **String**                                      | 內文     |
-| **buttons** | **Array**                                       | 按鈕資訊 |
+|-------------|-------------------------------------------------|----------|------|
+| **id**      | **Integer**                                     | 主鍵     |      |
+| **title**   | **String**                                      | 標題     |      |
+| **content** | **String**                                      | 內文     |      |
+| **buttons** | **Array**                                       | 按鈕資訊 |      |
 | **prev**    | [**V1InformationEntity**](#V1InformationEntity) |          | 選填 |
 | **next**    | [**V1InformationEntity**](#V1InformationEntity) |          | 選填 |
 
 ## V1MaintainOrderEntity
 
 | 欄位                         | 型別        | 說明           | 註記 |
-| ---------------------------- | ----------- | -------------- | ---- |
-| **id**                       | **Integer** | 流水號         |
-| **status**                   | **String**  | 狀態           |
-| **quotation**                | **Integer** | 報價           |
-| **customer_agree**           | **BOOLEAN** | 顧客同意報價   |
-| **brand_id**                 | **Integer** | 品牌流水號     |
-| **customer_id**              | **Integer** | 顧客流水號     |
-| **store_id**                 | **Integer** | 商店流水號     |
-| **receiver_name**            | **String**  | 買受人名字     |
-| **receiver_phone**           | **String**  | 買受人電話     |
-| **customer_disagree_reason** | **String**  | 顧客不同意原因 |
-| **number**                   | **String**  | 維修單號碼     |
+|------------------------------|-------------|--------------|------|
+| **id**                       | **Integer** | 流水號         |      |
+| **status**                   | **String**  | 狀態           |      |
+| **quotation**                | **Integer** | 報價           |      |
+| **customer_agree**           | **BOOLEAN** | 顧客同意報價   |      |
+| **brand_id**                 | **Integer** | 品牌流水號     |      |
+| **customer_id**              | **Integer** | 顧客流水號     |      |
+| **store_id**                 | **Integer** | 商店流水號     |      |
+| **receiver_name**            | **String**  | 買受人名字     |      |
+| **receiver_phone**           | **String**  | 買受人電話     |      |
+| **customer_disagree_reason** | **String**  | 顧客不同意原因 |      |
+| **number**                   | **String**  | 維修單號碼     |      |
 
 ## V1NotificationEntity
 
 | 欄位             | 型別        | 說明     | 註記 |
-| ---------------- | ----------- | -------- | ---- |
-| **id**           | **Integer** | 主鍵     |
-| **title**        | **String**  | 標題     |
-| **content**      | **String**  | 描述     |
-| **created_date** | **String**  | 創建時間 |
-| **type**         | **String**  | 類別     |
-| **sub_type**     | **String**  | 子類別   |
-| **image**        | **String**  | 照片資訊 |
-| **is_read**      | **BOOLEAN** | 已讀     |
+|------------------|-------------|--------|------|
+| **id**           | **Integer** | 主鍵     |      |
+| **title**        | **String**  | 標題     |      |
+| **content**      | **String**  | 描述     |      |
+| **created_date** | **String**  | 創建時間 |      |
+| **type**         | **String**  | 類別     |      |
+| **sub_type**     | **String**  | 子類別   |      |
+| **image**        | **String**  | 照片資訊 |      |
+| **is_read**      | **BOOLEAN** | 已讀     |      |
 
 ## V1OrderEntity
 
 | 欄位                            | 型別                                      | 說明         | 註記 |
-| ------------------------------- | ----------------------------------------- | ------------ | ---- |
-| **credit_card_id**              | **Integer**                               | 信用卡流水號 |
-| **number**                      | **Integer**                               | 數量         |
-| **price**                       | **Integer**                               | 價錢         |
-| **receiver_name**               | **String**                                | 買受人名字   |
-| **receiver_phone**              | **String**                                | 買受人號碼   |
-| **zip**                         | **String**                                | 區碼         |
-| **city**                        | **String**                                | 城市         |
-| **district**                    | **String**                                | 區域         |
-| **address**                     | **String**                                | 地址         |
-| **e_gui_type**                  | **String**                                | 發票類型     |
-| **e_gui_carrier**               | **String**                                | 發票載具     |
-| **e_gui_tax_number**            | **String**                                | 統一編號     |
-| **used_birth_gift**             | **Integer**                               | 使用生日點數 |
-| **used_rebate**                 | **Integer**                               | 使用點數     |
-| **gained_rebate**               | **Integer**                               | 新增點數     |
-| **credit_card_last_four**       | **String**                                | 信用卡前四碼 |
-| **credit_card_first_six**       | **String**                                | 信用卡後六碼 |
-| **cvs_number**                  | **String**                                | 超商代碼     |
-| **shipping_type**               | **String**                                | 貨運狀態     |
-| **status**                      | **String**                                | 發票狀態     |
-| **payment_status**              | **String**                                | 付款狀態     |
-| **installment**                 | **Integer**                               | 分期         |
-| **vip_level**                   | **String**                                | vip 等級     |
-| **original_price**              | **String**                                | 原價         |
+|---------------------------------|-------------------------------------------|--------------|------|
+| **credit_card_id**              | **Integer**                               | 信用卡流水號 |      |
+| **number**                      | **Integer**                               | 數量         |      |
+| **price**                       | **Integer**                               | 價錢         |      |
+| **receiver_name**               | **String**                                | 買受人名字   |      |
+| **receiver_phone**              | **String**                                | 買受人號碼   |      |
+| **zip**                         | **String**                                | 區碼         |      |
+| **city**                        | **String**                                | 城市         |      |
+| **district**                    | **String**                                | 區域         |      |
+| **address**                     | **String**                                | 地址         |      |
+| **e_gui_type**                  | **String**                                | 發票類型     |      |
+| **e_gui_carrier**               | **String**                                | 發票載具     |      |
+| **e_gui_tax_number**            | **String**                                | 統一編號     |      |
+| **used_birth_gift**             | **Integer**                               | 使用生日點數 |      |
+| **used_rebate**                 | **Integer**                               | 使用點數     |      |
+| **gained_rebate**               | **Integer**                               | 新增點數     |      |
+| **credit_card_last_four**       | **String**                                | 信用卡前四碼 |      |
+| **credit_card_first_six**       | **String**                                | 信用卡後六碼 |      |
+| **cvs_number**                  | **String**                                | 超商代碼     |      |
+| **shipping_type**               | **String**                                | 貨運狀態     |      |
+| **status**                      | **String**                                | 發票狀態     |      |
+| **payment_status**              | **String**                                | 付款狀態     |      |
+| **installment**                 | **Integer**                               | 分期         |      |
+| **vip_level**                   | **String**                                | vip 等級     |      |
+| **original_price**              | **String**                                | 原價         |      |
 | **sub_orders**                  | [**V1SubOrderEntity**](#V1SubOrderEntity) |              | 選填 |
-| **note**                        | **String**                                | 備註         |
-| **target_price_discount_value** | **Integer**                               | 滿額贈金額   |
-| **target_price_discount_title** | **String**                                | 滿額贈名稱   |
-| **cvs_store_name**              | **String**                                | 便利店名稱   |
-| **cvs_store_type**              | **String**                                | 便利店類人   |
-| **cancel_reason**               | **String**                                | 取消原因     |
-| **payment_failed_reason**       | **String**                                | 付款失敗原因 |
-| **membership_reward_percent**   | **Integer**                               | 會員獎勵     |
-| **is_offline_order**            | **BOOLEAN**                               | 線下訂單     |
+| **note**                        | **String**                                | 備註         |      |
+| **target_price_discount_value** | **Integer**                               | 滿額贈金額   |      |
+| **target_price_discount_title** | **String**                                | 滿額贈名稱   |      |
+| **cvs_store_name**              | **String**                                | 便利店名稱   |      |
+| **cvs_store_type**              | **String**                                | 便利店類人   |      |
+| **cancel_reason**               | **String**                                | 取消原因     |      |
+| **payment_failed_reason**       | **String**                                | 付款失敗原因 |      |
+| **membership_reward_percent**   | **Integer**                               | 會員獎勵     |      |
+| **is_offline_order**            | **BOOLEAN**                               | 線下訂單     |      |
 
 ## V1OrderItemEntity
 
 | 欄位                | 型別                                    | 說明     | 註記 |
-| ------------------- | --------------------------------------- | -------- | ---- |
+|---------------------|-----------------------------------------|----------|------|
 | **variant**         | [**V1VariantEntity**](#V1VariantEntity) |          | 選填 |
-| **quantity**        | **Integer**                             | 數量     |
-| **price**           | **Integer**                             | 價錢     |
-| **return_quantity** | **Integer**                             | 退貨數量 |
+| **quantity**        | **Integer**                             | 數量     |      |
+| **price**           | **Integer**                             | 價錢     |      |
+| **return_quantity** | **Integer**                             | 退貨數量 |      |
 
 ## V1ProductEntity
 
 | 欄位                     | 型別                                                | 說明       | 註記 |
-| ------------------------ | --------------------------------------------------- | ---------- | ---- |
-| **brand_id**             | **Integer**                                         | 品牌流水號 |
-| **title**                | **String**                                          | 商品名稱   |
-| **id**                   | **Integer**                                         | 主鍵       |
+|--------------------------|-----------------------------------------------------|------------|------|
+| **brand_id**             | **Integer**                                         | 品牌流水號 |      |
+| **title**                | **String**                                          | 商品名稱   |      |
+| **id**                   | **Integer**                                         | 主鍵       |      |
 | **category**             | [**V1CategoryEntity**](#V1CategoryEntity)           |            | 選填 |
 | **collection**           | [**V1CollectionEntity**](#V1CollectionEntity)       |            | 選填 |
 | **sub_collection**       | [**V1SubCollectionEntity**](#V1SubCollectionEntity) |            | 選填 |
-| **info_detail**          | **String**                                          | 商品描述   |
+| **info_detail**          | **String**                                          | 商品描述   |      |
 | **series**               | [**V1SeriesEntity**](#V1SeriesEntity)               |            | 選填 |
 | **promotion**            | [**V1PromotionEntity**](#V1PromotionEntity)         |            | 選填 |
-| **member_price**         | **Integer**                                         | 會員價     |
-| **promote_price**        | **Integer**                                         | 促銷價     |
-| **price**                | **Integer**                                         | 價錢       |
+| **member_price**         | **Integer**                                         | 會員價     |      |
+| **promote_price**        | **Integer**                                         | 促銷價     |      |
+| **price**                | **Integer**                                         | 價錢       |      |
 | **styled_with_products** | [**V1ProductEntity**](#V1ProductEntity)             |            | 選填 |
 | **recommend_products**   | [**V1ProductEntity**](#V1ProductEntity)             |            | 選填 |
-| **specified_variant_id** | **Integer**                                         | 品樣流水號 |
+| **specified_variant_id** | **Integer**                                         | 品樣流水號 |      |
 | **variants**             | [**V1VariantEntity**](#V1VariantEntity)             |            | 選填 |
-| **published**            | **BOOLEAN**                                         | 發布狀態   |
+| **published**            | **BOOLEAN**                                         | 發布狀態   |      |
 
 ## V1PromotionEntity
 
 | 欄位                | 型別                                                | 說明     | 註記 |
-| ------------------- | --------------------------------------------------- | -------- | ---- |
-| **id**              | **String**                                          | 流水號   |
-| **title**           | **String**                                          | 促銷標題 |
-| **ratio**           | **Float**                                           | 打折     |
+|---------------------|-----------------------------------------------------|----------|------|
+| **id**              | **String**                                          | 流水號   |      |
+| **title**           | **String**                                          | 促銷標題 |      |
+| **ratio**           | **Float**                                           | 打折     |      |
 | **collections**     | [**V1CollectionEntity**](#V1CollectionEntity)       |          | 選填 |
 | **sub_collections** | [**V1SubCollectionEntity**](#V1SubCollectionEntity) |          | 選填 |
 | **products**        | [**V1ProductEntity**](#V1ProductEntity)             |          | 選填 |
@@ -3449,129 +3449,129 @@ https://uatecapi.tungrp.com/v1/products/697
 ## V1ReturnOrderEntity
 
 | 欄位                             | 型別        | 說明         | 註記 |
-| -------------------------------- | ----------- | ------------ | ---- |
-| **status**                       | **String**  | 退貨狀態     |
-| **status_history**               | **Array**   | 退貨歷史     |
-| **number**                       | **Integer** | 退貨數量     |
-| **payment_status**               | **String**  | 付款狀態     |
-| **receiver_name**                | **Integer** | 申請總額     |
-| **receiver_phone**               | **Integer** | 申請總額     |
-| **zip**                          | **String**  | 區碼         |
-| **city**                         | **String**  | 城市         |
-| **district**                     | **String**  | 區域         |
-| **address**                      | **Integer** | 申請總額     |
-| **invoice_status**               | **String**  | 發票狀態     |
-| **invoice_status_history**       | **Array**   | 發票狀態     |
-| **failed_reason**                | **String**  | 退貨原因     |
-| **partial_failed**               | **BOOLEAN** | 部分退貨     |
-| **return_actual_cash_amount**    | **Integer** | 實際退貨金額 |
-| **return_actual_rebate_amount**  | **Integer** | 申請退貨金額 |
-| **return_applied_cash_amount**   | **Integer** | 實際退點     |
-| **return_applied_rebate_amount** | **Integer** | 申請退點     |
-| **return_actual_amount**         | **Integer** | 實際總額     |
-| **return_applied_amount**        | **Integer** | 申請總額     |
-| **brand_name**                   | **Integer** | 申請總額     |
-| **store_name**                   | **Integer** | 申請總額     |
-| **order_items**                  | **Integer** | 申請總額     |
-| **upload_images**                | **Integer** | 申請總額     |
+|----------------------------------|-------------|------------|------|
+| **status**                       | **String**  | 退貨狀態     |      |
+| **status_history**               | **Array**   | 退貨歷史     |      |
+| **number**                       | **Integer** | 退貨數量     |      |
+| **payment_status**               | **String**  | 付款狀態     |      |
+| **receiver_name**                | **Integer** | 申請總額     |      |
+| **receiver_phone**               | **Integer** | 申請總額     |      |
+| **zip**                          | **String**  | 區碼         |      |
+| **city**                         | **String**  | 城市         |      |
+| **district**                     | **String**  | 區域         |      |
+| **address**                      | **Integer** | 申請總額     |      |
+| **invoice_status**               | **String**  | 發票狀態     |      |
+| **invoice_status_history**       | **Array**   | 發票狀態     |      |
+| **failed_reason**                | **String**  | 退貨原因     |      |
+| **partial_failed**               | **BOOLEAN** | 部分退貨     |      |
+| **return_actual_cash_amount**    | **Integer** | 實際退貨金額 |      |
+| **return_actual_rebate_amount**  | **Integer** | 申請退貨金額 |      |
+| **return_applied_cash_amount**   | **Integer** | 實際退點     |      |
+| **return_applied_rebate_amount** | **Integer** | 申請退點     |      |
+| **return_actual_amount**         | **Integer** | 實際總額     |      |
+| **return_applied_amount**        | **Integer** | 申請總額     |      |
+| **brand_name**                   | **Integer** | 申請總額     |      |
+| **store_name**                   | **Integer** | 申請總額     |      |
+| **order_items**                  | **Integer** | 申請總額     |      |
+| **upload_images**                | **Integer** | 申請總額     |      |
 
 ## V1ScrollingTextEntity
 
 | 欄位      | 型別       | 說明 | 註記 |
-| --------- | ---------- | ---- | ---- |
+|-----------|------------|----|----|
 | **title** | **String** | 標題 | 選填 |
 
 ## V1SearchEntity
 
 | 欄位                          | 型別                                | 說明         | 註記 |
-| ----------------------------- | ----------------------------------- | ------------ | ---- |
+|-------------------------------|-------------------------------------|--------------|------|
 | **brands**                    | [**V1BrandEntity**](#V1BrandEntity) |              | 選填 |
-| **all_brands_products_count** | **Integer**                         | 品牌商品數量 |
+| **all_brands_products_count** | **Integer**                         | 品牌商品數量 |      |
 
 ## V1SeriesEntity
 
 | 欄位                | 型別        | 說明       | 註記 |
-| ------------------- | ----------- | ---------- | ---- |
-| **id**              | **Integer** | 流水號     |
-| **brand_id**        | **Integer** | 品牌流水號 |
-| **category_id**     | **Integer** | 大類流水號 |
-| **title**           | **String**  | 標題       |
-| **subtitle**        | **String**  | 副標       |
-| **series_sections** | **Array**   | 區塊       |
+|---------------------|-------------|----------|------|
+| **id**              | **Integer** | 流水號     |      |
+| **brand_id**        | **Integer** | 品牌流水號 |      |
+| **category_id**     | **Integer** | 大類流水號 |      |
+| **title**           | **String**  | 標題       |      |
+| **subtitle**        | **String**  | 副標       |      |
+| **series_sections** | **Array**   | 區塊       |      |
 
 ## V1ShopTheLookEntity
 
 | 欄位         | 型別                                              | 說明 | 註記 |
-| ------------ | ------------------------------------------------- | ---- | ---- |
+|--------------|---------------------------------------------------|------|----|
 | **products** | [**V1FocusProductEntity**](#V1FocusProductEntity) |      | 選填 |
 
 ## V1StoreEntity
 
 | 欄位                        | 型別        | 說明     | 註記 |
-| --------------------------- | ----------- | -------- | ---- |
-| **lat**                     | **Float**   | 緯度     |
-| **lng**                     | **Float**   | 經度     |
-| **title**                   | **String**  | 店舖名稱 |
-| **address**                 | **String**  | 電話     |
-| **phone**                   | **String**  | 手機     |
-| **instant_messaging_token** | **String**  | token    |
-| **opening_hours**           | **Array**   | 營業時間 |
-| **id**                      | **Integer** | 流水號   |
-| **area**                    | **String**  | 區域     |
-| **default**                 | **String**  | 預設店舖 |
+|-----------------------------|-------------|----------|------|
+| **lat**                     | **Float**   | 緯度     |      |
+| **lng**                     | **Float**   | 經度     |      |
+| **title**                   | **String**  | 店舖名稱 |      |
+| **address**                 | **String**  | 電話     |      |
+| **phone**                   | **String**  | 手機     |      |
+| **instant_messaging_token** | **String**  | token    |      |
+| **opening_hours**           | **Array**   | 營業時間 |      |
+| **id**                      | **Integer** | 流水號   |      |
+| **area**                    | **String**  | 區域     |      |
+| **default**                 | **String**  | 預設店舖 |      |
 
 ## V1SubCollectionEntity
 
 | 欄位      | 型別        | 說明        | 註記 |
-| --------- | ----------- | ----------- | ---- |
-| **id**    | **Integer** | 小類·流水號 |
-| **title** | **String**  | 小類標題    |
+|-----------|-------------|-----------|------|
+| **id**    | **Integer** | 小類·流水號 |      |
+| **title** | **String**  | 小類標題    |      |
 
 ## V1SubOrderEntity
 
 | 欄位                | 型別                                        | 說明         | 註記 |
-| ------------------- | ------------------------------------------- | ------------ | ---- |
-| **id**              | **Integer**                                 | 子訂單流水號 |
-| **brand_id**        | **Integer**                                 | 品牌流水號   |
+|---------------------|---------------------------------------------|--------------|------|
+| **id**              | **Integer**                                 | 子訂單流水號 |      |
+| **brand_id**        | **Integer**                                 | 品牌流水號   |      |
 | **store**           | [**V1StoreEntity**](#V1StoreEntity)         |              | 選填 |
 | **order_items**     | [**V1OrderItemEntity**](#V1OrderItemEntity) |              | 選填 |
-| **status**          | **String**                                  | 運送狀態     |
-| **shipping_status** | **String**                                  | 運送狀態     |
+| **status**          | **String**                                  | 運送狀態     |      |
+| **shipping_status** | **String**                                  | 運送狀態     |      |
 | **tracking_number** | **String**                                  | 運單         | 選填 |
-| **return_order_id** | **Integer**                                 | 退貨單       |
-| **returnable**      | **BOOLEAN**                                 | 是否可退     |
+| **return_order_id** | **Integer**                                 | 退貨單       |      |
+| **returnable**      | **BOOLEAN**                                 | 是否可退     |      |
 
 ## V1TargetPriceDiscountEntity
 
 | 欄位          | 型別                                | 說明       | 註記 |
-| ------------- | ----------------------------------- | ---------- | ---- |
-| **threshold** | **Integer**                         | 滿額贈門檻 |
-| **discount**  | **Integer**                         | 滿額贈折扣 |
+|---------------|-------------------------------------|------------|------|
+| **threshold** | **Integer**                         | 滿額贈門檻 |      |
+| **discount**  | **Integer**                         | 滿額贈折扣 |      |
 | **title**     | [**V1TitleEntity**](#V1TitleEntity) |            | 選填 |
 
 ## V1TitleEntity
 
 | 欄位   | 型別       | 說明 | 註記 |
-| ------ | ---------- | ---- | ---- |
-| **zh** | **String** | 中文 |
-| **en** | **String** | 英文 |
+|--------|------------|----|------|
+| **zh** | **String** | 中文 |      |
+| **en** | **String** | 英文 |      |
 
 ## V1VariantEntity
 
 | 欄位               | 型別        | 說明     | 註記 |
-| ------------------ | ----------- | -------- | ---- |
-| **uid**            | **String**  | 品號     |
-| **id**             | **Integer** | 品樣     |
-| **price**          | **Integer** | 價錢     |
-| **member_price**   | **Integer** | 會員價   |
-| **promote_price**  | **Integer** | 促銷價   |
-| **color**          | **String**  | 價錢     |
-| **color_display**  | **String**  | 顏色     |
-| **material**       | **String**  | 材質     |
-| **color_img**      | **String**  | 顏色連結 |
-| **size**           | **String**  | 尺寸     |
-| **images**         | **String**  | 照片     |
-| **video**          | **String**  | 影片連結 |
+|--------------------|-------------|----------|------|
+| **uid**            | **String**  | 品號     |      |
+| **id**             | **Integer** | 品樣     |      |
+| **price**          | **Integer** | 價錢     |      |
+| **member_price**   | **Integer** | 會員價   |      |
+| **promote_price**  | **Integer** | 促銷價   |      |
+| **color**          | **String**  | 價錢     |      |
+| **color_display**  | **String**  | 顏色     |      |
+| **material**       | **String**  | 材質     |      |
+| **color_img**      | **String**  | 顏色連結 |      |
+| **size**           | **String**  | 尺寸     |      |
+| **images**         | **String**  | 照片     |      |
+| **video**          | **String**  | 影片連結 |      |
 | **product**        | **String**  | 商品     | 選填 |
 | **stock**          | **String**  | 庫存     | 選填 |
 | **filter_br**      | **String**  |          | 選填 |
@@ -3583,3 +3583,10 @@ https://uatecapi.tungrp.com/v1/products/697
 | **filter_color**   | **String**  |          | 選填 |
 | **filter_theme**   | **String**  |          | 選填 |
 | **filter_series**  | **String**  |          | 選填 |
+
+
+<style>
+    table {
+        width: 100%;
+    }
+</style>
