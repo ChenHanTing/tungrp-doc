@@ -72,10 +72,10 @@
 | [**同意報價**](#同意報價)                             | **POST** /v1/maintain_orders/:number/quotation  |                                       | Y        |          |
 | [**綁定推播**](#綁定推播)                             | **POST** /v1/notification/bind                  |                                       | Y        |          |
 | [**解綁推播**](#解綁推播)                             | **POST** /v1/notification/unbind                |                                       | Y        |          |
-| [**已讀推播**](#已讀推播)                             | **POST** /v1/notifications/read                 | 已讀單筆推播                          | Y        |          |
-| [**推播已讀全部**](#推播已讀全部)                     | **POST** /v1/notifications/read_all             | 已讀會員內的全部推播                  | Y        |          |
-| [**創建訂單**](#創建訂單)                             | **POST** /v1/orders                             | 新增一筆訂單                          | Y        |          |
-| [**取消訂單**](#取消訂單)                             | **POST** /v1/orders/:number/cancel              | 取消已被創建的訂單                    | Y        |          |
+| [**已讀推播**](#已讀推播)                             | **POST** /v1/notifications/read                 | 已讀單筆推播                          | Y        | ✅        |
+| [**推播已讀全部**](#推播已讀全部)                     | **POST** /v1/notifications/read_all             | 已讀會員內的全部推播                  | Y        | ✅        |
+| [**創建訂單**](#創建訂單)                             | **POST** /v1/orders                             | 新增一筆訂單                          | Y        | ✅        |
+| [**取消訂單**](#取消訂單)                             | **POST** /v1/orders/:number/cancel              | 取消已被創建的訂單                    | Y        | ✅        |
 | [**重新結帳**](#重新結帳)                             | **POST** /v1/orders/:number/checkout            | 創建訂單付款失敗之後重新結帳動作      | Y        | ✅        |
 | [**商品篩選**](#商品篩選)                             | **POST** /v1/products                           | 依據篩選條件篩選出特定商品            |          | ✅        |
 | [**創建退貨單**](#創建退貨單)                         | **POST** /v1/return_orders/:id                  | 新增一筆待審核的退貨單                | Y        | ✅        |
@@ -475,7 +475,7 @@ Header
 - 請求參數範例
 
 ```
-curl --location --request GET 'https://uatecapi.tungrp.com/v1/v1/customers/carts/favorite' \
+curl --location --request GET 'https://uatecapi.tungrp.com/v1/customers/carts/favorite' \
 --header 'Authorization: Bearer QHSQUCdZyYVJIftyRCZpIIZNbH3pbmURbS3x2N3T0Ys'
 ```
 
@@ -513,7 +513,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/categories?brand_id=1
 ```
 
@@ -547,7 +547,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/categories/3
 ```
 
@@ -615,7 +615,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -684,7 +684,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -720,12 +720,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員主信用卡**
 
@@ -753,12 +752,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員存在狀態**
 
@@ -786,12 +784,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員基本資訊**
 
@@ -833,8 +830,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/me/' \
   --compressed
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 ```json
 {
@@ -887,12 +883,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員訂單記錄**
 
@@ -920,12 +915,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員業務店**
 
@@ -955,12 +949,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員 Barcode**
 
@@ -992,12 +985,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **促銷頁列表**
 
@@ -1019,7 +1011,7 @@ Header
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1055,7 +1047,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1091,7 +1083,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1121,7 +1113,7 @@ Header
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1157,12 +1149,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **維修保養單列表**
 
@@ -1191,12 +1182,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **維修保養單明細**
 
@@ -1224,7 +1214,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1262,7 +1252,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1298,7 +1288,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1342,7 +1332,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1378,7 +1368,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1456,7 +1446,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1492,7 +1482,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1528,7 +1518,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1770,7 +1760,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1806,7 +1796,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1843,7 +1833,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1879,7 +1869,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1915,7 +1905,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1953,7 +1943,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -1991,7 +1981,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -2029,7 +2019,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -2071,7 +2061,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -2109,12 +2099,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **新增地址簿**
 
@@ -2153,7 +2142,7 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
@@ -2198,12 +2187,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **新增信用卡**
 
@@ -2233,12 +2221,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **設定主信用卡**
 
@@ -2268,12 +2255,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **發送 OTP 到手機**
 
@@ -2304,12 +2290,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **發送 OTP**
 
@@ -2339,12 +2324,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員接收推播設定**
 
@@ -2376,12 +2360,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員重設密碼**
 
@@ -2413,12 +2396,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員設定預設店**
 
@@ -2449,12 +2431,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **取得 sso 憑證**
 
@@ -2485,12 +2466,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **社群媒體登入**
 
@@ -2521,12 +2501,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **社群媒體登出**
 
@@ -2556,12 +2535,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員同步 pos**
 
@@ -2608,9 +2586,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/sync_pos/' \
   --compressed
 ```
 
-- 回應參數說明
-
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員資訊更新**
 
@@ -2646,12 +2622,11 @@ Parameters
 
 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員重設密碼**
 
@@ -2683,13 +2658,11 @@ Parameters
 
 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
-
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 # **驗證 OTP**
 
 - 應用場景
@@ -2719,12 +2692,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **驗證密碼**
 
@@ -2754,12 +2726,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **創建維修單**
 
@@ -2795,12 +2766,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **取消維修單**
 
@@ -2830,12 +2800,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **同意報價**
 
@@ -2866,12 +2835,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **綁定推播**
 
@@ -2902,12 +2870,11 @@ Parameter
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **解綁推播**
 
@@ -2937,12 +2904,11 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 https://uatecapi.tungrp.com/v1/products/697
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **已讀推播**
 
@@ -2952,8 +2918,8 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/notifications/read
+  - 正式環境：https://ecapi.tungrp.com/v1/notifications/read
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2974,13 +2940,15 @@ Parameters
 
 - 請求參數範例
 
-```
-https://uatecapi.tungrp.com/v1/products/697
+```shell
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/notifications/read' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 9
+}'
 ```
 
-- 回應參數說明
-
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **推播已讀全部**
 
@@ -2990,8 +2958,8 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/notifications/read_all
+  - 正式環境：https://ecapi.tungrp.com/v1/notifications/read_all
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -3012,12 +2980,15 @@ Parameters
 
 - 請求參數範例
 
-```
-https://uatecapi.tungrp.com/v1/products/697
+```shell
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/notifications/read_all' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "type": "latest"
+}'
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **創建訂單**
 
@@ -3027,8 +2998,8 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/orders
+  - 正式環境：https://ecapi.tungrp.com/v1/orders
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -3068,15 +3039,26 @@ Parameters
 
 - 請求參數範例
 
-```
-https://uatecapi.tungrp.com/v1/products/697
+```shell
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/orders' \
+--header 'Authorization: Bearer VPoQbeSBejiaPUPnJipPqRTnvrviCFlkD3skp3zk34c' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "items": [
+        { "variant_id": 7, "quantity": 1 },
+        { "variant_id": 8, "quantity": 1 }
+    ],
+    "credit_card_id": 1,
+    "shipping_type": "home",
+    "receiver_name": "陳漢庭",
+    "receiver_phone": "0983168969",
+    "e_gui_type": "ecpay"
+}'
 ```
 
 - 回應參數說明
 
   [**V1OrderEntity**](#V1OrderEntity)
-
-- 回傳參數範例
 
 # **取消訂單**
 
@@ -3086,8 +3068,8 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/orders/:number/cancel
+  - 正式環境：https://ecapi.tungrp.com/v1/orders/:number/cancel
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -3108,12 +3090,13 @@ Parameters
 
 - 請求參數範例
 
-```
-https://uatecapi.tungrp.com/v1/products/697
+```shell
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/orders/21031610280667/cancel' \
+--header 'Authorization: Bearer vGtzatrc_jCKVX0SX5vYnvjB-9eKCwR69rN5MR6wVM4' \
+--data-raw ''
 ```
 
-- 回應參數說明
-- 回傳參數範例
+- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **重新結帳**
 
@@ -3148,7 +3131,7 @@ Parameters
 - 請求參數範例
 
 ```shell
-curl --location --request POST 'https://uatecapi.tungrp.com/v1/v1/orders/21042015085881/checkout' \
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/orders/21042015085881/checkout' \
 --header 'Authorization: Bearer VPoQbeSBejiaPUPnJipPqRTnvrviCFlkD3skp3zk34c' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -9599,7 +9582,7 @@ Parameters
 - 請求參數範例
 
 ```shell
-curl --location --request POST 'https://uatecapi.tungrp.com/v1/v1/return_orders/70' \
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/return_orders/70' \
 --header 'Authorization: Bearer Cc1l1bd_1DORpc8vVXRwC7D0nDF8oJmM95Kf_rCzCpM' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -9643,7 +9626,7 @@ Parameters
 - 請求參數範例
 
 ```shell
-curl --location --request POST 'https://uatecapi.tungrp.com/v1/v1/return_orders/pre_calculate/39' \
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/return_orders/pre_calculate/39' \
 --header 'Authorization: Bearer VprJnfpovXAkv-yuJfMCOka8LnEiZwmzgSy2jDQbrfQ' \
 --header 'Content-Type: application/json' \
 --data-raw '{
