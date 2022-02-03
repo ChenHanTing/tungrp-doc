@@ -20,7 +20,7 @@
 | [**會員主信用卡**](#會員主信用卡)                     | **GET** /v1/customers/credit_cards/get_primary  | 取得會員的主信用卡                    | Y        |          |
 | [**會員存在狀態**](#會員存在狀態)                     | **GET** /v1/customers/exist                     | 查看會員是否存在                      | Y        | ✅        |
 | [**會員基本資訊**](#會員基本資訊)                     | **GET** /v1/customers/me                        |                                       | Y        | ✅        |
-| [**會員點數紀錄**](#會員點數紀錄)                     | **GET** /v1/customers/point_history             |                                       | Y        |          |
+| [**會員點數紀錄**](#會員點數紀錄)                     | **GET** /v1/customers/point_history             |                                       | Y        | ✅        |
 | [**會員訂單記錄**](#會員訂單記錄)                     | **GET** /v1/customers/pos_order_histories       |                                       | Y        |          |
 | [**會員業務店**](#會員業務店)                         | **GET** /v1/customers/store                     |                                       | Y        |          |
 | [**會員 Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                       | Y        |          |
@@ -33,8 +33,8 @@
 | [**維修保養單明細**](#維修保養單明細)                 | **GET** /v1/maintain_orders/:number             |                                       | Y        |          |
 | [**推播列表**](#推播列表)                             | **GET** /v1/notifications                       |                                       | Y        |          |
 | [**推播明細**](#推播明細)                             | **GET** /v1/notifications/:id                   |                                       | Y        |          |
-| [**訂單列表**](#訂單列表)                             | **GET** /v1/orders                              |                                       | Y        |          |
-| [**訂單明細**](#訂單明細)                             | **GET** /v1/orders/:number                      |                                       | Y        |          |
+| [**訂單列表**](#訂單列表)                             | **GET** /v1/orders                              |                                       | Y        | ✅        |
+| [**訂單明細**](#訂單明細)                             | **GET** /v1/orders/:number                      |                                       | Y        | ✅        |
 | [**查看商品**](#查看商品)                             | **GET** /v1/products/:id                        |                                       |          | ✅        |
 | [**指定品項庫存**](#指定品項庫存)                     | **GET** /v1/products/query_stock                |                                       |          |          |
 | [**退貨單明細**](#退貨單明細)                         | **GET** /v1/return_orders/:id                   |                                       | Y        |          |
@@ -42,7 +42,7 @@
 | [**取得搜尋內容**](#取得搜尋內容)                     | **GET** /v1/search                              |                                       |          | ✅        |
 | [**系列頁列表**](#系列頁列表)                         | **GET** /v1/series                              |                                       |          |          |
 | [**指定系列頁**](#指定系列頁)                         | **GET** /v1/series/:series_id                   |                                       |          |          |
-| [**店舖列表**](#店舖列表)                             | **GET** /v1/stores                              |                                       |          |          |
+| [**店舖列表**](#店舖列表)                             | **GET** /v1/stores                              |                                       |          | ✅        |
 | [**小類列表**](#小類列表)                             | **GET** /v1/sub_collections                     |                                       |          |          |
 | [**小類明細**](#小類明細)                             | **GET** /v1/sub_collections/:id                 |                                       |          |          |
 | [**特定子訂單**](#特定子訂單)                         | **GET** /v1/sub_orders/:id                      |                                       | Y        |          |
@@ -1564,10 +1564,41 @@ Header
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/pos_order_histories/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'if-none-match: W/"58696874aeb44a164188371717cb1ee7"' \
+  --compressed
 ```
 
-- 標準回應，詳情請查看 [附錄 2](#附錄2)
+- 回應範例
+
+````json
+{
+  "histories": [
+    { "date": "2022-01-30", "price": 380, "order_number": "22012816321631" },
+    { "date": "2022-01-21", "price": 39200, "order_number": "" },
+    { "date": "2022-01-21", "price": 20500, "order_number": "" }
+  ],
+  "level_up_requires": 0,
+  "extend_requires": 30000,
+  "current_level": "G",
+  "vip_start_date": "2022-01-31",
+  "vip_end_date": "2023-01-31"
+}
+````
 
 # **會員訂單記錄**
 
@@ -1592,10 +1623,11 @@ Header
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/pos_order_histories' \
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
 ```
 
-- 標準回應，詳情請查看 [附錄 2](#附錄2)
+- 回應範例
 
 # **會員業務店**
 
@@ -2259,7 +2291,8 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/orders/?offset=0&limit=2000&status=' \
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
 ```
 
 - 回應參數說明
@@ -2267,6 +2300,1271 @@ https://uatecapi.tungrp.com/v1/products/697
   [**Array&lt;V1OrderEntity&gt;**](#V1OrderEntity)
 
 - 回傳參數範例
+
+```json
+{
+  "orders": [
+    {
+      "credit_card_id": null,
+      "created_at": "2022-01-30T00:00:00.000+08:00",
+      "updated_at": "2022-01-30T00:00:00.000+08:00",
+      "number": "ECEC019920220100000004",
+      "price": 380,
+      "zip": "",
+      "city": "",
+      "district": "",
+      "address": "",
+      "receiver_name": "",
+      "receiver_phone": "",
+      "e_gui_type": null,
+      "e_gui_carrier": null,
+      "e_gui_tax_number": null,
+      "used_birth_gift": null,
+      "used_rebate": null,
+      "gained_rebate": null,
+      "credit_card_last_four": "",
+      "credit_card_first_six": "",
+      "cvs_number": "",
+      "shipping_type": "",
+      "status": "done",
+      "payment_status": "paid",
+      "installment": null,
+      "vip_level": "",
+      "original_price": null,
+      "sub_orders": [
+        {
+          "id": null,
+          "brand_id": null,
+          "store": null,
+          "order_items": [
+            {
+              "variant": {
+                "uid": "ISA-BR0521-22P032B23NL.TU",
+                "id": 688,
+                "price": 3800,
+                "member_price": 3800,
+                "promote_price": 3800,
+                "color": "#e7ac62",
+                "colorDisplay": { "zh": "原色", "en": "NATURAL" },
+                "material": {
+                  "zh": "黃銅 50%, 貝殼 45%, 錫 5%",
+                  "en": "BRASS 50%, SEASHELL 45%, TIN 5%"
+                },
+                "color_img": "",
+                "size": { "zh": "TU", "en": "TU" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/2830/BR0521-22P032B23NL-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/2831/BR0521-22P032B23NL-2.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "ISABEL MARANT", "en": "ISABEL MARANT" },
+                "filter_metal": { "zh": "", "en": "" },
+                "filter_gem": { "zh": "", "en": "" },
+                "filter_size": { "zh": "TU", "en": "TU" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "米色", "en": "ECRU" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 3,
+                  "title": { "zh": "Bracelet手鍊", "en": "Bracelet" },
+                  "id": 513,
+                  "category": {
+                    "id": 4,
+                    "title": { "zh": " 女款", "en": "WOMEN" }
+                  },
+                  "collection": {
+                    "id": 16,
+                    "title": { "zh": "配件", "en": "ACCESSORIES" }
+                  },
+                  "sub_collection": {
+                    "id": 18,
+                    "title": { "zh": "飾品", "en": "JEWELRY" }
+                  },
+                  "info_detail": {
+                    "zh": "*貝殼手環\n*金色金屬手鍊搭配貝殼綴飾\n長度:17-18公分\n",
+                    "en": "Bracelet"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/12/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/13/size_zh.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 9,
+                      "title": { "en": "Accessories", "zh": "Accessories" }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 3800,
+                  "promote_price": 3800,
+                  "price": 3800,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 1,
+              "price": 380,
+              "return_quantity": 0
+            }
+          ],
+          "status": "unpaid",
+          "shipping_status": "ready",
+          "created_at": null,
+          "shipped_at": null,
+          "arrived_at": null,
+          "received_at": null,
+          "failed_at": null,
+          "tracking_number": "",
+          "return_order_id": null,
+          "returnable": true
+        }
+      ],
+      "note": "",
+      "target_price_discount_value": null,
+      "target_price_discount_title": { "zh": "", "en": "" },
+      "cvs_store_name": "",
+      "cvs_store_type": "",
+      "cancel_reason": "",
+      "payment_failed_reason": "",
+      "membership_reward_percent": null,
+      "is_offline_order": true,
+      "done_at": null
+    },
+    {
+      "credit_card_id": 34,
+      "created_at": "2022-01-28T16:32:16.608+08:00",
+      "updated_at": "2022-01-30T23:30:20.712+08:00",
+      "number": "22012816321631",
+      "price": 380,
+      "zip": "",
+      "city": "臺北市",
+      "district": "松山區",
+      "address": "南京東路四段186號7樓之三",
+      "receiver_name": "曾奕慈",
+      "receiver_phone": "0900790399",
+      "e_gui_type": "b2b",
+      "e_gui_carrier": null,
+      "e_gui_tax_number": "28552664",
+      "used_birth_gift": 0,
+      "used_rebate": 0,
+      "gained_rebate": null,
+      "credit_card_last_four": "9200",
+      "credit_card_first_six": "463670",
+      "cvs_number": "",
+      "shipping_type": "home",
+      "status": "done",
+      "payment_status": "paid",
+      "installment": 0,
+      "vip_level": "M",
+      "original_price": 380,
+      "sub_orders": [
+        {
+          "id": 34,
+          "brand_id": 3,
+          "store": {
+            "lat": 25.051405777304463,
+            "lng": 121.55772518378977,
+            "title": { "zh": "果思測試店櫃", "en": "Goons Test" },
+            "address": {
+              "zh": "台北市松山區南京東路四段186號7樓之3",
+              "en": "台北市松山區南京東路四段186號7樓之3"
+            },
+            "phone": "02-25770607",
+            "instant_messaging_token": "0",
+            "opening_hours": [
+              [null, null],
+              [null, null],
+              [null, null],
+              [null, null],
+              [null, null],
+              [null, null],
+              [null, null]
+            ],
+            "id": 3,
+            "area": "north",
+            "default": false
+          },
+          "order_items": [
+            {
+              "variant": {
+                "uid": "ISA-BR0521-22P032B23NL.TU",
+                "id": 688,
+                "price": 3800,
+                "member_price": 3800,
+                "promote_price": 3800,
+                "color": "#e7ac62",
+                "colorDisplay": { "zh": "原色", "en": "NATURAL" },
+                "material": {
+                  "zh": "黃銅 50%, 貝殼 45%, 錫 5%",
+                  "en": "BRASS 50%, SEASHELL 45%, TIN 5%"
+                },
+                "color_img": "",
+                "size": { "zh": "TU", "en": "TU" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/2830/BR0521-22P032B23NL-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/2831/BR0521-22P032B23NL-2.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "ISABEL MARANT", "en": "ISABEL MARANT" },
+                "filter_metal": { "zh": "", "en": "" },
+                "filter_gem": { "zh": "", "en": "" },
+                "filter_size": { "zh": "TU", "en": "TU" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "米色", "en": "ECRU" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 3,
+                  "title": { "zh": "Bracelet手鍊", "en": "Bracelet" },
+                  "id": 513,
+                  "category": {
+                    "id": 4,
+                    "title": { "zh": " 女款", "en": "WOMEN" }
+                  },
+                  "collection": {
+                    "id": 16,
+                    "title": { "zh": "配件", "en": "ACCESSORIES" }
+                  },
+                  "sub_collection": {
+                    "id": 18,
+                    "title": { "zh": "飾品", "en": "JEWELRY" }
+                  },
+                  "info_detail": {
+                    "zh": "*貝殼手環\n*金色金屬手鍊搭配貝殼綴飾\n長度:17-18公分\n",
+                    "en": "Bracelet"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/12/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/13/size_zh.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 9,
+                      "title": { "en": "Accessories", "zh": "Accessories" }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 3800,
+                  "promote_price": 3800,
+                  "price": 3800,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 1,
+              "price": 380,
+              "return_quantity": 0
+            }
+          ],
+          "status": "done",
+          "shipping_status": "received",
+          "created_at": "2022-01-28T16:32:16.626+08:00",
+          "shipped_at": null,
+          "arrived_at": null,
+          "received_at": "2022-01-28T16:36:07.000+08:00",
+          "failed_at": null,
+          "tracking_number": "",
+          "return_order_id": null,
+          "returnable": false
+        }
+      ],
+      "note": "D2",
+      "target_price_discount_value": null,
+      "target_price_discount_title": { "zh": "", "en": "" },
+      "cvs_store_name": "",
+      "cvs_store_type": "",
+      "cancel_reason": "",
+      "payment_failed_reason": "",
+      "membership_reward_percent": "0.0",
+      "is_offline_order": false,
+      "done_at": "2022-01-28T16:36:07.000+08:00"
+    },
+    {
+      "credit_card_id": 31,
+      "created_at": "2022-01-28T16:27:34.757+08:00",
+      "updated_at": "2022-01-29T02:00:08.652+08:00",
+      "number": "22012816273430",
+      "price": 380,
+      "zip": "",
+      "city": "臺北市",
+      "district": "松山區",
+      "address": "南京東路四段186號7樓之三",
+      "receiver_name": "曾奕慈",
+      "receiver_phone": "0900790399",
+      "e_gui_type": "b2b",
+      "e_gui_carrier": null,
+      "e_gui_tax_number": "28552664",
+      "used_birth_gift": 0,
+      "used_rebate": 0,
+      "gained_rebate": null,
+      "credit_card_last_four": "6370",
+      "credit_card_first_six": "524255",
+      "cvs_number": "",
+      "shipping_type": "home",
+      "status": "canceled",
+      "payment_status": "expired",
+      "installment": 0,
+      "vip_level": "M",
+      "original_price": 380,
+      "sub_orders": [
+        {
+          "id": 33,
+          "brand_id": 3,
+          "store": {
+            "lat": 25.051405777304463,
+            "lng": 121.55772518378977,
+            "title": { "zh": "果思測試店櫃", "en": "Goons Test" },
+            "address": {
+              "zh": "台北市松山區南京東路四段186號7樓之3",
+              "en": "台北市松山區南京東路四段186號7樓之3"
+            },
+            "phone": "02-25770607",
+            "instant_messaging_token": "0",
+            "opening_hours": [
+              [null, null],
+              [null, null],
+              [null, null],
+              [null, null],
+              [null, null],
+              [null, null],
+              [null, null]
+            ],
+            "id": 3,
+            "area": "north",
+            "default": false
+          },
+          "order_items": [
+            {
+              "variant": {
+                "uid": "ISA-BR0521-22P032B23NL.TU",
+                "id": 688,
+                "price": 3800,
+                "member_price": 3800,
+                "promote_price": 3800,
+                "color": "#e7ac62",
+                "colorDisplay": { "zh": "原色", "en": "NATURAL" },
+                "material": {
+                  "zh": "黃銅 50%, 貝殼 45%, 錫 5%",
+                  "en": "BRASS 50%, SEASHELL 45%, TIN 5%"
+                },
+                "color_img": "",
+                "size": { "zh": "TU", "en": "TU" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/2830/BR0521-22P032B23NL-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/2831/BR0521-22P032B23NL-2.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "ISABEL MARANT", "en": "ISABEL MARANT" },
+                "filter_metal": { "zh": "", "en": "" },
+                "filter_gem": { "zh": "", "en": "" },
+                "filter_size": { "zh": "TU", "en": "TU" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "米色", "en": "ECRU" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 3,
+                  "title": { "zh": "Bracelet手鍊", "en": "Bracelet" },
+                  "id": 513,
+                  "category": {
+                    "id": 4,
+                    "title": { "zh": " 女款", "en": "WOMEN" }
+                  },
+                  "collection": {
+                    "id": 16,
+                    "title": { "zh": "配件", "en": "ACCESSORIES" }
+                  },
+                  "sub_collection": {
+                    "id": 18,
+                    "title": { "zh": "飾品", "en": "JEWELRY" }
+                  },
+                  "info_detail": {
+                    "zh": "*貝殼手環\n*金色金屬手鍊搭配貝殼綴飾\n長度:17-18公分\n",
+                    "en": "Bracelet"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/12/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/13/size_zh.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 9,
+                      "title": { "en": "Accessories", "zh": "Accessories" }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 3800,
+                  "promote_price": 3800,
+                  "price": 3800,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 1,
+              "price": 380,
+              "return_quantity": 0
+            }
+          ],
+          "status": "canceled",
+          "shipping_status": "ready",
+          "created_at": "2022-01-28T16:27:34.772+08:00",
+          "shipped_at": null,
+          "arrived_at": null,
+          "received_at": null,
+          "failed_at": null,
+          "tracking_number": "",
+          "return_order_id": null,
+          "returnable": true
+        }
+      ],
+      "note": "D2222222",
+      "target_price_discount_value": null,
+      "target_price_discount_title": { "zh": "", "en": "" },
+      "cvs_store_name": "",
+      "cvs_store_type": "",
+      "cancel_reason": "customer_request",
+      "payment_failed_reason": "10800001-您已達風險控管條件(credit),故無法繼續操作,請您與綠界客服連絡 02-26551775 謝謝",
+      "membership_reward_percent": "0.0",
+      "is_offline_order": false,
+      "done_at": null
+    },
+    {
+      "credit_card_id": null,
+      "created_at": "2022-01-21T00:00:00.000+08:00",
+      "updated_at": "2022-01-21T00:00:00.000+08:00",
+      "number": "2713030120220100000502",
+      "price": 59600,
+      "zip": "",
+      "city": "",
+      "district": "",
+      "address": "",
+      "receiver_name": "",
+      "receiver_phone": "",
+      "e_gui_type": null,
+      "e_gui_carrier": null,
+      "e_gui_tax_number": null,
+      "used_birth_gift": null,
+      "used_rebate": null,
+      "gained_rebate": null,
+      "credit_card_last_four": "",
+      "credit_card_first_six": "",
+      "cvs_number": "",
+      "shipping_type": "",
+      "status": "canceled",
+      "payment_status": "paid",
+      "installment": null,
+      "vip_level": "",
+      "original_price": null,
+      "sub_orders": [
+        {
+          "id": null,
+          "brand_id": null,
+          "store": null,
+          "order_items": [
+            {
+              "variant": {
+                "uid": "agt-1013411105308007",
+                "id": 9,
+                "price": 9800,
+                "member_price": 9800,
+                "promote_price": 9800,
+                "color": "#FFFFFF",
+                "colorDisplay": { "zh": "白色", "en": "WHITE" },
+                "material": { "zh": "K10, 鑽石", "en": "K10, Diamond" },
+                "color_img": "",
+                "size": { "zh": "戒圍007", "en": "007" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/68/zz-10134111053_08-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/72/zz-10134111053_08-2.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/76/zz-10134111053_08-3.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "agete", "en": "agete" },
+                "filter_metal": { "zh": "K10", "en": "K10" },
+                "filter_gem": { "zh": "鑽石", "en": "Diamond" },
+                "filter_size": { "zh": "戒圍007", "en": "007" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "白色", "en": "WHITE" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 2,
+                  "title": {
+                    "zh": "10K鏤空蕾絲鑽石戒指",
+                    "en": "10K鏤空蕾絲鑽石戒指"
+                  },
+                  "id": 3,
+                  "category": {
+                    "id": 1,
+                    "title": { "zh": "珠寶飾品", "en": "JEWELRY" }
+                  },
+                  "collection": {
+                    "id": 1,
+                    "title": { "zh": "戒指", "en": "RING" }
+                  },
+                  "sub_collection": {
+                    "id": 1,
+                    "title": { "zh": "", "en": "" }
+                  },
+                  "info_detail": {
+                    "zh": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。",
+                    "en": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 19,
+                      "title": {
+                        "en": "經典戒指\u0026尾戒",
+                        "zh": "經典戒指\u0026尾戒"
+                      }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 9800,
+                  "promote_price": 9800,
+                  "price": 9800,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 2,
+              "price": 19600,
+              "return_quantity": 0
+            },
+            {
+              "variant": {
+                "uid": "agt-1017311103308007",
+                "id": 29,
+                "price": 10600,
+                "member_price": 10600,
+                "promote_price": 10600,
+                "color": "#FFFFFF",
+                "colorDisplay": { "zh": "白色", "en": "WHITE" },
+                "material": { "zh": "K10, 鑽石", "en": "K10, Diamond" },
+                "color_img": "",
+                "size": { "zh": "戒圍007", "en": "007" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/195/zz-10173111033_08-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/199/zz-10173111033_08-2.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/203/zz-10173111033_08-3.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "agete", "en": "agete" },
+                "filter_metal": { "zh": "K10", "en": "K10" },
+                "filter_gem": { "zh": "鑽石", "en": "Diamond" },
+                "filter_size": { "zh": "戒圍007", "en": "007" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "白色", "en": "WHITE" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 2,
+                  "title": { "zh": "10K鑽石戒指", "en": "10K鑽石戒指" },
+                  "id": 9,
+                  "category": {
+                    "id": 1,
+                    "title": { "zh": "珠寶飾品", "en": "JEWELRY" }
+                  },
+                  "collection": {
+                    "id": 1,
+                    "title": { "zh": "戒指", "en": "RING" }
+                  },
+                  "sub_collection": {
+                    "id": 1,
+                    "title": { "zh": "", "en": "" }
+                  },
+                  "info_detail": {
+                    "zh": "【Ring系列】捕捉水滴從樹葉落下的瞬間作為靈感，也像是一抹甜美的微笑。",
+                    "en": "【Ring系列】捕捉水滴從樹葉落下的瞬間作為靈感，也像是一抹甜美的微笑。"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 19,
+                      "title": {
+                        "en": "經典戒指\u0026尾戒",
+                        "zh": "經典戒指\u0026尾戒"
+                      }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 10600,
+                  "promote_price": 10600,
+                  "price": 10600,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 1,
+              "price": 10600,
+              "return_quantity": 0
+            },
+            {
+              "variant": {
+                "uid": "agt-1013411105308009",
+                "id": 10,
+                "price": 9800,
+                "member_price": 9800,
+                "promote_price": 9800,
+                "color": "#FFFFFF",
+                "colorDisplay": { "zh": "白色", "en": "WHITE" },
+                "material": { "zh": "K10, 鑽石", "en": "K10, Diamond" },
+                "color_img": "",
+                "size": { "zh": "戒圍009", "en": "009" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/69/zz-10134111053_08-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/73/zz-10134111053_08-2.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/77/zz-10134111053_08-3.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "agete", "en": "agete" },
+                "filter_metal": { "zh": "K10", "en": "K10" },
+                "filter_gem": { "zh": "鑽石", "en": "Diamond" },
+                "filter_size": { "zh": "戒圍009", "en": "009" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "白色", "en": "WHITE" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 2,
+                  "title": {
+                    "zh": "10K鏤空蕾絲鑽石戒指",
+                    "en": "10K鏤空蕾絲鑽石戒指"
+                  },
+                  "id": 3,
+                  "category": {
+                    "id": 1,
+                    "title": { "zh": "珠寶飾品", "en": "JEWELRY" }
+                  },
+                  "collection": {
+                    "id": 1,
+                    "title": { "zh": "戒指", "en": "RING" }
+                  },
+                  "sub_collection": {
+                    "id": 1,
+                    "title": { "zh": "", "en": "" }
+                  },
+                  "info_detail": {
+                    "zh": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。",
+                    "en": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 19,
+                      "title": {
+                        "en": "經典戒指\u0026尾戒",
+                        "zh": "經典戒指\u0026尾戒"
+                      }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 9800,
+                  "promote_price": 9800,
+                  "price": 9800,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 1,
+              "price": 9800,
+              "return_quantity": 0
+            },
+            {
+              "variant": {
+                "uid": "agt-1013411105308011",
+                "id": 11,
+                "price": 9800,
+                "member_price": 9800,
+                "promote_price": 9800,
+                "color": "#FFFFFF",
+                "colorDisplay": { "zh": "白色", "en": "WHITE" },
+                "material": { "zh": "K10, 鑽石", "en": "K10, Diamond" },
+                "color_img": "",
+                "size": { "zh": "戒圍011", "en": "011" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/70/zz-10134111053_08-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/74/zz-10134111053_08-2.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/78/zz-10134111053_08-3.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "agete", "en": "agete" },
+                "filter_metal": { "zh": "K10", "en": "K10" },
+                "filter_gem": { "zh": "鑽石", "en": "Diamond" },
+                "filter_size": { "zh": "戒圍011", "en": "011" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "白色", "en": "WHITE" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 2,
+                  "title": {
+                    "zh": "10K鏤空蕾絲鑽石戒指",
+                    "en": "10K鏤空蕾絲鑽石戒指"
+                  },
+                  "id": 3,
+                  "category": {
+                    "id": 1,
+                    "title": { "zh": "珠寶飾品", "en": "JEWELRY" }
+                  },
+                  "collection": {
+                    "id": 1,
+                    "title": { "zh": "戒指", "en": "RING" }
+                  },
+                  "sub_collection": {
+                    "id": 1,
+                    "title": { "zh": "", "en": "" }
+                  },
+                  "info_detail": {
+                    "zh": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。",
+                    "en": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 19,
+                      "title": {
+                        "en": "經典戒指\u0026尾戒",
+                        "zh": "經典戒指\u0026尾戒"
+                      }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 9800,
+                  "promote_price": 9800,
+                  "price": 9800,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 2,
+              "price": 19600,
+              "return_quantity": 0
+            }
+          ],
+          "status": "unpaid",
+          "shipping_status": "ready",
+          "created_at": null,
+          "shipped_at": null,
+          "arrived_at": null,
+          "received_at": null,
+          "failed_at": null,
+          "tracking_number": "",
+          "return_order_id": null,
+          "returnable": true
+        }
+      ],
+      "note": "",
+      "target_price_discount_value": null,
+      "target_price_discount_title": { "zh": "", "en": "" },
+      "cvs_store_name": "",
+      "cvs_store_type": "",
+      "cancel_reason": "",
+      "payment_failed_reason": "",
+      "membership_reward_percent": null,
+      "is_offline_order": true,
+      "done_at": null
+    },
+    {
+      "credit_card_id": null,
+      "created_at": "2022-01-21T00:00:00.000+08:00",
+      "updated_at": "2022-01-21T00:00:00.000+08:00",
+      "number": "2713030120220100000504",
+      "price": 39200,
+      "zip": "",
+      "city": "",
+      "district": "",
+      "address": "",
+      "receiver_name": "",
+      "receiver_phone": "",
+      "e_gui_type": null,
+      "e_gui_carrier": null,
+      "e_gui_tax_number": null,
+      "used_birth_gift": null,
+      "used_rebate": null,
+      "gained_rebate": null,
+      "credit_card_last_four": "",
+      "credit_card_first_six": "",
+      "cvs_number": "",
+      "shipping_type": "",
+      "status": "done",
+      "payment_status": "paid",
+      "installment": null,
+      "vip_level": "",
+      "original_price": null,
+      "sub_orders": [
+        {
+          "id": null,
+          "brand_id": null,
+          "store": null,
+          "order_items": [
+            {
+              "variant": {
+                "uid": "agt-1013411105308007",
+                "id": 9,
+                "price": 9800,
+                "member_price": 9800,
+                "promote_price": 9800,
+                "color": "#FFFFFF",
+                "colorDisplay": { "zh": "白色", "en": "WHITE" },
+                "material": { "zh": "K10, 鑽石", "en": "K10, Diamond" },
+                "color_img": "",
+                "size": { "zh": "戒圍007", "en": "007" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/68/zz-10134111053_08-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/72/zz-10134111053_08-2.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/76/zz-10134111053_08-3.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "agete", "en": "agete" },
+                "filter_metal": { "zh": "K10", "en": "K10" },
+                "filter_gem": { "zh": "鑽石", "en": "Diamond" },
+                "filter_size": { "zh": "戒圍007", "en": "007" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "白色", "en": "WHITE" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 2,
+                  "title": {
+                    "zh": "10K鏤空蕾絲鑽石戒指",
+                    "en": "10K鏤空蕾絲鑽石戒指"
+                  },
+                  "id": 3,
+                  "category": {
+                    "id": 1,
+                    "title": { "zh": "珠寶飾品", "en": "JEWELRY" }
+                  },
+                  "collection": {
+                    "id": 1,
+                    "title": { "zh": "戒指", "en": "RING" }
+                  },
+                  "sub_collection": {
+                    "id": 1,
+                    "title": { "zh": "", "en": "" }
+                  },
+                  "info_detail": {
+                    "zh": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。",
+                    "en": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 19,
+                      "title": {
+                        "en": "經典戒指\u0026尾戒",
+                        "zh": "經典戒指\u0026尾戒"
+                      }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 9800,
+                  "promote_price": 9800,
+                  "price": 9800,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 1,
+              "price": 9800,
+              "return_quantity": 0
+            },
+            {
+              "variant": {
+                "uid": "agt-1013411105308009",
+                "id": 10,
+                "price": 9800,
+                "member_price": 9800,
+                "promote_price": 9800,
+                "color": "#FFFFFF",
+                "colorDisplay": { "zh": "白色", "en": "WHITE" },
+                "material": { "zh": "K10, 鑽石", "en": "K10, Diamond" },
+                "color_img": "",
+                "size": { "zh": "戒圍009", "en": "009" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/69/zz-10134111053_08-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/73/zz-10134111053_08-2.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/77/zz-10134111053_08-3.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "agete", "en": "agete" },
+                "filter_metal": { "zh": "K10", "en": "K10" },
+                "filter_gem": { "zh": "鑽石", "en": "Diamond" },
+                "filter_size": { "zh": "戒圍009", "en": "009" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "白色", "en": "WHITE" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 2,
+                  "title": {
+                    "zh": "10K鏤空蕾絲鑽石戒指",
+                    "en": "10K鏤空蕾絲鑽石戒指"
+                  },
+                  "id": 3,
+                  "category": {
+                    "id": 1,
+                    "title": { "zh": "珠寶飾品", "en": "JEWELRY" }
+                  },
+                  "collection": {
+                    "id": 1,
+                    "title": { "zh": "戒指", "en": "RING" }
+                  },
+                  "sub_collection": {
+                    "id": 1,
+                    "title": { "zh": "", "en": "" }
+                  },
+                  "info_detail": {
+                    "zh": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。",
+                    "en": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 19,
+                      "title": {
+                        "en": "經典戒指\u0026尾戒",
+                        "zh": "經典戒指\u0026尾戒"
+                      }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 9800,
+                  "promote_price": 9800,
+                  "price": 9800,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 1,
+              "price": 9800,
+              "return_quantity": 0
+            },
+            {
+              "variant": {
+                "uid": "agt-1013411105308011",
+                "id": 11,
+                "price": 9800,
+                "member_price": 9800,
+                "promote_price": 9800,
+                "color": "#FFFFFF",
+                "colorDisplay": { "zh": "白色", "en": "WHITE" },
+                "material": { "zh": "K10, 鑽石", "en": "K10, Diamond" },
+                "color_img": "",
+                "size": { "zh": "戒圍011", "en": "011" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/70/zz-10134111053_08-1.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/74/zz-10134111053_08-2.jpg",
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/78/zz-10134111053_08-3.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "agete", "en": "agete" },
+                "filter_metal": { "zh": "K10", "en": "K10" },
+                "filter_gem": { "zh": "鑽石", "en": "Diamond" },
+                "filter_size": { "zh": "戒圍011", "en": "011" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "白色", "en": "WHITE" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 2,
+                  "title": {
+                    "zh": "10K鏤空蕾絲鑽石戒指",
+                    "en": "10K鏤空蕾絲鑽石戒指"
+                  },
+                  "id": 3,
+                  "category": {
+                    "id": 1,
+                    "title": { "zh": "珠寶飾品", "en": "JEWELRY" }
+                  },
+                  "collection": {
+                    "id": 1,
+                    "title": { "zh": "戒指", "en": "RING" }
+                  },
+                  "sub_collection": {
+                    "id": 1,
+                    "title": { "zh": "", "en": "" }
+                  },
+                  "info_detail": {
+                    "zh": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。",
+                    "en": "【Ring系列】以復古棉質蕾絲圖案設計的尾戒，帶有可愛的圖紋。乾淨的廓形略有高低差，鏤空的圖案讓你的手指看起來很華麗。營造出一種不同於古色古香的干淨現代的氛圍。為了讓您的手指看起來更漂亮，戒指金屬設計會逐漸向中心的鑽石凸起，所以當您戴上手指時，您的手指會顯得整潔而修長。"
+                  },
+                  "size_img": {
+                    "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg",
+                    "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/1/size.jpg"
+                  },
+                  "series": [
+                    {
+                      "id": 19,
+                      "title": {
+                        "en": "經典戒指\u0026尾戒",
+                        "zh": "經典戒指\u0026尾戒"
+                      }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 9800,
+                  "promote_price": 9800,
+                  "price": 9800,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 2,
+              "price": 19600,
+              "return_quantity": 0
+            }
+          ],
+          "status": "unpaid",
+          "shipping_status": "ready",
+          "created_at": null,
+          "shipped_at": null,
+          "arrived_at": null,
+          "received_at": null,
+          "failed_at": null,
+          "tracking_number": "",
+          "return_order_id": null,
+          "returnable": true
+        }
+      ],
+      "note": "",
+      "target_price_discount_value": null,
+      "target_price_discount_title": { "zh": "", "en": "" },
+      "cvs_store_name": "",
+      "cvs_store_type": "",
+      "cancel_reason": "",
+      "payment_failed_reason": "",
+      "membership_reward_percent": null,
+      "is_offline_order": true,
+      "done_at": null
+    },
+    {
+      "credit_card_id": null,
+      "created_at": "2022-01-21T00:00:00.000+08:00",
+      "updated_at": "2022-01-21T00:00:00.000+08:00",
+      "number": "2713030120220100000505",
+      "price": 20500,
+      "zip": "",
+      "city": "",
+      "district": "",
+      "address": "",
+      "receiver_name": "",
+      "receiver_phone": "",
+      "e_gui_type": null,
+      "e_gui_carrier": null,
+      "e_gui_tax_number": null,
+      "used_birth_gift": null,
+      "used_rebate": null,
+      "gained_rebate": null,
+      "credit_card_last_four": "",
+      "credit_card_first_six": "",
+      "cvs_number": "",
+      "shipping_type": "",
+      "status": "done",
+      "payment_status": "paid",
+      "installment": null,
+      "vip_level": "",
+      "original_price": null,
+      "sub_orders": [
+        {
+          "id": null,
+          "brand_id": null,
+          "store": null,
+          "order_items": [
+            {
+              "variant": {
+                "uid": "agt-1015111200908999",
+                "id": 252,
+                "price": 7000,
+                "member_price": 7000,
+                "promote_price": 7000,
+                "color": "#FFFFFF",
+                "colorDisplay": { "zh": "白色", "en": "WHITE" },
+                "material": { "zh": "K10, 鑽石", "en": "K10, Diamond" },
+                "color_img": "",
+                "size": { "zh": "單一尺寸", "en": "One Size" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/90/zz-10151112009_08-1.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "agete", "en": "agete" },
+                "filter_metal": { "zh": "K10", "en": "K10" },
+                "filter_gem": { "zh": "鑽石", "en": "Diamond" },
+                "filter_size": { "zh": "單一尺寸", "en": "One Size" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "白色", "en": "WHITE" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 2,
+                  "title": { "zh": "10K花朵鑽石耳環", "en": "10K花朵鑽石耳環" },
+                  "id": 102,
+                  "category": {
+                    "id": 1,
+                    "title": { "zh": "珠寶飾品", "en": "JEWELRY" }
+                  },
+                  "collection": {
+                    "id": 3,
+                    "title": { "zh": "針式耳環", "en": "PIERCED EARRINGS" }
+                  },
+                  "sub_collection": {
+                    "id": 3,
+                    "title": { "zh": "", "en": "" }
+                  },
+                  "info_detail": {
+                    "zh": "【鑽石系列】花朵造型的耳環，為了突出中心的鑽石，它以精緻的雕刻設計完成。",
+                    "en": "【鑽石系列】花朵造型的耳環，為了突出中心的鑽石，它以精緻的雕刻設計完成。"
+                  },
+                  "size_img": { "en": null, "zh": null },
+                  "series": [
+                    {
+                      "id": 16,
+                      "title": { "en": "Ear Dress", "zh": "Ear Dress" }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 7000,
+                  "promote_price": 7000,
+                  "price": 7000,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 1,
+              "price": 7000,
+              "return_quantity": 0
+            },
+            {
+              "variant": {
+                "uid": "agt-1015111401008999",
+                "id": 297,
+                "price": 13500,
+                "member_price": 13500,
+                "promote_price": 13500,
+                "color": "#FFFFFF",
+                "colorDisplay": { "zh": "白色", "en": "WHITE" },
+                "material": { "zh": "鑽石", "en": "Diamond" },
+                "color_img": "",
+                "size": { "zh": "單一尺寸", "en": "One Size" },
+                "images": [
+                  "https://storage.googleapis.com/uatecnas/variant_photo/photo/92/zz-10151114010_08-1.jpg"
+                ],
+                "video": "",
+                "filter_br": { "zh": "agete", "en": "agete" },
+                "filter_metal": { "zh": "K18", "en": "K18" },
+                "filter_gem": { "zh": "鑽石", "en": "Diamond" },
+                "filter_size": { "zh": "單一尺寸", "en": "One Size" },
+                "filter_cat": { "zh": "", "en": "" },
+                "filter_pattern": { "zh": "", "en": "" },
+                "filter_color": { "zh": "白色", "en": "WHITE" },
+                "filter_theme": { "zh": "", "en": "" },
+                "filter_series": { "zh": "", "en": "" },
+                "product": {
+                  "brand_id": 2,
+                  "title": {
+                    "zh": "18K十字架鑽石手鍊",
+                    "en": "18K十字架鑽石手鍊"
+                  },
+                  "id": 147,
+                  "category": {
+                    "id": 1,
+                    "title": { "zh": "珠寶飾品", "en": "JEWELRY" }
+                  },
+                  "collection": {
+                    "id": 5,
+                    "title": {
+                      "zh": "手鍊\u0026腳鍊",
+                      "en": "BRACELETS \u0026 ANKLETS"
+                    }
+                  },
+                  "sub_collection": {
+                    "id": 5,
+                    "title": { "zh": "", "en": "" }
+                  },
+                  "info_detail": {
+                    "zh": "【鑽石系列】鑽石密鑲於十字架造型底座，象徵著生命力，同時鑽石也代表堅定、永恆，一款含有守護信念的手鍊。",
+                    "en": "【鑽石系列】鑽石密鑲於十字架造型底座，象徵著生命力，同時鑽石也代表堅定、永恆，一款含有守護信念的手鍊。"
+                  },
+                  "size_img": { "en": null, "zh": null },
+                  "series": [
+                    {
+                      "id": 20,
+                      "title": { "en": "經典手鍊", "zh": "經典手鍊" }
+                    }
+                  ],
+                  "promotion": null,
+                  "member_price": 13500,
+                  "promote_price": 13500,
+                  "price": 13500,
+                  "specified_variant_id": null,
+                  "published": true
+                }
+              },
+              "quantity": 1,
+              "price": 13500,
+              "return_quantity": 0
+            }
+          ],
+          "status": "unpaid",
+          "shipping_status": "ready",
+          "created_at": null,
+          "shipped_at": null,
+          "arrived_at": null,
+          "received_at": null,
+          "failed_at": null,
+          "tracking_number": "",
+          "return_order_id": null,
+          "returnable": true
+        }
+      ],
+      "note": "",
+      "target_price_discount_value": null,
+      "target_price_discount_title": { "zh": "", "en": "" },
+      "cvs_store_name": "",
+      "cvs_store_type": "",
+      "cancel_reason": "",
+      "payment_failed_reason": "",
+      "membership_reward_percent": null,
+      "is_offline_order": true,
+      "done_at": null
+    }
+  ],
+  "order_status_count": { "canceled": 2, "done": 4 },
+  "offline_orders": 4
+}
+
+```
 
 # **訂單明細**
 
@@ -2297,7 +3595,8 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/orders/ECEC019920220100000004/' \
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M'
 ```
 
 - 回應參數說明
@@ -2305,6 +3604,137 @@ https://uatecapi.tungrp.com/v1/products/697
   [**V1OrderEntity**](#V1OrderEntity)
 
 - 回傳參數範例
+
+```json
+{
+  "credit_card_id": null,
+  "created_at": "2022-01-30T00:00:00.000+08:00",
+  "updated_at": "2022-01-30T00:00:00.000+08:00",
+  "number": "ECEC019920220100000004",
+  "price": 380,
+  "zip": "",
+  "city": "",
+  "district": "",
+  "address": "",
+  "receiver_name": "",
+  "receiver_phone": "",
+  "e_gui_type": null,
+  "e_gui_carrier": null,
+  "e_gui_tax_number": null,
+  "used_birth_gift": null,
+  "used_rebate": null,
+  "gained_rebate": null,
+  "credit_card_last_four": "",
+  "credit_card_first_six": "",
+  "cvs_number": "",
+  "shipping_type": "",
+  "status": "done",
+  "payment_status": "paid",
+  "installment": null,
+  "vip_level": "",
+  "original_price": null,
+  "sub_orders": [
+    {
+      "id": null,
+      "brand_id": null,
+      "store": null,
+      "order_items": [
+        {
+          "variant": {
+            "uid": "ISA-BR0521-22P032B23NL.TU",
+            "id": 688,
+            "price": 3800,
+            "member_price": 3800,
+            "promote_price": 3800,
+            "color": "#e7ac62",
+            "colorDisplay": { "zh": "原色", "en": "NATURAL" },
+            "material": {
+              "zh": "黃銅 50%, 貝殼 45%, 錫 5%",
+              "en": "BRASS 50%, SEASHELL 45%, TIN 5%"
+            },
+            "color_img": "",
+            "size": { "zh": "TU", "en": "TU" },
+            "images": [
+              "https://storage.googleapis.com/uatecnas/variant_photo/photo/2830/BR0521-22P032B23NL-1.jpg",
+              "https://storage.googleapis.com/uatecnas/variant_photo/photo/2831/BR0521-22P032B23NL-2.jpg"
+            ],
+            "video": "",
+            "filter_br": { "zh": "ISABEL MARANT", "en": "ISABEL MARANT" },
+            "filter_metal": { "zh": "", "en": "" },
+            "filter_gem": { "zh": "", "en": "" },
+            "filter_size": { "zh": "TU", "en": "TU" },
+            "filter_cat": { "zh": "", "en": "" },
+            "filter_pattern": { "zh": "", "en": "" },
+            "filter_color": { "zh": "米色", "en": "ECRU" },
+            "filter_theme": { "zh": "", "en": "" },
+            "filter_series": { "zh": "", "en": "" },
+            "product": {
+              "brand_id": 3,
+              "title": { "zh": "Bracelet手鍊", "en": "Bracelet" },
+              "id": 513,
+              "category": {
+                "id": 4,
+                "title": { "zh": " 女款", "en": "WOMEN" }
+              },
+              "collection": {
+                "id": 16,
+                "title": { "zh": "配件", "en": "ACCESSORIES" }
+              },
+              "sub_collection": {
+                "id": 18,
+                "title": { "zh": "飾品", "en": "JEWELRY" }
+              },
+              "info_detail": {
+                "zh": "*貝殼手環\n*金色金屬手鍊搭配貝殼綴飾\n長度:17-18公分\n",
+                "en": "Bracelet"
+              },
+              "size_img": {
+                "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/12/size.jpg",
+                "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/13/size_zh.jpg"
+              },
+              "series": [
+                {
+                  "id": 9,
+                  "title": { "en": "Accessories", "zh": "Accessories" }
+                }
+              ],
+              "promotion": null,
+              "member_price": 3800,
+              "promote_price": 3800,
+              "price": 3800,
+              "specified_variant_id": null,
+              "published": true
+            }
+          },
+          "quantity": 1,
+          "price": 380,
+          "return_quantity": 0
+        }
+      ],
+      "status": "unpaid",
+      "shipping_status": "ready",
+      "created_at": null,
+      "shipped_at": null,
+      "arrived_at": null,
+      "received_at": null,
+      "failed_at": null,
+      "tracking_number": "",
+      "return_order_id": null,
+      "returnable": true
+    }
+  ],
+  "note": "",
+  "target_price_discount_value": null,
+  "target_price_discount_title": { "zh": "", "en": "" },
+  "cvs_store_name": "",
+  "cvs_store_type": "",
+  "cancel_reason": "",
+  "payment_failed_reason": "",
+  "membership_reward_percent": null,
+  "is_offline_order": true,
+  "done_at": null
+}
+```
 
 # **查看商品**
 
@@ -4161,6 +5591,80 @@ https://uatecapi.tungrp.com/v1/products/697
   [**Array&lt;V1StoreEntity&gt;**](#V1StoreEntity)
 
 - 回傳參數範例
+
+````json
+[
+  {
+    "lat": 25.051405777304463,
+    "lng": 121.55772518378977,
+    "title": { "zh": "果思測試店櫃", "en": "Goons Test" },
+    "address": {
+      "zh": "台北市松山區南京東路四段186號7樓之3",
+      "en": "台北市松山區南京東路四段186號7樓之3"
+    },
+    "phone": "02-25770607",
+    "instant_messaging_token": "0",
+    "opening_hours": [
+      [null, null],
+      [null, null],
+      [null, null],
+      [null, null],
+      [null, null],
+      [null, null],
+      [null, null]
+    ],
+    "id": 3,
+    "area": "north",
+    "default": false
+  },
+  {
+    "lat": 25.040527,
+    "lng": 121.567157,
+    "title": { "zh": "Isabel Marant 微風信義", "en": "Isabel Marant 微風信義" },
+    "address": {
+      "zh": "台北市信義區忠孝東路五段68號2樓",
+      "en": "2F., No. 68, Sec. 5, Zhongxiao E. Rd., Xinyi Dist., Taipei City 110419 , Taiwan (R.O.C.)"
+    },
+    "phone": "02-27228575",
+    "instant_messaging_token": "272501",
+    "opening_hours": [
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"]
+    ],
+    "id": 30,
+    "area": "north",
+    "default": false
+  },
+  {
+    "lat": 25.04115,
+    "lng": 121.542943,
+    "title": { "zh": "Isabel Marant 復興SOGO", "en": "Isabel Marant 復興SOGO" },
+    "address": {
+      "zh": "台北市大安區忠孝東路三段300號3樓",
+      "en": "3F., No. 300, Sec. 3, Zhongxiao E. Rd., Da’an Dist., Taipei City 106455 , Taiwan (R.O.C.)"
+    },
+    "phone": "02-87726680",
+    "instant_messaging_token": "272502",
+    "opening_hours": [
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"]
+    ],
+    "id": 31,
+    "area": "north",
+    "default": false
+  }
+]
+````
 
 # **小類列表**
 
