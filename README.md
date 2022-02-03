@@ -9,39 +9,39 @@
 | [**刪除信用卡**](#刪除信用卡)                         | **DELETE** /v1/customers/credit_cards/:card_id  | 刪除會員帳號內綁定的信用卡            | Y        | ✅        |
 | [**當前 App 版號**](#當前App版號)                     | **GET** /v1/app_version                         | 查看當前的手機 App 版號               |          | ✅        |
 | [**取得購物車**](#取得購物車)                         | **GET** /v1/carts                               | 購物車資訊                            | Y        | ✅        |
-| [**查看最愛**](#查看最愛)                             | **GET** /v1/carts/favorites                     | 查看會員收藏商品                      | Y        |          |
-| [**大類列表**](#大類列表)                             | **GET** /v1/categories                          | 查看所有大類                          |          |          |
-| [**特定大類**](#特定大類)                             | **GET** /v1/categories/:id                      | 取得大類資訊                          |          |          |
-| [**中類列表**](#中類列表)                             | **GET** /v1/collections                         | 查看所有中類                          |          |          |
-| [**特定中類**](#特定中類)                             | **GET** /v1/collections/:id                     | 取得中類資訊                          |          |          |
+| [**查看最愛**](#查看最愛)                             | **GET** /v1/carts/favorites                     | 查看會員收藏商品                      | Y        | ✅        |
+| [**大類列表**](#大類列表)                             | **GET** /v1/categories                          | 查看所有大類                          |          | ✅        |
+| [**特定大類**](#特定大類)                             | **GET** /v1/categories/:id                      | 取得大類資訊                          |          | ✅        |
+| [**中類列表**](#中類列表)                             | **GET** /v1/collections                         | 查看所有中類                          |          | ✅        |
+| [**特定中類**](#特定中類)                             | **GET** /v1/collections/:id                     | 取得中類資訊                          |          | ✅        |
 | [**地址簿列表**](#地址簿)                             | **GET** /v1/customer/addresses                  | 取得會員地址簿                        | Y        |          |
 | [**從地址簿中取得特定地址**](#從地址簿中取得特定地址) | **GET** /v1/customer/addresses/:id              | 從會員地址簿內取得特定地址資訊        | Y        |          |
 | [**會員信用卡列表**](#會員信用卡列表)                 | **GET** /v1/customers/credit_cards              | 取得會員所有綁定的信用卡              | Y        |          |
 | [**會員主信用卡**](#會員主信用卡)                     | **GET** /v1/customers/credit_cards/get_primary  | 取得會員的主信用卡                    | Y        |          |
-| [**會員存在狀態**](#會員存在狀態)                     | **GET** /v1/customers/exist                     | 查看會員是否存在                      | Y        |          |
-| [**會員基本資訊**](#會員基本資訊)                     | **GET** /v1/customers/me                        |                                       | Y        |          |
+| [**會員存在狀態**](#會員存在狀態)                     | **GET** /v1/customers/exist                     | 查看會員是否存在                      | Y        | ✅        |
+| [**會員基本資訊**](#會員基本資訊)                     | **GET** /v1/customers/me                        |                                       | Y        | ✅        |
 | [**會員點數紀錄**](#會員點數紀錄)                     | **GET** /v1/customers/point_history             |                                       | Y        |          |
 | [**會員訂單記錄**](#會員訂單記錄)                     | **GET** /v1/customers/pos_order_histories       |                                       | Y        |          |
 | [**會員業務店**](#會員業務店)                         | **GET** /v1/customers/store                     |                                       | Y        |          |
 | [**會員 Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                       | Y        |          |
-| [**促銷頁列表**](#促銷頁列表)                         | **GET** /v1/event_pages                         |                                       |          |          |
-| [**特定促銷頁**](#特定促銷頁)                         | **GET** /v1/event_pages/:event_page_id          |                                       |          |          |
-| [**首頁**](#首頁)                                     | **GET** /v1/home_page                           | 首頁資訊                              |          |          |
-| [**消息列表**](#消息列表)                             | **GET** /v1/information                         |                                       |          |          |
-| [**特定消息**](#特定消息)                             | **GET** /v1/information/:information_id         |                                       |          |          |
+| [**促銷頁列表**](#促銷頁列表)                         | **GET** /v1/event_pages                         |                                       |          | ✅        |
+| [**特定促銷頁**](#特定促銷頁)                         | **GET** /v1/event_pages/:event_page_id          |                                       |          | ✅        |
+| [**首頁**](#首頁)                                     | **GET** /v1/home_page                           | 首頁資訊                              |          | ✅        |
+| [**消息列表**](#消息列表)                             | **GET** /v1/information                         |                                       |          | ✅        |
+| [**特定消息**](#特定消息)                             | **GET** /v1/information/:information_id         |                                       |          | ✅        |
 | [**維修保養單列表**](#維修保養單列表)                 | **GET** /v1/maintain_orders                     |                                       | Y        |          |
 | [**維修保養單明細**](#維修保養單明細)                 | **GET** /v1/maintain_orders/:number             |                                       | Y        |          |
 | [**推播列表**](#推播列表)                             | **GET** /v1/notifications                       |                                       | Y        |          |
 | [**推播明細**](#推播明細)                             | **GET** /v1/notifications/:id                   |                                       | Y        |          |
 | [**訂單列表**](#訂單列表)                             | **GET** /v1/orders                              |                                       | Y        |          |
 | [**訂單明細**](#訂單明細)                             | **GET** /v1/orders/:number                      |                                       | Y        |          |
-| [**查看商品**](#查看商品)                             | **GET** /v1/products/:id                        |                                       |          |          |
+| [**查看商品**](#查看商品)                             | **GET** /v1/products/:id                        |                                       |          | ✅        |
 | [**指定品項庫存**](#指定品項庫存)                     | **GET** /v1/products/query_stock                |                                       |          |          |
 | [**退貨單明細**](#退貨單明細)                         | **GET** /v1/return_orders/:id                   |                                       | Y        |          |
-| [**跑馬燈**](#跑馬燈)                                 | **GET** /v1/scrolling_texts                     |                                       |          |          |
+| [**跑馬燈**](#跑馬燈)                                 | **GET** /v1/scrolling_texts                     |                                       |          | ✅        |
 | [**取得搜尋內容**](#取得搜尋內容)                     | **GET** /v1/search                              |                                       |          | ✅        |
 | [**系列頁列表**](#系列頁列表)                         | **GET** /v1/series                              |                                       |          |          |
-| [**指定系列頁**](#指定系列頁)                         | **GET** /v1/series/{series_id}                  |                                       |          |          |
+| [**指定系列頁**](#指定系列頁)                         | **GET** /v1/series/:series_id                   |                                       |          |          |
 | [**店舖列表**](#店舖列表)                             | **GET** /v1/stores                              |                                       |          |          |
 | [**小類列表**](#小類列表)                             | **GET** /v1/sub_collections                     |                                       |          |          |
 | [**小類明細**](#小類明細)                             | **GET** /v1/sub_collections/:id                 |                                       |          |          |
@@ -54,7 +54,7 @@
 | [**創建顧客**](#創建顧客)                             | **POST** /v1/customers                          |                                       | Y        |          |
 | [**新增信用卡**](#新增信用卡)                         | **POST** /v1/customers/credit_cards             |                                       | Y        |          |
 | [**設定主信用卡**](#設定主信用卡)                     | **POST** /v1/customers/credit_cards/set_primary |                                       | Y        |          |
-| [**發送 OTP 到手機**](#發送OTP到手機)                 | **POST** /v1/customers/login_with_otp           |                                       | Y        |          |
+| [**社群媒體搭配OTP登入**](#社群媒體搭配OTP登入)       | **POST** /v1/customers/login_with_otp           |                                       | Y        |          |
 | [**發送 OTP**](#發送OTP)                              | **POST** /v1/customers/otp                      |                                       | Y        |          |
 | [**會員接收推播設定**](#會員接收推播設定)             | **POST** /v1/customers/receive_notifications    |                                       | Y        |          |
 | [**會員重設密碼**](#會員重設密碼)                     | **POST** /v1/customers/reset_password           |                                       | Y        |          |
@@ -454,7 +454,7 @@ curl 'https://uatecapi.tungrp.com/v1/carts/' \
 
 - 應用場景
 
-  查看會員收藏的商品
+  查看會員收藏的所有商品
 
 - 介接方式
 
@@ -484,10 +484,6 @@ curl --location --request GET 'https://uatecapi.tungrp.com/v1/customers/carts/fa
   [**Array&lt;V1VariantEntity&gt;**](#V1VariantEntity)
 
 - 回傳參數範例
-
-```json
-
-```
 
 # **大類列表**
 
@@ -523,6 +519,316 @@ https://uatecapi.tungrp.com/v1/categories?brand_id=1
 
 - 回傳參數範例
 
+```json
+[
+  {
+    "id": 7,
+    "title": {
+      "zh": "女裝",
+      "en": "WOMEN"
+    },
+    "collections": [
+      {
+        "id": 37,
+        "title": {
+          "zh": "外套 & 夾克",
+          "en": "COATS & JACKETS"
+        },
+        "sub_collections": [
+          {
+            "id": 53,
+            "title": {
+              "zh": "夾克",
+              "en": "JACKETS"
+            }
+          },
+          {
+            "id": 64,
+            "title": {
+              "zh": "外套",
+              "en": "COATS"
+            }
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "title": {
+          "zh": "運動衫",
+          "en": "SWEATSHIRTS"
+        },
+        "sub_collections": [
+          {
+            "id": 51,
+            "title": {
+              "zh": "衛衣",
+              "en": "SWEATSHIRT"
+            }
+          },
+          {
+            "id": 59,
+            "title": {
+              "zh": "連帽衛衣",
+              "en": "HOODIE"
+            }
+          },
+          {
+            "id": 69,
+            "title": {
+              "zh": "衛衣",
+              "en": "SWEATSHIRTS"
+            }
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "title": {
+          "zh": "T恤 & Polo衫",
+          "en": "T-SHIRTS & POLOS"
+        },
+        "sub_collections": [
+          {
+            "id": 61,
+            "title": {
+              "zh": "T恤",
+              "en": "T-SHIRTS"
+            }
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "title": {
+          "zh": "上衣 & 襯衫",
+          "en": "TOPS & SHIRTS"
+        },
+        "sub_collections": [
+          {
+            "id": 55,
+            "title": {
+              "zh": "襯衫",
+              "en": "SHIRTS"
+            }
+          },
+          {
+            "id": 65,
+            "title": {
+              "zh": "上衣",
+              "en": "TOPS"
+            }
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "title": {
+          "zh": "洋裝 & 連身褲",
+          "en": "DRESSES & JUMPSUITS"
+        },
+        "sub_collections": [
+          {
+            "id": 50,
+            "title": {
+              "zh": "短洋裝",
+              "en": "SHORT DRESSES"
+            }
+          },
+          {
+            "id": 52,
+            "title": {
+              "zh": "洋裝",
+              "en": "DRESSES"
+            }
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "title": {
+          "zh": "針織衫",
+          "en": "KNITWEAR"
+        },
+        "sub_collections": [
+          {
+            "id": 49,
+            "title": {
+              "zh": "針織衫",
+              "en": "SWEATER"
+            }
+          },
+          {
+            "id": 68,
+            "title": {
+              "zh": "針織背心",
+              "en": "VEST"
+            }
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "title": {
+          "zh": "裙款",
+          "en": "SKIRTS"
+        },
+        "sub_collections": [
+          {
+            "id": 54,
+            "title": {
+              "zh": "裙款",
+              "en": "SKIRTS"
+            }
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "title": {
+          "zh": "褲裝 & 短褲",
+          "en": "TROUSERS & SHORTS"
+        },
+        "sub_collections": [
+          {
+            "id": 57,
+            "title": {
+              "zh": "長褲",
+              "en": "PANTS"
+            }
+          },
+          {
+            "id": 58,
+            "title": {
+              "zh": "短褲",
+              "en": "SHORTS"
+            }
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "title": {
+          "zh": "鞋履 & 包款",
+          "en": "SHOES & BAGS"
+        },
+        "sub_collections": [
+          {
+            "id": 47,
+            "title": {
+              "zh": "包款",
+              "en": "BAGS"
+            }
+          },
+          {
+            "id": 56,
+            "title": {
+              "zh": "鞋履",
+              "en": "SHOES"
+            }
+          }
+        ]
+      }
+    ],
+    "series": []
+  },
+  {
+    "id": 8,
+    "title": {
+      "zh": "男裝",
+      "en": "MEN"
+    },
+    "collections": [
+      {
+        "id": 45,
+        "title": {
+          "zh": "褲裝 & 短褲",
+          "en": "TROUSERS & SHORTS"
+        },
+        "sub_collections": [
+          {
+            "id": 71,
+            "title": {
+              "zh": "短褲",
+              "en": "SHORTS"
+            }
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "title": {
+          "zh": "T恤 & POLO衫",
+          "en": "T-SHIRTS & POLOS"
+        },
+        "sub_collections": [
+          {
+            "id": 48,
+            "title": {
+              "zh": "POLO",
+              "en": "POLO"
+            }
+          },
+          {
+            "id": 60,
+            "title": {
+              "zh": "T恤",
+              "en": "T-SHIRTS"
+            }
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "title": {
+          "zh": "運動衫",
+          "en": "SWEATSHIRTS"
+        },
+        "sub_collections": [
+          {
+            "id": 63,
+            "title": {
+              "zh": "連帽衛衣",
+              "en": "HOODIE"
+            }
+          },
+          {
+            "id": 67,
+            "title": {
+              "zh": "衛衣",
+              "en": "SWEATSHIRT"
+            }
+          },
+          {
+            "id": 70,
+            "title": {
+              "zh": "衛衣",
+              "en": "SWEATSHIRTS"
+            }
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "title": {
+          "zh": "鞋履 & 包款",
+          "en": "SHOES & BAGS"
+        },
+        "sub_collections": [
+          {
+            "id": 66,
+            "title": {
+              "zh": "包款",
+              "en": "BAGS"
+            }
+          }
+        ]
+      }
+    ],
+    "series": []
+  }
+]
+```
+
 # **特定大類**
 
 - 應用場景
@@ -557,6 +863,220 @@ https://uatecapi.tungrp.com/v1/categories/3
 
 - 回傳參數範例
 
+```json
+{
+  "id": 3,
+  "title": {
+    "zh": "珠寶飾品",
+    "en": "JEWELRY"
+  },
+  "collections": [
+    {
+      "id": 10,
+      "title": {
+        "zh": "針式耳環",
+        "en": "PIERCED EARRINGS"
+      },
+      "sub_collections": [
+        {
+          "id": 10,
+          "title": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": {
+        "zh": "手鍊&腳鍊",
+        "en": "BRACELETS & ANKLETS"
+      },
+      "sub_collections": [
+        {
+          "id": 11,
+          "title": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": {
+        "zh": "項鍊",
+        "en": "NECKLACES"
+      },
+      "sub_collections": [
+        {
+          "id": 12,
+          "title": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": {
+        "zh": "戒指",
+        "en": "RING"
+      },
+      "sub_collections": [
+        {
+          "id": 13,
+          "title": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": {
+        "zh": "其他配飾",
+        "en": "OTHER ACCESSORIES"
+      },
+      "sub_collections": [
+        {
+          "id": 14,
+          "title": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/uatecnas/series/image_original/1/2022_Spring_Summer.jpg",
+        "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/1/2022_spring_summer_手機.jpg"
+      },
+      "id": 1,
+      "brand_id": 4,
+      "category_id": 3,
+      "title": {
+        "zh": "Spring Summer",
+        "en": "Spring Summer"
+      },
+      "subtitle": {
+        "zh": "Spring Summer",
+        "en": "Spring Summer"
+      }
+    },
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/uatecnas/series/image_original/2/2021FW_系列頁首圖.jpg",
+        "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/2/2021FW_系列頁首圖_手機.jpg"
+      },
+      "id": 2,
+      "brand_id": 4,
+      "category_id": 3,
+      "title": {
+        "zh": "Winter Sale",
+        "en": "Winter Sale"
+      },
+      "subtitle": {
+        "zh": "秋冬精選系列折扣",
+        "en": "Winter Sale"
+      }
+    },
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/uatecnas/series/image_original/3/芭蕾系列頁首圖.jpg",
+        "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/3/芭蕾_手機jpg.jpg"
+      },
+      "id": 3,
+      "brand_id": 4,
+      "category_id": 3,
+      "title": {
+        "zh": "芭蕾",
+        "en": "芭蕾"
+      },
+      "subtitle": {
+        "zh": "以芭蕾舞劇-天鵝湖為發想，打造出芭蕾舞伶的優雅姿態，為品牌經典的代表作。",
+        "en": "芭蕾"
+      }
+    },
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/uatecnas/series/image_original/4/星座.jpg",
+        "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/4/星座_手機.jpg"
+      },
+      "id": 4,
+      "brand_id": 4,
+      "category_id": 3,
+      "title": {
+        "zh": "星座",
+        "en": "浩瀚繁星，譜寫著命運，以星座為發想，帶我們尋找屬於自己的符號。"
+      },
+      "subtitle": {
+        "zh": "浩瀚繁星，譜寫著命運，以星座為發想，帶我們尋找屬於自己的符號。",
+        "en": "星座"
+      }
+    },
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/uatecnas/series/image_original/5/大型Banner-經典-星鑽-主題圖-大網.jpg",
+        "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/5/大型Banner-經典-星鑽-主題圖-小網.jpg"
+      },
+      "id": 5,
+      "brand_id": 4,
+      "category_id": 3,
+      "title": {
+        "zh": "星鑽",
+        "en": "星鑽"
+      },
+      "subtitle": {
+        "zh": "運用珠寶的切割工藝，水晶打造出華麗的質感，幻化飾品最根本的美麗。",
+        "en": "星鑽"
+      }
+    },
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/uatecnas/series/image_original/13/盛夏_系列頁首圖.jpg",
+        "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/13/盛夏_系列頁首圖_手機.jpg"
+      },
+      "id": 13,
+      "brand_id": 4,
+      "category_id": 3,
+      "title": {
+        "zh": "夢遊幻境",
+        "en": "夢遊幻境"
+      },
+      "subtitle": {
+        "zh": "跟著Les Néréides探訪山海、走入夢境，用無窮無盡的想像，豐富生活的每一刻。",
+        "en": "跟著Les Néréides探訪山海、走入夢境，用無窮無盡的想像，豐富生活的每一刻。"
+      }
+    },
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/uatecnas/series/image_original/14/主圖.jpg",
+        "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/14/主圖_手機.jpg"
+      },
+      "id": 14,
+      "brand_id": 4,
+      "category_id": 3,
+      "title": {
+        "zh": "漫步花園",
+        "en": "漫步花園"
+      },
+      "subtitle": {
+        "zh": "走訪Les Néréides的繽紛花園，體驗繁花盛開的浪漫，擁抱花卉點綴的日常。",
+        "en": "漫步花園"
+      }
+    }
+  ]
+}
+
+```
+
 # **中類列表**
 
 - 應用場景
@@ -573,17 +1093,174 @@ https://uatecapi.tungrp.com/v1/categories/3
   - Accept：application/json
   - HTTP Method ：GET
 
-Header
+Parameters
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數         | 型別        | 說明                 | 範例 |
+|--------------|-------------|--------------------|------|
+| **brand_id** | **Integer** | [**附錄 1**](#附錄1) | 1    |
+
+
+- 請求參數說明
+
+```shell
+https://uatecapi.tungrp.com/v1/collections?brand_id=2
+```
 
 - 回應參數說明
 
   [**Array&lt;V1CollectionEntity&gt;**](#V1CollectionEntity)
 
 - 回傳參數範例
+
+```json
+[
+  {
+    "id": 1,
+    "title": {
+      "zh": "戒指",
+      "en": "RING"
+    },
+    "sub_collections": [
+      {
+        "id": 1,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": {
+      "zh": "尾戒",
+      "en": "PINKY RING"
+    },
+    "sub_collections": [
+      {
+        "id": 2,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": {
+      "zh": "針式耳環",
+      "en": "PIERCED EARRINGS"
+    },
+    "sub_collections": [
+      {
+        "id": 3,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": {
+      "zh": "夾式耳環",
+      "en": "CLIP EARRINGS"
+    },
+    "sub_collections": [
+      {
+        "id": 4,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": {
+      "zh": "手鍊&腳鍊",
+      "en": "BRACELETS & ANKLETS"
+    },
+    "sub_collections": [
+      {
+        "id": 5,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": {
+      "zh": "項鍊&素鍊",
+      "en": "NECKLACES & CHAINS"
+    },
+    "sub_collections": [
+      {
+        "id": 6,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": {
+      "zh": "墜飾",
+      "en": "CHARMS"
+    },
+    "sub_collections": [
+      {
+        "id": 7,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": {
+      "zh": "手錶",
+      "en": "WATCH"
+    },
+    "sub_collections": [
+      {
+        "id": 8,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": {
+      "zh": "",
+      "en": ""
+    },
+    "sub_collections": [
+      {
+        "id": 9,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      }
+    ]
+  }
+]
+
+```
 
 # **特定中類**
 
@@ -601,22 +1278,16 @@ Header
   - Accept：application/json
   - HTTP Method ：GET
 
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
 |--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
+| **id** | **Integer** | 中類流水號 | 697  |
 
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/collections/1
 ```
 
 - 回應參數說明
@@ -624,6 +1295,25 @@ https://uatecapi.tungrp.com/v1/products/697
   [**Array&lt;V1CollectionEntity&gt;**](#V1CollectionEntity)
 
 - 回傳參數範例
+
+```json
+{
+  "id": 1,
+  "title": {
+    "zh": "戒指",
+    "en": "RING"
+  },
+  "sub_collections": [
+    {
+      "id": 1,
+      "title": {
+        "zh": "",
+        "en": ""
+      }
+    }
+  ]
+}
+```
 
 # **地址簿列表**
 
@@ -697,10 +1387,11 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員信用卡列表**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customer/credit_cards
+  - 正式環境：https://ecapi.tungrp.com/v1/customer/credit_cards
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -729,10 +1420,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員主信用卡**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得會員主信用卡
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/credit_cards/get_primary
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/credit_cards/get_primary
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -744,11 +1437,6 @@ Header
 |---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
 
@@ -761,42 +1449,51 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員存在狀態**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  查看會員是否存在
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
-- 請求參數說明
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/exist
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/exist
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
 
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
+| 參數      | 型別       | 說明     | 範例       |
+|-----------|------------|--------|------------|
+| **phone** | **String** | 電話號碼 | 0911111111 |
 
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/customers/exist?phone=0911111111
 ```
 
-- 標準回應，詳情請查看 [附錄 2](#附錄2)
+- 回應格式
+
+| 參數      | 型別        | 說明     | 範例 |
+|-----------|-------------|--------|------|
+| **exist** | **Boolean** | 是否存在 | true |
+
+- 回應範例
+
+```json
+{
+  "exist": true
+}
+```
 
 # **會員基本資訊**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得會員基本資訊
+
 - 介接方式
   - 測試環境：https://uatecapi.tungrp.com/v1/customers/me
   - 正式環境：https://ecapi.tungrp.com/v1/customers/me
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -810,24 +1507,11 @@ Header
 
 - 請求參數範例
 
-```
+```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/me/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
   -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  -H 'if-none-match: W/"19b71e7779ade1d37530eddf2447a7e3"' \
-  --compressed
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -835,7 +1519,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/me/' \
 ```json
 {
   "id": 17,
-  "phone": "0983168969",
+  "phone": "0911111111",
   "email": "k445566778899k@gmail.com",
   "name": "ChenHanTing",
   "birthdate": "2022-01-20",
@@ -860,10 +1544,12 @@ curl 'https://uatecapi.tungrp.com/v1/customers/me/' \
 # **會員點數紀錄**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得會鎻點數紀錄
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/point_history
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/point_history
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -874,12 +1560,6 @@ Header
 | Key           | Value        | 範例                                        | 說明     |
 |---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
 
@@ -892,10 +1572,11 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員訂單記錄**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得會員所有訂單記錄
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/pos_order_histories
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/pos_order_histories
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -907,11 +1588,6 @@ Header
 |---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
 
@@ -924,11 +1600,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員業務店**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得會員歸屬的業務店
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/store
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/store
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -941,16 +1618,11 @@ Header
 |---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -963,8 +1635,8 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/vip_barcode
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/vip_barcode
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -977,11 +1649,6 @@ Header
 |---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
 
 - 請求參數範例
 
@@ -994,25 +1661,25 @@ https://uatecapi.tungrp.com/v1/products/697
 # **促銷頁列表**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/event_pages
+  - 正式環境：https://ecapi.tungrp.com/v1/event_pages
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
 
-Header
+Parameters
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數         | 型別        | 說明                 | 範例 |
+|--------------|-------------|--------------------|------|
+| **brand_id** | **Integer** | [**附錄 1**](#附錄1) | 1    |
 
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/event_pages?brand_id=1
 ```
 
 - 回應參數說明
@@ -1021,34 +1688,75 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 回傳參數範例
 
+```json
+[
+  {
+    "image": {
+      "original": "https://storage.googleapis.com/uatecnas/event_page/image_original/1/1584688836741.jpeg",
+      "mobile": null
+    },
+    "id": 1,
+    "title": {
+      "zh": "促銷1",
+      "en": "Event1"
+    },
+    "description": {
+      "zh": "我是促銷1內容",
+      "en": "I want to pin the first content on this event"
+    },
+    "target_price_discount": null,
+    "event_type": "promotion",
+    "promotion": {
+      "id": 3,
+      "title": {
+        "zh": "測試一折",
+        "en": "test"
+      },
+      "ratio": 10,
+      "collections": [
+        {
+          "id": 31,
+          "brand_id": 5,
+          "title_en": "KNITWEAR",
+          "created_at": "2022-01-17T18:06:36.707+08:00",
+          "updated_at": "2022-01-17T18:29:56.249+08:00",
+          "category_id": 6,
+          "title_zh": "針織",
+          "position": 6
+        }
+      ],
+      "sub_collections": [],
+      "products": [],
+      "categories": []
+    }
+  }
+]
+
+```
+
 # **特定促銷頁**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  促銷明細頁
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/event_pages/:event_page_id
+  - 正式環境：https://ecapi.tungrp.com/v1/event_pages/:event_page_id
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
 
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
 Parameters
 
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
+| 參數   | 型別        | 說明         | 範例 |
+|--------|-------------|------------|------|
+| **id** | **Integer** | 促銷頁流水號 | 697  |
 
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/event_pages/1
 ```
 
 - 回應參數說明
@@ -1057,34 +1765,73 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 回傳參數範例
 
+```json
+{
+  "image": {
+    "original": "https://storage.googleapis.com/uatecnas/event_page/image_original/1/1584688836741.jpeg",
+    "mobile": null
+  },
+  "id": 1,
+  "title": {
+    "zh": "促銷1",
+    "en": "Event1"
+  },
+  "description": {
+    "zh": "我是促銷1內容",
+    "en": "I want to pin the first content on this event"
+  },
+  "target_price_discount": null,
+  "event_type": "promotion",
+  "promotion": {
+    "id": 3,
+    "title": {
+      "zh": "測試一折",
+      "en": "test"
+    },
+    "ratio": 10,
+    "collections": [
+      {
+        "id": 31,
+        "brand_id": 5,
+        "title_en": "KNITWEAR",
+        "created_at": "2022-01-17T18:06:36.707+08:00",
+        "updated_at": "2022-01-17T18:29:56.249+08:00",
+        "category_id": 6,
+        "title_zh": "針織",
+        "position": 6
+      }
+    ],
+    "sub_collections": [],
+    "products": [],
+    "categories": []
+  }
+}
+```
+
 # **首頁**
 
 - 應用場景
-  - 首頁所需得所有資料皆從這支取得
+  首頁所需得所有資料皆從這支取得
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/home_page
+  - 正式環境：https://ecapi.tungrp.com/v1/home_page
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
 
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
 Parameters
 
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
+| 參數         | 型別        | 說明                 | 範例 |
+|--------------|-------------|--------------------|------|
+| **brand_id** | **Integer** | [**附錄 1**](#附錄1) | 1    |
 
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://ecapi.tungrp.com/v1/home_page?brand_id=1
 ```
 
 - 回應參數說明
@@ -1093,28 +1840,114 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 回傳參數範例
 
+```json
+{
+  "carousels": [
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/tungrp-production-bucket-public/home_carousel/image_original/1/KNZ_CNY_01.jpg",
+        "mobile": "https://storage.googleapis.com/tungrp-production-bucket-public/home_carousel/image_mobile/1/KNZ_01.gif"
+      },
+      "buttons": [],
+      "id": 1,
+      "title": "2022SS CNY",
+      "video_url": ""
+    },
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/tungrp-production-bucket-public/home_carousel/image_original/2/Kenzo_Sport_03.jpg",
+        "mobile": "https://storage.googleapis.com/tungrp-production-bucket-public/home_carousel/image_mobile/2/KNZ_03.jpg"
+      },
+      "buttons": [],
+      "id": 2,
+      "title": "KENZO SPORT",
+      "video_url": ""
+    },
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/tungrp-production-bucket-public/home_carousel/image_original/4/Kenzo_Sport_02.jpg",
+        "mobile": "https://storage.googleapis.com/tungrp-production-bucket-public/home_carousel/image_mobile/4/KNZ_02.jpg"
+      },
+      "buttons": [],
+      "id": 4,
+      "title": "KENZO SPORT",
+      "video_url": ""
+    }
+  ],
+  "shop_the_look": {
+    "products": []
+  },
+  "banners": [
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/tungrp-production-bucket-public/home_banner/image_original/1/KNZ_acc.jpg",
+        "mobile": "https://storage.googleapis.com/tungrp-production-bucket-public/home_banner/image_mobile/1/KNZ_B.jpg"
+      },
+      "buttons": [],
+      "id": 1,
+      "title": "ACCESSORY",
+      "video_url": ""
+    },
+    {
+      "image": {
+        "original": "https://storage.googleapis.com/tungrp-production-bucket-public/home_banner/image_original/2/KNZ_Tiger.jpg",
+        "mobile": "https://storage.googleapis.com/tungrp-production-bucket-public/home_banner/image_mobile/2/KNZ_acc.jpg"
+      },
+      "buttons": [],
+      "id": 2,
+      "title": "THE TIGER",
+      "video_url": ""
+    }
+  ],
+  "top_banner": null,
+  "collection_background_image": {
+    "original": "https://storage.googleapis.com/tungrp-production-bucket-public/home_page/collection_background_image_original/1/KNZ_01.jpg",
+    "mobile": "https://storage.googleapis.com/tungrp-production-bucket-public/home_page/collection_background_image_mobile/1/KNZ_C.jpg"
+  },
+  "about_brand_image": {
+    "original": "https://storage.googleapis.com/tungrp-production-bucket-public/home_page/about_brand_image_original/1/Kenzo_about_the_brand_FOB已裁切.jpg",
+    "mobile": "https://storage.googleapis.com/tungrp-production-bucket-public/home_page/about_brand_image_mobile/1/Kenzo_about_the_brand_FOB_小網__1_.jpg"
+  },
+  "about_tun_image": {
+    "original": "https://storage.googleapis.com/tungrp-production-bucket-public/home_page/about_tun_image_original/1/119008561_215316009929548_4145654389735788759_o.jpg",
+    "mobile": "https://storage.googleapis.com/tungrp-production-bucket-public/home_page/about_tun_image_mobile/1/119008561_215316009929548_4145654389735788759_o__1_.jpg"
+  },
+  "service_image": {
+    "original": null,
+    "mobile": null
+  },
+  "collection_background_video": null,
+  "about_brand_video": null,
+  "about_tun_video": null,
+  "service_video": null
+}
+
+```
+
 # **消息列表**
 
 - 應用場景
-  - 消息頁列表
+  消息頁列表
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/information
+  - 正式環境：https://ecapi.tungrp.com/v1/information
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
 
-Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+Parameters
+
+| 參數         | 型別        | 說明 | 範例 |
+|--------------|-------------|----|------|
+| **brnad_id** | **Integer** | 品牌 | 2    |
 
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/information?brand_id=2
 ```
 
 - 回應參數說明
@@ -1123,45 +1956,134 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 回傳參數範例
 
+```json
+{
+  "informations": [
+    {
+      "image": "https://storage.googleapis.com/uatecnas/information/image/10/20200906_101014741_iOS.jpg",
+      "id": 10,
+      "title": {
+        "zh": "最新消息測試",
+        "en": "New Message"
+      },
+      "content": {
+        "zh": "<p>最新消息一二三</p><p>最新消息四五六</p>",
+        "en": ""
+      },
+      "buttons": [
+        {
+          "text": "最新消息一",
+          "link_to": {
+            "value": "https://www.tungrp.com",
+            "type": "url"
+          }
+        },
+        {
+          "text": "最新消息二",
+          "link_to": {
+            "value": 2,
+            "type": "products"
+          }
+        },
+        {
+          "text": "最新消息三",
+          "link_to": {
+            "value": 3,
+            "type": "collections"
+          }
+        }
+      ],
+      "start_date": "2022-01-25",
+      "prev": null,
+      "next": null
+    }
+  ],
+  "total_count": 1
+}
+
+```
+
 # **特定消息**
 
 - 應用場景
-  - 取得一筆特定消息
+  取得特定一筆消息
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/information/:information_id
+  - 正式環境：https://ecapi.tungrp.com/v1/information/:information_id
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
 
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
 Parameters
 
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
+| 參數               | 型別        | 說明             | 範例 |
+|--------------------|-------------|----------------|------|
+| **information_id** | **Integer** | 消息流水號（主鍵） | 1    |
 
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/information/1
 ```
 
-- 標準回應，詳情請查看 [附錄 2](#附錄2)
+- 回應範例
+
+```json
+{
+  "image": "https://storage.googleapis.com/uatecnas/information/image/1/LNS-AEMDD301-30-1.jpeg",
+  "id": 1,
+  "title": {
+    "zh": "測試4",
+    "en": "test"
+  },
+  "content": {
+    "zh": "<p>測試</p>",
+    "en": ""
+  },
+  "buttons": [],
+  "start_date": "2022-01-18",
+  "prev": {
+    "image": "https://storage.googleapis.com/uatecnas/information/image/3/LNS-AEMDD301-30-1.jpeg",
+    "id": 3,
+    "title": {
+      "zh": "測試3",
+      "en": "Test 3"
+    },
+    "content": {
+      "zh": "<p>AAAAAAAAAAAAAAAAAAAA</p><p>BBBBBBBBBBBBBBBBBBBB</p><p>CCCCCCCCCCCCCCCCCCCC</p><p>DDDDDDDDDDDDDDDDDDDD</p>",
+      "en": ""
+    },
+    "buttons": [],
+    "start_date": "2022-01-18"
+  },
+  "next": {
+    "image": "https://storage.googleapis.com/uatecnas/information/image/5/LNS-AEMDD301-30-1.jpeg",
+    "id": 5,
+    "title": {
+      "zh": "測試5",
+      "en": "test 5"
+    },
+    "content": {
+      "zh": "",
+      "en": ""
+    },
+    "buttons": [],
+    "start_date": "2022-01-18"
+  }
+}
+```
 
 # **維修保養單列表**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  會員維修單列表
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/maintain_orders
+  - 正式環境：https://ecapi.tungrp.com/v1/maintain_orders
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -1191,10 +2113,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **維修保養單明細**
 
 - 應用場景
-  - 取得一筆維修保養單
+  維修單明細
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/maintain_orders/:number
+  - 正式環境：https://ecapi.tungrp.com/v1/maintain_orders/:number
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -1227,10 +2151,11 @@ https://uatecapi.tungrp.com/v1/products/697
 # **推播列表**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  推播列表
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/notifications
+  - 正式環境：https://ecapi.tungrp.com/v1/notifications
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -1265,10 +2190,11 @@ https://uatecapi.tungrp.com/v1/products/697
 # **推播明細**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  查看單筆推播
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/notifications/:id
+  - 正式環境：https://ecapi.tungrp.com/v1/notifications/:id
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -1302,12 +2228,12 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 應用場景
 
-  - 羅列所有訂單
+  羅列會員所有訂單
 
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/orders
+  - 正式環境：https://ecapi.tungrp.com/v1/orders
 
 - 請求參數說明
 
@@ -1345,10 +2271,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **訂單明細**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  查看會員其中一筆訂單
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/orders/:number
+  - 正式環境：https://ecapi.tungrp.com/v1/orders/:number
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -1381,7 +2309,8 @@ https://uatecapi.tungrp.com/v1/products/697
 # **查看商品**
 
 - 應用場景
-  - 此為商品頁所需要的 API
+  查看商品（商品頁所需所有資料）
+
 - 介接方式
 
   - 測試環境：https://uatecapi.tungrp.com/v1/products/:id
@@ -1392,12 +2321,6 @@ https://uatecapi.tungrp.com/v1/products/697
   - Accept：application/json
   - HTTP Method ：GET
 
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
 Parameters
 
 | 參數   | 型別        | 說明       | 範例 |
@@ -1406,8 +2329,10 @@ Parameters
 
 - 請求參數範例
 
+直接在瀏覽器的網址列輸入下列網址即可以找到對應的資料
+
 ```txt
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/products/136/
 ```
 
 - 回應參數說明
@@ -1415,6 +2340,1404 @@ https://uatecapi.tungrp.com/v1/products/697
   [**Array&lt;V1ProductEntity&gt;**](#V1ProductEntity)
 
 - 回傳參數範例
+
+```json
+{
+  "brand_id": 2,
+  "title": {
+    "zh": "10K經典tiny耳環",
+    "en": "10K經典tiny耳環"
+  },
+  "id": 136,
+  "category": {
+    "id": 1,
+    "title": {
+      "zh": "珠寶飾品",
+      "en": "JEWELRY"
+    }
+  },
+  "collection": {
+    "id": 3,
+    "title": {
+      "zh": "針式耳環",
+      "en": "PIERCED EARRINGS"
+    }
+  },
+  "sub_collection": {
+    "id": 3,
+    "title": {
+      "zh": "",
+      "en": ""
+    }
+  },
+  "info_detail": {
+    "zh": "【Tiny Tiny系列】NOJESS把經典的象徵寄語於微觀的世界中，雖然迷你但設計細膩又精緻，更讓人著迷。“Always wear your invisible crown”「每個人的頭上都有一頂隱形皇冠，若是低頭就會掉下來， 所以抬頭挺胸大步向前吧！」",
+    "en": "【Tiny Tiny系列】NOJESS把經典的象徵寄語於微觀的世界中，雖然迷你但設計細膩又精緻，更讓人著迷。“Always wear your invisible crown”「每個人的頭上都有一頂隱形皇冠，若是低頭就會掉下來， 所以抬頭挺胸大步向前吧！」"
+  },
+  "size_img": {
+    "en": null,
+    "zh": null
+  },
+  "series": [
+    {
+      "id": 16,
+      "title": {
+        "en": "Ear Dress",
+        "zh": "Ear Dress"
+      }
+    }
+  ],
+  "promotion": {
+    "id": 2,
+    "title": {
+      "zh": "測試一折",
+      "en": "test"
+    },
+    "ratio": 10,
+    "collections": [
+      {
+        "id": 3,
+        "brand_id": 2,
+        "title_en": "PIERCED EARRINGS",
+        "created_at": "2022-01-14T17:33:16.370+08:00",
+        "updated_at": "2022-01-14T17:33:16.372+08:00",
+        "category_id": 1,
+        "title_zh": "針式耳環",
+        "position": null
+      }
+    ],
+    "sub_collections": [],
+    "products": [],
+    "categories": []
+  },
+  "member_price": 7500,
+  "promote_price": 750,
+  "price": 7500,
+  "styled_with_products": [
+    {
+      "id": 1,
+      "brand_id": 2,
+      "title": {
+        "zh": "10K千粒穀鑽石戒指",
+        "en": "10K千粒穀鑽石戒指"
+      },
+      "specified_variant_id": 1,
+      "price": 15800,
+      "promote_price": 15800,
+      "member_price": 15800,
+      "images": [
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/10/z-10102111048_08-1.jpg"
+          }
+        },
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/14/z-10102111048_08-2.jpg"
+          }
+        },
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/18/z-10102111048_08-3.jpg"
+          }
+        },
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/22/z-10102111048_08-4.jpg"
+          }
+        },
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/26/z-10102111048_08-5.jpg"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "uid": "agt-1010211104808007",
+          "id": 1,
+          "price": 15800,
+          "member_price": 15800,
+          "promote_price": 15800,
+          "color": "#FFFFFF",
+          "colorDisplay": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "material": {
+            "zh": "K10, 鑽石",
+            "en": "K10, Diamond"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "戒圍007",
+            "en": "007"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/10/z-10102111048_08-1.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/14/z-10102111048_08-2.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/18/z-10102111048_08-3.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/22/z-10102111048_08-4.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/26/z-10102111048_08-5.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "agete",
+            "en": "agete"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "filter_size": {
+            "zh": "戒圍007",
+            "en": "007"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        },
+        {
+          "uid": "agt-1010211104808009",
+          "id": 2,
+          "price": 15800,
+          "member_price": 15800,
+          "promote_price": 15800,
+          "color": "#FFFFFF",
+          "colorDisplay": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "material": {
+            "zh": "K10, 鑽石",
+            "en": "K10, Diamond"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "戒圍009",
+            "en": "009"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/11/z-10102111048_08-1.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/15/z-10102111048_08-2.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/19/z-10102111048_08-3.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/23/z-10102111048_08-4.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/27/z-10102111048_08-5.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "agete",
+            "en": "agete"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "filter_size": {
+            "zh": "戒圍009",
+            "en": "009"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        },
+        {
+          "uid": "agt-1010211104808011",
+          "id": 3,
+          "price": 15800,
+          "member_price": 15800,
+          "promote_price": 15800,
+          "color": "#FFFFFF",
+          "colorDisplay": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "material": {
+            "zh": "K10, 鑽石",
+            "en": "K10, Diamond"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "戒圍011",
+            "en": "011"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/12/z-10102111048_08-1.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/16/z-10102111048_08-2.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/20/z-10102111048_08-3.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/24/z-10102111048_08-4.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/28/z-10102111048_08-5.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "agete",
+            "en": "agete"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "filter_size": {
+            "zh": "戒圍011",
+            "en": "011"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        },
+        {
+          "uid": "agt-1010211104808013",
+          "id": 4,
+          "price": 15800,
+          "member_price": 15800,
+          "promote_price": 15800,
+          "color": "#FFFFFF",
+          "colorDisplay": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "material": {
+            "zh": "K10, 鑽石",
+            "en": "K10, Diamond"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "戒圍013",
+            "en": "013"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/13/z-10102111048_08-1.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/17/z-10102111048_08-2.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/21/z-10102111048_08-3.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/25/z-10102111048_08-4.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/29/z-10102111048_08-5.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "agete",
+            "en": "agete"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "filter_size": {
+            "zh": "戒圍013",
+            "en": "013"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 254,
+      "brand_id": 2,
+      "title": {
+        "zh": "SV耳墜",
+        "en": "SV耳墜"
+      },
+      "specified_variant_id": 404,
+      "price": 3400,
+      "promote_price": 3400,
+      "member_price": 3400,
+      "images": [
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/861/z-10212117025_08-1.jpg"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "uid": "agt-1021211702508999",
+          "id": 404,
+          "price": 3400,
+          "member_price": 3400,
+          "promote_price": 3400,
+          "color": "#FFFFFF",
+          "colorDisplay": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "material": {
+            "zh": "SV",
+            "en": "SV"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/861/z-10212117025_08-1.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "agete",
+            "en": "agete"
+          },
+          "filter_metal": {
+            "zh": "SV",
+            "en": "SV"
+          },
+          "filter_gem": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "brand_id": 2,
+      "title": {
+        "zh": "18K水滴鑽石戒指",
+        "en": "18K水滴鑽石戒指"
+      },
+      "specified_variant_id": 186,
+      "price": 22500,
+      "promote_price": 22500,
+      "member_price": 22500,
+      "images": [
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/1016/zz-30202111044_00-1.jpg"
+          }
+        },
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/1018/zz-30202111044_00-2.jpg"
+          }
+        },
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/1020/zz-30202111044_00-3.jpg"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "uid": "noj-3020211104400011",
+          "id": 186,
+          "price": 22500,
+          "member_price": 22500,
+          "promote_price": 22500,
+          "color": "#FCFCFC",
+          "colorDisplay": {
+            "zh": "透明",
+            "en": "COLORLESS"
+          },
+          "material": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "戒圍011",
+            "en": "011"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1016/zz-30202111044_00-1.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1018/zz-30202111044_00-2.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1020/zz-30202111044_00-3.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "nojess",
+            "en": "nojess"
+          },
+          "filter_metal": {
+            "zh": "K18",
+            "en": "K18"
+          },
+          "filter_gem": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "filter_size": {
+            "zh": "戒圍011",
+            "en": "011"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "透明",
+            "en": "COLORLESS"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        },
+        {
+          "uid": "noj-3020211104400013",
+          "id": 187,
+          "price": 22500,
+          "member_price": 22500,
+          "promote_price": 22500,
+          "color": "#FCFCFC",
+          "colorDisplay": {
+            "zh": "透明",
+            "en": "COLORLESS"
+          },
+          "material": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "戒圍013",
+            "en": "013"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1017/zz-30202111044_00-1.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1019/zz-30202111044_00-2.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1021/zz-30202111044_00-3.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "nojess",
+            "en": "nojess"
+          },
+          "filter_metal": {
+            "zh": "K18",
+            "en": "K18"
+          },
+          "filter_gem": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "filter_size": {
+            "zh": "戒圍013",
+            "en": "013"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "透明",
+            "en": "COLORLESS"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "brand_id": 2,
+      "title": {
+        "zh": "10K經典tiny皇冠戒指",
+        "en": "10K經典tiny皇冠戒指"
+      },
+      "specified_variant_id": 201,
+      "price": 8300,
+      "promote_price": 8300,
+      "member_price": 8300,
+      "images": [
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/1115/z-30212111012_00-1.jpg"
+          }
+        },
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/1117/z-30212111012_00-2.jpg"
+          }
+        },
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/1119/z-30212111012_00-3.jpg"
+          }
+        },
+        {
+          "url": {
+            "url": "https://storage.googleapis.com/uatecnas/variant_photo/photo/1121/z-30212111012_00-4.jpg"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "uid": "noj-3021211101200009",
+          "id": 201,
+          "price": 8300,
+          "member_price": 8300,
+          "promote_price": 8300,
+          "color": "#FCFCFC",
+          "colorDisplay": {
+            "zh": "透明",
+            "en": "COLORLESS"
+          },
+          "material": {
+            "zh": "K10, 鑽石",
+            "en": "K10, Diamond"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "戒圍009",
+            "en": "009"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1115/z-30212111012_00-1.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1117/z-30212111012_00-2.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1119/z-30212111012_00-3.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1121/z-30212111012_00-4.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "nojess",
+            "en": "nojess"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "filter_size": {
+            "zh": "戒圍009",
+            "en": "009"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "透明",
+            "en": "COLORLESS"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        },
+        {
+          "uid": "noj-3021211101200011",
+          "id": 202,
+          "price": 8300,
+          "member_price": 8300,
+          "promote_price": 8300,
+          "color": "#FCFCFC",
+          "colorDisplay": {
+            "zh": "透明",
+            "en": "COLORLESS"
+          },
+          "material": {
+            "zh": "K10, 鑽石",
+            "en": "K10, Diamond"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "戒圍011",
+            "en": "011"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1116/z-30212111012_00-1.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1118/z-30212111012_00-2.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1120/z-30212111012_00-3.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/1122/z-30212111012_00-4.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "nojess",
+            "en": "nojess"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "鑽石",
+            "en": "Diamond"
+          },
+          "filter_size": {
+            "zh": "戒圍011",
+            "en": "011"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "透明",
+            "en": "COLORLESS"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ]
+    }
+  ],
+  "recommend_products": [
+    {
+      "brand_id": 2,
+      "title": {
+        "zh": "10K蛋白石耳環",
+        "en": "10K蛋白石耳環"
+      },
+      "id": 96,
+      "category": {
+        "id": 1,
+        "title": {
+          "zh": "珠寶飾品",
+          "en": "JEWELRY"
+        }
+      },
+      "collection": {
+        "id": 3,
+        "title": {
+          "zh": "針式耳環",
+          "en": "PIERCED EARRINGS"
+        }
+      },
+      "sub_collection": {
+        "id": 3,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      },
+      "info_detail": {
+        "zh": "【蛋白石系列】一顆蛋白石包裹在精緻的寶石座中，營造出精緻的氛圍。簡單的耳環，四季皆可佩戴。七種柔和的光線在您的耳朵附近閃耀。",
+        "en": "【蛋白石系列】一顆蛋白石包裹在精緻的寶石座中，營造出精緻的氛圍。簡單的耳環，四季皆可佩戴。七種柔和的光線在您的耳朵附近閃耀。"
+      },
+      "size_img": {
+        "en": null,
+        "zh": null
+      },
+      "series": [
+        {
+          "id": 16,
+          "title": {
+            "en": "Ear Dress",
+            "zh": "Ear Dress"
+          }
+        }
+      ],
+      "promotion": {
+        "id": 2,
+        "title": {
+          "zh": "測試一折",
+          "en": "test"
+        },
+        "ratio": 10,
+        "collections": [
+          {
+            "id": 3,
+            "brand_id": 2,
+            "title_en": "PIERCED EARRINGS",
+            "created_at": "2022-01-14T17:33:16.370+08:00",
+            "updated_at": "2022-01-14T17:33:16.372+08:00",
+            "category_id": 1,
+            "title_zh": "針式耳環",
+            "position": null
+          }
+        ],
+        "sub_collections": [],
+        "products": [],
+        "categories": []
+      },
+      "member_price": 8600,
+      "promote_price": 860,
+      "price": 8600,
+      "specified_variant_id": null,
+      "variants": [
+        {
+          "uid": "agt-1010311207108999",
+          "id": 246,
+          "price": 8600,
+          "member_price": 8600,
+          "promote_price": 860,
+          "color": "#FFFFFF",
+          "colorDisplay": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "material": {
+            "zh": "K10, 蛋白石",
+            "en": "K10, Opal"
+          },
+          "color_img": "",
+          "size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/30/zz-10103112071_08-1.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "agete",
+            "en": "agete"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "蛋白石",
+            "en": "Opal"
+          },
+          "filter_size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "白色",
+            "en": "WHITE"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ],
+      "published": true
+    },
+    {
+      "brand_id": 2,
+      "title": {
+        "zh": "10K耳環",
+        "en": "10K耳環"
+      },
+      "id": 97,
+      "category": {
+        "id": 1,
+        "title": {
+          "zh": "珠寶飾品",
+          "en": "JEWELRY"
+        }
+      },
+      "collection": {
+        "id": 3,
+        "title": {
+          "zh": "針式耳環",
+          "en": "PIERCED EARRINGS"
+        }
+      },
+      "sub_collection": {
+        "id": 3,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      },
+      "info_detail": {
+        "zh": "【Eardress系列】K10清新啞光材質的耳環。簡單的設計讓質感脫穎而出。",
+        "en": "【Eardress系列】K10清新啞光材質的耳環。簡單的設計讓質感脫穎而出。"
+      },
+      "size_img": {
+        "en": null,
+        "zh": null
+      },
+      "series": [
+        {
+          "id": 16,
+          "title": {
+            "en": "Ear Dress",
+            "zh": "Ear Dress"
+          }
+        }
+      ],
+      "promotion": {
+        "id": 2,
+        "title": {
+          "zh": "測試一折",
+          "en": "test"
+        },
+        "ratio": 10,
+        "collections": [
+          {
+            "id": 3,
+            "brand_id": 2,
+            "title_en": "PIERCED EARRINGS",
+            "created_at": "2022-01-14T17:33:16.370+08:00",
+            "updated_at": "2022-01-14T17:33:16.372+08:00",
+            "category_id": 1,
+            "title_zh": "針式耳環",
+            "position": null
+          }
+        ],
+        "sub_collections": [],
+        "products": [],
+        "categories": []
+      },
+      "member_price": 10200,
+      "promote_price": 1020,
+      "price": 10200,
+      "specified_variant_id": null,
+      "variants": [
+        {
+          "uid": "agt-1012211236203999",
+          "id": 247,
+          "price": 10200,
+          "member_price": 10200,
+          "promote_price": 1020,
+          "color": "#ffff4d",
+          "colorDisplay": {
+            "zh": "黃色",
+            "en": "YELLOW"
+          },
+          "material": {
+            "zh": "",
+            "en": ""
+          },
+          "color_img": "",
+          "size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/55/zz-10122112362_01-1.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "agete",
+            "en": "agete"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "黃色",
+            "en": "YELLOW"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ],
+      "published": true
+    },
+    {
+      "brand_id": 2,
+      "title": {
+        "zh": "10K耳環",
+        "en": "10K耳環"
+      },
+      "id": 98,
+      "category": {
+        "id": 1,
+        "title": {
+          "zh": "珠寶飾品",
+          "en": "JEWELRY"
+        }
+      },
+      "collection": {
+        "id": 3,
+        "title": {
+          "zh": "針式耳環",
+          "en": "PIERCED EARRINGS"
+        }
+      },
+      "sub_collection": {
+        "id": 3,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      },
+      "info_detail": {
+        "zh": "【Eardress系列】小而華麗的圈形耳環，帶有重複的細磨球和菱形造型金屬設計。",
+        "en": "【Eardress系列】小而華麗的圈形耳環，帶有重複的細磨球和菱形造型金屬設計。"
+      },
+      "size_img": {
+        "en": null,
+        "zh": null
+      },
+      "series": [
+        {
+          "id": 16,
+          "title": {
+            "en": "Ear Dress",
+            "zh": "Ear Dress"
+          }
+        }
+      ],
+      "promotion": {
+        "id": 2,
+        "title": {
+          "zh": "測試一折",
+          "en": "test"
+        },
+        "ratio": 10,
+        "collections": [
+          {
+            "id": 3,
+            "brand_id": 2,
+            "title_en": "PIERCED EARRINGS",
+            "created_at": "2022-01-14T17:33:16.370+08:00",
+            "updated_at": "2022-01-14T17:33:16.372+08:00",
+            "category_id": 1,
+            "title_zh": "針式耳環",
+            "position": null
+          }
+        ],
+        "sub_collections": [],
+        "products": [],
+        "categories": []
+      },
+      "member_price": 7800,
+      "promote_price": 780,
+      "price": 7800,
+      "specified_variant_id": null,
+      "variants": [
+        {
+          "uid": "agt-1012311240503999",
+          "id": 248,
+          "price": 7800,
+          "member_price": 7800,
+          "promote_price": 780,
+          "color": "#ffff4d",
+          "colorDisplay": {
+            "zh": "黃色",
+            "en": "YELLOW"
+          },
+          "material": {
+            "zh": "",
+            "en": ""
+          },
+          "color_img": "",
+          "size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/56/zz-10123112405_03-1.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "agete",
+            "en": "agete"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "黃色",
+            "en": "YELLOW"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ],
+      "published": true
+    },
+    {
+      "brand_id": 2,
+      "title": {
+        "zh": "10K耳環",
+        "en": "10K耳環"
+      },
+      "id": 99,
+      "category": {
+        "id": 1,
+        "title": {
+          "zh": "珠寶飾品",
+          "en": "JEWELRY"
+        }
+      },
+      "collection": {
+        "id": 3,
+        "title": {
+          "zh": "針式耳環",
+          "en": "PIERCED EARRINGS"
+        }
+      },
+      "sub_collection": {
+        "id": 3,
+        "title": {
+          "zh": "",
+          "en": ""
+        }
+      },
+      "info_detail": {
+        "zh": "【Eardress系列】耳環是清新的花瓣的形狀，它採用由小而寬的設計。",
+        "en": "【Eardress系列】耳環是清新的花瓣的形狀，它採用由小而寬的設計。"
+      },
+      "size_img": {
+        "en": null,
+        "zh": null
+      },
+      "series": [
+        {
+          "id": 16,
+          "title": {
+            "en": "Ear Dress",
+            "zh": "Ear Dress"
+          }
+        }
+      ],
+      "promotion": {
+        "id": 2,
+        "title": {
+          "zh": "測試一折",
+          "en": "test"
+        },
+        "ratio": 10,
+        "collections": [
+          {
+            "id": 3,
+            "brand_id": 2,
+            "title_en": "PIERCED EARRINGS",
+            "created_at": "2022-01-14T17:33:16.370+08:00",
+            "updated_at": "2022-01-14T17:33:16.372+08:00",
+            "category_id": 1,
+            "title_zh": "針式耳環",
+            "position": null
+          }
+        ],
+        "sub_collections": [],
+        "products": [],
+        "categories": []
+      },
+      "member_price": 7800,
+      "promote_price": 780,
+      "price": 7800,
+      "specified_variant_id": null,
+      "variants": [
+        {
+          "uid": "agt-1013211204103999",
+          "id": 249,
+          "price": 7800,
+          "member_price": 7800,
+          "promote_price": 780,
+          "color": "#ffff4d",
+          "colorDisplay": {
+            "zh": "黃色",
+            "en": "YELLOW"
+          },
+          "material": {
+            "zh": "",
+            "en": ""
+          },
+          "color_img": "",
+          "size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "images": [
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/60/z-10132112041_03-1.jpg",
+            "https://storage.googleapis.com/uatecnas/variant_photo/photo/61/z-10132112041_03-2.jpg"
+          ],
+          "video": "",
+          "filter_br": {
+            "zh": "agete",
+            "en": "agete"
+          },
+          "filter_metal": {
+            "zh": "K10",
+            "en": "K10"
+          },
+          "filter_gem": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_size": {
+            "zh": "單一尺寸",
+            "en": "One Size"
+          },
+          "filter_cat": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_pattern": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_color": {
+            "zh": "黃色",
+            "en": "YELLOW"
+          },
+          "filter_theme": {
+            "zh": "",
+            "en": ""
+          },
+          "filter_series": {
+            "zh": "",
+            "en": ""
+          }
+        }
+      ],
+      "published": true
+    }
+  ],
+  "specified_variant_id": null,
+  "variants": [
+    {
+      "uid": "noj-3021211201400999",
+      "id": 286,
+      "price": 7500,
+      "member_price": 7500,
+      "promote_price": 750,
+      "color": "#FCFCFC",
+      "colorDisplay": {
+        "zh": "透明",
+        "en": "COLORLESS"
+      },
+      "material": {
+        "zh": "K10, 鑽石",
+        "en": "K10, Diamond"
+      },
+      "color_img": "",
+      "size": {
+        "zh": "單一尺寸",
+        "en": "One Size"
+      },
+      "images": [
+        "https://storage.googleapis.com/uatecnas/variant_photo/photo/1139/z-30212112014_00-1.jpg",
+        "https://storage.googleapis.com/uatecnas/variant_photo/photo/1140/z-30212112014_00-2.jpg"
+      ],
+      "video": "",
+      "filter_br": {
+        "zh": "nojess",
+        "en": "nojess"
+      },
+      "filter_metal": {
+        "zh": "K10",
+        "en": "K10"
+      },
+      "filter_gem": {
+        "zh": "鑽石",
+        "en": "Diamond"
+      },
+      "filter_size": {
+        "zh": "單一尺寸",
+        "en": "One Size"
+      },
+      "filter_cat": {
+        "zh": "",
+        "en": ""
+      },
+      "filter_pattern": {
+        "zh": "",
+        "en": ""
+      },
+      "filter_color": {
+        "zh": "透明",
+        "en": "COLORLESS"
+      },
+      "filter_theme": {
+        "zh": "",
+        "en": ""
+      },
+      "filter_series": {
+        "zh": "",
+        "en": ""
+      }
+    }
+  ],
+  "published": true
+}
+```
 
 # **指定品項庫存**
 
@@ -1424,19 +3747,13 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/products/query_stock
+  - 正式環境：https://ecapi.tungrp.com/v1/products/query_stock
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
-
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -1459,10 +3776,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **退貨單明細**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  查看特定退貨單
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/return_orders/:id
+  - 正式環境：https://ecapi.tungrp.com/v1/return_orders/:id
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
@@ -1495,20 +3814,16 @@ https://uatecapi.tungrp.com/v1/products/697
 # **跑馬燈**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  運行中的跑馬燈
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/scrolling_texts
+  - 正式環境：https://ecapi.tungrp.com/v1/scrolling_texts
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
-
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -1518,8 +3833,10 @@ Parameters
 
 - 請求參數範例
 
+直接在瀏覽器的網址列輸入下列網址即可以找到對應的資料
+
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/scrolling_texts?brand_id=3
 ```
 
 - 回應參數說明
@@ -1527,6 +3844,21 @@ https://uatecapi.tungrp.com/v1/products/697
   [**Array&lt;V1ScrollingTextEntity&gt;**](#V1ScrollingTextEntity)
 
 - 回傳參數範例
+
+```json
+[
+  {
+    "title": {
+      "zh": "歡迎來到惇聚",
+      "en": " wellcome to  Tungrp !!"
+    },
+    "link_to": {
+      "value": 6,
+      "type": "series"
+    }
+  }
+]
+```
 
 # **取得搜尋內容**
 
@@ -1739,18 +4071,13 @@ Parameters
 - 應用場景
   - 從所有會員收藏的商品內刪除特定一筆商品
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/series
+  - 正式環境：https://ecapi.tungrp.com/v1/series
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
-
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -1773,20 +4100,16 @@ https://uatecapi.tungrp.com/v1/products/697
 # **指定系列頁**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  查看特定一筆系列頁
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/series/:series_id
+  - 正式環境：https://ecapi.tungrp.com/v1/series/:series_id
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
-
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -1810,20 +4133,16 @@ https://uatecapi.tungrp.com/v1/products/697
 # **店舖列表**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  查看所有店舖
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/stores
+  - 正式環境：https://ecapi.tungrp.com/v1/stores
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
-
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -1846,20 +4165,16 @@ https://uatecapi.tungrp.com/v1/products/697
 # **小類列表**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  小類列表
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/sub_collections
+  - 正式環境：https://ecapi.tungrp.com/v1/sub_collections
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
-
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -1882,20 +4197,16 @@ https://uatecapi.tungrp.com/v1/products/697
 # **小類明細**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得特定的小類詳細資料
+
 - 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/sub_collections/:id
+  - 正式環境：https://ecapi.tungrp.com/v1/sub_collections/:id
+
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
   - Accept：application/json
   - HTTP Method ：GET
-
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -1918,11 +4229,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **特定子訂單**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得特定一筆子訂單
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/sub_orders/:id
+  - 正式環境：https://ecapi.tungrp.com/v1/sub_orders/:id
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -1956,11 +4268,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **當前滿額贈**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得活動中的滿額贈
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/target_price_discounts
+  - 正式環境：https://ecapi.tungrp.com/v1/target_price_discounts
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -1994,11 +4307,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **置頂 Banner**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得預渲染的置頂Banner資料
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/top_banner
+  - 正式環境：https://ecapi.tungrp.com/v1/top_banner
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2032,11 +4346,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **加入購物車**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  將商品加入購物車
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/carts
+  - 正式環境：https://ecapi.tungrp.com/v1/carts
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2074,11 +4389,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **加入最愛**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  會員將特定一筆商品加入最愛
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/carts/add_favorites
+  - 正式環境：https://ecapi.tungrp.com/v1/carts/add_favorites
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2108,11 +4424,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **新增地址簿**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  會員新增地址
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customer/addresses
+  - 正式環境：https://ecapi.tungrp.com/v1/customer/addresses
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2155,11 +4472,11 @@ https://uatecapi.tungrp.com/v1/products/697
 # **創建顧客**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  註冊一筆新會員
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers
+  - 正式環境：https://ecapi.tungrp.com/v1/customers
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2196,11 +4513,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **新增信用卡**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  新增一筆信用卡
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/credit_cards
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/credit_cards
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2230,11 +4548,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **設定主信用卡**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  從會員的信用卡當中設定一張信用卡當作主要使用的信用卡
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/credit_cards/set_primary
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/credit_cards/set_primary
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2261,14 +4580,14 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
 
-# **發送 OTP 到手機**
+# **社群媒體搭配OTP登入**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/login_with_otp
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/login_with_otp
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2299,11 +4618,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **發送 OTP**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  手機簡訊發送OTP
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/otp
+  - 正式環境：https://ecapi.tungrp.com/v1/v1/customers/otp
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2333,11 +4653,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員接收推播設定**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  會員自己設定自己要收到哪種推播的接收推播設定
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/receive_notifications
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/receive_notifications
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2369,11 +4690,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員重設密碼**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  會員重設密碼
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/reset_password
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/reset_password
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2405,11 +4727,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員設定預設店**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  會員設定預設店
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/set_default_store
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/set_default_store
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2440,11 +4763,11 @@ https://uatecapi.tungrp.com/v1/products/697
 # **取得 sso 憑證**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  取得sso憑證
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/sso
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/sso
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2475,11 +4798,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **社群媒體登入**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  從社群媒體登入
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/sso_bind
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/sso_bind
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2510,11 +4834,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **社群媒體登出**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  從社群媒體登出
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/sso_unbind
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/sso_unbind
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2544,7 +4869,8 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員同步 pos**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  EC會員同步Pos
+
 - 介接方式
 
   - 測試環境：https://uatecapi.tungrp.com/v1/customers/sync_pos
@@ -2591,11 +4917,12 @@ curl 'https://uatecapi.tungrp.com/v1/customers/sync_pos/' \
 # **會員資訊更新**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  更改會員資訊
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/update
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/update
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2631,11 +4958,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **會員重設密碼**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  會員重新設定密碼
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/update_password
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/update_password
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2666,11 +4994,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **驗證 OTP**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  驗證手機發送6碼是否符合輸6碼
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/validate_otp
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/validate_otp
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2701,11 +5030,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **驗證密碼**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  驗證密碼是否正確
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/customers/validate_password
+  - 正式環境：https://ecapi.tungrp.com/v1/customers/validate_password
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2735,11 +5065,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **創建維修單**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  顧客新增一筆推修單
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/maintain_orders
+  - 正式環境：https://ecapi.tungrp.com/v1/maintain_orders
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2775,11 +5106,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **取消維修單**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  顧客取消維修單
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/maintain_orders/:number/cancel
+  - 正式環境：https://ecapi.tungrp.com/v1/maintain_orders/:number/cancel
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2809,11 +5141,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **同意報價**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  會員同意惇聚後台人員所開出來的維修價錢
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/maintain_orders/:number/quotation
+  - 正式環境：https://ecapi.tungrp.com/v1/maintain_orders/:number/quotation
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2844,11 +5177,11 @@ https://uatecapi.tungrp.com/v1/products/697
 # **綁定推播**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  綁定預計推播裝置，執行此動作手機將收到推播
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/notification/bind
+  - 正式環境：https://ecapi.tungrp.com/v1/notification/bind
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -2879,11 +5212,12 @@ https://uatecapi.tungrp.com/v1/products/697
 # **解綁推播**
 
 - 應用場景
-  - 從所有會員收藏的商品內刪除特定一筆商品
+  解除綁定預計推播裝置，執行此動作手機將收不到推播
+
 - 介接方式
 
-  - 測試環境：https://uatecapi.tungrp.com/v1/carts/favorite
-  - 正式環境：https://ecapi.tungrp.com/v1/carts/favorite
+  - 測試環境：https://uatecapi.tungrp.com/v1/notification/unbind
+  - 正式環境：https://ecapi.tungrp.com/v1/notification/unbind
 
 - 請求參數說明
   - Content Type ：application/x-www-form-urlencoded
@@ -3051,7 +5385,7 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/orders' \
     "credit_card_id": 1,
     "shipping_type": "home",
     "receiver_name": "陳漢庭",
-    "receiver_phone": "0983168969",
+    "receiver_phone": "0911111111",
     "e_gui_type": "ecpay"
 }'
 ```
@@ -9709,7 +12043,7 @@ curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
   -H 'sec-fetch-dest: empty' \
   -H 'referer: https://uatecweb.tungrp.com/' \
   -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"receiver_name":"陳漢庭","receiver_phone":"0983168969","city":"臺中市","district":"東區","detail":"新北市新莊區幸福路716號2樓","address_type":"home","default":true}' \
+  --data-raw '{"receiver_name":"陳漢庭","receiver_phone":"0911111111","city":"臺中市","district":"東區","detail":"新北市新莊區幸福路716號2樓","address_type":"home","default":true}' \
   --compressed
 ```
 
@@ -9725,7 +12059,7 @@ curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
   "record": {
     "id": 35,
     "receiver_name": "陳漢庭",
-    "receiver_phone": "0983168969",
+    "receiver_phone": "0911111111",
     "zip": "",
     "city": "臺中市",
     "district": "東區",
