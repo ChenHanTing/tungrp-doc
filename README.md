@@ -1588,7 +1588,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/me/' \
 {
   "id": 17,
   "phone": "0911111111",
-  "email": "k445566778899k@gmail.com",
+  "email": "qwerasdf1234@gmail.com",
   "name": "ChenHanTing",
   "birthdate": "2022-01-20",
   "sex": "N",
@@ -6458,12 +6458,12 @@ curl 'https://uatecapi.tungrp.com/v1/sub_orders/37/' \
 {
   "status": "done",
   "shipping_status": "received",
-  "receiver_name": "陳漢庭",
-  "receiver_phone": "0983168969",
+  "receiver_name": "陳一二",
+  "receiver_phone": "0911111111",
   "zip": "",
   "city": "臺中市",
   "district": "東區",
-  "address": "新北市新莊區幸福路716號2樓",
+  "address": "澎湖縣南區思源路三段路2號",
   "shipping_type": "home",
   "brand_name": "Self Portrait",
   "store_name": {
@@ -6990,12 +6990,12 @@ curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
   },
   {
     "id": 37,
-    "receiver_name": "陳漢庭",
+    "receiver_name": "陳一二",
     "receiver_phone": "0911111111",
     "zip": "",
     "city": "臺中市",
     "district": "東區",
-    "detail": "新北市新莊區111路716號2樓",
+    "detail": "澎湖縣南區111路2號10樓",
     "store_id": "",
     "store_name": "",
     "store_type": "",
@@ -7043,8 +7043,8 @@ Parameters
 
 ```shell
 curl --location --request POST 'https://uatecapi.tungrp.com/v1/customers' \
---form 'name="陳漢庭"' \
---form 'email="k445566778899k@gmail.com"' \
+--form 'name="陳一二"' \
+--form 'email="qwerasdf1234@gmail.com"' \
 --form 'password="1234qwer"' \
 --form 'phone="0934343437"' \
 --form 'birthdate="19940505"' \
@@ -7174,7 +7174,7 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/otp/' \
-  --data-raw '{"phone":"0983168969", "otp": "123456"}'
+  --data-raw '{"phone":"0911111111", "otp": "123456"}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -7223,7 +7223,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/otp/' \
   -H 'sec-fetch-dest: empty' \
   -H 'referer: https://uatecweb.tungrp.com/' \
   -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"phone":"0983168969"}' \
+  --data-raw '{"phone":"0911111111"}' \
   --compressed
 ```
 
@@ -7306,7 +7306,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/reset_password/' \
   -H 'sec-fetch-dest: empty' \
   -H 'referer: https://uatecweb.tungrp.com/' \
   -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"phone":"0983168969","otp":"903784","new_password":"as789123456"}' \
+  --data-raw '{"phone":"0911111111","otp":"903784","new_password":"as789123456"}' \
   --compressed
 ```
 
@@ -7670,7 +7670,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/validate_otp/' \
   -H 'sec-fetch-dest: empty' \
   -H 'referer: https://uatecweb.tungrp.com/' \
   -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"phone":"0983168969","otp":"900150"}' \
+  --data-raw '{"phone":"0911111111","otp":"900150"}' \
   --compressed
 ```
 
@@ -7685,7 +7685,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/validate_otp/' \
   "success": true,
   "customer": {
     "name": "ChenHanTing",
-    "email": "k445566778899k@gmail.com",
+    "email": "qwerasdf1234@gmail.com",
     "sex": "",
     "birthday": "2022/01/20"
   }
@@ -7699,7 +7699,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/validate_otp/' \
   "success": false,
   "customer": {
     "name": "ChenHanTing",
-    "email": "k445566778899k@gmail.com",
+    "email": "qwerasdf1234@gmail.com",
     "sex": "",
     "birthday": "2022/01/20"
   }
@@ -7796,8 +7796,8 @@ Parameters
 curl --location --request POST 'https://uatecapi.tungrp.com/v1/maintain_orders' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "receiver_name": "陳漢庭",
-    "receiver_phone": "0983168969",
+    "receiver_name": "陳一二",
+    "receiver_phone": "0911111111",
     "brand_id": 1,
     "store_id": 1,
     "product_no": "AB123456",
@@ -8108,7 +8108,7 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/orders' \
     ],
     "credit_card_id": 1,
     "shipping_type": "home",
-    "receiver_name": "陳漢庭",
+    "receiver_name": "陳",
     "receiver_phone": "0911111111",
     "e_gui_type": "ecpay"
 }'
@@ -14647,7 +14647,7 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/return_orders/70'
     "items": [
         {"variant_id": 1, "quantity": 1, "cancel_reason": "與想像不符" }
     ],
-    "address": "新北市",
+    "address": "澎湖縣",
     "receiver_name": "123",
     "receiver_phone": "0912559059"
 }'
@@ -14767,7 +14767,7 @@ curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
   -H 'sec-fetch-dest: empty' \
   -H 'referer: https://uatecweb.tungrp.com/' \
   -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"receiver_name":"陳漢庭","receiver_phone":"0911111111","city":"臺中市","district":"東區","detail":"新北市新莊區幸福路716號2樓","address_type":"home","default":true}' \
+  --data-raw '{"receiver_name":"陳一二","receiver_phone":"0911111111","city":"臺中市","district":"東區","detail":"澎湖縣南區思源路三段2號10樓","address_type":"home","default":true}' \
   --compressed
 ```
 
@@ -14782,12 +14782,12 @@ curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
   "success": true,
   "record": {
     "id": 35,
-    "receiver_name": "陳漢庭",
+    "receiver_name": "陳一二",
     "receiver_phone": "0911111111",
     "zip": "",
     "city": "臺中市",
     "district": "東區",
-    "detail": "新北市新莊區幸福路716號2樓",
+    "detail": "澎湖縣南區思源路路2號10樓",
     "store_id": "",
     "store_name": "",
     "store_type": "",
