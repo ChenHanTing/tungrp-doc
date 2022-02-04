@@ -14,64 +14,63 @@
 | [**特定大類**](#特定大類)                             | **GET** /v1/categories/:id                      | 取得大類資訊                          |          | ✅        |
 | [**中類列表**](#中類列表)                             | **GET** /v1/collections                         | 查看所有中類                          |          | ✅        |
 | [**特定中類**](#特定中類)                             | **GET** /v1/collections/:id                     | 取得中類資訊                          |          | ✅        |
-| [**地址簿列表**](#地址簿)                             | **GET** /v1/customer/addresses                  | 取得會員地址簿                        | Y        |          |
-| [**從地址簿中取得特定地址**](#從地址簿中取得特定地址) | **GET** /v1/customer/addresses/:id              | 從會員地址簿內取得特定地址資訊        | Y        |          |
-| [**會員信用卡列表**](#會員信用卡列表)                 | **GET** /v1/customers/credit_cards              | 取得會員所有綁定的信用卡              | Y        |          |
-| [**會員主信用卡**](#會員主信用卡)                     | **GET** /v1/customers/credit_cards/get_primary  | 取得會員的主信用卡                    | Y        |          |
+| [**地址簿列表**](#地址簿)                             | **GET** /v1/customer/addresses                  | 取得會員地址簿                        | Y        | ✅        |
+| [**從地址簿中取得特定地址**](#從地址簿中取得特定地址) | **GET** /v1/customer/addresses/:id              | 從會員地址簿內取得特定地址資訊        | Y        | ✅        |
+| [**會員信用卡列表**](#會員信用卡列表)                 | **GET** /v1/customers/credit_cards              | 取得會員所有綁定的信用卡              | Y        | ✅        |
 | [**會員存在狀態**](#會員存在狀態)                     | **GET** /v1/customers/exist                     | 查看會員是否存在                      | Y        | ✅        |
 | [**會員基本資訊**](#會員基本資訊)                     | **GET** /v1/customers/me                        |                                       | Y        | ✅        |
 | [**會員點數紀錄**](#會員點數紀錄)                     | **GET** /v1/customers/point_history             |                                       | Y        | ✅        |
-| [**會員訂單記錄**](#會員訂單記錄)                     | **GET** /v1/customers/pos_order_histories       |                                       | Y        |          |
-| [**會員業務店**](#會員業務店)                         | **GET** /v1/customers/store                     |                                       | Y        |          |
-| [**會員 Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                       | Y        |          |
+| [**會員訂單記錄**](#會員訂單記錄)                     | **GET** /v1/customers/pos_order_histories       |                                       | Y        | ✅        |
+| [**會員業務店**](#會員業務店)                         | **GET** /v1/customers/store                     |                                       | Y        | ✅        |
+| [**會員 Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                       | Y        | ✅        |
 | [**促銷頁列表**](#促銷頁列表)                         | **GET** /v1/event_pages                         |                                       |          | ✅        |
 | [**特定促銷頁**](#特定促銷頁)                         | **GET** /v1/event_pages/:event_page_id          |                                       |          | ✅        |
 | [**首頁**](#首頁)                                     | **GET** /v1/home_page                           | 首頁資訊                              |          | ✅        |
 | [**消息列表**](#消息列表)                             | **GET** /v1/information                         |                                       |          | ✅        |
 | [**特定消息**](#特定消息)                             | **GET** /v1/information/:information_id         |                                       |          | ✅        |
-| [**維修保養單列表**](#維修保養單列表)                 | **GET** /v1/maintain_orders                     |                                       | Y        |          |
-| [**維修保養單明細**](#維修保養單明細)                 | **GET** /v1/maintain_orders/:number             |                                       | Y        |          |
-| [**推播列表**](#推播列表)                             | **GET** /v1/notifications                       |                                       | Y        |          |
-| [**推播明細**](#推播明細)                             | **GET** /v1/notifications/:id                   |                                       | Y        |          |
+| [**維修保養單列表**](#維修保養單列表)                 | **GET** /v1/maintain_orders                     |                                       | Y        | ✅        |
+| [**維修保養單明細**](#維修保養單明細)                 | **GET** /v1/maintain_orders/:number             |                                       | Y        | ✅        |
+| [**推播列表**](#推播列表)                             | **GET** /v1/notifications                       |                                       | Y        | ✅        |
+| [**推播明細**](#推播明細)                             | **GET** /v1/notifications/:id                   |                                       | Y        | ✅        |
 | [**訂單列表**](#訂單列表)                             | **GET** /v1/orders                              |                                       | Y        | ✅        |
 | [**訂單明細**](#訂單明細)                             | **GET** /v1/orders/:number                      |                                       | Y        | ✅        |
 | [**查看商品**](#查看商品)                             | **GET** /v1/products/:id                        |                                       |          | ✅        |
-| [**指定品項庫存**](#指定品項庫存)                     | **GET** /v1/products/query_stock                |                                       |          |          |
-| [**退貨單明細**](#退貨單明細)                         | **GET** /v1/return_orders/:id                   |                                       | Y        |          |
+| [**指定品項庫存**](#指定品項庫存)                     | **GET** /v1/products/query_stock                |                                       |          | ✅        |
+| [**退貨單明細**](#退貨單明細)                         | **GET** /v1/return_orders/:id                   |                                       | Y        | ✅        |
 | [**跑馬燈**](#跑馬燈)                                 | **GET** /v1/scrolling_texts                     |                                       |          | ✅        |
 | [**取得搜尋內容**](#取得搜尋內容)                     | **GET** /v1/search                              |                                       |          | ✅        |
-| [**系列頁列表**](#系列頁列表)                         | **GET** /v1/series                              |                                       |          |          |
-| [**指定系列頁**](#指定系列頁)                         | **GET** /v1/series/:series_id                   |                                       |          |          |
+| [**系列頁列表**](#系列頁列表)                         | **GET** /v1/series                              |                                       |          |    ✅       |
+| [**指定系列頁**](#指定系列頁)                         | **GET** /v1/series/:series_id                   |                                       |          |    ✅       |
 | [**店舖列表**](#店舖列表)                             | **GET** /v1/stores                              |                                       |          | ✅        |
-| [**小類列表**](#小類列表)                             | **GET** /v1/sub_collections                     |                                       |          |          |
-| [**小類明細**](#小類明細)                             | **GET** /v1/sub_collections/:id                 |                                       |          |          |
-| [**特定子訂單**](#特定子訂單)                         | **GET** /v1/sub_orders/:id                      |                                       | Y        |          |
-| [**當前滿額贈**](#當前滿額贈)                         | **GET** /v1/target_price_discounts              |                                       | Y        |          |
-| [**置頂 Banner**](#置頂Banner)                        | **GET** /v1/top_banner                          |                                       |          |          |
-| [**加入購物車**](#加入購物車)                         | **POST** /v1/carts                              |                                       | Y        |          |
-| [**加入最愛**](#加入最愛)                             | **POST** /v1/carts/add_favorites                |                                       | Y        |          |
-| [**新增地址簿**](#新增地址簿)                         | **POST** /v1/customer/addresses                 |                                       | Y        |          |
-| [**創建顧客**](#創建顧客)                             | **POST** /v1/customers                          |                                       | Y        |          |
-| [**新增信用卡**](#新增信用卡)                         | **POST** /v1/customers/credit_cards             |                                       | Y        |          |
-| [**設定主信用卡**](#設定主信用卡)                     | **POST** /v1/customers/credit_cards/set_primary |                                       | Y        |          |
-| [**社群媒體搭配OTP登入**](#社群媒體搭配OTP登入)       | **POST** /v1/customers/login_with_otp           |                                       | Y        |          |
-| [**發送 OTP**](#發送OTP)                              | **POST** /v1/customers/otp                      |                                       | Y        |          |
-| [**會員接收推播設定**](#會員接收推播設定)             | **POST** /v1/customers/receive_notifications    |                                       | Y        |          |
-| [**會員重設密碼**](#會員重設密碼)                     | **POST** /v1/customers/reset_password           |                                       | Y        |          |
-| [**會員設定預設店**](#會員設定預設店)                 | **POST** /v1/customers/set_default_store        |                                       | Y        |          |
-| [**取得 sso 憑證**](#取得sso憑證)                     | **POST** /v1/customers/sso                      |                                       | Y        |          |
-| [**社群媒體登入**](#社群媒體登入)                     | **POST** /v1/customers/sso_bind                 |                                       |          |          |
-| [**社群媒體登出**](#社群媒體登出)                     | **POST** /v1/customers/sso_unbind               |                                       | Y        |          |
-| [**會員同步 pos**](#會員同步pos)                      | **POST** /v1/customers/sync_pos                 |                                       | Y        |          |
-| [**會員資訊更新**](#會員資訊更新)                     | **POST** /v1/customers/update                   |                                       | Y        |          |
-| [**會員更新密碼**](#會員更新密碼)                     | **POST** /v1/customers/update_password          |                                       | Y        |          |
-| [**驗證 OTP**](#驗證OTP)                              | **POST** /v1/customers/validate_otp             | 驗證為數 6 碼的驗證碼                 | Y        |          |
-| [**驗證密碼**](#驗證密碼)                             | **POST** /v1/customers/validate_password        | 驗證密碼是否正確                      | Y        |          |
-| [**創建維修單**](#創建維修單)                         | **POST** /v1/maintain_orders                    |                                       | Y        |          |
-| [**取消維修單**](#取消維修單)                         | **POST** /v1/maintain_orders/:number/cancel     |                                       | Y        |          |
-| [**同意報價**](#同意報價)                             | **POST** /v1/maintain_orders/:number/quotation  |                                       | Y        |          |
-| [**綁定推播**](#綁定推播)                             | **POST** /v1/notification/bind                  |                                       | Y        |          |
-| [**解綁推播**](#解綁推播)                             | **POST** /v1/notification/unbind                |                                       | Y        |          |
+| [**小類列表**](#小類列表)                             | **GET** /v1/sub_collections                     |                                       |          |  ✅         |
+| [**小類明細**](#小類明細)                             | **GET** /v1/sub_collections/:id                 |                                       |          |    ✅       |
+| [**特定子訂單**](#特定子訂單)                         | **GET** /v1/sub_orders/:id                      |                                       | Y        |     ✅      |
+| [**當前滿額贈**](#當前滿額贈)                         | **GET** /v1/target_price_discounts              |                                       | Y        |      ✅     |
+| [**置頂 Banner**](#置頂Banner)                        | **GET** /v1/top_banner                          |                                       |          |     ✅      |
+| [**加入購物車**](#加入購物車)                         | **POST** /v1/carts                              |                                       | Y        |      ✅      |
+| [**加入最愛**](#加入最愛)                             | **POST** /v1/carts/add_favorites                |                                       | Y        |     ✅       |
+| [**新增地址簿**](#新增地址簿)                         | **POST** /v1/customer/addresses                 |                                       | Y        |      ✅      |
+| [**創建顧客**](#創建顧客)                             | **POST** /v1/customers                          |                                       | Y        |      ✅     |
+| [**新增信用卡**](#新增信用卡)                         | **POST** /v1/customers/credit_cards             |                                       | Y        | ✅        |
+| [**設定主信用卡**](#設定主信用卡)                     | **POST** /v1/customers/credit_cards/set_primary |                                       | Y        | ✅        |
+| [**社群媒體搭配OTP登入**](#社群媒體搭配OTP登入)       | **POST** /v1/customers/login_with_otp           |                                       | Y        |  ✅           |
+| [**發送 OTP**](#發送OTP)                              | **POST** /v1/customers/otp                      |                                       | Y        | ✅        |
+| [**會員接收推播設定**](#會員接收推播設定)             | **POST** /v1/customers/receive_notifications    |                                       | Y        |    ✅   |
+| [**會員重設密碼**](#會員重設密碼)                     | **POST** /v1/customers/reset_password           |                                       | Y        |     ✅       |
+| [**會員設定預設店**](#會員設定預設店)                 | **POST** /v1/customers/set_default_store        |                                       | Y        |     ✅       |
+| [**取得 sso 憑證**](#取得sso憑證)                     | **POST** /v1/customers/sso                      |                                       | Y        |    ✅       |
+| [**社群媒體登入**](#社群媒體登入)                     | **POST** /v1/customers/sso_bind                 |                                       |          |      ✅      |
+| [**社群媒體登出**](#社群媒體登出)                     | **POST** /v1/customers/sso_unbind               |                                       | Y        |      ✅      |
+| [**會員同步 pos**](#會員同步pos)                      | **POST** /v1/customers/sync_pos                 |                                       | Y        | ✅        |
+| [**會員資訊更新**](#會員資訊更新)                     | **POST** /v1/customers/update                   |                                       | Y        | ✅        |
+| [**會員更新密碼**](#會員更新密碼)                     | **POST** /v1/customers/update_password          |                                       | Y        | ✅        |
+| [**驗證 OTP**](#驗證OTP)                              | **POST** /v1/customers/validate_otp             | 驗證為數 6 碼的驗證碼                 | Y        | ✅        |
+| [**驗證密碼**](#驗證密碼)                             | **POST** /v1/customers/validate_password        | 驗證密碼是否正確                      | Y        | ✅        |
+| [**創建維修單**](#創建維修單)                         | **POST** /v1/maintain_orders                    |                                       | Y        | ✅        |
+| [**取消維修單**](#取消維修單)                         | **POST** /v1/maintain_orders/:number/cancel     |                                       | Y        | ✅        |
+| [**同意報價**](#同意報價)                             | **POST** /v1/maintain_orders/:number/quotation  |                                       | Y        | ✅        |
+| [**綁定推播**](#綁定推播)                             | **POST** /v1/notification/bind                  |                                       | Y        | ✅        |
+| [**解綁推播**](#解綁推播)                             | **POST** /v1/notification/unbind                |                                       | Y        | ✅        |
 | [**已讀推播**](#已讀推播)                             | **POST** /v1/notifications/read                 | 已讀單筆推播                          | Y        | ✅        |
 | [**推播已讀全部**](#推播已讀全部)                     | **POST** /v1/notifications/read_all             | 已讀會員內的全部推播                  | Y        | ✅        |
 | [**創建訂單**](#創建訂單)                             | **POST** /v1/orders                             | 新增一筆訂單                          | Y        | ✅        |
@@ -157,9 +156,9 @@ curl --location --request POST 'https://uatecapi.tungrp.com/oauth/token' \
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -191,9 +190,9 @@ Parameters
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -204,7 +203,7 @@ Parameters
 - 請求參數範例
 
 ```shell
-curl --location --request DELETE 'https://api-test.tun-grp.com/v1/carts/favorite'
+curl --location --request DELETE 'https://uatecapi.tungrp.com/v1/carts/favorite'
 --header 'Authorization: Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60'
 --data-raw '{
     "variant_id": 3
@@ -231,9 +230,9 @@ curl --location --request DELETE 'https://api-test.tun-grp.com/v1/carts/favorite
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -244,7 +243,7 @@ Parameters
 - 請求參數範例
 
 ```shell
-curl --location --request DELETE 'https://api-test.tun-grp.com/v1/customers/addresses/3'
+curl --location --request DELETE 'https://uatecapi.tungrp.com/v1/customers/addresses/3'
 --header 'Authorization: Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60'
 ```
 
@@ -268,9 +267,9 @@ curl --location --request DELETE 'https://api-test.tun-grp.com/v1/customers/addr
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -283,7 +282,7 @@ Parameters
 此為刪除`id=3`的信用卡
 
 ```shell
-curl --location --request DELETE 'https://api-test.tun-grp.com/v1/customers/credit_cards/3'
+curl --location --request DELETE 'https://uatecapi.tungrp.com/v1/customers/credit_cards/3'
 --header 'Authorization: Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60'
 ```
 
@@ -328,9 +327,9 @@ curl --location --request DELETE 'https://api-test.tun-grp.com/v1/customers/cred
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -468,9 +467,9 @@ curl 'https://uatecapi.tungrp.com/v1/carts/' \
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 - 請求參數範例
 
@@ -1338,11 +1337,72 @@ Header
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 |               |              |                                             |          |
 
+Parameters
+
+| 參數   | 型別        | 說明         | 範例 |
+|--------|-------------|------------|------|
+| **id** | **Integer** | 地址簿流水號 | 697  |
+
+- 請求參數範例
+
+```shell
+curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --compressed
+```
+
 - 回應參數說明
 
   [**Array&lt;V1AddressEntity&gt;**](#V1AddressEntity)
 
 - 回傳參數範例
+
+```json
+[
+  {
+    "id": 32,
+    "receiver_name": "曾奕慈",
+    "receiver_phone": "0900790399",
+    "zip": "",
+    "city": "臺北市",
+    "district": "松山區",
+    "detail": "南京東路四段186號7樓之三",
+    "store_id": "",
+    "store_name": "",
+    "store_type": "",
+    "address_type": "home",
+    "default": false
+  },
+  {
+    "id": 36,
+    "receiver_name": "QWER",
+    "receiver_phone": "0911111111",
+    "zip": "",
+    "city": "高雄市",
+    "district": "左營區",
+    "detail": "XX路71X號X樓",
+    "store_id": "",
+    "store_name": "",
+    "store_type": "",
+    "address_type": "home",
+    "default": true
+  }
+]
+
+```
 
 # **從地址簿中取得特定地址**
 
@@ -1362,9 +1422,9 @@ Header
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -1375,7 +1435,22 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customer/addresses/32' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --compressed
 ```
 
 - 回應參數說明
@@ -1383,6 +1458,24 @@ https://uatecapi.tungrp.com/v1/products/697
   [**V1AddressEntity**](#V1AddressEntity)
 
 - 回傳參數範例
+
+```json
+{
+  "id": 32,
+  "receiver_name": "曾奕慈",
+  "receiver_phone": "0900790399",
+  "zip": "",
+  "city": "臺北市",
+  "district": "松山區",
+  "detail": "南京東路四段186號7樓之三",
+  "store_id": "",
+  "store_name": "",
+  "store_type": "",
+  "address_type": "home",
+  "default": false
+}
+
+```
 
 # **會員信用卡列表**
 
@@ -1399,52 +1492,27 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
-Parameters
-
-| 參數   | 型別        | 說明       | 範例 |
-|--------|-------------|----------|------|
-| **id** | **Integer** | 商品流水號 | 697  |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/credit_cards/' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M'
 ```
 
-- 標準回應，詳情請查看 [附錄 2](#附錄2)
+- 回應範例
 
-# **會員主信用卡**
-
-- 應用場景
-  取得會員主信用卡
-
-- 介接方式
-  - 測試環境：https://uatecapi.tungrp.com/v1/customers/credit_cards/get_primary
-  - 正式環境：https://ecapi.tungrp.com/v1/customers/credit_cards/get_primary
-
-- 請求參數說明
-  - Content Type ：application/x-www-form-urlencoded
-  - Accept：application/json
-  - HTTP Method ：GET
-
-Header
-
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
-
-
-- 請求參數範例
-
-```shell
-https://uatecapi.tungrp.com/v1/products/697
+```json
+[
+  { "id": 34, "first_six": "463670", "last_four": "9200", "is_primary": true },
+  { "id": 36, "first_six": "524255", "last_four": "6370", "is_primary": false }
+]
 ```
-
-- 標準回應，詳情請查看 [附錄 2](#附錄2)
 
 # **會員存在狀態**
 
@@ -1501,9 +1569,9 @@ https://uatecapi.tungrp.com/v1/customers/exist?phone=0911111111
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 - 請求參數範例
 
@@ -1557,9 +1625,9 @@ curl 'https://uatecapi.tungrp.com/v1/customers/me/' \
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 - 請求參數範例
 
@@ -1615,9 +1683,9 @@ curl 'https://uatecapi.tungrp.com/v1/customers/pos_order_histories/' \
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 
 - 請求參數範例
@@ -1646,18 +1714,68 @@ curl 'https://uatecapi.tungrp.com/v1/customers/pos_order_histories' \
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 
 - 請求參數範例
 
 ```shell
-
+curl 'https://uatecapi.tungrp.com/v1/customers/store/?brand_id=1' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer eveEKCSh7whewREeXEDlGavlJXrox2RLcXVkB4eHGK0' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'if-none-match: W/"b136348f87617e0e7207f83d4789dc1b"' \
+  --compressed
 ```
 
-- 標準回應，詳情請查看 [附錄 2](#附錄2)
+- 回應參數說明
+
+  [**Array&lt;V1StoreEntity&gt;**](#V1StoreEntity)
+
+- 回傳參數範例
+
+```json
+{
+  "success": true,
+  "store": {
+    "lat": 22.669315163087038,
+    "lng": 120.30250053490053,
+    "title": { "zh": "KENZO 高雄漢神巨蛋", "en": "KENZO 高雄漢神巨蛋" },
+    "address": {
+      "zh": "高雄市左營區博愛二路777號1樓",
+      "en": "1F., No. 777, Bo'ai 2nd Rd., Zuoying Dist., Kaohsiung City 813603 , Taiwan (R.O.C.)"
+    },
+    "phone": "07-5222475",
+    "instant_messaging_token": "272409",
+    "opening_hours": [
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"],
+      ["10:30", "21:00"]
+    ],
+    "id": 28,
+    "area": "south",
+    "default": false
+  }
+}
+
+```
 
 # **會員 Barcode**
 
@@ -1677,7 +1795,7 @@ Header
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
+| 參數          | 值           | 範例                                        | 說明     |
 |---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
@@ -1685,10 +1803,17 @@ Header
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/vip_barcode' \
+  -H 'authorization: Bearer eveEKCSh7whewREeXEDlGavlJXrox2RLcXVkB4eHGK0'
 ```
 
-- 標準回應，詳情請查看 [附錄 2](#附錄2)
+- 回應範例
+
+| 參數              | 型別         | 範例             | 說明     |
+|-------------------|--------------|------------------|----------|
+| **success**       | **integer**  | true             | 成功與否 |
+| **barcode**       | **string**   | 3F16010970041372 |          |
+| **valid_through** | **datetime** |                  |          |
 
 # **促銷頁列表**
 
@@ -2123,7 +2248,7 @@ https://uatecapi.tungrp.com/v1/information/1
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
+| 參數          | 值           | 範例                                        | 說明     |
 |---------------|--------------|---------------------------------------------|--------|
 | Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
@@ -2137,10 +2262,13 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request GET 'https://uatecapi.tungrp.com/v1/maintain_orders' \
+--header 'Authorization: Bearer QHSQUCdZyYVJIftyRCZpIIZNbH3pbmURbS3x2N3T0Ys'
 ```
 
-- 標準回應，詳情請查看 [附錄 2](#附錄2)
+- 回應參數說明
+
+  [**Array<V1MaintainOrderEntity>**](#V1MaintainOrderEntity)
 
 # **維修保養單明細**
 
@@ -2158,9 +2286,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -2171,14 +2299,14 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request GET 'https://uatecapi.tungrp.com/v1/maintain_orders/1' \
+--header 'Authorization: Bearer QHSQUCdZyYVJIftyRCZpIIZNbH3pbmURbS3x2N3T0Ys'
 ```
 
 - 回應參數說明
 
   [**V1MaintainOrderEntity**](#V1MaintainOrderEntity)
 
-- 回傳參數範例
 
 # **推播列表**
 
@@ -2195,9 +2323,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -2210,14 +2338,14 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request GET 'https://uatecapi.tungrp.com/v1/notifications?type=orders&limit=2000' \
+--header 'Authorization: Bearer GVB3UX8Tui2S2z8meOUoUmBApcnzfM1jLfnl8-KIlgs'
 ```
 
 - 回應參數說明
 
   [**Array&lt;V1NotificationEntity&gt;**](#V1NotificationEntity)
 
-- 回傳參數範例
 
 # **推播明細**
 
@@ -2234,9 +2362,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -2247,7 +2375,8 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request GET 'https://uatecapi.tungrp.com/v1/notifications/23' \
+--header 'Authorization: Bearer QHSQUCdZyYVJIftyRCZpIIZNbH3pbmURbS3x2N3T0Ys'
 ```
 
 - 回應參數說明
@@ -2276,9 +2405,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -3582,9 +3711,9 @@ curl 'https://uatecapi.tungrp.com/v1/orders/?offset=0&limit=2000&status=' \
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -5194,14 +5323,114 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request GET 'https://uatecapi.tungrp.com/v1/products/query_stock' \
+--header 'Authorization: Bearer vGtzatrc_jCKVX0SX5vYnvjB-9eKCwR69rN5MR6wVM4'
 ```
 
 - 回應參數說明
 
   [**V1VariantEntity**](#V1VariantEntity)
 
-- 回傳參數範例
+- 回應參數範例
+
+```json
+[
+  {
+    "uid": "KEN212-FB52BL1299CO.95.XS",
+    "id": 1311,
+    "price": 22800,
+    "member_price": 22800,
+    "promote_price": 22800,
+    "color": "#7A7974",
+    "colorDisplay": { "zh": "鸽子灰", "en": "DOVE GREY" },
+    "material": { "zh": "聚醯胺纖維 100%", "en": "POLYAMIDE 100%" },
+    "color_img": "",
+    "size": { "zh": "XS", "en": "XS" },
+    "images": [
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6938/FB52BL1299CO.95-1.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6941/FB52BL1299CO.95-2.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6944/FB52BL1299CO.95-3.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6947/FB52BL1299CO.95-4.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6950/FB52BL1299CO.95-5.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6953/FB52BL1299CO.95-6.jpg"
+    ],
+    "video": "",
+    "filter_br": { "zh": "", "en": "" },
+    "filter_metal": { "zh": "", "en": "" },
+    "filter_gem": { "zh": "", "en": "" },
+    "filter_size": { "zh": "XS", "en": "XS" },
+    "filter_cat": { "zh": "", "en": "" },
+    "filter_pattern": { "zh": "", "en": "" },
+    "filter_color": { "zh": "灰色", "en": "GREY" },
+    "filter_theme": { "zh": "", "en": "" },
+    "filter_series": { "zh": "KENZO Sport", "en": "KENZO Sport" },
+    "stock": 100
+  },
+  {
+    "uid": "KEN212-FB52BL1299CO.95.S",
+    "id": 1312,
+    "price": 22800,
+    "member_price": 22800,
+    "promote_price": 22800,
+    "color": "#7A7974",
+    "colorDisplay": { "zh": "鸽子灰", "en": "DOVE GREY" },
+    "material": { "zh": "聚醯胺纖維 100%", "en": "POLYAMIDE 100%" },
+    "color_img": "",
+    "size": { "zh": "S", "en": "S" },
+    "images": [
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6939/FB52BL1299CO.95-1.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6942/FB52BL1299CO.95-2.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6945/FB52BL1299CO.95-3.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6948/FB52BL1299CO.95-4.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6951/FB52BL1299CO.95-5.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6954/FB52BL1299CO.95-6.jpg"
+    ],
+    "video": "",
+    "filter_br": { "zh": "", "en": "" },
+    "filter_metal": { "zh": "", "en": "" },
+    "filter_gem": { "zh": "", "en": "" },
+    "filter_size": { "zh": "S", "en": "S" },
+    "filter_cat": { "zh": "", "en": "" },
+    "filter_pattern": { "zh": "", "en": "" },
+    "filter_color": { "zh": "灰色", "en": "GREY" },
+    "filter_theme": { "zh": "", "en": "" },
+    "filter_series": { "zh": "KENZO Sport", "en": "KENZO Sport" },
+    "stock": 99
+  },
+  {
+    "uid": "KEN212-FB52BL1299CO.95.M",
+    "id": 1313,
+    "price": 22800,
+    "member_price": 22800,
+    "promote_price": 22800,
+    "color": "#7A7974",
+    "colorDisplay": { "zh": "鸽子灰", "en": "DOVE GREY" },
+    "material": { "zh": "聚醯胺纖維 100%", "en": "POLYAMIDE 100%" },
+    "color_img": "",
+    "size": { "zh": "M", "en": "M" },
+    "images": [
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6940/FB52BL1299CO.95-1.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6943/FB52BL1299CO.95-2.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6946/FB52BL1299CO.95-3.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6949/FB52BL1299CO.95-4.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6952/FB52BL1299CO.95-5.jpg",
+      "https://storage.googleapis.com/uatecnas/variant_photo/photo/6955/FB52BL1299CO.95-6.jpg"
+    ],
+    "video": "",
+    "filter_br": { "zh": "", "en": "" },
+    "filter_metal": { "zh": "", "en": "" },
+    "filter_gem": { "zh": "", "en": "" },
+    "filter_size": { "zh": "M", "en": "M" },
+    "filter_cat": { "zh": "", "en": "" },
+    "filter_pattern": { "zh": "", "en": "" },
+    "filter_color": { "zh": "灰色", "en": "GREY" },
+    "filter_theme": { "zh": "", "en": "" },
+    "filter_series": { "zh": "KENZO Sport", "en": "KENZO Sport" },
+    "stock": 95
+  }
+]
+
+```
 
 # **退貨單明細**
 
@@ -5219,9 +5448,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -5232,14 +5461,14 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request GET 'https://uatecapi.tungrp.com/v1/return_orders/43' \
+--header 'Authorization: Bearer H8KQahv1cJ2X5kbfV8SX72oqMjJID1l0fMUUp8jjYs0' \
+--data-raw ''
 ```
 
 - 回應參數說明
 
   [**V1ReturnOrderEntity**](#V1ReturnOrderEntity)
-
-- 回傳參數範例
 
 # **跑馬燈**
 
@@ -5518,7 +5747,7 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/series/?brand_id=2
 ```
 
 - 回應參數說明
@@ -5526,6 +5755,131 @@ https://uatecapi.tungrp.com/v1/products/697
   [**Array&lt;V1SeriesEntity&gt;**](#V1SeriesEntity)
 
 - 回傳參數範例
+
+```json
+[
+  {
+    "image": {
+      "original": "https://storage.googleapis.com/uatecnas/series/image_original/15/AGT_系.jpg",
+      "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/15/AGT_系mobile.jpg"
+    },
+    "id": 15,
+    "brand_id": 2,
+    "category_id": 1,
+    "title": {
+      "zh": "agete 2022 Spring",
+      "en": "agete 2022 Spring"
+    },
+    "subtitle": {
+      "zh": "1800年的英國人們盛行將情感注入於珠寶首飾之中。 那仍是一個以手工為主的時代， 珠寶飾品比現今更加珍貴特別， 因此，人們所佩戴的寶石與圖案， 都緊密聯繫對某人的感情與心願。 任何一個年代對自己珍愛的事物都抱持著相同的情感。 溫故知新的同時，也傳遞出一份溫情的珠寶秘語。",
+      "en": "agete 2022 Spring"
+    }
+  },
+  {
+    "image": {
+      "original": "https://storage.googleapis.com/uatecnas/series/image_original/16/Ear.jpg",
+      "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/16/EAR_mobile.jpg"
+    },
+    "id": 16,
+    "brand_id": 2,
+    "category_id": 1,
+    "title": {
+      "zh": "Ear Dress",
+      "en": "Ear Dress"
+    },
+    "subtitle": {
+      "zh": "EAR DRESS 根據每天的穿搭或心情，發掘出各式各樣的搭配組合。 如同挑選衣服般，日日都能享受著輕珠寶穿搭的樂趣。 以這般思維來妝點耳畔， 誕生了EAR DRESS的概念。",
+      "en": "Ear Dress"
+    }
+  },
+  {
+    "image": {
+      "original": "https://storage.googleapis.com/uatecnas/series/image_original/17/NJS_21W_系.jpg",
+      "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/17/NJS_系mobile.jpg"
+    },
+    "id": 17,
+    "brand_id": 2,
+    "category_id": 1,
+    "title": {
+      "zh": "NOJESS",
+      "en": "NOJESS"
+    },
+    "subtitle": {
+      "zh": "盡情發想不設限。 將古董歷久不衰的魅力。 以巴黎式的精隨，啟發新的價值觀。  更貼近女子生活上的日常點滴，。 經典元素與俏皮感同存「洋溢著日常幸福的珠寶」。  dear tiny memorial",
+      "en": "NOJESS"
+    }
+  },
+  {
+    "image": {
+      "original": "https://storage.googleapis.com/uatecnas/series/image_original/18/大型banner-watch主題圖-大網.jpg",
+      "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/18/大型banner-watch主題圖-大網.jpg"
+    },
+    "id": 18,
+    "brand_id": 2,
+    "category_id": 1,
+    "title": {
+      "zh": "Watch",
+      "en": "test"
+    },
+    "subtitle": {
+      "zh": "Watch",
+      "en": "test"
+    }
+  },
+  {
+    "image": {
+      "original": "https://storage.googleapis.com/uatecnas/series/image_original/19/戒指.jpg",
+      "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/19/戒指_手機.jpg"
+    },
+    "id": 19,
+    "brand_id": 2,
+    "category_id": 1,
+    "title": {
+      "zh": "經典戒指&尾戒",
+      "en": "經典戒指&尾戒"
+    },
+    "subtitle": {
+      "zh": "經典戒指&尾戒",
+      "en": "經典戒指&尾戒"
+    }
+  },
+  {
+    "image": {
+      "original": "https://storage.googleapis.com/uatecnas/series/image_original/20/手鍊.jpg",
+      "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/20/手鍊_手機.jpg"
+    },
+    "id": 20,
+    "brand_id": 2,
+    "category_id": 1,
+    "title": {
+      "zh": "經典手鍊",
+      "en": "經典手鍊"
+    },
+    "subtitle": {
+      "zh": "經典手鍊",
+      "en": "經典手鍊"
+    }
+  },
+  {
+    "image": {
+      "original": "https://storage.googleapis.com/uatecnas/series/image_original/21/項鍊.jpg",
+      "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/21/項鍊_手機.jpg"
+    },
+    "id": 21,
+    "brand_id": 2,
+    "category_id": 1,
+    "title": {
+      "zh": "經典項鍊",
+      "en": "經典項鍊"
+    },
+    "subtitle": {
+      "zh": "經典項鍊",
+      "en": "經典項鍊"
+    }
+  }
+]
+
+```
 
 # **指定系列頁**
 
@@ -5559,6 +5913,130 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 回傳參數範例
 
+```json
+{
+  "image": {
+    "original": "https://storage.googleapis.com/uatecnas/series/image_original/15/AGT_系.jpg",
+    "mobile": "https://storage.googleapis.com/uatecnas/series/image_mobile/15/AGT_系mobile.jpg"
+  },
+  "id": 15,
+  "brand_id": 2,
+  "category_id": 1,
+  "title": {
+    "zh": "agete 2022 Spring",
+    "en": "agete 2022 Spring"
+  },
+  "subtitle": {
+    "zh": "1800年的英國人們盛行將情感注入於珠寶首飾之中。 那仍是一個以手工為主的時代， 珠寶飾品比現今更加珍貴特別， 因此，人們所佩戴的寶石與圖案， 都緊密聯繫對某人的感情與心願。 任何一個年代對自己珍愛的事物都抱持著相同的情感。 溫故知新的同時，也傳遞出一份溫情的珠寶秘語。",
+    "en": "agete 2022 Spring"
+  },
+  "series_sections": [
+    {
+      "image": {
+        "portrait": null,
+        "landscape": null
+      },
+      "id": 141,
+      "title": {
+        "zh": "agete 2022 Spring",
+        "en": ""
+      },
+      "subtitle": {
+        "zh": "",
+        "en": ""
+      },
+      "filters": [],
+      "products": []
+    },
+    {
+      "image": {
+        "portrait": null,
+        "landscape": null
+      },
+      "id": 142,
+      "title": {
+        "zh": "",
+        "en": ""
+      },
+      "subtitle": {
+        "zh": "",
+        "en": ""
+      },
+      "filters": [],
+      "products": []
+    },
+    {
+      "image": {
+        "portrait": null,
+        "landscape": null
+      },
+      "id": 143,
+      "title": {
+        "zh": "",
+        "en": ""
+      },
+      "subtitle": {
+        "zh": "",
+        "en": ""
+      },
+      "filters": [],
+      "products": []
+    },
+    {
+      "image": {
+        "portrait": null,
+        "landscape": null
+      },
+      "id": 144,
+      "title": {
+        "zh": "",
+        "en": ""
+      },
+      "subtitle": {
+        "zh": "",
+        "en": ""
+      },
+      "filters": [],
+      "products": []
+    },
+    {
+      "image": {
+        "portrait": null,
+        "landscape": null
+      },
+      "id": 145,
+      "title": {
+        "zh": "",
+        "en": ""
+      },
+      "subtitle": {
+        "zh": "",
+        "en": ""
+      },
+      "filters": [],
+      "products": []
+    },
+    {
+      "image": {
+        "portrait": null,
+        "landscape": null
+      },
+      "id": 146,
+      "title": {
+        "zh": "",
+        "en": ""
+      },
+      "subtitle": {
+        "zh": "",
+        "en": ""
+      },
+      "filters": [],
+      "products": []
+    }
+  ]
+}
+
+```
 
 # **店舖列表**
 
@@ -5689,7 +6167,7 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/sub_collections?brand_id=2
 ```
 
 - 回應參數說明
@@ -5697,6 +6175,187 @@ https://uatecapi.tungrp.com/v1/products/697
   [**Array&lt;V1SubCollectionEntity&gt;**](#V1SubCollectionEntity)
 
 - 回傳參數範例
+
+```json
+[
+  {
+    "id": 47,
+    "title": {
+      "zh": "包款",
+      "en": "BAGS"
+    }
+  },
+  {
+    "id": 48,
+    "title": {
+      "zh": "POLO",
+      "en": "POLO"
+    }
+  },
+  {
+    "id": 49,
+    "title": {
+      "zh": "針織衫",
+      "en": "SWEATER"
+    }
+  },
+  {
+    "id": 50,
+    "title": {
+      "zh": "短洋裝",
+      "en": "SHORT DRESSES"
+    }
+  },
+  {
+    "id": 51,
+    "title": {
+      "zh": "衛衣",
+      "en": "SWEATSHIRT"
+    }
+  },
+  {
+    "id": 52,
+    "title": {
+      "zh": "洋裝",
+      "en": "DRESSES"
+    }
+  },
+  {
+    "id": 53,
+    "title": {
+      "zh": "夾克",
+      "en": "JACKETS"
+    }
+  },
+  {
+    "id": 54,
+    "title": {
+      "zh": "裙款",
+      "en": "SKIRTS"
+    }
+  },
+  {
+    "id": 55,
+    "title": {
+      "zh": "襯衫",
+      "en": "SHIRTS"
+    }
+  },
+  {
+    "id": 56,
+    "title": {
+      "zh": "鞋履",
+      "en": "SHOES"
+    }
+  },
+  {
+    "id": 57,
+    "title": {
+      "zh": "長褲",
+      "en": "PANTS"
+    }
+  },
+  {
+    "id": 58,
+    "title": {
+      "zh": "短褲",
+      "en": "SHORTS"
+    }
+  },
+  {
+    "id": 59,
+    "title": {
+      "zh": "連帽衛衣",
+      "en": "HOODIE"
+    }
+  },
+  {
+    "id": 60,
+    "title": {
+      "zh": "T恤",
+      "en": "T-SHIRTS"
+    }
+  },
+  {
+    "id": 61,
+    "title": {
+      "zh": "T恤",
+      "en": "T-SHIRTS"
+    }
+  },
+  {
+    "id": 62,
+    "title": {
+      "zh": "短褲",
+      "en": "SHORTS"
+    }
+  },
+  {
+    "id": 63,
+    "title": {
+      "zh": "連帽衛衣",
+      "en": "HOODIE"
+    }
+  },
+  {
+    "id": 64,
+    "title": {
+      "zh": "外套",
+      "en": "COATS"
+    }
+  },
+  {
+    "id": 65,
+    "title": {
+      "zh": "上衣",
+      "en": "TOPS"
+    }
+  },
+  {
+    "id": 66,
+    "title": {
+      "zh": "包款",
+      "en": "BAGS"
+    }
+  },
+  {
+    "id": 67,
+    "title": {
+      "zh": "衛衣",
+      "en": "SWEATSHIRT"
+    }
+  },
+  {
+    "id": 68,
+    "title": {
+      "zh": "針織背心",
+      "en": "VEST"
+    }
+  },
+  {
+    "id": 69,
+    "title": {
+      "zh": "衛衣",
+      "en": "SWEATSHIRTS"
+    }
+  },
+  {
+    "id": 70,
+    "title": {
+      "zh": "衛衣",
+      "en": "SWEATSHIRTS"
+    }
+  },
+  {
+    "id": 71,
+    "title": {
+      "zh": "短褲",
+      "en": "SHORTS"
+    }
+  }
+]
+
+```
 
 # **小類明細**
 
@@ -5721,7 +6380,7 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+https://uatecapi.tungrp.com/v1/sub_collections/47
 ```
 
 - 回應參數說明
@@ -5729,6 +6388,16 @@ https://uatecapi.tungrp.com/v1/products/697
   [**V1SubCollectionEntity**](#V1SubCollectionEntity)
 
 - 回傳參數範例
+
+```json
+{
+  "id": 47,
+  "title": {
+    "zh": "包款",
+    "en": "BAGS"
+  }
+}
+```
 
 # **特定子訂單**
 
@@ -5747,9 +6416,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -5760,7 +6429,23 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/sub_orders/37/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer A5Ne7wZk72ta5E2kaSJ4SecLft5ArJwlbmG1khW0fjQ' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'if-none-match: W/"9870e13038a7f3408c24070c8538c302"' \
+  --compressed
 ```
 
 - 回應參數說明
@@ -5768,6 +6453,96 @@ https://uatecapi.tungrp.com/v1/products/697
   [**V1ReturnOrderEntity**](#V1ReturnOrderEntity)
 
 - 回傳參數範例
+
+```json
+{
+  "status": "done",
+  "shipping_status": "received",
+  "receiver_name": "陳漢庭",
+  "receiver_phone": "0983168969",
+  "zip": "",
+  "city": "臺中市",
+  "district": "東區",
+  "address": "新北市新莊區幸福路716號2樓",
+  "shipping_type": "home",
+  "brand_name": "Self Portrait",
+  "store_name": {
+    "zh": "Self Portrait 復興SOGO",
+    "en": "Self Portrait 復興SOGO"
+  },
+  "order_items": [
+    {
+      "quantity": 1,
+      "price": 5,
+      "variant": {
+        "uid": "SPT-1403AW21-131.B10.04",
+        "id": 1026,
+        "price": 5,
+        "member_price": 5,
+        "promote_price": 5,
+        "color": "#dce5d5",
+        "colorDisplay": { "zh": "薄荷綠", "en": " PASTEL JADE" },
+        "material": { "zh": "聚脂纖維 100%", "en": "POLYESTER 100%" },
+        "color_img": "",
+        "size": { "zh": "04", "en": "04" },
+        "images": [
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6418/SPT-1403AW21-131-1.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6422/SPT-1403AW21-131-2.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6426/SPT-1403AW21-131-3.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6430/SPT-1403AW21-131-4.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6434/SPT-1403AW21-131-5.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6438/SPT-1403AW21-131-6.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6442/SPT-1403AW21-131-7.jpg"
+        ],
+        "video": "",
+        "filter_br": { "zh": "", "en": "" },
+        "filter_metal": { "zh": "", "en": "" },
+        "filter_gem": { "zh": "", "en": "" },
+        "filter_size": { "zh": "04", "en": "04" },
+        "filter_cat": { "zh": "", "en": "" },
+        "filter_pattern": { "zh": "", "en": "" },
+        "filter_color": { "zh": "藍色", "en": "BLUE" },
+        "filter_theme": { "zh": "", "en": "" },
+        "filter_series": { "zh": "", "en": "" },
+        "product": {
+          "brand_id": 5,
+          "title": {
+            "zh": "冰綠色雪紡細褶短洋裝",
+            "en": "Pastel Jade Chiffon Mini Dress"
+          },
+          "id": 613,
+          "category": {
+            "id": 6,
+            "title": { "zh": "女款", "en": "WOMEN'S WEAR" }
+          },
+          "collection": { "id": 30, "title": { "zh": "洋裝", "en": "DRESS" } },
+          "sub_collection": {
+            "id": 43,
+            "title": { "zh": "短洋裝", "en": "MINI DRESS" }
+          },
+          "info_detail": {
+            "zh": "冰綠色雪紡細褶短洋裝，領口以同色系刺繡領片與綁帶裝飾，裙襬拼接細緻蕾絲。\n版型正常。\n建議乾洗。",
+            "en": ""
+          },
+          "size_img": {
+            "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/18/size.jpg",
+            "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/19/size_zh.jpg"
+          },
+          "series": [],
+          "promotion": null,
+          "member_price": 5,
+          "promote_price": 5,
+          "price": 5,
+          "specified_variant_id": null,
+          "published": true
+        }
+      }
+    }
+  ],
+  "return_order_id": null
+}
+
+```
 
 # **當前滿額贈**
 
@@ -5786,9 +6561,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -5799,7 +6574,22 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/target_price_discounts/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'if-none-match: W/"419718c0bc9eaf1b231eb66fdc59ecd7"' \
+  --compressed
 ```
 
 - 回應參數說明
@@ -5807,6 +6597,16 @@ https://uatecapi.tungrp.com/v1/products/697
   [**Array&lt;V1TargetPriceDiscountEntity&gt;**](#V1TargetPriceDiscountEntity)
 
 - 回傳參數範例
+
+```json
+[
+  {
+    "threshold": 1000,
+    "discount": 100,
+    "title": { "zh": "全館滿額", "en": "goons test" }
+  }
+]
+```
 
 # **置頂 Banner**
 
@@ -5825,9 +6625,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -5847,6 +6647,20 @@ https://uatecapi.tungrp.com/v1/products/697
 
 - 回傳參數範例
 
+```json
+{
+  "image": {
+    "original": "https://storage.googleapis.com/uatecnas/top_banner/image_original/3/1584688836741.jpeg",
+    "mobile": "https://storage.googleapis.com/uatecnas/top_banner/image_mobile/3/1584688836741.jpeg"
+  },
+  "link_to": {
+    "value": 630,
+    "type": "products"
+  }
+}
+
+```
+
 # **加入購物車**
 
 - 應用場景
@@ -5864,9 +6678,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -5881,7 +6695,10 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/carts/' \
+  -H 'authorization: Bearer eveEKCSh7whewREeXEDlGavlJXrox2RLcXVkB4eHGK0' \
+  --data-raw '{"items":[{"variant_id":1311,"quantity":1},{"variant_id":1317,"quantity":1}],"token":null,"use_birth_gift":0,"use_rebate_points":0}' \
+  --compressed
 ```
 
 - 回應參數說明
@@ -5889,6 +6706,156 @@ https://uatecapi.tungrp.com/v1/products/697
   [**V1CartEntity**](#V1CartEntity)
 
 - 回傳參數範例
+
+```json
+{
+  "subtotal": 69600,
+  "items": [
+    {
+      "variant": {
+        "uid": "KEN212-FB52BL1299CO.95.XS",
+        "id": 1311,
+        "price": 22800,
+        "member_price": 22800,
+        "promote_price": 22800,
+        "color": "#7A7974",
+        "colorDisplay": { "zh": "鸽子灰", "en": "DOVE GREY" },
+        "material": { "zh": "聚醯胺纖維 100%", "en": "POLYAMIDE 100%" },
+        "color_img": "",
+        "size": { "zh": "XS", "en": "XS" },
+        "images": [
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6938/FB52BL1299CO.95-1.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6941/FB52BL1299CO.95-2.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6944/FB52BL1299CO.95-3.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6947/FB52BL1299CO.95-4.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6950/FB52BL1299CO.95-5.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6953/FB52BL1299CO.95-6.jpg"
+        ],
+        "video": "",
+        "filter_br": { "zh": "", "en": "" },
+        "filter_metal": { "zh": "", "en": "" },
+        "filter_gem": { "zh": "", "en": "" },
+        "filter_size": { "zh": "XS", "en": "XS" },
+        "filter_cat": { "zh": "", "en": "" },
+        "filter_pattern": { "zh": "", "en": "" },
+        "filter_color": { "zh": "灰色", "en": "GREY" },
+        "filter_theme": { "zh": "", "en": "" },
+        "filter_series": { "zh": "KENZO Sport", "en": "KENZO Sport" },
+        "product": {
+          "brand_id": 1,
+          "title": {
+            "zh": "SPORTX水洗尼龍卡其灰拼接風衣外套",
+            "en": "KENZO Sport wind stopper"
+          },
+          "id": 697,
+          "category": { "id": 7, "title": { "zh": "女裝", "en": "WOMEN" } },
+          "collection": {
+            "id": 37,
+            "title": { "zh": "外套 \u0026 夾克", "en": "COATS \u0026 JACKETS" }
+          },
+          "sub_collection": {
+            "id": 53,
+            "title": { "zh": "夾克", "en": "JACKETS" }
+          },
+          "info_detail": {
+            "zh": "KENZO SPORT 風衣外套，拉鍊式設計，附有單側口袋，能層拼接網眼布料，增添透氣性，同時面料具有輕微防風、防潑水功能，兼具機能與休閒感的運動單品。",
+            "en": "Opt for this KENZO Sport wind stopper to add a sportswear touch to your outfit. Adjust it to fit thanks to the on-trend and practical pull cord and stoppers.\n\nKENZO Sport wind stopper.\nLong elasticated sleeves.\nSlightly raised neckline.\nContrasting K-shaped inserts.\n'Little X' printed on back.\nMesh panel at back.\nPull cords and stoppers at waist.\n2 side pockets with zips.\nFastens at the front with zip and press studs."
+          },
+          "size_img": {
+            "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/28/f_size.jpg",
+            "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/29/f_size_zh.jpg"
+          },
+          "series": [],
+          "promotion": null,
+          "member_price": 22800,
+          "promote_price": 22800,
+          "price": 22800,
+          "specified_variant_id": null,
+          "published": true
+        },
+        "stock": 100
+      },
+      "quantity": 1
+    },
+    {
+      "variant": {
+        "uid": "KEN212-FB52BL1279PB.49.38",
+        "id": 1317,
+        "price": 46800,
+        "member_price": 46800,
+        "promote_price": 46800,
+        "color": "#a19579",
+        "colorDisplay": { "zh": "墨綠卡其", "en": "KAKI MOLESKIN" },
+        "material": { "zh": "棉 100%", "en": "COTTON 100%" },
+        "color_img": "",
+        "size": { "zh": "38", "en": "38" },
+        "images": [
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6924/FB52BL1279PB.49-1.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6926/FB52BL1279PB.49-2.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6928/FB52BL1279PB.49-3.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6930/FB52BL1279PB.49-4.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6932/FB52BL1279PB.49-5.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6934/FB52BL1279PB.49-6.jpg",
+          "https://storage.googleapis.com/uatecnas/variant_photo/photo/6936/FB52BL1279PB.49-7.jpg"
+        ],
+        "video": "",
+        "filter_br": { "zh": "", "en": "" },
+        "filter_metal": { "zh": "", "en": "" },
+        "filter_gem": { "zh": "", "en": "" },
+        "filter_size": { "zh": "M", "en": "M" },
+        "filter_cat": { "zh": "", "en": "" },
+        "filter_pattern": { "zh": "", "en": "" },
+        "filter_color": { "zh": "卡其色", "en": "KHAKI" },
+        "filter_theme": { "zh": "", "en": "" },
+        "filter_series": { "zh": "SS21", "en": "SS21" },
+        "product": {
+          "brand_id": 1,
+          "title": {
+            "zh": "荒地迷蹤軍綠色布勞森外套",
+            "en": "Printed blouson"
+          },
+          "id": 699,
+          "category": { "id": 7, "title": { "zh": "女裝", "en": "WOMEN" } },
+          "collection": {
+            "id": 37,
+            "title": { "zh": "外套 \u0026 夾克", "en": "COATS \u0026 JACKETS" }
+          },
+          "sub_collection": {
+            "id": 53,
+            "title": { "zh": "夾克", "en": "JACKETS" }
+          },
+          "info_detail": {
+            "zh": "立領挺版布勞森外套，拉鍊式設計，為純棉布料透氣舒適，造型結合工裝元素，以金屬釦及口袋呈現俐落帥氣感。承襲KENZO叢林風格，運用大地色系結合豹紋印花，展現獨特不失個性的穿搭。",
+            "en": "The original and inspired blouson is the perfect choice to complete a casual look with cargo trousers and a jumper.\n\nLong-sleeved blouson.\nRaised neckline.\nAll-over 'Cheetah' print.\n2  flap pockets at front.\nEmbroidered K.\nFastens with snap buttons and a hidden zip."
+          },
+          "size_img": {
+            "en": "https://storage.googleapis.com/uatecnas/size_photo/photo/28/f_size.jpg",
+            "zh": "https://storage.googleapis.com/uatecnas/size_photo/photo/29/f_size_zh.jpg"
+          },
+          "series": [],
+          "promotion": null,
+          "member_price": 46800,
+          "promote_price": 46800,
+          "price": 46800,
+          "specified_variant_id": null,
+          "published": true
+        },
+        "stock": 96
+      },
+      "quantity": 1
+    }
+  ],
+  "token": "xZX532qGLS22qySU9nHbrhG8",
+  "price_detail": {
+    "target_price_discount_title": { "zh": "全館滿額", "en": "goons test" },
+    "target_price_discount_value": 6900,
+    "rebate": 0,
+    "birth_gift": 0,
+    "price": 62700,
+    "subtotal": 69600
+  }
+}
+```
 
 # **加入最愛**
 
@@ -5907,9 +6874,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -5920,7 +6887,9 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/carts/add_favorites/' \
+  -H 'authorization: Bearer eveEKCSh7whewREeXEDlGavlJXrox2RLcXVkB4eHGK0' \
+  --data-raw '{"variant_id":1}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -5942,9 +6911,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -5964,7 +6933,23 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --data-raw '{"receiver_name":"QWER","receiver_phone":"0911111111","city":"高雄市","district":"左營區","detail":"XX路71X號X樓","address_type":"home","default":true}' \
+  --compressed
 ```
 
 - 回應參數說明
@@ -5972,6 +6957,54 @@ https://uatecapi.tungrp.com/v1/products/697
   [**V1AddressFormEntity**](#V1AddressFormEntity)
 
 - 回傳參數範例
+
+```json
+[
+  {
+    "id": 32,
+    "receiver_name": "曾奕慈",
+    "receiver_phone": "0900790399",
+    "zip": "",
+    "city": "臺北市",
+    "district": "松山區",
+    "detail": "南京東路四段186號7樓之三",
+    "store_id": "",
+    "store_name": "",
+    "store_type": "",
+    "address_type": "home",
+    "default": false
+  },
+  {
+    "id": 36,
+    "receiver_name": "QWER",
+    "receiver_phone": "0911111111",
+    "zip": "",
+    "city": "高雄市",
+    "district": "左營區",
+    "detail": "XX路71X號X樓",
+    "store_id": "",
+    "store_name": "",
+    "store_type": "",
+    "address_type": "home",
+    "default": false
+  },
+  {
+    "id": 37,
+    "receiver_name": "陳漢庭",
+    "receiver_phone": "0911111111",
+    "zip": "",
+    "city": "臺中市",
+    "district": "東區",
+    "detail": "新北市新莊區111路716號2樓",
+    "store_id": "",
+    "store_name": "",
+    "store_type": "",
+    "address_type": "home",
+    "default": true
+  }
+]
+
+```
 
 # **創建顧客**
 
@@ -5989,9 +7022,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6009,7 +7042,15 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/customers' \
+--form 'name="陳漢庭"' \
+--form 'email="k445566778899k@gmail.com"' \
+--form 'password="1234qwer"' \
+--form 'phone="0934343437"' \
+--form 'birthdate="19940505"' \
+--form 'sex="M"' \
+--form 'locale="zh_tw"' \
+--form 'source="app"'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6031,9 +7072,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6044,7 +7085,9 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/customers/credit_cards' \
+--header 'Authorization: Bearer vGtzatrc_jCKVX0SX5vYnvjB-9eKCwR69rN5MR6wVM4' \
+--form 'client_back_url="https://tungrp.netlify.app/profile?active=card_management"'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6066,9 +7109,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6079,7 +7122,23 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/credit_cards/set_primary/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --data-raw '{"card_id":36}' \
+  --compressed
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6100,9 +7159,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6114,7 +7173,8 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/otp/' \
+  --data-raw '{"phone":"0983168969", "otp": "123456"}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6136,9 +7196,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6149,7 +7209,22 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/otp/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --data-raw '{"phone":"0983168969"}' \
+  --compressed
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6171,9 +7246,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6182,12 +7257,6 @@ Parameters
 | **received**          | **BOOLEAN** |      |      |
 | **receive_type**      | **String**  |      |      |
 | **notification_type** | **String**  |      | 選填 |
-
-- 請求參數範例
-
-```shell
-https://uatecapi.tungrp.com/v1/products/697
-```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
 
@@ -6208,9 +7277,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6223,10 +7292,35 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/reset_password/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --data-raw '{"phone":"0983168969","otp":"903784","new_password":"as789123456"}' \
+  --compressed
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
+
+- 回應範例
+
+更改成功
+
+````json
+{
+  "success": true
+}
+````
 
 # **會員設定預設店**
 
@@ -6245,9 +7339,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6259,11 +7353,24 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/set_default_store/' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer AKGROVgZYcwE1WOml8y6Lju7bg7xFCeOKT-ClFdZ5E0' \
+  --data-raw '{"brand_id":1,"store_id":24}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
 
+- 回應範例
+
+更改成功
+
+````json
+{
+  "success": true
+}
+````
 # **取得 sso 憑證**
 
 - 應用場景
@@ -6280,9 +7387,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6294,7 +7401,8 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/otp/' \
+  --data-raw '{"provider":"GOOGLE", "token": "qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60"}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6316,9 +7424,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6330,7 +7438,10 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/sso_bind/' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer AKGROVgZYcwE1WOml8y6Lju7bg7xFCeOKT-ClFdZ5E0'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6352,9 +7463,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6365,7 +7476,10 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/sso_unbind/' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer AKGROVgZYcwE1WOml8y6Lju7bg7xFCeOKT-ClFdZ5E0'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6387,15 +7501,15 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
 - 請求參數範例
 
-```
+```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/sync_pos/' \
   -X 'POST' \
   -H 'authority: uatecapi.tungrp.com' \
@@ -6435,9 +7549,9 @@ curl 'https://uatecapi.tungrp.com/v1/customers/sync_pos/' \
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6454,7 +7568,23 @@ Parameters
 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/update/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer cOe-IrBbmqSKkyINwqx1H7YRaUEw6MqEVbLuNkTXYuQ' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --data-raw '{"email":"souekisen@gmail.com","sex":"M","name":"Gigi","phone":"0936654691"}' \
+  --compressed
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6476,9 +7606,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6512,9 +7642,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6526,10 +7656,55 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/validate_otp/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --data-raw '{"phone":"0983168969","otp":"900150"}' \
+  --compressed
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
+
+- 回應範例
+
+驗證碼輸入成功
+
+```json
+{
+  "success": true,
+  "customer": {
+    "name": "ChenHanTing",
+    "email": "k445566778899k@gmail.com",
+    "sex": "",
+    "birthday": "2022/01/20"
+  }
+}
+```
+
+驗證碼輸入失敗
+
+```json
+{
+  "success": false,
+  "customer": {
+    "name": "ChenHanTing",
+    "email": "k445566778899k@gmail.com",
+    "sex": "",
+    "birthday": "2022/01/20"
+  }
+}
+```
 
 # **驗證密碼**
 
@@ -6548,9 +7723,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6561,7 +7736,23 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl 'https://uatecapi.tungrp.com/v1/customers/validate_password/' \
+  -H 'authority: uatecapi.tungrp.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer cOe-IrBbmqSKkyINwqx1H7YRaUEw6MqEVbLuNkTXYuQ' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'origin: https://uatecweb.tungrp.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uatecweb.tungrp.com/' \
+  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --data-raw '{"password":"qwer1234"}' \
+  --compressed
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6583,9 +7774,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6602,7 +7793,17 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/maintain_orders' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "receiver_name": "陳漢庭",
+    "receiver_phone": "0983168969",
+    "brand_id": 1,
+    "store_id": 1,
+    "product_no": "AB123456",
+    "item": "測試項目",
+    "services": ["a", "b"]
+}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6624,9 +7825,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6637,7 +7838,11 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/maintain_orders/1/cancel' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "action": "agree"
+}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6659,9 +7864,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6673,7 +7878,11 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/maintain_orders/1/quotation' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "action": "agree"
+}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6694,9 +7903,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameter
 
@@ -6708,7 +7917,13 @@ Parameter
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/notification/bind' \
+--header 'Authorization: Bearer QHSQUCdZyYVJIftyRCZpIIZNbH3pbmURbS3x2N3T0Ys' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "device_token": "fL0PNXT5RHKD1ght0I2onS:APA91bGEj7696Fv-lkeeI1QaRPwpBIjwpJHQYxFO0gxJVTEejH_f-0tVE-WSDHXoBY_bbmYWWlpCSlMEHmIfQlKROikX_scRVv5r5_fD4ZDipJgptRYK5bU5Vn_dKmHeTenVRJB81wk0",
+    "device_type": "android"
+}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6730,9 +7945,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6743,7 +7958,12 @@ Parameters
 - 請求參數範例
 
 ```shell
-https://uatecapi.tungrp.com/v1/products/697
+curl --location --request POST 'https://uatecapi.tungrp.com/v1/notification/unbind' \
+--header 'Authorization: Bearer fMDV2TQNbzj8Z5GYT81YvxZNFA6-zYE8qBA3lfbScdM' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "device_token": "50b9df32649e91cba1b1c8d635e6ca97190113cc5712ded4226024157ca68451"
+}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -6766,9 +7986,9 @@ https://uatecapi.tungrp.com/v1/products/697
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6806,9 +8026,9 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/notifications/rea
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6846,9 +8066,9 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/notifications/rea
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6916,9 +8136,9 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/orders' \
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -6954,9 +8174,9 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/orders/2103161028
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -13397,9 +14617,9 @@ curl 'https://uatecapi.tungrp.com/v1/products/' \
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -13449,9 +14669,9 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/return_orders/70'
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
@@ -13469,7 +14689,7 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/return_orders/pre
 --header 'Content-Type: application/json' \
 --data-raw '{
     "items": [
-        {"variant_id": 38, "quantity": 0 }
+        {"variant_id": 38, "quantity": 1 }
     ]
 }'
 ```
@@ -13510,9 +14730,9 @@ curl --location --request POST 'https://uatecapi.tungrp.com/v1/return_orders/pre
 
 Header
 
-| Key           | Value        | 範例                                        | 說明     |
-|---------------|--------------|---------------------------------------------|--------|
-| Authorization | Bearer Token | qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
+| 參數          | 值           | 範例                                               | 說明     |
+|---------------|--------------|----------------------------------------------------|--------|
+| Authorization | Bearer Token | Bearer qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60 | 登入權杖 |
 
 Parameters
 
