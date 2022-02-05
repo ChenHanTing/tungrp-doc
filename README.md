@@ -342,24 +342,12 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 curl 'https://uatecapi.tungrp.com/v1/carts/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer C-kZPjOPmgILZqfV5t4-u3VB1qkrbs3EqDG5wp8v0Xo' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"items":[{"variant_id":1335,"quantity":1}],"token":null,"use_birth_gift":0,"use_rebate_points":0}' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  --data-raw '{"items":[{"variant_id":1335,"quantity":1}],"token":null,"use_birth_gift":0,"use_rebate_points":0}'
 ```
 
 - 回應參數說明
@@ -1347,21 +1335,9 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應參數說明
@@ -1436,21 +1412,9 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customer/addresses/32' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應參數說明
@@ -1502,7 +1466,7 @@ Header
 curl 'https://uatecapi.tungrp.com/v1/customers/credit_cards/' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M'
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應範例
@@ -1579,7 +1543,7 @@ Header
 curl 'https://uatecapi.tungrp.com/v1/customers/me/' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -1633,22 +1597,9 @@ Header
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/pos_order_histories/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  -H 'if-none-match: W/"58696874aeb44a164188371717cb1ee7"' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應範例
@@ -1692,7 +1643,9 @@ Header
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/pos_order_histories' \
-  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應範例
@@ -1723,22 +1676,9 @@ Header
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/store/?brand_id=1' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer eveEKCSh7whewREeXEDlGavlJXrox2RLcXVkB4eHGK0' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  -H 'if-none-match: W/"b136348f87617e0e7207f83d4789dc1b"' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應參數說明
@@ -1804,7 +1744,9 @@ Header
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/vip_barcode' \
-  -H 'authorization: Bearer eveEKCSh7whewREeXEDlGavlJXrox2RLcXVkB4eHGK0'
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應範例
@@ -2421,7 +2363,9 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/orders/?offset=0&limit=2000&status=' \
-  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應參數說明
@@ -3725,7 +3669,9 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/orders/ECEC019920220100000004/' \
-  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M'
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應參數說明
@@ -6430,22 +6376,9 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/sub_orders/37/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer A5Ne7wZk72ta5E2kaSJ4SecLft5ArJwlbmG1khW0fjQ' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  -H 'if-none-match: W/"9870e13038a7f3408c24070c8538c302"' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 回應參數說明
@@ -6574,22 +6507,7 @@ Parameters
 - 請求參數範例
 
 ```shell
-curl 'https://uatecapi.tungrp.com/v1/target_price_discounts/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
-  -H 'accept: application/json' \
-  -H 'content-type: application/json' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  -H 'if-none-match: W/"419718c0bc9eaf1b231eb66fdc59ecd7"' \
-  --compressed
+curl 'https://uatecapi.tungrp.com/v1/target_price_discounts/'
 ```
 
 - 回應參數說明
@@ -6696,9 +6614,11 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/carts/' \
-  -H 'authorization: Bearer eveEKCSh7whewREeXEDlGavlJXrox2RLcXVkB4eHGK0' \
-  --data-raw '{"items":[{"variant_id":1311,"quantity":1},{"variant_id":1317,"quantity":1}],"token":null,"use_birth_gift":0,"use_rebate_points":0}' \
-  --compressed
+  -X 'POST' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  --data-raw '{"items":[{"variant_id":1311,"quantity":1},{"variant_id":1317,"quantity":1}],"token":null,"use_birth_gift":0,"use_rebate_points":0}'
 ```
 
 - 回應參數說明
@@ -6934,22 +6854,8 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
-  -H 'accept: application/json' \
-  -H 'content-type: application/json' \
   -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"receiver_name":"QWER","receiver_phone":"0911111111","city":"高雄市","district":"左營區","detail":"XX路71X號X樓","address_type":"home","default":true}' \
-  --compressed
+  --data-raw '{"receiver_name":"QWER","receiver_phone":"0911111111","city":"高雄市","district":"左營區","detail":"XX路71X號X樓","address_type":"home","default":true}'
 ```
 
 - 回應參數說明
@@ -7123,22 +7029,8 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/credit_cards/set_primary/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
-  -H 'accept: application/json' \
-  -H 'content-type: application/json' \
-  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"card_id":36}' \
-  --compressed
+  -H 'authorization: Bearer F4d-KwwGk9WXQ-MmuU5dExV7VTvVkvfx6nlBQlMuT2M'
+  --data-raw '{"card_id":36}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -7174,6 +7066,9 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/otp/' \
+  -X 'POST' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
   --data-raw '{"phone":"0911111111", "otp": "123456"}'
 ```
 
@@ -7210,21 +7105,10 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/otp/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"phone":"0911111111"}' \
-  --compressed
+  --data-raw '{"phone":"0911111111"}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -7293,21 +7177,10 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/reset_password/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"phone":"0911111111","otp":"903784","new_password":"as789123456"}' \
-  --compressed
+  --data-raw '{"phone":"0911111111","otp":"903784","new_password":"as789123456"}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -7354,9 +7227,10 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/set_default_store/' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer AKGROVgZYcwE1WOml8y6Lju7bg7xFCeOKT-ClFdZ5E0' \
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
   --data-raw '{"brand_id":1,"store_id":24}'
 ```
 
@@ -7402,6 +7276,9 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/otp/' \
+  -X 'POST' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
   --data-raw '{"provider":"GOOGLE", "token": "qqNX4luI35GnRFM8SILhSA0Z7I2-oko0iPAWEDpIZ60"}'
 ```
 
@@ -7439,9 +7316,10 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/sso_bind/' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer AKGROVgZYcwE1WOml8y6Lju7bg7xFCeOKT-ClFdZ5E0'
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -7477,9 +7355,10 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/sso_unbind/' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer AKGROVgZYcwE1WOml8y6Lju7bg7xFCeOKT-ClFdZ5E0'
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' 
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -7512,22 +7391,9 @@ Parameters
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/sync_pos/' \
   -X 'POST' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'content-length: 0' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -7569,22 +7435,11 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/update/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer cOe-IrBbmqSKkyINwqx1H7YRaUEw6MqEVbLuNkTXYuQ' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"email":"souekisen@gmail.com","sex":"M","name":"Gigi","phone":"0936654691"}' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  --data-raw '{"email":"souekisen@gmail.com","sex":"M","name":"Gigi","phone":"0936654691"}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -7657,21 +7512,11 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/validate_otp/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"phone":"0911111111","otp":"900150"}' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  --data-raw '{"phone":"0911111111","otp":"900150"}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -7737,22 +7582,11 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customers/validate_password/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer cOe-IrBbmqSKkyINwqx1H7YRaUEw6MqEVbLuNkTXYuQ' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"password":"qwer1234"}' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  --data-raw '{"password":"qwer1234"}'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
@@ -8238,24 +8072,13 @@ Parameters
 
 - 請求參數範例
 
-```
+```shell
 curl 'https://uatecapi.tungrp.com/v1/products/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer RK2doyNyI3rel1gMbD2Dq7UC5nHwlJZS8MkYoCyvjTU' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"brand_id":2,"offset":0,"limit":48,"collection_ids":[],"sort_by":"-created","search":{"filter_br":["nojess"],"filter_metal":["K10"],"filter_gem":["拉長石"],"filter_size":[],"filter_color":[]},"series_id":"16"}' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  --data-raw '{"brand_id":2,"offset":0,"limit":48,"collection_ids":[],"sort_by":"-created","search":{"filter_br":["nojess"],"filter_metal":["K10"],"filter_gem":["拉長石"],"filter_size":[],"filter_color":[]},"series_id":"16"}'
 ```
 
 - 回傳參數範例
@@ -14753,22 +14576,11 @@ Parameters
 
 ```shell
 curl 'https://uatecapi.tungrp.com/v1/customer/addresses/' \
-  -H 'authority: uatecapi.tungrp.com' \
-  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer RK2doyNyI3rel1gMbD2Dq7UC5nHwlJZS8MkYoCyvjTU' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'origin: https://uatecweb.tungrp.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://uatecweb.tungrp.com/' \
-  -H 'accept-language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"receiver_name":"陳一二","receiver_phone":"0911111111","city":"臺中市","district":"東區","detail":"澎湖縣南區思源路三段2號10樓","address_type":"home","default":true}' \
-  --compressed
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' \
+  --data-raw '{"receiver_name":"陳一二","receiver_phone":"0911111111","city":"臺中市","district":"東區","detail":"澎湖縣南區思源路三段2號10樓","address_type":"home","default":true}'
 ```
 
 - 回應參數說明
