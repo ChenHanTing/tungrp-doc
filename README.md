@@ -1,4 +1,16 @@
-# Api & Api 列表
+# 惇聚API說明文件
+
+文件日期：2022年02月09日
+
+版　　次：0.0
+
+# 文件勘誤與修訂記錄
+
+| 版本日期   | 版次 | 修訂摘要 | 修改人員 |
+| ---------- | ---- | -------- | -------- |
+| 2022.02.09 | 0.0  | 建立文件 | Han      |
+
+# Api 列表
 
 | Method                                                | HTTP request                                    | 說明                                  | 登入狀態 |
 |-------------------------------------------------------|-------------------------------------------------|---------------------------------------|----------|
@@ -22,7 +34,7 @@
 | [**會員點數紀錄**](#會員點數紀錄)                     | **GET** /v1/customers/point_history             |                                       | Y        |
 | [**會員訂單記錄**](#會員訂單記錄)                     | **GET** /v1/customers/pos_order_histories       |                                       | Y        |
 | [**會員業務店**](#會員業務店)                         | **GET** /v1/customers/store                     |                                       | Y        |
-| [**會員 Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                       | Y        |
+| [**會員Barcode**](#會員Barcode)                      | **GET** /v1/customers/vip_barcode               |                                       | Y        |
 | [**促銷頁列表**](#促銷頁列表)                         | **GET** /v1/event_pages                         |                                       |          |
 | [**特定促銷頁**](#特定促銷頁)                         | **GET** /v1/event_pages/:event_page_id          |                                       |          |
 | [**首頁**](#首頁)                                     | **GET** /v1/home_page                           | 首頁資訊                              |          |
@@ -1717,11 +1729,11 @@ curl 'https://uatecapi.tungrp.com/v1/customers/store/?brand_id=1' \
 
 ```
 
-# **會員 Barcode**
+# **會員Barcode**
 
 - 應用場景
 
-  取得會員 Barcode
+  取得會員Barcode
 
 - 介接方式
 
@@ -7358,7 +7370,7 @@ curl 'https://uatecapi.tungrp.com/v1/customers/sso_unbind/' \
   -X 'POST' \
   -H 'accept: application/json' \
   -H 'content-type: application/json' \
-  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek' 
+  -H 'authorization: Bearer T5IVKRpyMGaEU-HWkC7m27APB6vcXUtywX9iuN4-5Ek'
 ```
 
 - 標準回應，詳情請查看 [附錄 2](#附錄2)
